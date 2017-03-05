@@ -56,16 +56,12 @@ depending on which case to run.
 
 ## DOCUMENTATION:
 
-### HTML
+[HTML](doc/html)
 
-cd doc/html
-firefox index.html &
+[PDF](doc)
 
-### PDF
+[User Guide](doc/usersguide.pdf)
 
-cd doc/
-acroread usersguide.pdf &
-acroread programmersguide.pdf &
+[Programmer's Guide](doc/programmersguide.pdf)
 
-or start Adobe Acrobat reader and open a pdf-file above.
 
