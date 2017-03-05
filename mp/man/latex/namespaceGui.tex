@@ -1,0 +1,1900 @@
+\hypertarget{namespaceGui}{
+\section{Gui Namespace Reference}
+\label{namespaceGui}\index{Gui@{Gui}}
+}
+OpenGL window output routines.  
+
+
+\subsection*{Classes}
+\begin{CompactItemize}
+\item 
+struct \hyperlink{structGui_1_1ElementDisp}{ElementDisp}
+\item 
+struct \hyperlink{structGui_1_1ColorScale}{ColorScale}
+\item 
+struct \hyperlink{structGui_1_1Scene}{Scene}
+\item 
+struct \hyperlink{structGui_1_1WindowGeom}{WindowGeom}
+\end{CompactItemize}
+\subsection*{Enumerations}
+\begin{CompactItemize}
+\item 
+enum \hyperlink{namespaceGui_b91d1a1829da9e0182fee5bd217c3b07}{Elements} \{ \par
+\hyperlink{namespaceGui_b91d1a1829da9e0182fee5bd217c3b07e11d6f6a11db666f60c25c3e39dc9ff6}{points} = 0, 
+\hyperlink{namespaceGui_b91d1a1829da9e0182fee5bd217c3b076dd3182e2f63f3b4e0724424d5d9abf1}{nodes}, 
+\hyperlink{namespaceGui_b91d1a1829da9e0182fee5bd217c3b0783d83f2da1c33c287a435262eb1e78c7}{edges}, 
+\hyperlink{namespaceGui_b91d1a1829da9e0182fee5bd217c3b07e6fff4d6efe4dd046581e7edd4e76996}{faces}, 
+\par
+\hyperlink{namespaceGui_b91d1a1829da9e0182fee5bd217c3b07e56bae0a838fa0c0b37e16e8ff5e8195}{cells}, 
+\hyperlink{namespaceGui_b91d1a1829da9e0182fee5bd217c3b07a6477f62f08ce9cce52ac44183cb9a11}{frame}, 
+\hyperlink{namespaceGui_b91d1a1829da9e0182fee5bd217c3b076714f85631cf197ec004e549cf451df8}{mesh}, 
+\hyperlink{namespaceGui_b91d1a1829da9e0182fee5bd217c3b073720dd04a2c5710ce3e30dbb8868e8a5}{boundary\_\-nodes}, 
+\par
+\hyperlink{namespaceGui_b91d1a1829da9e0182fee5bd217c3b071003fe795bedc273db2aa0963218270f}{boundary\_\-edges}, 
+\hyperlink{namespaceGui_b91d1a1829da9e0182fee5bd217c3b0714c8aa62f16274452a7077b235745ca5}{boundary\_\-faces}, 
+\hyperlink{namespaceGui_b91d1a1829da9e0182fee5bd217c3b074d157de1e437bed3a8f5e0797630a69b}{boundary\_\-cells}, 
+\hyperlink{namespaceGui_b91d1a1829da9e0182fee5bd217c3b0781093a7a40f51a596eec5795c93c42a0}{maxelements}
+ \}
+\item 
+enum \hyperlink{namespaceGui_cbb337b4c4fa94642bb2aff54b2961ac}{Color} \{ \par
+\hyperlink{namespaceGui_cbb337b4c4fa94642bb2aff54b2961ac3133e08b9e9a7d7357787f51dbae3fba}{red} = 0, 
+\hyperlink{namespaceGui_cbb337b4c4fa94642bb2aff54b2961ace27cf14be5c0058ce4846f862624cf68}{green}, 
+\hyperlink{namespaceGui_cbb337b4c4fa94642bb2aff54b2961acd0afbe9f4afd7320638719dfa760a0a7}{blue}, 
+\hyperlink{namespaceGui_cbb337b4c4fa94642bb2aff54b2961ac3363fe24a423437358573630dff2b81a}{skyblue}, 
+\par
+\hyperlink{namespaceGui_cbb337b4c4fa94642bb2aff54b2961ac5ff1714e359596ffdb60868fed254741}{brown}, 
+\hyperlink{namespaceGui_cbb337b4c4fa94642bb2aff54b2961ac24c5c628556bd929188a591902f22483}{magenta}, 
+\hyperlink{namespaceGui_cbb337b4c4fa94642bb2aff54b2961ac0b6dd5fa41d688549882df7b10124718}{yellow}, 
+\hyperlink{namespaceGui_cbb337b4c4fa94642bb2aff54b2961acddf90ff7cd6adeca55f51d585220a257}{color6}, 
+\par
+\hyperlink{namespaceGui_cbb337b4c4fa94642bb2aff54b2961ac480caee59a706bd21ae20ba9c9f8a127}{color7}, 
+\hyperlink{namespaceGui_cbb337b4c4fa94642bb2aff54b2961ac743582f737075526279f4828ce974034}{color8}, 
+\hyperlink{namespaceGui_cbb337b4c4fa94642bb2aff54b2961ac976b7bd16efddc2932562af5c1720740}{color9}, 
+\hyperlink{namespaceGui_cbb337b4c4fa94642bb2aff54b2961acdd5873424fa114aea66b6a1fda9007ac}{color10}, 
+\par
+\hyperlink{namespaceGui_cbb337b4c4fa94642bb2aff54b2961ac63c401d99ea5cf1e92094c94cbdd0d39}{color11}, 
+\hyperlink{namespaceGui_cbb337b4c4fa94642bb2aff54b2961acec9a808bbe723e93bf3566f1db0fd0cb}{color12}, 
+\hyperlink{namespaceGui_cbb337b4c4fa94642bb2aff54b2961ac47446ec16186a522941ec9c89605b719}{color13}, 
+\hyperlink{namespaceGui_cbb337b4c4fa94642bb2aff54b2961ac995e5084295e07f774fef0318ad5a31f}{color14}, 
+\par
+\hyperlink{namespaceGui_cbb337b4c4fa94642bb2aff54b2961acf2cf4786c2a88ac52139ddbc0cdcdfcf}{color15}, 
+\hyperlink{namespaceGui_cbb337b4c4fa94642bb2aff54b2961ac79519ae0fda9c4ef448d5494c4e818d3}{maxcolor}
+ \}
+\item 
+enum \hyperlink{namespaceGui_c2e79ad804d96d09cb5f4d6c4d790641}{ColorSchemes} \{ \par
+\hyperlink{namespaceGui_c2e79ad804d96d09cb5f4d6c4d79064180fb0870c82462bfff036860251127a8}{colorByType} = 0, 
+\hyperlink{namespaceGui_c2e79ad804d96d09cb5f4d6c4d7906414fe01d31a117126177e330bac7720e6c}{colorByBoundary}, 
+\hyperlink{namespaceGui_c2e79ad804d96d09cb5f4d6c4d79064149251db996f03799d5b4238c516755ef}{colorByTime}, 
+\hyperlink{namespaceGui_c2e79ad804d96d09cb5f4d6c4d790641e1f7050a0cb1378f80ab9880bbe62107}{colorByMass}, 
+\par
+\hyperlink{namespaceGui_c2e79ad804d96d09cb5f4d6c4d79064166962868f19c9ad99719ca51238b6b98}{maxColorSchemes}
+ \}
+\item 
+enum \hyperlink{namespaceGui_73e95325ae60556061676676af19d2ce}{PointParameters} \{ \par
+\hyperlink{namespaceGui_73e95325ae60556061676676af19d2cef757ad554a66b51d352edd20f7c7deef}{variable} = maxcolor, 
+\hyperlink{namespaceGui_73e95325ae60556061676676af19d2ce39ebda0c9b725b402f1996019a1d7219}{vmin}, 
+\hyperlink{namespaceGui_73e95325ae60556061676676af19d2ce7a7595b4665bd1c700c16f438914b1c2}{vmax}, 
+\hyperlink{namespaceGui_73e95325ae60556061676676af19d2ce3484dc570f6b21a8f58abb6ae34d29f3}{size}, 
+\par
+\hyperlink{namespaceGui_73e95325ae60556061676676af19d2ceda84abf2f568ef18c718f27019c49e8b}{sizevar}, 
+\hyperlink{namespaceGui_73e95325ae60556061676676af19d2ce52d80c5df1bdcbb5f2b5abce88c13544}{massvar}, 
+\hyperlink{namespaceGui_73e95325ae60556061676676af19d2ceb958cff51b2f1a035ac14a391432f6b5}{maxpointprm}
+ \}
+\item 
+enum \hyperlink{namespaceGui_6923b19bee7b52d6f2b875ae0ec22847}{LineParameters} \{ \hyperlink{namespaceGui_6923b19bee7b52d6f2b875ae0ec2284760d14dd1a41b6a0cf052fc63d3108144}{thickness} = maxcolor, 
+\hyperlink{namespaceGui_6923b19bee7b52d6f2b875ae0ec2284791c417e0d31669f12111c9f7285fa80d}{length}, 
+\hyperlink{namespaceGui_6923b19bee7b52d6f2b875ae0ec228476bc0be8492682ff5789ef10dfd23788f}{maxlineprm}
+ \}
+\item 
+enum \hyperlink{namespaceGui_a8302259e8c5ddb260972b85a19f6b0f}{AxesParameters} \{ \par
+\hyperlink{namespaceGui_a8302259e8c5ddb260972b85a19f6b0f76551f5bb97c753c03b9c8018b597510}{axeswidth} = 0, 
+\hyperlink{namespaceGui_a8302259e8c5ddb260972b85a19f6b0f1980e353fa4ee9a8d37eddf6f2f2288f}{xaxislength}, 
+\hyperlink{namespaceGui_a8302259e8c5ddb260972b85a19f6b0fe2506c3e1d4867aec950d640bfa8e2f3}{yaxislength}, 
+\hyperlink{namespaceGui_a8302259e8c5ddb260972b85a19f6b0f184403a53f69239dad27684279fe00e9}{zaxislength}, 
+\par
+\hyperlink{namespaceGui_a8302259e8c5ddb260972b85a19f6b0fca9fb008de3d4914897a3bd51d7c95a5}{arrowheight}, 
+\hyperlink{namespaceGui_a8302259e8c5ddb260972b85a19f6b0fe12cfa7a95a6ee661395435ca57659fa}{arrowidth}, 
+\hyperlink{namespaceGui_a8302259e8c5ddb260972b85a19f6b0f977d49ae1e9a592de5e25be1786d6a64}{maxaxesprm}
+ \}
+\item 
+enum \hyperlink{namespaceGui_6fef08ea87190324ff605e26b49552a3}{SurfDispType} \{ \hyperlink{namespaceGui_6fef08ea87190324ff605e26b49552a389c37bfa1a2dcd397816581697289c9e}{gridlines} = 0, 
+\hyperlink{namespaceGui_6fef08ea87190324ff605e26b49552a39291c3e9f7c0474ca010c12033d49306}{solidsurface}, 
+\hyperlink{namespaceGui_6fef08ea87190324ff605e26b49552a31bd3eba675110cb7cd711a4ecd20c2ed}{maxsurfdisptypes}
+ \}
+\item 
+enum \hyperlink{namespaceGui_6c6dedfc7728e59d542346b9a44868fd}{Movement} \{ \hyperlink{namespaceGui_6c6dedfc7728e59d542346b9a44868fd7f1d2de20b014524b41aedaf7d52ed9a}{stay} = 0, 
+\hyperlink{namespaceGui_6c6dedfc7728e59d542346b9a44868fda6ccf1eb433d1edf781b02fa3a641bf6}{rotate}, 
+\hyperlink{namespaceGui_6c6dedfc7728e59d542346b9a44868fdddefbf4ce9081506b47dc5242e06b04b}{moveuv}, 
+\hyperlink{namespaceGui_6c6dedfc7728e59d542346b9a44868fddca00a21aa0511a5a1713ce8d3af26fa}{movew}
+ \}
+\item 
+enum \hyperlink{namespaceGui_2f09cab6f9b07748793d52c1f5da226f}{ShowPars} \{ \par
+\hyperlink{namespaceGui_2f09cab6f9b07748793d52c1f5da226f88ba8810c6007532782eeda363ac29ea}{showRun} = 0, 
+\hyperlink{namespaceGui_2f09cab6f9b07748793d52c1f5da226ffcc3d55c092a1e5aaa63df02c7923a7c}{showAxes}, 
+\hyperlink{namespaceGui_2f09cab6f9b07748793d52c1f5da226f221c537fe63c85bfcad64bbbc6559a02}{showSpheres}, 
+\hyperlink{namespaceGui_2f09cab6f9b07748793d52c1f5da226fbb074a852eb37c6896351d6788d2b07f}{showBonds}, 
+\par
+\hyperlink{namespaceGui_2f09cab6f9b07748793d52c1f5da226ff34ab26b205572ee526595308176766b}{showGrid}, 
+\hyperlink{namespaceGui_2f09cab6f9b07748793d52c1f5da226ffd177c34930f6ca01edec2b4c262d066}{showNodes}, 
+\hyperlink{namespaceGui_2f09cab6f9b07748793d52c1f5da226f9bec9b0482dd40cf446ecfaa335fc5dd}{showVariables}, 
+\hyperlink{namespaceGui_2f09cab6f9b07748793d52c1f5da226f9893b077fb4e3f60fd47a5545ac43401}{showBoundaryVertexes}, 
+\par
+\hyperlink{namespaceGui_2f09cab6f9b07748793d52c1f5da226f04c26d2317ac9b7b77dcd086bfd5981a}{showBoundaryVectors}, 
+\hyperlink{namespaceGui_2f09cab6f9b07748793d52c1f5da226fa071404b1051486dba9a6c005d91beb7}{showToolVertexes}, 
+\hyperlink{namespaceGui_2f09cab6f9b07748793d52c1f5da226f0c22024f321328952c15d061ef0bd148}{showBoundaryFaceCenters}, 
+\hyperlink{namespaceGui_2f09cab6f9b07748793d52c1f5da226f3d92120b419e05044536dd5700c9ae33}{showBoundaryFaces}, 
+\par
+\hyperlink{namespaceGui_2f09cab6f9b07748793d52c1f5da226feae66931b47abd217b75a27118eadc54}{showBoundaryGrid}, 
+\hyperlink{namespaceGui_2f09cab6f9b07748793d52c1f5da226f602eae4a5644cb174d1a0aede0ea9d79}{showToolGrid}, 
+\hyperlink{namespaceGui_2f09cab6f9b07748793d52c1f5da226fd2100839aa7915ca76715fdae62d1f97}{showFrame}, 
+\hyperlink{namespaceGui_2f09cab6f9b07748793d52c1f5da226fb9a4fd2e4815ee9755c0ba56fcd180f0}{showCellCenters}, 
+\par
+\hyperlink{namespaceGui_2f09cab6f9b07748793d52c1f5da226fe5828ec6c23ff967bc0f69c9c8613e1f}{showFaceCenters}, 
+\hyperlink{namespaceGui_2f09cab6f9b07748793d52c1f5da226fbec48521a5502294ab480116306356a7}{showIsoSurfaces}, 
+\hyperlink{namespaceGui_2f09cab6f9b07748793d52c1f5da226fe993c569699327e8e0f649c732470350}{dumpWindow}, 
+\hyperlink{namespaceGui_2f09cab6f9b07748793d52c1f5da226fc4121609defd78f80617154eab1a4c92}{maxshowpars}
+ \}
+\end{CompactItemize}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+int \hyperlink{namespaceGui_7fbca852fb0cacc6663ba5689441c628}{query\_\-extension} (char $\ast$extName)
+\item 
+void \hyperlink{namespaceGui_c7a8f5580648139e0b12062692cdf4d5}{init} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]}, \hyperlink{classDomain}{Domain} $\ast$newdomain)
+\item 
+void \hyperlink{namespaceGui_0e5d9f6cb4fd8f9ddb9f214e12b4e6e5}{helpDisplay} ()
+\item 
+int \hyperlink{namespaceGui_c367306deffcdaf711e6dfe0452b0b76}{readparam} (char $\ast$s, char $\ast$param\mbox{[}$\,$\mbox{]}, int maxparam, char $\ast$filename, int val\mbox{[}$\,$\mbox{]})
+\item 
+int \hyperlink{namespaceGui_2dfb340ad9e98cedbf5e4ef8022da1b9}{readparam} (char $\ast$s, char $\ast$param\mbox{[}$\,$\mbox{]}, int maxparam, char $\ast$filename, REAL val\mbox{[}$\,$\mbox{]})
+\item 
+void \hyperlink{namespaceGui_adc1ae9662345d502dd4bccf0ea58473}{readconf} ()
+\item 
+void \hyperlink{namespaceGui_5b94ce6e857635065a0c2053b95529b5}{refresh} ()
+\item 
+void \hyperlink{namespaceGui_6d4b87c2b4664134825955c4ff89f2df}{initdisp} ()
+\item 
+void \hyperlink{namespaceGui_14bb49f023f388f7b0ff25c7a9b963e2}{Materials} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\item 
+void \hyperlink{namespaceGui_f8cee9625f9a733c48a9dce46829368a}{showVector} (double $\ast$x, double $\ast$v)
+\item 
+void \hyperlink{namespaceGui_ffad4636da327fdb77959a672413695a}{showParticle} (double vmn, double vmx, double val, double $\ast$x)
+\item 
+void \hyperlink{namespaceGui_5c3ecb8dde5ba2aea7ef1d89ef30f66a}{showSphere} (double vmn, double vmx, double val, double rad, double $\ast$x)
+\item 
+void \hyperlink{namespaceGui_2e3009086a3b9c82c98613657675c89a}{displayAxes} ()
+\item 
+void \hyperlink{namespaceGui_e7d03455e3e501e3e58965a138c3aa6c}{getScaling} (double \&l0, double \&l1)
+\item 
+void \hyperlink{namespaceGui_ea3e30468c8a97723f3a69e8810b4b38}{getXLimits} (double $\ast$x0, double $\ast$x1)
+\item 
+void \hyperlink{namespaceGui_992c5b9e252d42f351c0b4559f3dc594}{Exit} ()
+\item 
+void \hyperlink{namespaceGui_6fda3017d1da246375076a92d719888e}{Quit} ()
+\item 
+void \hyperlink{namespaceGui_b76fb09eeb57cd517ef9161f1d69b9a5}{menu} (int value)
+\item 
+void \hyperlink{namespaceGui_5780bf157b4553f0002f9c0bac80c57c}{displayMenu} ()
+\item 
+void \hyperlink{namespaceGui_8b9da92ca9a1573368c0a085b1121d54}{consoleMenu} ()
+\item 
+void \hyperlink{namespaceGui_8ade665fa0c7e87786e08242f88eff40}{setBackgroundRun} ()
+\item 
+void \hyperlink{namespaceGui_273a116825827361f5a21f8226589d35}{setForegroundRun} ()
+\item 
+void \hyperlink{namespaceGui_565addf34ff426cb969e2c56ed140d39}{toggleSpheres} ()
+\item 
+void \hyperlink{namespaceGui_ab3a8248d4ef4514f77fd2a50d70728a}{switchColorScheme} ()
+\item 
+void \hyperlink{namespaceGui_7799b76168d5342d97a7db05630b4c3a}{runmany} ()
+\item 
+void \hyperlink{namespaceGui_f65e92132f04c4a318e60fd3b4e7fa38}{toggleWindowDump} ()
+\item 
+void \hyperlink{namespaceGui_6ad1b72a8dc01fe97af9fe591a365a5e}{dumpwindow} ()
+\item 
+void \hyperlink{namespaceGui_90f0cf49fd3ea753450fa24a2a9675af}{commandMode} ()
+\item 
+void \hyperlink{namespaceGui_cb047c1330f58d16c1f9336aef134bbf}{display} ()
+\item 
+void \hyperlink{namespaceGui_bc885686e998a79d9c98f86c678d6e69}{animate} ()
+\item 
+void \hyperlink{namespaceGui_88a5c559d5b4309bd2c3d1ff11f93692}{helpCommand} ()
+\item 
+void \hyperlink{namespaceGui_fe299b50153348bf53b6910e74098c42}{reshape} (int w, int h)
+\item 
+void \hyperlink{namespaceGui_3971df0804b9da39b2c9a1b40f708b50}{mouse} (int button, int state, int x, int y)
+\item 
+void \hyperlink{namespaceGui_c6941f396ae4c5f4a14ed6f39820bd93}{motion} (int x, int y)
+\item 
+void \hyperlink{namespaceGui_8c6bd3add9cc9a25f67c4bcb75fb3c11}{keyboard} (unsigned int key)
+\item 
+void \hyperlink{namespaceGui_225eb7edaace31eb6cc4ec3173b2a703}{run} ()
+\item 
+void \hyperlink{namespaceGui_3a5bf26c85086313b175ec4901ac04bd}{displaymessage} (char $\ast$msg)
+\item 
+void \hyperlink{namespaceGui_7ff1dbc60509be2005c1732738066a69}{setElementColor} (int element\_\-type, REAL \hyperlink{namespaceGui_e32ed5f0f6c168d88ee4dcfcb237aa7a}{rgbcolor}\mbox{[}$\,$\mbox{]})
+\item 
+void \hyperlink{namespaceGui_b4972a7318cbe5e96312527816694e1e}{getElementColor} (int element\_\-type, REAL \hyperlink{namespaceGui_e32ed5f0f6c168d88ee4dcfcb237aa7a}{rgbcolor}\mbox{[}$\,$\mbox{]})
+\item 
+void \hyperlink{namespaceGui_84221f62186ae4133398e1b6a2475d09}{writeData} ()
+\item 
+void \hyperlink{namespaceGui_193a20479572ecdce2ba9826ea1afa52}{printGridXLimits} ()
+\item 
+void \hyperlink{namespaceGui_1bcce63e80eb6c25379b1902623ae885}{printGridVecLimits} ()
+\item 
+void \hyperlink{namespaceGui_6303d84a2defe353bcdde5e2d64c54fc}{getXLimits} (REAL $\ast$\hyperlink{namespaceGui_0dfb5583ee08d6cf807efcd9813cf4c5}{xmin}, REAL $\ast$\hyperlink{namespaceGui_93f1d37d2bd27e638d68895f5d264cbc}{xmax})
+\item 
+void \hyperlink{namespaceGui_ecc4bc7e909d123787c57982a5059d37}{getScaling} (REAL \&\hyperlink{namespaceGui_56c94fbda09f27d64aa2e60813b5c72f}{lmin}, REAL \&\hyperlink{namespaceGui_ac727ddae788cc92ec47a42a42c624c1}{lmax})
+\item 
+void \hyperlink{namespaceGui_a532192f836051be770c02dfd5b54379}{printPartVelLimits} ()
+\item 
+void \hyperlink{namespaceGui_b12854bedf083987e0815e02f599ec45}{printParticleVariables} ()
+\item 
+void \hyperlink{namespaceGui_8e3c2fd257a10f8ebcb0bb5ca80960cf}{showGridElements} (int ne, double $\ast$X, REAL color\mbox{[}$\,$\mbox{]})
+\item 
+void \hyperlink{namespaceGui_fc1dab157022a5a7a7570d5e14c7111d}{showVectorComponent} (int ivar, int icomp, double $\ast$X, double vmn, double vmx)
+\item 
+void \hyperlink{namespaceGui_b2f8045a7d03276f092d05afd5be1e71}{showVector} (int ivar, double $\ast$X)
+\item 
+void \hyperlink{namespaceGui_02455eabb69d94328ba20a3d8abd5239}{printVariables} (int n)
+\item 
+void \hyperlink{namespaceGui_0a78be634dd9a0fd330799e5d6a2bada}{finish} ()
+\item 
+void \hyperlink{namespaceGui_6b37f7051aba2059c1b5b91694708408}{InitMaterials} (void)
+\item 
+void \hyperlink{namespaceGui_dd6f6cfa5773cf46c29030ef50a87a06}{selectVariable} ()
+\item 
+void \hyperlink{namespaceGui_65935dbee960e580e4aa401013022f14}{keyboard} (unsigned char key, int x, int y)
+\item 
+void \hyperlink{namespaceGui_f509da960f39882c423601210a118a96}{drawSegment} (REAL $\ast$x, REAL $\ast$y)
+\end{CompactItemize}
+\subsection*{Variables}
+\begin{CompactItemize}
+\item 
+\hyperlink{classDomain}{Domain} $\ast$ \hyperlink{namespaceGui_60f6d8ae2497f90f2e3bad7a69c27f1d}{domain}
+\item 
+\hyperlink{structGui_1_1ElementDisp}{ElementDisp} \hyperlink{namespaceGui_a3da3aa4111d6dc26f3f40324c8f52d3}{disp} \mbox{[}maxelements\mbox{]}
+\item 
+char $\ast$ \hyperlink{namespaceGui_6702af97844e9ea00bded3ffb073c223}{configfile} = (char$\ast$)\char`\"{}gui.cfg\char`\"{}
+\item 
+char \hyperlink{namespaceGui_05e5a56061d9b709de0cbf9c54640465}{windowname} \mbox{[}MAXLINLEN\mbox{]}
+\item 
+int \hyperlink{namespaceGui_aa991dcea49b723b5d30bbf0fa3cec6c}{showpar} \mbox{[}maxshowpars\mbox{]}
+\item 
+int \hyperlink{namespaceGui_d167a9a00b5fcd633d94be01594f97c6}{finished}
+\item 
+int \hyperlink{namespaceGui_8e6788190d414f842e08826fcefa496c}{animation}
+\item 
+int \hyperlink{namespaceGui_d5d34028af9532dba173542e87d23f56}{nwdump}
+\item 
+int \hyperlink{namespaceGui_85922779b0101fa854b9b70a316998bd}{iwdump}
+\item 
+int \hyperlink{namespaceGui_a57d40ab8d008d5fd9e51830e254f2f8}{attributeList} \mbox{[}$\,$\mbox{]}
+\item 
+REAL \hyperlink{namespaceGui_8ef4f3e30c066fc451103c29d312ebfc}{step}
+\item 
+REAL \hyperlink{namespaceGui_7cfc73b4cf3c43f2eae07648ed332adf}{vecval} \mbox{[}maxlineprm\mbox{]}
+\item 
+REAL \hyperlink{namespaceGui_d8cd720a8150fa90f583d180f6a83b99}{axes} \mbox{[}maxaxesprm\mbox{]}
+\item 
+REAL \hyperlink{namespaceGui_e32ed5f0f6c168d88ee4dcfcb237aa7a}{rgbcolor} \mbox{[}maxcolor\mbox{]}\mbox{[}3\mbox{]}
+\item 
+REAL \hyperlink{namespaceGui_4e0f39982d5320819b7ce9a6aec7ee4f}{wdtime}
+\item 
+REAL \hyperlink{namespaceGui_0ed0ea23e3f4484056c1581a73b38f95}{xo} \mbox{[}3\mbox{]}
+\item 
+REAL \hyperlink{namespaceGui_447643e9fc2878cea10d5d51fe076fd8}{dx}
+\item 
+REAL \hyperlink{namespaceGui_9f9c724776b5bb133fbb54fbbaad8b6b}{dy}
+\item 
+REAL \hyperlink{namespaceGui_08f884685f2bc61bf9ba9f3a20f809c5}{dz}
+\item 
+REAL \hyperlink{namespaceGui_67e596ec4c26da38c4c16edd4d3d8ffd}{lastx}
+\item 
+REAL \hyperlink{namespaceGui_0a1d9c5f437e332539fd6a9059ab2e54}{lasty}
+\item 
+REAL \hyperlink{namespaceGui_47745f43ef1ca3e88dc4afb80e7d2f7e}{lastz}
+\item 
+int \hyperlink{namespaceGui_b7fec0b981b38104f3b9843f86c30839}{mouseButtons} \mbox{[}3\mbox{]}
+\item 
+REAL \hyperlink{namespaceGui_0da4588637a3890172d5a43efb250048}{zoom}
+\item 
+REAL \hyperlink{namespaceGui_67c138887f5c4630c5afd040e7a5294c}{rotx}
+\item 
+REAL \hyperlink{namespaceGui_d638ed2f20a59ff6c2d2b1b6cf1de469}{roty}
+\item 
+REAL \hyperlink{namespaceGui_0d144586c178c9eb8a740d3209e83111}{tx}
+\item 
+REAL \hyperlink{namespaceGui_ae6dc6eb71aeb72299e638a67fe2d1bd}{ty}
+\item 
+REAL \hyperlink{namespaceGui_0dfb5583ee08d6cf807efcd9813cf4c5}{xmin} \mbox{[}DIM\mbox{]}
+\item 
+REAL \hyperlink{namespaceGui_93f1d37d2bd27e638d68895f5d264cbc}{xmax} \mbox{[}DIM\mbox{]}
+\item 
+REAL \hyperlink{namespaceGui_29647b3a241e0ba782e3be2e6e328af2}{lx}
+\item 
+REAL \hyperlink{namespaceGui_c2a7515d6f755bd934cf19d75e7bc4d1}{ly}
+\item 
+REAL \hyperlink{namespaceGui_c87eeee68e3d6a4915b6d18e10eeca8b}{lz}
+\item 
+REAL \hyperlink{namespaceGui_56c94fbda09f27d64aa2e60813b5c72f}{lmin}
+\item 
+REAL \hyperlink{namespaceGui_ac727ddae788cc92ec47a42a42c624c1}{lmax}
+\item 
+enum \hyperlink{namespaceGui_6c6dedfc7728e59d542346b9a44868fd}{Movement} \hyperlink{namespaceGui_993ed2a8e49cde7369fa3578802b851d}{movement}
+\item 
+struct \hyperlink{structGui_1_1ColorScale}{ColorScale} \hyperlink{namespaceGui_4701d367312756fbf7b5f1950665a65a}{colorscale}
+\item 
+struct \hyperlink{structGui_1_1Scene}{Scene} \hyperlink{namespaceGui_ad072e1325427d8e1fbd4d978bce6cf0}{scene}
+\item 
+struct \hyperlink{structGui_1_1WindowGeom}{WindowGeom} \hyperlink{namespaceGui_32823865b86d01eb5cc0797ef95b72d1}{window}
+\item 
+struct BFaceList $\ast$ \hyperlink{namespaceGui_f84d6dd43874bce8629a513c3cbaff73}{bface\_\-root}
+\item 
+Display $\ast$ \hyperlink{namespaceGui_7cffe1d85006be54ecc4edc51a9978be}{dpy}
+\item 
+Window \hyperlink{namespaceGui_ca6acfc184422daa4fa15bd0c6ce422b}{win}
+\item 
+int \hyperlink{namespaceGui_e1e212e4a0c46b3ff775b1aa017e7bfc}{firstR} = 1
+\item 
+int $\ast$ \hyperlink{namespaceGui_6f927abe8b3833f6de26cd97440c1598}{vars}
+\item 
+int $\ast$ \hyperlink{namespaceGui_a46e6ad4b192cdaba9efb1ada2133df9}{coms}
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+OpenGL window output routines. 
+
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{namespaceGui_a8302259e8c5ddb260972b85a19f6b0f}{
+\index{Gui@{Gui}!AxesParameters@{AxesParameters}}
+\index{AxesParameters@{AxesParameters}!Gui@{Gui}}
+\subsubsection[{AxesParameters}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Gui::AxesParameters}}}
+\label{namespaceGui_a8302259e8c5ddb260972b85a19f6b0f}
+
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{axeswidth@{axeswidth}!Gui@{Gui}}\index{Gui@{Gui}!axeswidth@{axeswidth}}\item[{\em 
+\hypertarget{namespaceGui_a8302259e8c5ddb260972b85a19f6b0f76551f5bb97c753c03b9c8018b597510}{
+axeswidth}
+\label{namespaceGui_a8302259e8c5ddb260972b85a19f6b0f76551f5bb97c753c03b9c8018b597510}
+}]\index{xaxislength@{xaxislength}!Gui@{Gui}}\index{Gui@{Gui}!xaxislength@{xaxislength}}\item[{\em 
+\hypertarget{namespaceGui_a8302259e8c5ddb260972b85a19f6b0f1980e353fa4ee9a8d37eddf6f2f2288f}{
+xaxislength}
+\label{namespaceGui_a8302259e8c5ddb260972b85a19f6b0f1980e353fa4ee9a8d37eddf6f2f2288f}
+}]\index{yaxislength@{yaxislength}!Gui@{Gui}}\index{Gui@{Gui}!yaxislength@{yaxislength}}\item[{\em 
+\hypertarget{namespaceGui_a8302259e8c5ddb260972b85a19f6b0fe2506c3e1d4867aec950d640bfa8e2f3}{
+yaxislength}
+\label{namespaceGui_a8302259e8c5ddb260972b85a19f6b0fe2506c3e1d4867aec950d640bfa8e2f3}
+}]\index{zaxislength@{zaxislength}!Gui@{Gui}}\index{Gui@{Gui}!zaxislength@{zaxislength}}\item[{\em 
+\hypertarget{namespaceGui_a8302259e8c5ddb260972b85a19f6b0f184403a53f69239dad27684279fe00e9}{
+zaxislength}
+\label{namespaceGui_a8302259e8c5ddb260972b85a19f6b0f184403a53f69239dad27684279fe00e9}
+}]\index{arrowheight@{arrowheight}!Gui@{Gui}}\index{Gui@{Gui}!arrowheight@{arrowheight}}\item[{\em 
+\hypertarget{namespaceGui_a8302259e8c5ddb260972b85a19f6b0fca9fb008de3d4914897a3bd51d7c95a5}{
+arrowheight}
+\label{namespaceGui_a8302259e8c5ddb260972b85a19f6b0fca9fb008de3d4914897a3bd51d7c95a5}
+}]\index{arrowidth@{arrowidth}!Gui@{Gui}}\index{Gui@{Gui}!arrowidth@{arrowidth}}\item[{\em 
+\hypertarget{namespaceGui_a8302259e8c5ddb260972b85a19f6b0fe12cfa7a95a6ee661395435ca57659fa}{
+arrowidth}
+\label{namespaceGui_a8302259e8c5ddb260972b85a19f6b0fe12cfa7a95a6ee661395435ca57659fa}
+}]\index{maxaxesprm@{maxaxesprm}!Gui@{Gui}}\index{Gui@{Gui}!maxaxesprm@{maxaxesprm}}\item[{\em 
+\hypertarget{namespaceGui_a8302259e8c5ddb260972b85a19f6b0f977d49ae1e9a592de5e25be1786d6a64}{
+maxaxesprm}
+\label{namespaceGui_a8302259e8c5ddb260972b85a19f6b0f977d49ae1e9a592de5e25be1786d6a64}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 71 of file gui.h.\hypertarget{namespaceGui_cbb337b4c4fa94642bb2aff54b2961ac}{
+\index{Gui@{Gui}!Color@{Color}}
+\index{Color@{Color}!Gui@{Gui}}
+\subsubsection[{Color}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Gui::Color}}}
+\label{namespaceGui_cbb337b4c4fa94642bb2aff54b2961ac}
+
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{red@{red}!Gui@{Gui}}\index{Gui@{Gui}!red@{red}}\item[{\em 
+\hypertarget{namespaceGui_cbb337b4c4fa94642bb2aff54b2961ac3133e08b9e9a7d7357787f51dbae3fba}{
+red}
+\label{namespaceGui_cbb337b4c4fa94642bb2aff54b2961ac3133e08b9e9a7d7357787f51dbae3fba}
+}]\index{green@{green}!Gui@{Gui}}\index{Gui@{Gui}!green@{green}}\item[{\em 
+\hypertarget{namespaceGui_cbb337b4c4fa94642bb2aff54b2961ace27cf14be5c0058ce4846f862624cf68}{
+green}
+\label{namespaceGui_cbb337b4c4fa94642bb2aff54b2961ace27cf14be5c0058ce4846f862624cf68}
+}]\index{blue@{blue}!Gui@{Gui}}\index{Gui@{Gui}!blue@{blue}}\item[{\em 
+\hypertarget{namespaceGui_cbb337b4c4fa94642bb2aff54b2961acd0afbe9f4afd7320638719dfa760a0a7}{
+blue}
+\label{namespaceGui_cbb337b4c4fa94642bb2aff54b2961acd0afbe9f4afd7320638719dfa760a0a7}
+}]\index{skyblue@{skyblue}!Gui@{Gui}}\index{Gui@{Gui}!skyblue@{skyblue}}\item[{\em 
+\hypertarget{namespaceGui_cbb337b4c4fa94642bb2aff54b2961ac3363fe24a423437358573630dff2b81a}{
+skyblue}
+\label{namespaceGui_cbb337b4c4fa94642bb2aff54b2961ac3363fe24a423437358573630dff2b81a}
+}]\index{brown@{brown}!Gui@{Gui}}\index{Gui@{Gui}!brown@{brown}}\item[{\em 
+\hypertarget{namespaceGui_cbb337b4c4fa94642bb2aff54b2961ac5ff1714e359596ffdb60868fed254741}{
+brown}
+\label{namespaceGui_cbb337b4c4fa94642bb2aff54b2961ac5ff1714e359596ffdb60868fed254741}
+}]\index{magenta@{magenta}!Gui@{Gui}}\index{Gui@{Gui}!magenta@{magenta}}\item[{\em 
+\hypertarget{namespaceGui_cbb337b4c4fa94642bb2aff54b2961ac24c5c628556bd929188a591902f22483}{
+magenta}
+\label{namespaceGui_cbb337b4c4fa94642bb2aff54b2961ac24c5c628556bd929188a591902f22483}
+}]\index{yellow@{yellow}!Gui@{Gui}}\index{Gui@{Gui}!yellow@{yellow}}\item[{\em 
+\hypertarget{namespaceGui_cbb337b4c4fa94642bb2aff54b2961ac0b6dd5fa41d688549882df7b10124718}{
+yellow}
+\label{namespaceGui_cbb337b4c4fa94642bb2aff54b2961ac0b6dd5fa41d688549882df7b10124718}
+}]\index{color6@{color6}!Gui@{Gui}}\index{Gui@{Gui}!color6@{color6}}\item[{\em 
+\hypertarget{namespaceGui_cbb337b4c4fa94642bb2aff54b2961acddf90ff7cd6adeca55f51d585220a257}{
+color6}
+\label{namespaceGui_cbb337b4c4fa94642bb2aff54b2961acddf90ff7cd6adeca55f51d585220a257}
+}]\index{color7@{color7}!Gui@{Gui}}\index{Gui@{Gui}!color7@{color7}}\item[{\em 
+\hypertarget{namespaceGui_cbb337b4c4fa94642bb2aff54b2961ac480caee59a706bd21ae20ba9c9f8a127}{
+color7}
+\label{namespaceGui_cbb337b4c4fa94642bb2aff54b2961ac480caee59a706bd21ae20ba9c9f8a127}
+}]\index{color8@{color8}!Gui@{Gui}}\index{Gui@{Gui}!color8@{color8}}\item[{\em 
+\hypertarget{namespaceGui_cbb337b4c4fa94642bb2aff54b2961ac743582f737075526279f4828ce974034}{
+color8}
+\label{namespaceGui_cbb337b4c4fa94642bb2aff54b2961ac743582f737075526279f4828ce974034}
+}]\index{color9@{color9}!Gui@{Gui}}\index{Gui@{Gui}!color9@{color9}}\item[{\em 
+\hypertarget{namespaceGui_cbb337b4c4fa94642bb2aff54b2961ac976b7bd16efddc2932562af5c1720740}{
+color9}
+\label{namespaceGui_cbb337b4c4fa94642bb2aff54b2961ac976b7bd16efddc2932562af5c1720740}
+}]\index{color10@{color10}!Gui@{Gui}}\index{Gui@{Gui}!color10@{color10}}\item[{\em 
+\hypertarget{namespaceGui_cbb337b4c4fa94642bb2aff54b2961acdd5873424fa114aea66b6a1fda9007ac}{
+color10}
+\label{namespaceGui_cbb337b4c4fa94642bb2aff54b2961acdd5873424fa114aea66b6a1fda9007ac}
+}]\index{color11@{color11}!Gui@{Gui}}\index{Gui@{Gui}!color11@{color11}}\item[{\em 
+\hypertarget{namespaceGui_cbb337b4c4fa94642bb2aff54b2961ac63c401d99ea5cf1e92094c94cbdd0d39}{
+color11}
+\label{namespaceGui_cbb337b4c4fa94642bb2aff54b2961ac63c401d99ea5cf1e92094c94cbdd0d39}
+}]\index{color12@{color12}!Gui@{Gui}}\index{Gui@{Gui}!color12@{color12}}\item[{\em 
+\hypertarget{namespaceGui_cbb337b4c4fa94642bb2aff54b2961acec9a808bbe723e93bf3566f1db0fd0cb}{
+color12}
+\label{namespaceGui_cbb337b4c4fa94642bb2aff54b2961acec9a808bbe723e93bf3566f1db0fd0cb}
+}]\index{color13@{color13}!Gui@{Gui}}\index{Gui@{Gui}!color13@{color13}}\item[{\em 
+\hypertarget{namespaceGui_cbb337b4c4fa94642bb2aff54b2961ac47446ec16186a522941ec9c89605b719}{
+color13}
+\label{namespaceGui_cbb337b4c4fa94642bb2aff54b2961ac47446ec16186a522941ec9c89605b719}
+}]\index{color14@{color14}!Gui@{Gui}}\index{Gui@{Gui}!color14@{color14}}\item[{\em 
+\hypertarget{namespaceGui_cbb337b4c4fa94642bb2aff54b2961ac995e5084295e07f774fef0318ad5a31f}{
+color14}
+\label{namespaceGui_cbb337b4c4fa94642bb2aff54b2961ac995e5084295e07f774fef0318ad5a31f}
+}]\index{color15@{color15}!Gui@{Gui}}\index{Gui@{Gui}!color15@{color15}}\item[{\em 
+\hypertarget{namespaceGui_cbb337b4c4fa94642bb2aff54b2961acf2cf4786c2a88ac52139ddbc0cdcdfcf}{
+color15}
+\label{namespaceGui_cbb337b4c4fa94642bb2aff54b2961acf2cf4786c2a88ac52139ddbc0cdcdfcf}
+}]\index{maxcolor@{maxcolor}!Gui@{Gui}}\index{Gui@{Gui}!maxcolor@{maxcolor}}\item[{\em 
+\hypertarget{namespaceGui_cbb337b4c4fa94642bb2aff54b2961ac79519ae0fda9c4ef448d5494c4e818d3}{
+maxcolor}
+\label{namespaceGui_cbb337b4c4fa94642bb2aff54b2961ac79519ae0fda9c4ef448d5494c4e818d3}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 31 of file gui.h.\hypertarget{namespaceGui_c2e79ad804d96d09cb5f4d6c4d790641}{
+\index{Gui@{Gui}!ColorSchemes@{ColorSchemes}}
+\index{ColorSchemes@{ColorSchemes}!Gui@{Gui}}
+\subsubsection[{ColorSchemes}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Gui::ColorSchemes}}}
+\label{namespaceGui_c2e79ad804d96d09cb5f4d6c4d790641}
+
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{colorByType@{colorByType}!Gui@{Gui}}\index{Gui@{Gui}!colorByType@{colorByType}}\item[{\em 
+\hypertarget{namespaceGui_c2e79ad804d96d09cb5f4d6c4d79064180fb0870c82462bfff036860251127a8}{
+colorByType}
+\label{namespaceGui_c2e79ad804d96d09cb5f4d6c4d79064180fb0870c82462bfff036860251127a8}
+}]\index{colorByBoundary@{colorByBoundary}!Gui@{Gui}}\index{Gui@{Gui}!colorByBoundary@{colorByBoundary}}\item[{\em 
+\hypertarget{namespaceGui_c2e79ad804d96d09cb5f4d6c4d7906414fe01d31a117126177e330bac7720e6c}{
+colorByBoundary}
+\label{namespaceGui_c2e79ad804d96d09cb5f4d6c4d7906414fe01d31a117126177e330bac7720e6c}
+}]\index{colorByTime@{colorByTime}!Gui@{Gui}}\index{Gui@{Gui}!colorByTime@{colorByTime}}\item[{\em 
+\hypertarget{namespaceGui_c2e79ad804d96d09cb5f4d6c4d79064149251db996f03799d5b4238c516755ef}{
+colorByTime}
+\label{namespaceGui_c2e79ad804d96d09cb5f4d6c4d79064149251db996f03799d5b4238c516755ef}
+}]\index{colorByMass@{colorByMass}!Gui@{Gui}}\index{Gui@{Gui}!colorByMass@{colorByMass}}\item[{\em 
+\hypertarget{namespaceGui_c2e79ad804d96d09cb5f4d6c4d790641e1f7050a0cb1378f80ab9880bbe62107}{
+colorByMass}
+\label{namespaceGui_c2e79ad804d96d09cb5f4d6c4d790641e1f7050a0cb1378f80ab9880bbe62107}
+}]\index{maxColorSchemes@{maxColorSchemes}!Gui@{Gui}}\index{Gui@{Gui}!maxColorSchemes@{maxColorSchemes}}\item[{\em 
+\hypertarget{namespaceGui_c2e79ad804d96d09cb5f4d6c4d79064166962868f19c9ad99719ca51238b6b98}{
+maxColorSchemes}
+\label{namespaceGui_c2e79ad804d96d09cb5f4d6c4d79064166962868f19c9ad99719ca51238b6b98}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 51 of file gui.h.\hypertarget{namespaceGui_b91d1a1829da9e0182fee5bd217c3b07}{
+\index{Gui@{Gui}!Elements@{Elements}}
+\index{Elements@{Elements}!Gui@{Gui}}
+\subsubsection[{Elements}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Gui::Elements}}}
+\label{namespaceGui_b91d1a1829da9e0182fee5bd217c3b07}
+
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{points@{points}!Gui@{Gui}}\index{Gui@{Gui}!points@{points}}\item[{\em 
+\hypertarget{namespaceGui_b91d1a1829da9e0182fee5bd217c3b07e11d6f6a11db666f60c25c3e39dc9ff6}{
+points}
+\label{namespaceGui_b91d1a1829da9e0182fee5bd217c3b07e11d6f6a11db666f60c25c3e39dc9ff6}
+}]\index{nodes@{nodes}!Gui@{Gui}}\index{Gui@{Gui}!nodes@{nodes}}\item[{\em 
+\hypertarget{namespaceGui_b91d1a1829da9e0182fee5bd217c3b076dd3182e2f63f3b4e0724424d5d9abf1}{
+nodes}
+\label{namespaceGui_b91d1a1829da9e0182fee5bd217c3b076dd3182e2f63f3b4e0724424d5d9abf1}
+}]\index{edges@{edges}!Gui@{Gui}}\index{Gui@{Gui}!edges@{edges}}\item[{\em 
+\hypertarget{namespaceGui_b91d1a1829da9e0182fee5bd217c3b0783d83f2da1c33c287a435262eb1e78c7}{
+edges}
+\label{namespaceGui_b91d1a1829da9e0182fee5bd217c3b0783d83f2da1c33c287a435262eb1e78c7}
+}]\index{faces@{faces}!Gui@{Gui}}\index{Gui@{Gui}!faces@{faces}}\item[{\em 
+\hypertarget{namespaceGui_b91d1a1829da9e0182fee5bd217c3b07e6fff4d6efe4dd046581e7edd4e76996}{
+faces}
+\label{namespaceGui_b91d1a1829da9e0182fee5bd217c3b07e6fff4d6efe4dd046581e7edd4e76996}
+}]\index{cells@{cells}!Gui@{Gui}}\index{Gui@{Gui}!cells@{cells}}\item[{\em 
+\hypertarget{namespaceGui_b91d1a1829da9e0182fee5bd217c3b07e56bae0a838fa0c0b37e16e8ff5e8195}{
+cells}
+\label{namespaceGui_b91d1a1829da9e0182fee5bd217c3b07e56bae0a838fa0c0b37e16e8ff5e8195}
+}]\index{frame@{frame}!Gui@{Gui}}\index{Gui@{Gui}!frame@{frame}}\item[{\em 
+\hypertarget{namespaceGui_b91d1a1829da9e0182fee5bd217c3b07a6477f62f08ce9cce52ac44183cb9a11}{
+frame}
+\label{namespaceGui_b91d1a1829da9e0182fee5bd217c3b07a6477f62f08ce9cce52ac44183cb9a11}
+}]\index{mesh@{mesh}!Gui@{Gui}}\index{Gui@{Gui}!mesh@{mesh}}\item[{\em 
+\hypertarget{namespaceGui_b91d1a1829da9e0182fee5bd217c3b076714f85631cf197ec004e549cf451df8}{
+mesh}
+\label{namespaceGui_b91d1a1829da9e0182fee5bd217c3b076714f85631cf197ec004e549cf451df8}
+}]\index{boundary\_\-nodes@{boundary\_\-nodes}!Gui@{Gui}}\index{Gui@{Gui}!boundary\_\-nodes@{boundary\_\-nodes}}\item[{\em 
+\hypertarget{namespaceGui_b91d1a1829da9e0182fee5bd217c3b073720dd04a2c5710ce3e30dbb8868e8a5}{
+boundary\_\-nodes}
+\label{namespaceGui_b91d1a1829da9e0182fee5bd217c3b073720dd04a2c5710ce3e30dbb8868e8a5}
+}]\index{boundary\_\-edges@{boundary\_\-edges}!Gui@{Gui}}\index{Gui@{Gui}!boundary\_\-edges@{boundary\_\-edges}}\item[{\em 
+\hypertarget{namespaceGui_b91d1a1829da9e0182fee5bd217c3b071003fe795bedc273db2aa0963218270f}{
+boundary\_\-edges}
+\label{namespaceGui_b91d1a1829da9e0182fee5bd217c3b071003fe795bedc273db2aa0963218270f}
+}]\index{boundary\_\-faces@{boundary\_\-faces}!Gui@{Gui}}\index{Gui@{Gui}!boundary\_\-faces@{boundary\_\-faces}}\item[{\em 
+\hypertarget{namespaceGui_b91d1a1829da9e0182fee5bd217c3b0714c8aa62f16274452a7077b235745ca5}{
+boundary\_\-faces}
+\label{namespaceGui_b91d1a1829da9e0182fee5bd217c3b0714c8aa62f16274452a7077b235745ca5}
+}]\index{boundary\_\-cells@{boundary\_\-cells}!Gui@{Gui}}\index{Gui@{Gui}!boundary\_\-cells@{boundary\_\-cells}}\item[{\em 
+\hypertarget{namespaceGui_b91d1a1829da9e0182fee5bd217c3b074d157de1e437bed3a8f5e0797630a69b}{
+boundary\_\-cells}
+\label{namespaceGui_b91d1a1829da9e0182fee5bd217c3b074d157de1e437bed3a8f5e0797630a69b}
+}]\index{maxelements@{maxelements}!Gui@{Gui}}\index{Gui@{Gui}!maxelements@{maxelements}}\item[{\em 
+\hypertarget{namespaceGui_b91d1a1829da9e0182fee5bd217c3b0781093a7a40f51a596eec5795c93c42a0}{
+maxelements}
+\label{namespaceGui_b91d1a1829da9e0182fee5bd217c3b0781093a7a40f51a596eec5795c93c42a0}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 17 of file gui.h.\hypertarget{namespaceGui_6923b19bee7b52d6f2b875ae0ec22847}{
+\index{Gui@{Gui}!LineParameters@{LineParameters}}
+\index{LineParameters@{LineParameters}!Gui@{Gui}}
+\subsubsection[{LineParameters}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Gui::LineParameters}}}
+\label{namespaceGui_6923b19bee7b52d6f2b875ae0ec22847}
+
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{thickness@{thickness}!Gui@{Gui}}\index{Gui@{Gui}!thickness@{thickness}}\item[{\em 
+\hypertarget{namespaceGui_6923b19bee7b52d6f2b875ae0ec2284760d14dd1a41b6a0cf052fc63d3108144}{
+thickness}
+\label{namespaceGui_6923b19bee7b52d6f2b875ae0ec2284760d14dd1a41b6a0cf052fc63d3108144}
+}]\index{length@{length}!Gui@{Gui}}\index{Gui@{Gui}!length@{length}}\item[{\em 
+\hypertarget{namespaceGui_6923b19bee7b52d6f2b875ae0ec2284791c417e0d31669f12111c9f7285fa80d}{
+length}
+\label{namespaceGui_6923b19bee7b52d6f2b875ae0ec2284791c417e0d31669f12111c9f7285fa80d}
+}]\index{maxlineprm@{maxlineprm}!Gui@{Gui}}\index{Gui@{Gui}!maxlineprm@{maxlineprm}}\item[{\em 
+\hypertarget{namespaceGui_6923b19bee7b52d6f2b875ae0ec228476bc0be8492682ff5789ef10dfd23788f}{
+maxlineprm}
+\label{namespaceGui_6923b19bee7b52d6f2b875ae0ec228476bc0be8492682ff5789ef10dfd23788f}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 65 of file gui.h.\hypertarget{namespaceGui_6c6dedfc7728e59d542346b9a44868fd}{
+\index{Gui@{Gui}!Movement@{Movement}}
+\index{Movement@{Movement}!Gui@{Gui}}
+\subsubsection[{Movement}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Gui::Movement}}}
+\label{namespaceGui_6c6dedfc7728e59d542346b9a44868fd}
+
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{stay@{stay}!Gui@{Gui}}\index{Gui@{Gui}!stay@{stay}}\item[{\em 
+\hypertarget{namespaceGui_6c6dedfc7728e59d542346b9a44868fd7f1d2de20b014524b41aedaf7d52ed9a}{
+stay}
+\label{namespaceGui_6c6dedfc7728e59d542346b9a44868fd7f1d2de20b014524b41aedaf7d52ed9a}
+}]\index{rotate@{rotate}!Gui@{Gui}}\index{Gui@{Gui}!rotate@{rotate}}\item[{\em 
+\hypertarget{namespaceGui_6c6dedfc7728e59d542346b9a44868fda6ccf1eb433d1edf781b02fa3a641bf6}{
+rotate}
+\label{namespaceGui_6c6dedfc7728e59d542346b9a44868fda6ccf1eb433d1edf781b02fa3a641bf6}
+}]\index{moveuv@{moveuv}!Gui@{Gui}}\index{Gui@{Gui}!moveuv@{moveuv}}\item[{\em 
+\hypertarget{namespaceGui_6c6dedfc7728e59d542346b9a44868fdddefbf4ce9081506b47dc5242e06b04b}{
+moveuv}
+\label{namespaceGui_6c6dedfc7728e59d542346b9a44868fdddefbf4ce9081506b47dc5242e06b04b}
+}]\index{movew@{movew}!Gui@{Gui}}\index{Gui@{Gui}!movew@{movew}}\item[{\em 
+\hypertarget{namespaceGui_6c6dedfc7728e59d542346b9a44868fddca00a21aa0511a5a1713ce8d3af26fa}{
+movew}
+\label{namespaceGui_6c6dedfc7728e59d542346b9a44868fddca00a21aa0511a5a1713ce8d3af26fa}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 123 of file gui.h.\hypertarget{namespaceGui_73e95325ae60556061676676af19d2ce}{
+\index{Gui@{Gui}!PointParameters@{PointParameters}}
+\index{PointParameters@{PointParameters}!Gui@{Gui}}
+\subsubsection[{PointParameters}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Gui::PointParameters}}}
+\label{namespaceGui_73e95325ae60556061676676af19d2ce}
+
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{variable@{variable}!Gui@{Gui}}\index{Gui@{Gui}!variable@{variable}}\item[{\em 
+\hypertarget{namespaceGui_73e95325ae60556061676676af19d2cef757ad554a66b51d352edd20f7c7deef}{
+variable}
+\label{namespaceGui_73e95325ae60556061676676af19d2cef757ad554a66b51d352edd20f7c7deef}
+}]\index{vmin@{vmin}!Gui@{Gui}}\index{Gui@{Gui}!vmin@{vmin}}\item[{\em 
+\hypertarget{namespaceGui_73e95325ae60556061676676af19d2ce39ebda0c9b725b402f1996019a1d7219}{
+vmin}
+\label{namespaceGui_73e95325ae60556061676676af19d2ce39ebda0c9b725b402f1996019a1d7219}
+}]\index{vmax@{vmax}!Gui@{Gui}}\index{Gui@{Gui}!vmax@{vmax}}\item[{\em 
+\hypertarget{namespaceGui_73e95325ae60556061676676af19d2ce7a7595b4665bd1c700c16f438914b1c2}{
+vmax}
+\label{namespaceGui_73e95325ae60556061676676af19d2ce7a7595b4665bd1c700c16f438914b1c2}
+}]\index{size@{size}!Gui@{Gui}}\index{Gui@{Gui}!size@{size}}\item[{\em 
+\hypertarget{namespaceGui_73e95325ae60556061676676af19d2ce3484dc570f6b21a8f58abb6ae34d29f3}{
+size}
+\label{namespaceGui_73e95325ae60556061676676af19d2ce3484dc570f6b21a8f58abb6ae34d29f3}
+}]\index{sizevar@{sizevar}!Gui@{Gui}}\index{Gui@{Gui}!sizevar@{sizevar}}\item[{\em 
+\hypertarget{namespaceGui_73e95325ae60556061676676af19d2ceda84abf2f568ef18c718f27019c49e8b}{
+sizevar}
+\label{namespaceGui_73e95325ae60556061676676af19d2ceda84abf2f568ef18c718f27019c49e8b}
+}]\index{massvar@{massvar}!Gui@{Gui}}\index{Gui@{Gui}!massvar@{massvar}}\item[{\em 
+\hypertarget{namespaceGui_73e95325ae60556061676676af19d2ce52d80c5df1bdcbb5f2b5abce88c13544}{
+massvar}
+\label{namespaceGui_73e95325ae60556061676676af19d2ce52d80c5df1bdcbb5f2b5abce88c13544}
+}]\index{maxpointprm@{maxpointprm}!Gui@{Gui}}\index{Gui@{Gui}!maxpointprm@{maxpointprm}}\item[{\em 
+\hypertarget{namespaceGui_73e95325ae60556061676676af19d2ceb958cff51b2f1a035ac14a391432f6b5}{
+maxpointprm}
+\label{namespaceGui_73e95325ae60556061676676af19d2ceb958cff51b2f1a035ac14a391432f6b5}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 58 of file gui.h.\hypertarget{namespaceGui_2f09cab6f9b07748793d52c1f5da226f}{
+\index{Gui@{Gui}!ShowPars@{ShowPars}}
+\index{ShowPars@{ShowPars}!Gui@{Gui}}
+\subsubsection[{ShowPars}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Gui::ShowPars}}}
+\label{namespaceGui_2f09cab6f9b07748793d52c1f5da226f}
+
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{showRun@{showRun}!Gui@{Gui}}\index{Gui@{Gui}!showRun@{showRun}}\item[{\em 
+\hypertarget{namespaceGui_2f09cab6f9b07748793d52c1f5da226f88ba8810c6007532782eeda363ac29ea}{
+showRun}
+\label{namespaceGui_2f09cab6f9b07748793d52c1f5da226f88ba8810c6007532782eeda363ac29ea}
+}]\index{showAxes@{showAxes}!Gui@{Gui}}\index{Gui@{Gui}!showAxes@{showAxes}}\item[{\em 
+\hypertarget{namespaceGui_2f09cab6f9b07748793d52c1f5da226ffcc3d55c092a1e5aaa63df02c7923a7c}{
+showAxes}
+\label{namespaceGui_2f09cab6f9b07748793d52c1f5da226ffcc3d55c092a1e5aaa63df02c7923a7c}
+}]\index{showSpheres@{showSpheres}!Gui@{Gui}}\index{Gui@{Gui}!showSpheres@{showSpheres}}\item[{\em 
+\hypertarget{namespaceGui_2f09cab6f9b07748793d52c1f5da226f221c537fe63c85bfcad64bbbc6559a02}{
+showSpheres}
+\label{namespaceGui_2f09cab6f9b07748793d52c1f5da226f221c537fe63c85bfcad64bbbc6559a02}
+}]\index{showBonds@{showBonds}!Gui@{Gui}}\index{Gui@{Gui}!showBonds@{showBonds}}\item[{\em 
+\hypertarget{namespaceGui_2f09cab6f9b07748793d52c1f5da226fbb074a852eb37c6896351d6788d2b07f}{
+showBonds}
+\label{namespaceGui_2f09cab6f9b07748793d52c1f5da226fbb074a852eb37c6896351d6788d2b07f}
+}]\index{showGrid@{showGrid}!Gui@{Gui}}\index{Gui@{Gui}!showGrid@{showGrid}}\item[{\em 
+\hypertarget{namespaceGui_2f09cab6f9b07748793d52c1f5da226ff34ab26b205572ee526595308176766b}{
+showGrid}
+\label{namespaceGui_2f09cab6f9b07748793d52c1f5da226ff34ab26b205572ee526595308176766b}
+}]\index{showNodes@{showNodes}!Gui@{Gui}}\index{Gui@{Gui}!showNodes@{showNodes}}\item[{\em 
+\hypertarget{namespaceGui_2f09cab6f9b07748793d52c1f5da226ffd177c34930f6ca01edec2b4c262d066}{
+showNodes}
+\label{namespaceGui_2f09cab6f9b07748793d52c1f5da226ffd177c34930f6ca01edec2b4c262d066}
+}]\index{showVariables@{showVariables}!Gui@{Gui}}\index{Gui@{Gui}!showVariables@{showVariables}}\item[{\em 
+\hypertarget{namespaceGui_2f09cab6f9b07748793d52c1f5da226f9bec9b0482dd40cf446ecfaa335fc5dd}{
+showVariables}
+\label{namespaceGui_2f09cab6f9b07748793d52c1f5da226f9bec9b0482dd40cf446ecfaa335fc5dd}
+}]\index{showBoundaryVertexes@{showBoundaryVertexes}!Gui@{Gui}}\index{Gui@{Gui}!showBoundaryVertexes@{showBoundaryVertexes}}\item[{\em 
+\hypertarget{namespaceGui_2f09cab6f9b07748793d52c1f5da226f9893b077fb4e3f60fd47a5545ac43401}{
+showBoundaryVertexes}
+\label{namespaceGui_2f09cab6f9b07748793d52c1f5da226f9893b077fb4e3f60fd47a5545ac43401}
+}]\index{showBoundaryVectors@{showBoundaryVectors}!Gui@{Gui}}\index{Gui@{Gui}!showBoundaryVectors@{showBoundaryVectors}}\item[{\em 
+\hypertarget{namespaceGui_2f09cab6f9b07748793d52c1f5da226f04c26d2317ac9b7b77dcd086bfd5981a}{
+showBoundaryVectors}
+\label{namespaceGui_2f09cab6f9b07748793d52c1f5da226f04c26d2317ac9b7b77dcd086bfd5981a}
+}]\index{showToolVertexes@{showToolVertexes}!Gui@{Gui}}\index{Gui@{Gui}!showToolVertexes@{showToolVertexes}}\item[{\em 
+\hypertarget{namespaceGui_2f09cab6f9b07748793d52c1f5da226fa071404b1051486dba9a6c005d91beb7}{
+showToolVertexes}
+\label{namespaceGui_2f09cab6f9b07748793d52c1f5da226fa071404b1051486dba9a6c005d91beb7}
+}]\index{showBoundaryFaceCenters@{showBoundaryFaceCenters}!Gui@{Gui}}\index{Gui@{Gui}!showBoundaryFaceCenters@{showBoundaryFaceCenters}}\item[{\em 
+\hypertarget{namespaceGui_2f09cab6f9b07748793d52c1f5da226f0c22024f321328952c15d061ef0bd148}{
+showBoundaryFaceCenters}
+\label{namespaceGui_2f09cab6f9b07748793d52c1f5da226f0c22024f321328952c15d061ef0bd148}
+}]\index{showBoundaryFaces@{showBoundaryFaces}!Gui@{Gui}}\index{Gui@{Gui}!showBoundaryFaces@{showBoundaryFaces}}\item[{\em 
+\hypertarget{namespaceGui_2f09cab6f9b07748793d52c1f5da226f3d92120b419e05044536dd5700c9ae33}{
+showBoundaryFaces}
+\label{namespaceGui_2f09cab6f9b07748793d52c1f5da226f3d92120b419e05044536dd5700c9ae33}
+}]\index{showBoundaryGrid@{showBoundaryGrid}!Gui@{Gui}}\index{Gui@{Gui}!showBoundaryGrid@{showBoundaryGrid}}\item[{\em 
+\hypertarget{namespaceGui_2f09cab6f9b07748793d52c1f5da226feae66931b47abd217b75a27118eadc54}{
+showBoundaryGrid}
+\label{namespaceGui_2f09cab6f9b07748793d52c1f5da226feae66931b47abd217b75a27118eadc54}
+}]\index{showToolGrid@{showToolGrid}!Gui@{Gui}}\index{Gui@{Gui}!showToolGrid@{showToolGrid}}\item[{\em 
+\hypertarget{namespaceGui_2f09cab6f9b07748793d52c1f5da226f602eae4a5644cb174d1a0aede0ea9d79}{
+showToolGrid}
+\label{namespaceGui_2f09cab6f9b07748793d52c1f5da226f602eae4a5644cb174d1a0aede0ea9d79}
+}]\index{showFrame@{showFrame}!Gui@{Gui}}\index{Gui@{Gui}!showFrame@{showFrame}}\item[{\em 
+\hypertarget{namespaceGui_2f09cab6f9b07748793d52c1f5da226fd2100839aa7915ca76715fdae62d1f97}{
+showFrame}
+\label{namespaceGui_2f09cab6f9b07748793d52c1f5da226fd2100839aa7915ca76715fdae62d1f97}
+}]\index{showCellCenters@{showCellCenters}!Gui@{Gui}}\index{Gui@{Gui}!showCellCenters@{showCellCenters}}\item[{\em 
+\hypertarget{namespaceGui_2f09cab6f9b07748793d52c1f5da226fb9a4fd2e4815ee9755c0ba56fcd180f0}{
+showCellCenters}
+\label{namespaceGui_2f09cab6f9b07748793d52c1f5da226fb9a4fd2e4815ee9755c0ba56fcd180f0}
+}]\index{showFaceCenters@{showFaceCenters}!Gui@{Gui}}\index{Gui@{Gui}!showFaceCenters@{showFaceCenters}}\item[{\em 
+\hypertarget{namespaceGui_2f09cab6f9b07748793d52c1f5da226fe5828ec6c23ff967bc0f69c9c8613e1f}{
+showFaceCenters}
+\label{namespaceGui_2f09cab6f9b07748793d52c1f5da226fe5828ec6c23ff967bc0f69c9c8613e1f}
+}]\index{showIsoSurfaces@{showIsoSurfaces}!Gui@{Gui}}\index{Gui@{Gui}!showIsoSurfaces@{showIsoSurfaces}}\item[{\em 
+\hypertarget{namespaceGui_2f09cab6f9b07748793d52c1f5da226fbec48521a5502294ab480116306356a7}{
+showIsoSurfaces}
+\label{namespaceGui_2f09cab6f9b07748793d52c1f5da226fbec48521a5502294ab480116306356a7}
+}]\index{dumpWindow@{dumpWindow}!Gui@{Gui}}\index{Gui@{Gui}!dumpWindow@{dumpWindow}}\item[{\em 
+\hypertarget{namespaceGui_2f09cab6f9b07748793d52c1f5da226fe993c569699327e8e0f649c732470350}{
+dumpWindow}
+\label{namespaceGui_2f09cab6f9b07748793d52c1f5da226fe993c569699327e8e0f649c732470350}
+}]\index{maxshowpars@{maxshowpars}!Gui@{Gui}}\index{Gui@{Gui}!maxshowpars@{maxshowpars}}\item[{\em 
+\hypertarget{namespaceGui_2f09cab6f9b07748793d52c1f5da226fc4121609defd78f80617154eab1a4c92}{
+maxshowpars}
+\label{namespaceGui_2f09cab6f9b07748793d52c1f5da226fc4121609defd78f80617154eab1a4c92}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 129 of file gui.h.\hypertarget{namespaceGui_6fef08ea87190324ff605e26b49552a3}{
+\index{Gui@{Gui}!SurfDispType@{SurfDispType}}
+\index{SurfDispType@{SurfDispType}!Gui@{Gui}}
+\subsubsection[{SurfDispType}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Gui::SurfDispType}}}
+\label{namespaceGui_6fef08ea87190324ff605e26b49552a3}
+
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{gridlines@{gridlines}!Gui@{Gui}}\index{Gui@{Gui}!gridlines@{gridlines}}\item[{\em 
+\hypertarget{namespaceGui_6fef08ea87190324ff605e26b49552a389c37bfa1a2dcd397816581697289c9e}{
+gridlines}
+\label{namespaceGui_6fef08ea87190324ff605e26b49552a389c37bfa1a2dcd397816581697289c9e}
+}]\index{solidsurface@{solidsurface}!Gui@{Gui}}\index{Gui@{Gui}!solidsurface@{solidsurface}}\item[{\em 
+\hypertarget{namespaceGui_6fef08ea87190324ff605e26b49552a39291c3e9f7c0474ca010c12033d49306}{
+solidsurface}
+\label{namespaceGui_6fef08ea87190324ff605e26b49552a39291c3e9f7c0474ca010c12033d49306}
+}]\index{maxsurfdisptypes@{maxsurfdisptypes}!Gui@{Gui}}\index{Gui@{Gui}!maxsurfdisptypes@{maxsurfdisptypes}}\item[{\em 
+\hypertarget{namespaceGui_6fef08ea87190324ff605e26b49552a31bd3eba675110cb7cd711a4ecd20c2ed}{
+maxsurfdisptypes}
+\label{namespaceGui_6fef08ea87190324ff605e26b49552a31bd3eba675110cb7cd711a4ecd20c2ed}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 81 of file gui.h.
+
+\subsection{Function Documentation}
+\hypertarget{namespaceGui_bc885686e998a79d9c98f86c678d6e69}{
+\index{Gui@{Gui}!animate@{animate}}
+\index{animate@{animate}!Gui@{Gui}}
+\subsubsection[{animate}]{\setlength{\rightskip}{0pt plus 5cm}void Gui::animate ()}}
+\label{namespaceGui_bc885686e998a79d9c98f86c678d6e69}
+
+
+
+
+DDD glutIdleFunc(NULL);//Causes segmentation fault (!?)
+
+\hyperlink{namespaceGui_5b94ce6e857635065a0c2053b95529b5}{refresh()}; 
+
+Definition at line 1851 of file gui.cc.
+
+References animation, display(), domain, dumpwindow(), dumpWindow, ESC, finished, iwdump, nwdump, Run::option, Domain::run(), showpar, showRun, and Run::time.
+
+Referenced by menu().\hypertarget{namespaceGui_90f0cf49fd3ea753450fa24a2a9675af}{
+\index{Gui@{Gui}!commandMode@{commandMode}}
+\index{commandMode@{commandMode}!Gui@{Gui}}
+\subsubsection[{commandMode}]{\setlength{\rightskip}{0pt plus 5cm}void Gui::commandMode ()}}
+\label{namespaceGui_90f0cf49fd3ea753450fa24a2a9675af}
+
+
+
+
+Definition at line 1465 of file gui.cc.
+
+References consoleMenu(), dumpwindow(), Exit(), helpCommand(), MAXLINLEN, Quit(), runmany(), setBackgroundRun(), setForegroundRun(), switchColorScheme(), toggleSpheres(), and toggleWindowDump().
+
+Referenced by keyboard().\hypertarget{namespaceGui_8b9da92ca9a1573368c0a085b1121d54}{
+\index{Gui@{Gui}!consoleMenu@{consoleMenu}}
+\index{consoleMenu@{consoleMenu}!Gui@{Gui}}
+\subsubsection[{consoleMenu}]{\setlength{\rightskip}{0pt plus 5cm}void Gui::consoleMenu ()}}
+\label{namespaceGui_8b9da92ca9a1573368c0a085b1121d54}
+
+
+
+
+Definition at line 1360 of file gui.cc.
+
+References displayMenu(), MAXLINLEN, and menu().
+
+Referenced by commandMode(), and keyboard().\hypertarget{namespaceGui_cb047c1330f58d16c1f9336aef134bbf}{
+\index{Gui@{Gui}!display@{display}}
+\index{display@{display}!Gui@{Gui}}
+\subsubsection[{display}]{\setlength{\rightskip}{0pt plus 5cm}void Gui::display ()}}
+\label{namespaceGui_cb047c1330f58d16c1f9336aef134bbf}
+
+
+
+
+Definition at line 1530 of file gui.cc.
+
+References blue, Gui::Scene::color, colorByBoundary, colorByMass, colorByTime, colorByType, Molecule::Coordinates(), Collection$<$ Element $>$::Current(), displayAxes(), domain, dpy, faces, Gui::Scene::frame, frame, getElementColor(), Collection$<$ Element $>$::goFirst(), Collection$<$ Element $>$::goNext(), green, init(), Collection$<$ Element $>$::isFirst(), Potential::lengthscale(), Gui::Scene::Scene::Frame::line, Species::Specie::Mass(), Gui::Scene::Scene::Color::maxvalue, Gui::Scene::mesh, Gui::Scene::Scene::Color::minvalue, Domain::Molecules(), Gui::Scene::Scene::Mesh::node, nodes, Collection$<$ Element $>$::number(), Run::option, Palette::pickcolor(), REAL, red, refresh(), rotx, roty, scene, Gui::Scene::Scene::Color::scheme, showBoundaryGrid, showBoundaryVertexes, showFrame, showGrid, showNodes, showpar, showSpheres, Species::Specie::Size(), size, Species::species, thickness, Run::time, tx, ty, Molecule::Type(), win, xmax, xmin, and zoom.
+
+Referenced by animate().\hypertarget{namespaceGui_2e3009086a3b9c82c98613657675c89a}{
+\index{Gui@{Gui}!displayAxes@{displayAxes}}
+\index{displayAxes@{displayAxes}!Gui@{Gui}}
+\subsubsection[{displayAxes}]{\setlength{\rightskip}{0pt plus 5cm}void Gui::displayAxes ()}}
+\label{namespaceGui_2e3009086a3b9c82c98613657675c89a}
+
+
+
+
+Definition at line 1181 of file gui.cc.
+
+References arrowheight, arrowidth, axes, axeswidth, lx, ly, lz, showAxes, showpar, xaxislength, xo, yaxislength, and zaxislength.
+
+Referenced by display().\hypertarget{namespaceGui_5780bf157b4553f0002f9c0bac80c57c}{
+\index{Gui@{Gui}!displayMenu@{displayMenu}}
+\index{displayMenu@{displayMenu}!Gui@{Gui}}
+\subsubsection[{displayMenu}]{\setlength{\rightskip}{0pt plus 5cm}void Gui::displayMenu ()}}
+\label{namespaceGui_5780bf157b4553f0002f9c0bac80c57c}
+
+
+
+
+Definition at line 1334 of file gui.cc.
+
+Referenced by consoleMenu().\hypertarget{namespaceGui_3a5bf26c85086313b175ec4901ac04bd}{
+\index{Gui@{Gui}!displaymessage@{displaymessage}}
+\index{displaymessage@{displaymessage}!Gui@{Gui}}
+\subsubsection[{displaymessage}]{\setlength{\rightskip}{0pt plus 5cm}void Gui::displaymessage (char $\ast$ {\em msg})}}
+\label{namespaceGui_3a5bf26c85086313b175ec4901ac04bd}
+
+
+
+
+Definition at line 2162 of file gui.cc.\hypertarget{namespaceGui_f509da960f39882c423601210a118a96}{
+\index{Gui@{Gui}!drawSegment@{drawSegment}}
+\index{drawSegment@{drawSegment}!Gui@{Gui}}
+\subsubsection[{drawSegment}]{\setlength{\rightskip}{0pt plus 5cm}void Gui::drawSegment (REAL $\ast$ {\em x}, \/  REAL $\ast$ {\em y})}}
+\label{namespaceGui_f509da960f39882c423601210a118a96}
+
+
+\hypertarget{namespaceGui_6ad1b72a8dc01fe97af9fe591a365a5e}{
+\index{Gui@{Gui}!dumpwindow@{dumpwindow}}
+\index{dumpwindow@{dumpwindow}!Gui@{Gui}}
+\subsubsection[{dumpwindow}]{\setlength{\rightskip}{0pt plus 5cm}void Gui::dumpwindow ()}}
+\label{namespaceGui_6ad1b72a8dc01fe97af9fe591a365a5e}
+
+
+
+
+Definition at line 1461 of file gui.cc.
+
+References windowname, and IO::xwd().
+
+Referenced by animate(), and commandMode().\hypertarget{namespaceGui_992c5b9e252d42f351c0b4559f3dc594}{
+\index{Gui@{Gui}!Exit@{Exit}}
+\index{Exit@{Exit}!Gui@{Gui}}
+\subsubsection[{Exit}]{\setlength{\rightskip}{0pt plus 5cm}void Gui::Exit ()}}
+\label{namespaceGui_992c5b9e252d42f351c0b4559f3dc594}
+
+
+
+
+Definition at line 1229 of file gui.cc.
+
+References animation, and MAXLINLEN.
+
+Referenced by commandMode(), and keyboard().\hypertarget{namespaceGui_0a78be634dd9a0fd330799e5d6a2bada}{
+\index{Gui@{Gui}!finish@{finish}}
+\index{finish@{finish}!Gui@{Gui}}
+\subsubsection[{finish}]{\setlength{\rightskip}{0pt plus 5cm}void Gui::finish ()}}
+\label{namespaceGui_0a78be634dd9a0fd330799e5d6a2bada}
+
+
+\hypertarget{namespaceGui_b4972a7318cbe5e96312527816694e1e}{
+\index{Gui@{Gui}!getElementColor@{getElementColor}}
+\index{getElementColor@{getElementColor}!Gui@{Gui}}
+\subsubsection[{getElementColor}]{\setlength{\rightskip}{0pt plus 5cm}void Gui::getElementColor (int {\em element\_\-type}, \/  REAL {\em rgbcolor}\mbox{[}$\,$\mbox{]})}}
+\label{namespaceGui_b4972a7318cbe5e96312527816694e1e}
+
+
+
+
+Definition at line 2172 of file gui.cc.
+
+References disp, and maxelements.
+
+Referenced by display().\hypertarget{namespaceGui_ecc4bc7e909d123787c57982a5059d37}{
+\index{Gui@{Gui}!getScaling@{getScaling}}
+\index{getScaling@{getScaling}!Gui@{Gui}}
+\subsubsection[{getScaling}]{\setlength{\rightskip}{0pt plus 5cm}void Gui::getScaling (REAL \& {\em lmin}, \/  REAL \& {\em lmax})}}
+\label{namespaceGui_ecc4bc7e909d123787c57982a5059d37}
+
+
+\hypertarget{namespaceGui_e7d03455e3e501e3e58965a138c3aa6c}{
+\index{Gui@{Gui}!getScaling@{getScaling}}
+\index{getScaling@{getScaling}!Gui@{Gui}}
+\subsubsection[{getScaling}]{\setlength{\rightskip}{0pt plus 5cm}void Gui::getScaling (double \& {\em l0}, \/  double \& {\em l1})}}
+\label{namespaceGui_e7d03455e3e501e3e58965a138c3aa6c}
+
+
+
+
+Definition at line 1212 of file gui.cc.
+
+References lmax, and lmin.
+
+Referenced by reshape().\hypertarget{namespaceGui_6303d84a2defe353bcdde5e2d64c54fc}{
+\index{Gui@{Gui}!getXLimits@{getXLimits}}
+\index{getXLimits@{getXLimits}!Gui@{Gui}}
+\subsubsection[{getXLimits}]{\setlength{\rightskip}{0pt plus 5cm}void Gui::getXLimits (REAL $\ast$ {\em xmin}, \/  REAL $\ast$ {\em xmax})}}
+\label{namespaceGui_6303d84a2defe353bcdde5e2d64c54fc}
+
+
+\hypertarget{namespaceGui_ea3e30468c8a97723f3a69e8810b4b38}{
+\index{Gui@{Gui}!getXLimits@{getXLimits}}
+\index{getXLimits@{getXLimits}!Gui@{Gui}}
+\subsubsection[{getXLimits}]{\setlength{\rightskip}{0pt plus 5cm}void Gui::getXLimits (double $\ast$ {\em x0}, \/  double $\ast$ {\em x1})}}
+\label{namespaceGui_ea3e30468c8a97723f3a69e8810b4b38}
+
+
+
+
+Definition at line 1220 of file gui.cc.
+
+References xmax, and xmin.\hypertarget{namespaceGui_88a5c559d5b4309bd2c3d1ff11f93692}{
+\index{Gui@{Gui}!helpCommand@{helpCommand}}
+\index{helpCommand@{helpCommand}!Gui@{Gui}}
+\subsubsection[{helpCommand}]{\setlength{\rightskip}{0pt plus 5cm}void Gui::helpCommand ()}}
+\label{namespaceGui_88a5c559d5b4309bd2c3d1ff11f93692}
+
+
+
+
+Definition at line 1871 of file gui.cc.
+
+References Run::outputname.
+
+Referenced by commandMode().\hypertarget{namespaceGui_0e5d9f6cb4fd8f9ddb9f214e12b4e6e5}{
+\index{Gui@{Gui}!helpDisplay@{helpDisplay}}
+\index{helpDisplay@{helpDisplay}!Gui@{Gui}}
+\subsubsection[{helpDisplay}]{\setlength{\rightskip}{0pt plus 5cm}void Gui::helpDisplay ()}}
+\label{namespaceGui_0e5d9f6cb4fd8f9ddb9f214e12b4e6e5}
+
+
+
+
+Definition at line 175 of file gui.cc.
+
+References configfile, and Run::outputname.
+
+Referenced by init(), keyboard(), and menu().\hypertarget{namespaceGui_c7a8f5580648139e0b12062692cdf4d5}{
+\index{Gui@{Gui}!init@{init}}
+\index{init@{init}!Gui@{Gui}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}void Gui::init (int {\em argc}, \/  char $\ast$ {\em argv}\mbox{[}$\,$\mbox{]}, \/  {\bf Domain} $\ast$ {\em newdomain})}}
+\label{namespaceGui_c7a8f5580648139e0b12062692cdf4d5}
+
+
+
+
+Definition at line 91 of file gui.cc.
+
+References animation, attributeList, Gui::Scene::color, colorByMass, domain, dpy, dumpWindow, ERROR, finished, Gui::WindowGeom::height, helpDisplay(), initdisp(), lastx, lasty, lastz, Materials(), mouseButtons, Run::option, query\_\-extension(), rotx, roty, scene, Gui::Scene::Scene::Color::scheme, showAxes, showBonds, showBoundaryFaceCenters, showBoundaryFaces, showBoundaryGrid, showBoundaryVectors, showBoundaryVertexes, showCellCenters, showFaceCenters, showFrame, showGrid, showNodes, showpar, showRun, showSpheres, showToolGrid, showToolVertexes, showVariables, tx, ty, wdtime, Gui::WindowGeom::width, win, window, windowname, and zoom.
+
+Referenced by display(), and main().\hypertarget{namespaceGui_6d4b87c2b4664134825955c4ff89f2df}{
+\index{Gui@{Gui}!initdisp@{initdisp}}
+\index{initdisp@{initdisp}!Gui@{Gui}}
+\subsubsection[{initdisp}]{\setlength{\rightskip}{0pt plus 5cm}void Gui::initdisp ()}}
+\label{namespaceGui_6d4b87c2b4664134825955c4ff89f2df}
+
+
+
+
+DDD 
+
+Definition at line 701 of file gui.cc.
+
+References arrowheight, arrowidth, axes, axeswidth, blue, brown, cells, colorscale, DIM, domain, dx, dy, dz, edges, faces, frame, Gui::Scene::frame, green, Gui::WindowGeom::height, LARGE, length, Gui::Scene::Scene::Mesh::line, Gui::Scene::Scene::Frame::line, lmax, lmin, lx, ly, lz, magenta, MAX\_\-WINDOW\_\-HEIGHT, MAX\_\-WINDOW\_\-WIDTH, maxcolor, maxelements, mesh, Gui::Scene::mesh, Domain::Molecules(), Gui::Scene::Scene::Mesh::node, nodes, Collection$<$ Element $>$::number(), Run::option, readconf(), REAL, red, Gui::ColorScale::relative, rgbcolor, scene, setElementColor(), Domain::setMaxBound(), Domain::setMinBound(), size, skyblue, step, thickness, vecval, Gui::WindowGeom::width, window, WINDOW\_\-SIZE, xaxislength, xmax, xmin, xo, yaxislength, yellow, zaxislength, and zoom.
+
+Referenced by init().\hypertarget{namespaceGui_6b37f7051aba2059c1b5b91694708408}{
+\index{Gui@{Gui}!InitMaterials@{InitMaterials}}
+\index{InitMaterials@{InitMaterials}!Gui@{Gui}}
+\subsubsection[{InitMaterials}]{\setlength{\rightskip}{0pt plus 5cm}void Gui::InitMaterials (void)}}
+\label{namespaceGui_6b37f7051aba2059c1b5b91694708408}
+
+
+\hypertarget{namespaceGui_65935dbee960e580e4aa401013022f14}{
+\index{Gui@{Gui}!keyboard@{keyboard}}
+\index{keyboard@{keyboard}!Gui@{Gui}}
+\subsubsection[{keyboard}]{\setlength{\rightskip}{0pt plus 5cm}void Gui::keyboard (unsigned char {\em key}, \/  int {\em x}, \/  int {\em y})}}
+\label{namespaceGui_65935dbee960e580e4aa401013022f14}
+
+
+\hypertarget{namespaceGui_8c6bd3add9cc9a25f67c4bcb75fb3c11}{
+\index{Gui@{Gui}!keyboard@{keyboard}}
+\index{keyboard@{keyboard}!Gui@{Gui}}
+\subsubsection[{keyboard}]{\setlength{\rightskip}{0pt plus 5cm}void Gui::keyboard (unsigned int {\em key})}}
+\label{namespaceGui_8c6bd3add9cc9a25f67c4bcb75fb3c11}
+
+
+
+
+\hyperlink{namespaceGui_5b94ce6e857635065a0c2053b95529b5}{refresh()}; 
+
+Definition at line 1978 of file gui.cc.
+
+References animation, commandMode(), consoleMenu(), domain, ESC, Exit(), finished, helpDisplay(), MAXLINLEN, Run::option, Run::outputname, readconf(), Domain::run(), Domain::save(), showAxes, showBoundaryFaces, showBoundaryGrid, showBoundaryVectors, showBoundaryVertexes, showFrame, showGrid, showNodes, showpar, switchColorScheme(), Run::time, and zoom.\hypertarget{namespaceGui_14bb49f023f388f7b0ff25c7a9b963e2}{
+\index{Gui@{Gui}!Materials@{Materials}}
+\index{Materials@{Materials}!Gui@{Gui}}
+\subsubsection[{Materials}]{\setlength{\rightskip}{0pt plus 5cm}void Gui::Materials (int {\em argc}, \/  char $\ast$ {\em argv}\mbox{[}$\,$\mbox{]})}}
+\label{namespaceGui_14bb49f023f388f7b0ff25c7a9b963e2}
+
+
+
+
+Definition at line 818 of file gui.cc.
+
+References lz, Run::option, and xo.
+
+Referenced by init().\hypertarget{namespaceGui_b76fb09eeb57cd517ef9161f1d69b9a5}{
+\index{Gui@{Gui}!menu@{menu}}
+\index{menu@{menu}!Gui@{Gui}}
+\subsubsection[{menu}]{\setlength{\rightskip}{0pt plus 5cm}void Gui::menu (int {\em value})}}
+\label{namespaceGui_b76fb09eeb57cd517ef9161f1d69b9a5}
+
+
+
+
+Definition at line 1253 of file gui.cc.
+
+References ABOUT, animate(), animation, finished, helpDisplay(), showAxes, showBonds, showBoundaryFaceCenters, showBoundaryGrid, showBoundaryVectors, showBoundaryVertexes, showCellCenters, showFaceCenters, showGrid, showNodes, showpar, and showVariables.
+
+Referenced by consoleMenu().\hypertarget{namespaceGui_c6941f396ae4c5f4a14ed6f39820bd93}{
+\index{Gui@{Gui}!motion@{motion}}
+\index{motion@{motion}!Gui@{Gui}}
+\subsubsection[{motion}]{\setlength{\rightskip}{0pt plus 5cm}void Gui::motion (int {\em x}, \/  int {\em y})}}
+\label{namespaceGui_c6941f396ae4c5f4a14ed6f39820bd93}
+
+
+
+
+Definition at line 1954 of file gui.cc.
+
+References lastx, lasty, mouseButtons, REAL, rotx, roty, tx, ty, and zoom.\hypertarget{namespaceGui_3971df0804b9da39b2c9a1b40f708b50}{
+\index{Gui@{Gui}!mouse@{mouse}}
+\index{mouse@{mouse}!Gui@{Gui}}
+\subsubsection[{mouse}]{\setlength{\rightskip}{0pt plus 5cm}void Gui::mouse (int {\em button}, \/  int {\em state}, \/  int {\em x}, \/  int {\em y})}}
+\label{namespaceGui_3971df0804b9da39b2c9a1b40f708b50}
+
+
+
+
+Definition at line 1927 of file gui.cc.
+
+References lastx, lasty, LEFT\_\-BUTTON, MIDDLE\_\-BUTTON, mouseButtons, and RIGHT\_\-BUTTON.\hypertarget{namespaceGui_1bcce63e80eb6c25379b1902623ae885}{
+\index{Gui@{Gui}!printGridVecLimits@{printGridVecLimits}}
+\index{printGridVecLimits@{printGridVecLimits}!Gui@{Gui}}
+\subsubsection[{printGridVecLimits}]{\setlength{\rightskip}{0pt plus 5cm}void Gui::printGridVecLimits ()}}
+\label{namespaceGui_1bcce63e80eb6c25379b1902623ae885}
+
+
+\hypertarget{namespaceGui_193a20479572ecdce2ba9826ea1afa52}{
+\index{Gui@{Gui}!printGridXLimits@{printGridXLimits}}
+\index{printGridXLimits@{printGridXLimits}!Gui@{Gui}}
+\subsubsection[{printGridXLimits}]{\setlength{\rightskip}{0pt plus 5cm}void Gui::printGridXLimits ()}}
+\label{namespaceGui_193a20479572ecdce2ba9826ea1afa52}
+
+
+\hypertarget{namespaceGui_b12854bedf083987e0815e02f599ec45}{
+\index{Gui@{Gui}!printParticleVariables@{printParticleVariables}}
+\index{printParticleVariables@{printParticleVariables}!Gui@{Gui}}
+\subsubsection[{printParticleVariables}]{\setlength{\rightskip}{0pt plus 5cm}void Gui::printParticleVariables ()}}
+\label{namespaceGui_b12854bedf083987e0815e02f599ec45}
+
+
+\hypertarget{namespaceGui_a532192f836051be770c02dfd5b54379}{
+\index{Gui@{Gui}!printPartVelLimits@{printPartVelLimits}}
+\index{printPartVelLimits@{printPartVelLimits}!Gui@{Gui}}
+\subsubsection[{printPartVelLimits}]{\setlength{\rightskip}{0pt plus 5cm}void Gui::printPartVelLimits ()}}
+\label{namespaceGui_a532192f836051be770c02dfd5b54379}
+
+
+\hypertarget{namespaceGui_02455eabb69d94328ba20a3d8abd5239}{
+\index{Gui@{Gui}!printVariables@{printVariables}}
+\index{printVariables@{printVariables}!Gui@{Gui}}
+\subsubsection[{printVariables}]{\setlength{\rightskip}{0pt plus 5cm}void Gui::printVariables (int {\em n})}}
+\label{namespaceGui_02455eabb69d94328ba20a3d8abd5239}
+
+
+\hypertarget{namespaceGui_7fbca852fb0cacc6663ba5689441c628}{
+\index{Gui@{Gui}!query\_\-extension@{query\_\-extension}}
+\index{query\_\-extension@{query\_\-extension}!Gui@{Gui}}
+\subsubsection[{query\_\-extension}]{\setlength{\rightskip}{0pt plus 5cm}int Gui::query\_\-extension (char $\ast$ {\em extName})}}
+\label{namespaceGui_7fbca852fb0cacc6663ba5689441c628}
+
+
+
+
+Definition at line 78 of file gui.cc.
+
+Referenced by init().\hypertarget{namespaceGui_6fda3017d1da246375076a92d719888e}{
+\index{Gui@{Gui}!Quit@{Quit}}
+\index{Quit@{Quit}!Gui@{Gui}}
+\subsubsection[{Quit}]{\setlength{\rightskip}{0pt plus 5cm}void Gui::Quit ()}}
+\label{namespaceGui_6fda3017d1da246375076a92d719888e}
+
+
+
+
+Definition at line 1241 of file gui.cc.
+
+References animation, and MAXLINLEN.
+
+Referenced by commandMode().\hypertarget{namespaceGui_adc1ae9662345d502dd4bccf0ea58473}{
+\index{Gui@{Gui}!readconf@{readconf}}
+\index{readconf@{readconf}!Gui@{Gui}}
+\subsubsection[{readconf}]{\setlength{\rightskip}{0pt plus 5cm}void Gui::readconf ()}}
+\label{namespaceGui_adc1ae9662345d502dd4bccf0ea58473}
+
+
+
+
+Definition at line 259 of file gui.cc.
+
+References arrowheight, arrowidth, axeswidth, blue, brown, Gui::Scene::color, colorByMass, colorByType, Run::configfile, configfile, DIM, DOCTYPE, domain, dx, dy, dz, frame, Gui::Scene::frame, green, length, Gui::Scene::Scene::Frame::line, Gui::Scene::Scene::Mesh::line, lx, ly, lz, magenta, massvar, maxaxesprm, Domain::maxBound(), maxcolor, maxlineprm, MAXLINLEN, maxpointprm, maxshowpars, Gui::Scene::Scene::Color::maxvalue, mesh, Gui::Scene::mesh, Domain::minBound(), Gui::Scene::Scene::Color::minvalue, Gui::Scene::Scene::Mesh::node, nodes, Run::option, IO::parseWord(), REAL, red, rgbcolor, scene, Gui::Scene::Scene::Color::scheme, setElementColor(), showpar, showSpheres, size, sizevar, skyblue, step, thickness, variable, vecval, vmax, vmin, xaxislength, xmax, xmin, yaxislength, and zaxislength.
+
+Referenced by initdisp(), and keyboard().\hypertarget{namespaceGui_2dfb340ad9e98cedbf5e4ef8022da1b9}{
+\index{Gui@{Gui}!readparam@{readparam}}
+\index{readparam@{readparam}!Gui@{Gui}}
+\subsubsection[{readparam}]{\setlength{\rightskip}{0pt plus 5cm}int Gui::readparam (char $\ast$ {\em s}, \/  char $\ast$ {\em param}\mbox{[}$\,$\mbox{]}, \/  int {\em maxparam}, \/  char $\ast$ {\em filename}, \/  REAL {\em val}\mbox{[}$\,$\mbox{]})}}
+\label{namespaceGui_2dfb340ad9e98cedbf5e4ef8022da1b9}
+
+
+
+
+Definition at line 230 of file gui.cc.\hypertarget{namespaceGui_c367306deffcdaf711e6dfe0452b0b76}{
+\index{Gui@{Gui}!readparam@{readparam}}
+\index{readparam@{readparam}!Gui@{Gui}}
+\subsubsection[{readparam}]{\setlength{\rightskip}{0pt plus 5cm}int Gui::readparam (char $\ast$ {\em s}, \/  char $\ast$ {\em param}\mbox{[}$\,$\mbox{]}, \/  int {\em maxparam}, \/  char $\ast$ {\em filename}, \/  int {\em val}\mbox{[}$\,$\mbox{]})}}
+\label{namespaceGui_c367306deffcdaf711e6dfe0452b0b76}
+
+
+
+
+Definition at line 198 of file gui.cc.\hypertarget{namespaceGui_5b94ce6e857635065a0c2053b95529b5}{
+\index{Gui@{Gui}!refresh@{refresh}}
+\index{refresh@{refresh}!Gui@{Gui}}
+\subsubsection[{refresh}]{\setlength{\rightskip}{0pt plus 5cm}void Gui::refresh ()}}
+\label{namespaceGui_5b94ce6e857635065a0c2053b95529b5}
+
+
+
+
+Definition at line 689 of file gui.cc.
+
+Referenced by display().\hypertarget{namespaceGui_fe299b50153348bf53b6910e74098c42}{
+\index{Gui@{Gui}!reshape@{reshape}}
+\index{reshape@{reshape}!Gui@{Gui}}
+\subsubsection[{reshape}]{\setlength{\rightskip}{0pt plus 5cm}void Gui::reshape (int {\em w}, \/  int {\em h})}}
+\label{namespaceGui_fe299b50153348bf53b6910e74098c42}
+
+
+
+
+Definition at line 1890 of file gui.cc.
+
+References getScaling(), lmax, and lmin.\hypertarget{namespaceGui_225eb7edaace31eb6cc4ec3173b2a703}{
+\index{Gui@{Gui}!run@{run}}
+\index{run@{run}!Gui@{Gui}}
+\subsubsection[{run}]{\setlength{\rightskip}{0pt plus 5cm}void Gui::run ()}}
+\label{namespaceGui_225eb7edaace31eb6cc4ec3173b2a703}
+
+
+
+
+Definition at line 2159 of file gui.cc.
+
+Referenced by main().\hypertarget{namespaceGui_7799b76168d5342d97a7db05630b4c3a}{
+\index{Gui@{Gui}!runmany@{runmany}}
+\index{runmany@{runmany}!Gui@{Gui}}
+\subsubsection[{runmany}]{\setlength{\rightskip}{0pt plus 5cm}void Gui::runmany ()}}
+\label{namespaceGui_7799b76168d5342d97a7db05630b4c3a}
+
+
+
+
+Definition at line 1392 of file gui.cc.
+
+References domain, and Domain::run().
+
+Referenced by commandMode().\hypertarget{namespaceGui_dd6f6cfa5773cf46c29030ef50a87a06}{
+\index{Gui@{Gui}!selectVariable@{selectVariable}}
+\index{selectVariable@{selectVariable}!Gui@{Gui}}
+\subsubsection[{selectVariable}]{\setlength{\rightskip}{0pt plus 5cm}void Gui::selectVariable ()}}
+\label{namespaceGui_dd6f6cfa5773cf46c29030ef50a87a06}
+
+
+\hypertarget{namespaceGui_8ade665fa0c7e87786e08242f88eff40}{
+\index{Gui@{Gui}!setBackgroundRun@{setBackgroundRun}}
+\index{setBackgroundRun@{setBackgroundRun}!Gui@{Gui}}
+\subsubsection[{setBackgroundRun}]{\setlength{\rightskip}{0pt plus 5cm}void Gui::setBackgroundRun ()}}
+\label{namespaceGui_8ade665fa0c7e87786e08242f88eff40}
+
+
+
+
+Definition at line 1376 of file gui.cc.
+
+References showpar, and showRun.
+
+Referenced by commandMode().\hypertarget{namespaceGui_7ff1dbc60509be2005c1732738066a69}{
+\index{Gui@{Gui}!setElementColor@{setElementColor}}
+\index{setElementColor@{setElementColor}!Gui@{Gui}}
+\subsubsection[{setElementColor}]{\setlength{\rightskip}{0pt plus 5cm}void Gui::setElementColor (int {\em element\_\-type}, \/  REAL {\em rgbcolor}\mbox{[}$\,$\mbox{]})}}
+\label{namespaceGui_7ff1dbc60509be2005c1732738066a69}
+
+
+
+
+Definition at line 2166 of file gui.cc.
+
+References disp, and maxelements.
+
+Referenced by initdisp(), and readconf().\hypertarget{namespaceGui_273a116825827361f5a21f8226589d35}{
+\index{Gui@{Gui}!setForegroundRun@{setForegroundRun}}
+\index{setForegroundRun@{setForegroundRun}!Gui@{Gui}}
+\subsubsection[{setForegroundRun}]{\setlength{\rightskip}{0pt plus 5cm}void Gui::setForegroundRun ()}}
+\label{namespaceGui_273a116825827361f5a21f8226589d35}
+
+
+
+
+Definition at line 1380 of file gui.cc.
+
+References showpar, and showRun.
+
+Referenced by commandMode().\hypertarget{namespaceGui_8e3c2fd257a10f8ebcb0bb5ca80960cf}{
+\index{Gui@{Gui}!showGridElements@{showGridElements}}
+\index{showGridElements@{showGridElements}!Gui@{Gui}}
+\subsubsection[{showGridElements}]{\setlength{\rightskip}{0pt plus 5cm}void Gui::showGridElements (int {\em ne}, \/  double $\ast$ {\em X}, \/  REAL {\em color}\mbox{[}$\,$\mbox{]})}}
+\label{namespaceGui_8e3c2fd257a10f8ebcb0bb5ca80960cf}
+
+
+\hypertarget{namespaceGui_ffad4636da327fdb77959a672413695a}{
+\index{Gui@{Gui}!showParticle@{showParticle}}
+\index{showParticle@{showParticle}!Gui@{Gui}}
+\subsubsection[{showParticle}]{\setlength{\rightskip}{0pt plus 5cm}void Gui::showParticle (double {\em vmn}, \/  double {\em vmx}, \/  double {\em val}, \/  double $\ast$ {\em x})}}
+\label{namespaceGui_ffad4636da327fdb77959a672413695a}
+
+
+
+
+Definition at line 952 of file gui.cc.
+
+References PI, REAL, and Palette::vav.\hypertarget{namespaceGui_5c3ecb8dde5ba2aea7ef1d89ef30f66a}{
+\index{Gui@{Gui}!showSphere@{showSphere}}
+\index{showSphere@{showSphere}!Gui@{Gui}}
+\subsubsection[{showSphere}]{\setlength{\rightskip}{0pt plus 5cm}void Gui::showSphere (double {\em vmn}, \/  double {\em vmx}, \/  double {\em val}, \/  double {\em rad}, \/  double $\ast$ {\em x})}}
+\label{namespaceGui_5c3ecb8dde5ba2aea7ef1d89ef30f66a}
+
+
+
+
+= \{ 0.6, 0.8, 0.3, 1.0 \}, 
+
+Definition at line 982 of file gui.cc.
+
+References PI, REAL, and Palette::vav.\hypertarget{namespaceGui_b2f8045a7d03276f092d05afd5be1e71}{
+\index{Gui@{Gui}!showVector@{showVector}}
+\index{showVector@{showVector}!Gui@{Gui}}
+\subsubsection[{showVector}]{\setlength{\rightskip}{0pt plus 5cm}void Gui::showVector (int {\em ivar}, \/  double $\ast$ {\em X})}}
+\label{namespaceGui_b2f8045a7d03276f092d05afd5be1e71}
+
+
+\hypertarget{namespaceGui_f8cee9625f9a733c48a9dce46829368a}{
+\index{Gui@{Gui}!showVector@{showVector}}
+\index{showVector@{showVector}!Gui@{Gui}}
+\subsubsection[{showVector}]{\setlength{\rightskip}{0pt plus 5cm}void Gui::showVector (double $\ast$ {\em x}, \/  double $\ast$ {\em v})}}
+\label{namespaceGui_f8cee9625f9a733c48a9dce46829368a}
+
+
+
+
+Definition at line 874 of file gui.cc.
+
+References length, and vecval.\hypertarget{namespaceGui_fc1dab157022a5a7a7570d5e14c7111d}{
+\index{Gui@{Gui}!showVectorComponent@{showVectorComponent}}
+\index{showVectorComponent@{showVectorComponent}!Gui@{Gui}}
+\subsubsection[{showVectorComponent}]{\setlength{\rightskip}{0pt plus 5cm}void Gui::showVectorComponent (int {\em ivar}, \/  int {\em icomp}, \/  double $\ast$ {\em X}, \/  double {\em vmn}, \/  double {\em vmx})}}
+\label{namespaceGui_fc1dab157022a5a7a7570d5e14c7111d}
+
+
+\hypertarget{namespaceGui_ab3a8248d4ef4514f77fd2a50d70728a}{
+\index{Gui@{Gui}!switchColorScheme@{switchColorScheme}}
+\index{switchColorScheme@{switchColorScheme}!Gui@{Gui}}
+\subsubsection[{switchColorScheme}]{\setlength{\rightskip}{0pt plus 5cm}void Gui::switchColorScheme ()}}
+\label{namespaceGui_ab3a8248d4ef4514f77fd2a50d70728a}
+
+
+
+
+Definition at line 1388 of file gui.cc.
+
+References Gui::Scene::color, maxColorSchemes, scene, and Gui::Scene::Scene::Color::scheme.
+
+Referenced by commandMode(), and keyboard().\hypertarget{namespaceGui_565addf34ff426cb969e2c56ed140d39}{
+\index{Gui@{Gui}!toggleSpheres@{toggleSpheres}}
+\index{toggleSpheres@{toggleSpheres}!Gui@{Gui}}
+\subsubsection[{toggleSpheres}]{\setlength{\rightskip}{0pt plus 5cm}void Gui::toggleSpheres ()}}
+\label{namespaceGui_565addf34ff426cb969e2c56ed140d39}
+
+
+
+
+Definition at line 1384 of file gui.cc.
+
+References showpar, and showSpheres.
+
+Referenced by commandMode().\hypertarget{namespaceGui_f65e92132f04c4a318e60fd3b4e7fa38}{
+\index{Gui@{Gui}!toggleWindowDump@{toggleWindowDump}}
+\index{toggleWindowDump@{toggleWindowDump}!Gui@{Gui}}
+\subsubsection[{toggleWindowDump}]{\setlength{\rightskip}{0pt plus 5cm}void Gui::toggleWindowDump ()}}
+\label{namespaceGui_f65e92132f04c4a318e60fd3b4e7fa38}
+
+
+
+
+Definition at line 1448 of file gui.cc.
+
+References dumpWindow, iwdump, nwdump, showpar, step, Run::time, and wdtime.
+
+Referenced by commandMode().\hypertarget{namespaceGui_84221f62186ae4133398e1b6a2475d09}{
+\index{Gui@{Gui}!writeData@{writeData}}
+\index{writeData@{writeData}!Gui@{Gui}}
+\subsubsection[{writeData}]{\setlength{\rightskip}{0pt plus 5cm}void Gui::writeData ()}}
+\label{namespaceGui_84221f62186ae4133398e1b6a2475d09}
+
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{namespaceGui_8e6788190d414f842e08826fcefa496c}{
+\index{Gui@{Gui}!animation@{animation}}
+\index{animation@{animation}!Gui@{Gui}}
+\subsubsection[{animation}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf Gui::animation}}}
+\label{namespaceGui_8e6788190d414f842e08826fcefa496c}
+
+
+
+
+Definition at line 29 of file gui.cc.
+
+Referenced by animate(), Exit(), init(), keyboard(), menu(), and Quit().\hypertarget{namespaceGui_a57d40ab8d008d5fd9e51830e254f2f8}{
+\index{Gui@{Gui}!attributeList@{attributeList}}
+\index{attributeList@{attributeList}!Gui@{Gui}}
+\subsubsection[{attributeList}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf Gui::attributeList}\mbox{[}$\,$\mbox{]}}}
+\label{namespaceGui_a57d40ab8d008d5fd9e51830e254f2f8}
+
+
+\textbf{Initial value:}
+
+\begin{Code}\begin{verbatim} 
+                {       GLX_RGBA, 
+                        GLX_RED_SIZE, 1, 
+                        GLX_GREEN_SIZE, 1,
+                        GLX_BLUE_SIZE, 1, 
+                        GLX_DOUBLEBUFFER, 
+                        GLX_DEPTH_SIZE, 1, 
+                        None 
+                }
+\end{verbatim}
+\end{Code}
+
+
+Definition at line 33 of file gui.cc.
+
+Referenced by init().\hypertarget{namespaceGui_d8cd720a8150fa90f583d180f6a83b99}{
+\index{Gui@{Gui}!axes@{axes}}
+\index{axes@{axes}!Gui@{Gui}}
+\subsubsection[{axes}]{\setlength{\rightskip}{0pt plus 5cm}REAL {\bf Gui::axes} ()}}
+\label{namespaceGui_d8cd720a8150fa90f583d180f6a83b99}
+
+
+
+
+Definition at line 43 of file gui.cc.
+
+Referenced by displayAxes(), and initdisp().\hypertarget{namespaceGui_f84d6dd43874bce8629a513c3cbaff73}{
+\index{Gui@{Gui}!bface\_\-root@{bface\_\-root}}
+\index{bface\_\-root@{bface\_\-root}!Gui@{Gui}}
+\subsubsection[{bface\_\-root}]{\setlength{\rightskip}{0pt plus 5cm}struct BFaceList$\ast$ {\bf Gui::bface\_\-root}}}
+\label{namespaceGui_f84d6dd43874bce8629a513c3cbaff73}
+
+
+
+
+Definition at line 70 of file gui.cc.\hypertarget{namespaceGui_4701d367312756fbf7b5f1950665a65a}{
+\index{Gui@{Gui}!colorscale@{colorscale}}
+\index{colorscale@{colorscale}!Gui@{Gui}}
+\subsubsection[{colorscale}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf ColorScale} {\bf Gui::colorscale}}}
+\label{namespaceGui_4701d367312756fbf7b5f1950665a65a}
+
+
+
+
+Definition at line 66 of file gui.cc.
+
+Referenced by initdisp().\hypertarget{namespaceGui_a46e6ad4b192cdaba9efb1ada2133df9}{
+\index{Gui@{Gui}!coms@{coms}}
+\index{coms@{coms}!Gui@{Gui}}
+\subsubsection[{coms}]{\setlength{\rightskip}{0pt plus 5cm}int $\ast$ {\bf Gui::coms}}}
+\label{namespaceGui_a46e6ad4b192cdaba9efb1ada2133df9}
+
+
+
+
+Definition at line 76 of file gui.cc.\hypertarget{namespaceGui_6702af97844e9ea00bded3ffb073c223}{
+\index{Gui@{Gui}!configfile@{configfile}}
+\index{configfile@{configfile}!Gui@{Gui}}
+\subsubsection[{configfile}]{\setlength{\rightskip}{0pt plus 5cm}char $\ast$ {\bf Gui::configfile} = (char$\ast$)\char`\"{}gui.cfg\char`\"{}}}
+\label{namespaceGui_6702af97844e9ea00bded3ffb073c223}
+
+
+
+
+Definition at line 26 of file gui.cc.
+
+Referenced by helpDisplay(), and readconf().\hypertarget{namespaceGui_a3da3aa4111d6dc26f3f40324c8f52d3}{
+\index{Gui@{Gui}!disp@{disp}}
+\index{disp@{disp}!Gui@{Gui}}
+\subsubsection[{disp}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ElementDisp} {\bf Gui::disp}}}
+\label{namespaceGui_a3da3aa4111d6dc26f3f40324c8f52d3}
+
+
+
+
+Definition at line 25 of file gui.cc.
+
+Referenced by getElementColor(), and setElementColor().\hypertarget{namespaceGui_60f6d8ae2497f90f2e3bad7a69c27f1d}{
+\index{Gui@{Gui}!domain@{domain}}
+\index{domain@{domain}!Gui@{Gui}}
+\subsubsection[{domain}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Domain}$\ast$ {\bf Gui::domain}}}
+\label{namespaceGui_60f6d8ae2497f90f2e3bad7a69c27f1d}
+
+
+
+
+Definition at line 24 of file gui.cc.
+
+Referenced by animate(), display(), init(), initdisp(), keyboard(), main(), readconf(), and runmany().\hypertarget{namespaceGui_7cffe1d85006be54ecc4edc51a9978be}{
+\index{Gui@{Gui}!dpy@{dpy}}
+\index{dpy@{dpy}!Gui@{Gui}}
+\subsubsection[{dpy}]{\setlength{\rightskip}{0pt plus 5cm}Display$\ast$ {\bf Gui::dpy}}}
+\label{namespaceGui_7cffe1d85006be54ecc4edc51a9978be}
+
+
+
+
+Definition at line 72 of file gui.cc.
+
+Referenced by display(), and init().\hypertarget{namespaceGui_447643e9fc2878cea10d5d51fe076fd8}{
+\index{Gui@{Gui}!dx@{dx}}
+\index{dx@{dx}!Gui@{Gui}}
+\subsubsection[{dx}]{\setlength{\rightskip}{0pt plus 5cm}REAL {\bf Gui::dx}}}
+\label{namespaceGui_447643e9fc2878cea10d5d51fe076fd8}
+
+
+
+
+Definition at line 43 of file gui.cc.
+
+Referenced by Domain::boundary(), initdisp(), Boundary::Inject(), Domain::interact(), Domain::interaction(), and readconf().\hypertarget{namespaceGui_9f9c724776b5bb133fbb54fbbaad8b6b}{
+\index{Gui@{Gui}!dy@{dy}}
+\index{dy@{dy}!Gui@{Gui}}
+\subsubsection[{dy}]{\setlength{\rightskip}{0pt plus 5cm}REAL {\bf Gui::dy}}}
+\label{namespaceGui_9f9c724776b5bb133fbb54fbbaad8b6b}
+
+
+
+
+Definition at line 43 of file gui.cc.
+
+Referenced by initdisp(), and readconf().\hypertarget{namespaceGui_08f884685f2bc61bf9ba9f3a20f809c5}{
+\index{Gui@{Gui}!dz@{dz}}
+\index{dz@{dz}!Gui@{Gui}}
+\subsubsection[{dz}]{\setlength{\rightskip}{0pt plus 5cm}REAL {\bf Gui::dz}}}
+\label{namespaceGui_08f884685f2bc61bf9ba9f3a20f809c5}
+
+
+
+
+Definition at line 43 of file gui.cc.
+
+Referenced by initdisp(), and readconf().\hypertarget{namespaceGui_d167a9a00b5fcd633d94be01594f97c6}{
+\index{Gui@{Gui}!finished@{finished}}
+\index{finished@{finished}!Gui@{Gui}}
+\subsubsection[{finished}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf Gui::finished}}}
+\label{namespaceGui_d167a9a00b5fcd633d94be01594f97c6}
+
+
+
+
+Definition at line 29 of file gui.cc.
+
+Referenced by animate(), init(), keyboard(), and menu().\hypertarget{namespaceGui_e1e212e4a0c46b3ff775b1aa017e7bfc}{
+\index{Gui@{Gui}!firstR@{firstR}}
+\index{firstR@{firstR}!Gui@{Gui}}
+\subsubsection[{firstR}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf Gui::firstR} = 1}}
+\label{namespaceGui_e1e212e4a0c46b3ff775b1aa017e7bfc}
+
+
+
+
+Definition at line 75 of file gui.cc.\hypertarget{namespaceGui_85922779b0101fa854b9b70a316998bd}{
+\index{Gui@{Gui}!iwdump@{iwdump}}
+\index{iwdump@{iwdump}!Gui@{Gui}}
+\subsubsection[{iwdump}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf Gui::iwdump}}}
+\label{namespaceGui_85922779b0101fa854b9b70a316998bd}
+
+
+
+
+Definition at line 29 of file gui.cc.
+
+Referenced by animate(), and toggleWindowDump().\hypertarget{namespaceGui_67e596ec4c26da38c4c16edd4d3d8ffd}{
+\index{Gui@{Gui}!lastx@{lastx}}
+\index{lastx@{lastx}!Gui@{Gui}}
+\subsubsection[{lastx}]{\setlength{\rightskip}{0pt plus 5cm}REAL {\bf Gui::lastx}}}
+\label{namespaceGui_67e596ec4c26da38c4c16edd4d3d8ffd}
+
+
+
+
+Definition at line 43 of file gui.cc.
+
+Referenced by init(), motion(), and mouse().\hypertarget{namespaceGui_0a1d9c5f437e332539fd6a9059ab2e54}{
+\index{Gui@{Gui}!lasty@{lasty}}
+\index{lasty@{lasty}!Gui@{Gui}}
+\subsubsection[{lasty}]{\setlength{\rightskip}{0pt plus 5cm}REAL {\bf Gui::lasty}}}
+\label{namespaceGui_0a1d9c5f437e332539fd6a9059ab2e54}
+
+
+
+
+Definition at line 43 of file gui.cc.
+
+Referenced by init(), motion(), and mouse().\hypertarget{namespaceGui_47745f43ef1ca3e88dc4afb80e7d2f7e}{
+\index{Gui@{Gui}!lastz@{lastz}}
+\index{lastz@{lastz}!Gui@{Gui}}
+\subsubsection[{lastz}]{\setlength{\rightskip}{0pt plus 5cm}REAL {\bf Gui::lastz}}}
+\label{namespaceGui_47745f43ef1ca3e88dc4afb80e7d2f7e}
+
+
+
+
+Definition at line 43 of file gui.cc.
+
+Referenced by init().\hypertarget{namespaceGui_ac727ddae788cc92ec47a42a42c624c1}{
+\index{Gui@{Gui}!lmax@{lmax}}
+\index{lmax@{lmax}!Gui@{Gui}}
+\subsubsection[{lmax}]{\setlength{\rightskip}{0pt plus 5cm}REAL {\bf Gui::lmax}}}
+\label{namespaceGui_ac727ddae788cc92ec47a42a42c624c1}
+
+
+
+
+Definition at line 61 of file gui.cc.
+
+Referenced by getScaling(), initdisp(), and reshape().\hypertarget{namespaceGui_56c94fbda09f27d64aa2e60813b5c72f}{
+\index{Gui@{Gui}!lmin@{lmin}}
+\index{lmin@{lmin}!Gui@{Gui}}
+\subsubsection[{lmin}]{\setlength{\rightskip}{0pt plus 5cm}REAL {\bf Gui::lmin}}}
+\label{namespaceGui_56c94fbda09f27d64aa2e60813b5c72f}
+
+
+
+
+Definition at line 61 of file gui.cc.
+
+Referenced by getScaling(), initdisp(), and reshape().\hypertarget{namespaceGui_29647b3a241e0ba782e3be2e6e328af2}{
+\index{Gui@{Gui}!lx@{lx}}
+\index{lx@{lx}!Gui@{Gui}}
+\subsubsection[{lx}]{\setlength{\rightskip}{0pt plus 5cm}REAL {\bf Gui::lx}}}
+\label{namespaceGui_29647b3a241e0ba782e3be2e6e328af2}
+
+
+
+
+Definition at line 61 of file gui.cc.
+
+Referenced by displayAxes(), initdisp(), and readconf().\hypertarget{namespaceGui_c2a7515d6f755bd934cf19d75e7bc4d1}{
+\index{Gui@{Gui}!ly@{ly}}
+\index{ly@{ly}!Gui@{Gui}}
+\subsubsection[{ly}]{\setlength{\rightskip}{0pt plus 5cm}REAL {\bf Gui::ly}}}
+\label{namespaceGui_c2a7515d6f755bd934cf19d75e7bc4d1}
+
+
+
+
+Definition at line 61 of file gui.cc.
+
+Referenced by displayAxes(), initdisp(), and readconf().\hypertarget{namespaceGui_c87eeee68e3d6a4915b6d18e10eeca8b}{
+\index{Gui@{Gui}!lz@{lz}}
+\index{lz@{lz}!Gui@{Gui}}
+\subsubsection[{lz}]{\setlength{\rightskip}{0pt plus 5cm}REAL {\bf Gui::lz}}}
+\label{namespaceGui_c87eeee68e3d6a4915b6d18e10eeca8b}
+
+
+
+
+Definition at line 61 of file gui.cc.
+
+Referenced by displayAxes(), initdisp(), Materials(), and readconf().\hypertarget{namespaceGui_b7fec0b981b38104f3b9843f86c30839}{
+\index{Gui@{Gui}!mouseButtons@{mouseButtons}}
+\index{mouseButtons@{mouseButtons}!Gui@{Gui}}
+\subsubsection[{mouseButtons}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf Gui::mouseButtons}}}
+\label{namespaceGui_b7fec0b981b38104f3b9843f86c30839}
+
+
+
+
+Definition at line 53 of file gui.cc.
+
+Referenced by init(), motion(), and mouse().\hypertarget{namespaceGui_993ed2a8e49cde7369fa3578802b851d}{
+\index{Gui@{Gui}!movement@{movement}}
+\index{movement@{movement}!Gui@{Gui}}
+\subsubsection[{movement}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Movement} {\bf Gui::movement}}}
+\label{namespaceGui_993ed2a8e49cde7369fa3578802b851d}
+
+
+
+
+Definition at line 64 of file gui.cc.\hypertarget{namespaceGui_d5d34028af9532dba173542e87d23f56}{
+\index{Gui@{Gui}!nwdump@{nwdump}}
+\index{nwdump@{nwdump}!Gui@{Gui}}
+\subsubsection[{nwdump}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf Gui::nwdump}}}
+\label{namespaceGui_d5d34028af9532dba173542e87d23f56}
+
+
+
+
+Definition at line 29 of file gui.cc.
+
+Referenced by animate(), and toggleWindowDump().\hypertarget{namespaceGui_e32ed5f0f6c168d88ee4dcfcb237aa7a}{
+\index{Gui@{Gui}!rgbcolor@{rgbcolor}}
+\index{rgbcolor@{rgbcolor}!Gui@{Gui}}
+\subsubsection[{rgbcolor}]{\setlength{\rightskip}{0pt plus 5cm}REAL {\bf Gui::rgbcolor} ()}}
+\label{namespaceGui_e32ed5f0f6c168d88ee4dcfcb237aa7a}
+
+
+
+
+Definition at line 43 of file gui.cc.
+
+Referenced by initdisp(), and readconf().\hypertarget{namespaceGui_67c138887f5c4630c5afd040e7a5294c}{
+\index{Gui@{Gui}!rotx@{rotx}}
+\index{rotx@{rotx}!Gui@{Gui}}
+\subsubsection[{rotx}]{\setlength{\rightskip}{0pt plus 5cm}REAL {\bf Gui::rotx}}}
+\label{namespaceGui_67c138887f5c4630c5afd040e7a5294c}
+
+
+
+
+Definition at line 55 of file gui.cc.
+
+Referenced by display(), init(), and motion().\hypertarget{namespaceGui_d638ed2f20a59ff6c2d2b1b6cf1de469}{
+\index{Gui@{Gui}!roty@{roty}}
+\index{roty@{roty}!Gui@{Gui}}
+\subsubsection[{roty}]{\setlength{\rightskip}{0pt plus 5cm}REAL {\bf Gui::roty}}}
+\label{namespaceGui_d638ed2f20a59ff6c2d2b1b6cf1de469}
+
+
+
+
+Definition at line 56 of file gui.cc.
+
+Referenced by display(), init(), and motion().\hypertarget{namespaceGui_ad072e1325427d8e1fbd4d978bce6cf0}{
+\index{Gui@{Gui}!scene@{scene}}
+\index{scene@{scene}!Gui@{Gui}}
+\subsubsection[{scene}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf Scene} {\bf Gui::scene}}}
+\label{namespaceGui_ad072e1325427d8e1fbd4d978bce6cf0}
+
+
+
+
+Definition at line 67 of file gui.cc.
+
+Referenced by display(), init(), initdisp(), readconf(), and switchColorScheme().\hypertarget{namespaceGui_aa991dcea49b723b5d30bbf0fa3cec6c}{
+\index{Gui@{Gui}!showpar@{showpar}}
+\index{showpar@{showpar}!Gui@{Gui}}
+\subsubsection[{showpar}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf Gui::showpar}}}
+\label{namespaceGui_aa991dcea49b723b5d30bbf0fa3cec6c}
+
+
+
+
+Definition at line 29 of file gui.cc.
+
+Referenced by animate(), display(), displayAxes(), init(), keyboard(), menu(), readconf(), setBackgroundRun(), setForegroundRun(), toggleSpheres(), and toggleWindowDump().\hypertarget{namespaceGui_8ef4f3e30c066fc451103c29d312ebfc}{
+\index{Gui@{Gui}!step@{step}}
+\index{step@{step}!Gui@{Gui}}
+\subsubsection[{step}]{\setlength{\rightskip}{0pt plus 5cm}REAL {\bf Gui::step}}}
+\label{namespaceGui_8ef4f3e30c066fc451103c29d312ebfc}
+
+
+
+
+Definition at line 43 of file gui.cc.
+
+Referenced by initdisp(), readconf(), and toggleWindowDump().\hypertarget{namespaceGui_0d144586c178c9eb8a740d3209e83111}{
+\index{Gui@{Gui}!tx@{tx}}
+\index{tx@{tx}!Gui@{Gui}}
+\subsubsection[{tx}]{\setlength{\rightskip}{0pt plus 5cm}REAL {\bf Gui::tx}}}
+\label{namespaceGui_0d144586c178c9eb8a740d3209e83111}
+
+
+
+
+Definition at line 57 of file gui.cc.
+
+Referenced by display(), init(), and motion().\hypertarget{namespaceGui_ae6dc6eb71aeb72299e638a67fe2d1bd}{
+\index{Gui@{Gui}!ty@{ty}}
+\index{ty@{ty}!Gui@{Gui}}
+\subsubsection[{ty}]{\setlength{\rightskip}{0pt plus 5cm}REAL {\bf Gui::ty}}}
+\label{namespaceGui_ae6dc6eb71aeb72299e638a67fe2d1bd}
+
+
+
+
+Definition at line 58 of file gui.cc.
+
+Referenced by display(), init(), and motion().\hypertarget{namespaceGui_6f927abe8b3833f6de26cd97440c1598}{
+\index{Gui@{Gui}!vars@{vars}}
+\index{vars@{vars}!Gui@{Gui}}
+\subsubsection[{vars}]{\setlength{\rightskip}{0pt plus 5cm}int$\ast$ {\bf Gui::vars}}}
+\label{namespaceGui_6f927abe8b3833f6de26cd97440c1598}
+
+
+
+
+Definition at line 76 of file gui.cc.\hypertarget{namespaceGui_7cfc73b4cf3c43f2eae07648ed332adf}{
+\index{Gui@{Gui}!vecval@{vecval}}
+\index{vecval@{vecval}!Gui@{Gui}}
+\subsubsection[{vecval}]{\setlength{\rightskip}{0pt plus 5cm}REAL {\bf Gui::vecval} ()}}
+\label{namespaceGui_7cfc73b4cf3c43f2eae07648ed332adf}
+
+
+
+
+Definition at line 43 of file gui.cc.
+
+Referenced by initdisp(), readconf(), and showVector().\hypertarget{namespaceGui_4e0f39982d5320819b7ce9a6aec7ee4f}{
+\index{Gui@{Gui}!wdtime@{wdtime}}
+\index{wdtime@{wdtime}!Gui@{Gui}}
+\subsubsection[{wdtime}]{\setlength{\rightskip}{0pt plus 5cm}REAL {\bf Gui::wdtime}}}
+\label{namespaceGui_4e0f39982d5320819b7ce9a6aec7ee4f}
+
+
+
+
+Definition at line 43 of file gui.cc.
+
+Referenced by init(), and toggleWindowDump().\hypertarget{namespaceGui_ca6acfc184422daa4fa15bd0c6ce422b}{
+\index{Gui@{Gui}!win@{win}}
+\index{win@{win}!Gui@{Gui}}
+\subsubsection[{win}]{\setlength{\rightskip}{0pt plus 5cm}Window {\bf Gui::win}}}
+\label{namespaceGui_ca6acfc184422daa4fa15bd0c6ce422b}
+
+
+
+
+Definition at line 73 of file gui.cc.
+
+Referenced by display(), and init().\hypertarget{namespaceGui_32823865b86d01eb5cc0797ef95b72d1}{
+\index{Gui@{Gui}!window@{window}}
+\index{window@{window}!Gui@{Gui}}
+\subsubsection[{window}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf WindowGeom} {\bf Gui::window}}}
+\label{namespaceGui_32823865b86d01eb5cc0797ef95b72d1}
+
+
+
+
+Definition at line 68 of file gui.cc.
+
+Referenced by init(), and initdisp().\hypertarget{namespaceGui_05e5a56061d9b709de0cbf9c54640465}{
+\index{Gui@{Gui}!windowname@{windowname}}
+\index{windowname@{windowname}!Gui@{Gui}}
+\subsubsection[{windowname}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf Gui::windowname}\mbox{[}MAXLINLEN\mbox{]}}}
+\label{namespaceGui_05e5a56061d9b709de0cbf9c54640465}
+
+
+
+
+Definition at line 26 of file gui.cc.
+
+Referenced by dumpwindow(), and init().\hypertarget{namespaceGui_93f1d37d2bd27e638d68895f5d264cbc}{
+\index{Gui@{Gui}!xmax@{xmax}}
+\index{xmax@{xmax}!Gui@{Gui}}
+\subsubsection[{xmax}]{\setlength{\rightskip}{0pt plus 5cm}REAL {\bf Gui::xmax} ()}}
+\label{namespaceGui_93f1d37d2bd27e638d68895f5d264cbc}
+
+
+
+
+Definition at line 61 of file gui.cc.
+
+Referenced by display(), Domain::Domain(), getXLimits(), initdisp(), and readconf().\hypertarget{namespaceGui_0dfb5583ee08d6cf807efcd9813cf4c5}{
+\index{Gui@{Gui}!xmin@{xmin}}
+\index{xmin@{xmin}!Gui@{Gui}}
+\subsubsection[{xmin}]{\setlength{\rightskip}{0pt plus 5cm}REAL {\bf Gui::xmin}}}
+\label{namespaceGui_0dfb5583ee08d6cf807efcd9813cf4c5}
+
+
+
+
+Definition at line 61 of file gui.cc.
+
+Referenced by display(), Domain::Domain(), getXLimits(), initdisp(), and readconf().\hypertarget{namespaceGui_0ed0ea23e3f4484056c1581a73b38f95}{
+\index{Gui@{Gui}!xo@{xo}}
+\index{xo@{xo}!Gui@{Gui}}
+\subsubsection[{xo}]{\setlength{\rightskip}{0pt plus 5cm}REAL {\bf Gui::xo}}}
+\label{namespaceGui_0ed0ea23e3f4484056c1581a73b38f95}
+
+
+
+
+Definition at line 43 of file gui.cc.
+
+Referenced by displayAxes(), initdisp(), and Materials().\hypertarget{namespaceGui_0da4588637a3890172d5a43efb250048}{
+\index{Gui@{Gui}!zoom@{zoom}}
+\index{zoom@{zoom}!Gui@{Gui}}
+\subsubsection[{zoom}]{\setlength{\rightskip}{0pt plus 5cm}REAL {\bf Gui::zoom}}}
+\label{namespaceGui_0da4588637a3890172d5a43efb250048}
+
+
+
+
+Definition at line 54 of file gui.cc.
+
+Referenced by display(), init(), initdisp(), keyboard(), and motion().

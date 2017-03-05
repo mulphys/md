@@ -1,0 +1,12 @@
+ram=16e6 # KB: memory
+N=1:e6 # number of molecules
+mpm=1e-1 # KB: memory per one molecule
+mem=N*mpm # KB: memory for all molecules
+mg=ram-mem # memory available for the grid
+mgc=1e-1 # KB: memory per grid cell
+Nc=mg/mgc # number of grid cells
+M=N/Nc # number of molecules in each grid cell
+ti=1e-3 # number of seconds per interaction
+ni=M**2 # number of interactions within a cell
+Ni=Nc*ni # total number of interactions per iteration
+t=Ni*ti # time per iteration

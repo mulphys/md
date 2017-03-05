@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mesh xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="mesh.xsd">
+	<time>
+		<start>0.0</start>
+		<step>0.1</step>
+		<end>10.0</end>
+	</time>
+	<!-- DOMAINS -->
+	<domain name="Box">
+		<type>box</type>
+		<energy>
+			<lengthscale>30.0</lengthscale>
+			<strength>1.0</strength>
+		</energy>
+		<geometry>
+			<bounds>0.0 100.0 0.0 100.0 0.0 100.0</bounds>
+			<boundary>elastic</boundary><!-- elastic periodic -->
+		</geometry>
+	</domain>
+	<!-- GUI -->
+	<gui>
+		<translation>
+			<step>0.01</step>
+		</translation>
+		<vector>
+			<length>2.0</length>
+			<thickness>1.0</thickness>
+			<color>
+				<red>0.5</red>
+				<green>1.0</green>
+				<blue>1.0</blue>
+			</color>
+		</vector>
+		<frame>
+			<line>
+				<thickness>1.0</thickness>
+				<color>
+					<red>1.0</red>
+					<green>0.0</green>
+					<blue>0.0</blue>
+				</color>
+			</line>
+		</frame>
+		<mesh>
+			<!-- Possible Color Schemes:
+				0: by boundary
+				1: by time
+			-->
+			<node>
+				<type>sphere</type>
+				<!--<type>point</type>-->
+				<colorscheme>
+					<variable>mass</variable>
+					<minvalue>0.0</minvalue>
+					<maxvalue>6.0</maxvalue>
+				</colorscheme>
+				<size>1.0</size>
+				<value>
+					<min>-1.0</min>
+					<max>1.0</max>
+				</value>
+				<color>
+					<!-- Basic colors: -->
+					<red>0.0</red>
+					<green>1.0</green>
+					<blue>0.0</blue>
+				</color>
+			</node>
+			<line>
+				<thickness>1.0</thickness>
+				<color>
+					<red>1.0</red>
+					<green>0.5</green>
+					<blue>0.0</blue>
+				</color>
+				<boundary_color>
+					<red>0.0</red>
+					<green>1.0</green>
+					<blue>0.5</blue>
+				</boundary_color>
+			</line>
+		</mesh>
+	</gui>	
+</mesh>

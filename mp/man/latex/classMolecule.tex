@@ -1,0 +1,370 @@
+\hypertarget{classMolecule}{
+\section{Molecule Class Reference}
+\label{classMolecule}\index{Molecule@{Molecule}}
+}
+{\tt \#include $<$model.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{classMolecule_7e7d290ae641518ad4c4d5303b519d0f}{Molecule} ()
+\item 
+void \hyperlink{classMolecule_cc9589d399845b82ad02886a7075fe06}{Type} (int t)
+\item 
+int \hyperlink{classMolecule_cfda1c0c7b2f35dacc50e9859aad82c6}{Type} ()
+\item 
+void \hyperlink{classMolecule_44c2aad65d094a675610e1966e268031}{InternalEnergy} (REAL e)
+\item 
+REAL \hyperlink{classMolecule_a9587ec46e840a47f25acc2b9d49b32a}{InternalEnergy} ()
+\item 
+REAL \hyperlink{classMolecule_aee00f4809061c5e52b9abdbcbd9ed08}{Coordinate} (int i)
+\item 
+void \hyperlink{classMolecule_f9ce4f748a740168da3fcd3a8488c40c}{Coordinate} (int i, REAL y)
+\item 
+REAL $\ast$ \hyperlink{classMolecule_243725aba0af815b6abadee8c89cb291}{Coordinates} ()
+\item 
+void \hyperlink{classMolecule_a30f81c8d8e9199a6a6fdad9f93d3fef}{Coordinates} (REAL y\mbox{[}$\,$\mbox{]})
+\item 
+void \hyperlink{classMolecule_5cb53332e22df64ac0367fcef3222953}{setCoordinates} (REAL y\mbox{[}$\,$\mbox{]})
+\item 
+REAL \hyperlink{classMolecule_88aa88f5770c5f0c35e05dd401ae065b}{Velocity} (int i)
+\item 
+void \hyperlink{classMolecule_eb0a0b9273ac471af02a7b24700fb04d}{Velocity} (int i, REAL u)
+\item 
+REAL $\ast$ \hyperlink{classMolecule_6095c691e07aa1c0d6b1a51aaa95844a}{Velocity} ()
+\item 
+void \hyperlink{classMolecule_57214f734d0091fd3ece17dcd822ea24}{Velocity} (REAL u\mbox{[}$\,$\mbox{]})
+\item 
+void \hyperlink{classMolecule_a371f10f7878c6ca91c753004a3b9df5}{setVelocity} (REAL u\mbox{[}$\,$\mbox{]})
+\item 
+REAL \hyperlink{classMolecule_2b5eba8c03b1496587754b9b5b407064}{KineticEnergy} ()
+\begin{CompactList}\small\item\em Retrieve kinetic energy. \item\end{CompactList}\item 
+void \hyperlink{classMolecule_3e60d33531b5e720051f41155d194e93}{Temperature} (REAL temperature)
+\begin{CompactList}\small\item\em Set internal energy according to temperature:. \item\end{CompactList}\item 
+void \hyperlink{classMolecule_328a0ac9cc33a1a6e2c1e17087eb4762}{Move} ()
+\begin{CompactList}\small\item\em Moving a molecule by one time step. \item\end{CompactList}\item 
+void \hyperlink{classMolecule_ed5cd1c9eb118054e0ed2f058a672676}{copy} (\hyperlink{classMolecule}{Molecule} $\ast$molecule)
+\end{CompactItemize}
+\subsection*{Private Attributes}
+\begin{CompactItemize}
+\item 
+int \hyperlink{classMolecule_3e459e9ae52f281073d4821b9af72b60}{type}
+\begin{CompactList}\small\item\em points to the species\mbox{[}type\mbox{]}; \item\end{CompactList}\item 
+REAL \hyperlink{classMolecule_2057df9ea61493ef02a722f06e6fe607}{energy}
+\begin{CompactList}\small\item\em internal energy \item\end{CompactList}\item 
+REAL \hyperlink{classMolecule_21a3fe802207db2ce796f30864c4d131}{x} \mbox{[}DIM\mbox{]}
+\begin{CompactList}\small\item\em position of center of mass \item\end{CompactList}\item 
+REAL \hyperlink{classMolecule_91748f8e6a013950f86e50861eb7fc2f}{v} \mbox{[}DIM\mbox{]}
+\begin{CompactList}\small\item\em velocity of center of mass \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 23 of file model.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classMolecule_7e7d290ae641518ad4c4d5303b519d0f}{
+\index{Molecule@{Molecule}!Molecule@{Molecule}}
+\index{Molecule@{Molecule}!Molecule@{Molecule}}
+\subsubsection[{Molecule}]{\setlength{\rightskip}{0pt plus 5cm}Molecule::Molecule ()}}
+\label{classMolecule_7e7d290ae641518ad4c4d5303b519d0f}
+
+
+
+
+Definition at line 20 of file model.cc.
+
+References energy, Run::time, and type.
+
+\subsection{Member Function Documentation}
+\hypertarget{classMolecule_f9ce4f748a740168da3fcd3a8488c40c}{
+\index{Molecule@{Molecule}!Coordinate@{Coordinate}}
+\index{Coordinate@{Coordinate}!Molecule@{Molecule}}
+\subsubsection[{Coordinate}]{\setlength{\rightskip}{0pt plus 5cm}void Molecule::Coordinate (int {\em i}, \/  REAL {\em y})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classMolecule_f9ce4f748a740168da3fcd3a8488c40c}
+
+
+
+
+Definition at line 103 of file model.h.
+
+References DIM, and x.\hypertarget{classMolecule_aee00f4809061c5e52b9abdbcbd9ed08}{
+\index{Molecule@{Molecule}!Coordinate@{Coordinate}}
+\index{Coordinate@{Coordinate}!Molecule@{Molecule}}
+\subsubsection[{Coordinate}]{\setlength{\rightskip}{0pt plus 5cm}REAL Molecule::Coordinate (int {\em i})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classMolecule_aee00f4809061c5e52b9abdbcbd9ed08}
+
+
+
+
+Definition at line 95 of file model.h.
+
+References DIM, and x.
+
+Referenced by copy(), Bulk::inject(), Boundary::Inject(), Domain::load(), and Domain::save().\hypertarget{classMolecule_a30f81c8d8e9199a6a6fdad9f93d3fef}{
+\index{Molecule@{Molecule}!Coordinates@{Coordinates}}
+\index{Coordinates@{Coordinates}!Molecule@{Molecule}}
+\subsubsection[{Coordinates}]{\setlength{\rightskip}{0pt plus 5cm}void Molecule::Coordinates (REAL {\em y}\mbox{[}$\,$\mbox{]})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classMolecule_a30f81c8d8e9199a6a6fdad9f93d3fef}
+
+
+
+
+Definition at line 111 of file model.h.
+
+References DIM, and x.\hypertarget{classMolecule_243725aba0af815b6abadee8c89cb291}{
+\index{Molecule@{Molecule}!Coordinates@{Coordinates}}
+\index{Coordinates@{Coordinates}!Molecule@{Molecule}}
+\subsubsection[{Coordinates}]{\setlength{\rightskip}{0pt plus 5cm}REAL$\ast$ Molecule::Coordinates ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classMolecule_243725aba0af815b6abadee8c89cb291}
+
+
+
+
+Definition at line 110 of file model.h.
+
+References x.
+
+Referenced by Domain::boundary(), Domain::computeBounds(), Gui::display(), Domain::interact(), and GridContainer::put().\hypertarget{classMolecule_ed5cd1c9eb118054e0ed2f058a672676}{
+\index{Molecule@{Molecule}!copy@{copy}}
+\index{copy@{copy}!Molecule@{Molecule}}
+\subsubsection[{copy}]{\setlength{\rightskip}{0pt plus 5cm}void Molecule::copy ({\bf Molecule} $\ast$ {\em molecule})}}
+\label{classMolecule_ed5cd1c9eb118054e0ed2f058a672676}
+
+
+
+
+Definition at line 36 of file model.cc.
+
+References Coordinate(), DIM, Type(), type, v, Velocity(), and x.\hypertarget{classMolecule_a9587ec46e840a47f25acc2b9d49b32a}{
+\index{Molecule@{Molecule}!InternalEnergy@{InternalEnergy}}
+\index{InternalEnergy@{InternalEnergy}!Molecule@{Molecule}}
+\subsubsection[{InternalEnergy}]{\setlength{\rightskip}{0pt plus 5cm}REAL Molecule::InternalEnergy ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classMolecule_a9587ec46e840a47f25acc2b9d49b32a}
+
+
+
+
+Definition at line 86 of file model.h.
+
+References energy.
+
+Referenced by Temperature().\hypertarget{classMolecule_44c2aad65d094a675610e1966e268031}{
+\index{Molecule@{Molecule}!InternalEnergy@{InternalEnergy}}
+\index{InternalEnergy@{InternalEnergy}!Molecule@{Molecule}}
+\subsubsection[{InternalEnergy}]{\setlength{\rightskip}{0pt plus 5cm}void Molecule::InternalEnergy (REAL {\em e})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classMolecule_44c2aad65d094a675610e1966e268031}
+
+
+
+
+Definition at line 85 of file model.h.
+
+References energy.
+
+Referenced by Domain::boundary(), Domain::interact(), Domain::load(), Domain::run(), and Domain::save().\hypertarget{classMolecule_2b5eba8c03b1496587754b9b5b407064}{
+\index{Molecule@{Molecule}!KineticEnergy@{KineticEnergy}}
+\index{KineticEnergy@{KineticEnergy}!Molecule@{Molecule}}
+\subsubsection[{KineticEnergy}]{\setlength{\rightskip}{0pt plus 5cm}REAL Molecule::KineticEnergy ()}}
+\label{classMolecule_2b5eba8c03b1496587754b9b5b407064}
+
+
+Retrieve kinetic energy. 
+
+
+
+Definition at line 46 of file model.cc.
+
+References DIM, Species::Specie::Mass(), REAL, Species::species, type, and v.
+
+Referenced by Domain::boundary(), and Domain::run().\hypertarget{classMolecule_328a0ac9cc33a1a6e2c1e17087eb4762}{
+\index{Molecule@{Molecule}!Move@{Move}}
+\index{Move@{Move}!Molecule@{Molecule}}
+\subsubsection[{Move}]{\setlength{\rightskip}{0pt plus 5cm}void Molecule::Move ()}}
+\label{classMolecule_328a0ac9cc33a1a6e2c1e17087eb4762}
+
+
+Moving a molecule by one time step. 
+
+
+
+Definition at line 68 of file model.cc.
+
+References DIM, Species::Specie::Mass(), Species::nspecies, REAL, SMALL, Species::species, Run::time, type, v, and x.
+
+Referenced by Domain::run().\hypertarget{classMolecule_5cb53332e22df64ac0367fcef3222953}{
+\index{Molecule@{Molecule}!setCoordinates@{setCoordinates}}
+\index{setCoordinates@{setCoordinates}!Molecule@{Molecule}}
+\subsubsection[{setCoordinates}]{\setlength{\rightskip}{0pt plus 5cm}void Molecule::setCoordinates (REAL {\em y}\mbox{[}$\,$\mbox{]})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classMolecule_5cb53332e22df64ac0367fcef3222953}
+
+
+
+
+Definition at line 112 of file model.h.
+
+References DIM, and x.\hypertarget{classMolecule_a371f10f7878c6ca91c753004a3b9df5}{
+\index{Molecule@{Molecule}!setVelocity@{setVelocity}}
+\index{setVelocity@{setVelocity}!Molecule@{Molecule}}
+\subsubsection[{setVelocity}]{\setlength{\rightskip}{0pt plus 5cm}void Molecule::setVelocity (REAL {\em u}\mbox{[}$\,$\mbox{]})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classMolecule_a371f10f7878c6ca91c753004a3b9df5}
+
+
+
+
+Definition at line 130 of file model.h.
+
+References DIM, and v.\hypertarget{classMolecule_3e60d33531b5e720051f41155d194e93}{
+\index{Molecule@{Molecule}!Temperature@{Temperature}}
+\index{Temperature@{Temperature}!Molecule@{Molecule}}
+\subsubsection[{Temperature}]{\setlength{\rightskip}{0pt plus 5cm}void Molecule::Temperature (REAL {\em temperature})}}
+\label{classMolecule_3e60d33531b5e720051f41155d194e93}
+
+
+Set internal energy according to temperature:. 
+
+Set internal energy according to the temperature. \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em temperature}]temperature in K \end{description}
+\end{Desc}
+
+
+Definition at line 57 of file model.cc.
+
+References AtomicMassUnit, BoltzmannConstant, Species::Specie::Cp(), DOF, DOFI, energy, InternalEnergy(), REAL, Species::species, and Type().
+
+Referenced by Domain::init(), and Boundary::Inject().\hypertarget{classMolecule_cfda1c0c7b2f35dacc50e9859aad82c6}{
+\index{Molecule@{Molecule}!Type@{Type}}
+\index{Type@{Type}!Molecule@{Molecule}}
+\subsubsection[{Type}]{\setlength{\rightskip}{0pt plus 5cm}int Molecule::Type ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classMolecule_cfda1c0c7b2f35dacc50e9859aad82c6}
+
+
+
+
+Definition at line 50 of file model.h.
+
+References type.
+
+Referenced by Temperature().\hypertarget{classMolecule_cc9589d399845b82ad02886a7075fe06}{
+\index{Molecule@{Molecule}!Type@{Type}}
+\index{Type@{Type}!Molecule@{Molecule}}
+\subsubsection[{Type}]{\setlength{\rightskip}{0pt plus 5cm}void Molecule::Type (int {\em t})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classMolecule_cc9589d399845b82ad02886a7075fe06}
+
+
+
+
+Definition at line 49 of file model.h.
+
+References type.
+
+Referenced by Domain::boundary(), copy(), Gui::display(), Bulk::inject(), Boundary::Inject(), Domain::interact(), Domain::interaction(), Domain::load(), GridContainer::put(), Domain::run(), and Domain::save().\hypertarget{classMolecule_57214f734d0091fd3ece17dcd822ea24}{
+\index{Molecule@{Molecule}!Velocity@{Velocity}}
+\index{Velocity@{Velocity}!Molecule@{Molecule}}
+\subsubsection[{Velocity}]{\setlength{\rightskip}{0pt plus 5cm}void Molecule::Velocity (REAL {\em u}\mbox{[}$\,$\mbox{]})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classMolecule_57214f734d0091fd3ece17dcd822ea24}
+
+
+
+
+Definition at line 129 of file model.h.
+
+References DIM, and v.\hypertarget{classMolecule_6095c691e07aa1c0d6b1a51aaa95844a}{
+\index{Molecule@{Molecule}!Velocity@{Velocity}}
+\index{Velocity@{Velocity}!Molecule@{Molecule}}
+\subsubsection[{Velocity}]{\setlength{\rightskip}{0pt plus 5cm}REAL$\ast$ Molecule::Velocity ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classMolecule_6095c691e07aa1c0d6b1a51aaa95844a}
+
+
+
+
+Definition at line 128 of file model.h.
+
+References v.\hypertarget{classMolecule_eb0a0b9273ac471af02a7b24700fb04d}{
+\index{Molecule@{Molecule}!Velocity@{Velocity}}
+\index{Velocity@{Velocity}!Molecule@{Molecule}}
+\subsubsection[{Velocity}]{\setlength{\rightskip}{0pt plus 5cm}void Molecule::Velocity (int {\em i}, \/  REAL {\em u})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classMolecule_eb0a0b9273ac471af02a7b24700fb04d}
+
+
+
+
+Definition at line 121 of file model.h.
+
+References DIM, and v.\hypertarget{classMolecule_88aa88f5770c5f0c35e05dd401ae065b}{
+\index{Molecule@{Molecule}!Velocity@{Velocity}}
+\index{Velocity@{Velocity}!Molecule@{Molecule}}
+\subsubsection[{Velocity}]{\setlength{\rightskip}{0pt plus 5cm}REAL Molecule::Velocity (int {\em i})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classMolecule_88aa88f5770c5f0c35e05dd401ae065b}
+
+
+
+
+Definition at line 113 of file model.h.
+
+References DIM, and v.
+
+Referenced by Domain::boundary(), copy(), Bulk::inject(), Boundary::Inject(), Domain::interact(), Domain::load(), GridContainer::put(), Domain::run(), and Domain::save().
+
+\subsection{Member Data Documentation}
+\hypertarget{classMolecule_2057df9ea61493ef02a722f06e6fe607}{
+\index{Molecule@{Molecule}!energy@{energy}}
+\index{energy@{energy}!Molecule@{Molecule}}
+\subsubsection[{energy}]{\setlength{\rightskip}{0pt plus 5cm}REAL {\bf Molecule::energy}\hspace{0.3cm}{\tt  \mbox{[}private\mbox{]}}}}
+\label{classMolecule_2057df9ea61493ef02a722f06e6fe607}
+
+
+internal energy 
+
+
+
+Definition at line 40 of file model.h.
+
+Referenced by InternalEnergy(), Molecule(), and Temperature().\hypertarget{classMolecule_3e459e9ae52f281073d4821b9af72b60}{
+\index{Molecule@{Molecule}!type@{type}}
+\index{type@{type}!Molecule@{Molecule}}
+\subsubsection[{type}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf Molecule::type}\hspace{0.3cm}{\tt  \mbox{[}private\mbox{]}}}}
+\label{classMolecule_3e459e9ae52f281073d4821b9af72b60}
+
+
+points to the species\mbox{[}type\mbox{]}; 
+
+
+
+Definition at line 24 of file model.h.
+
+Referenced by copy(), KineticEnergy(), Molecule(), Move(), and Type().\hypertarget{classMolecule_91748f8e6a013950f86e50861eb7fc2f}{
+\index{Molecule@{Molecule}!v@{v}}
+\index{v@{v}!Molecule@{Molecule}}
+\subsubsection[{v}]{\setlength{\rightskip}{0pt plus 5cm}REAL {\bf Molecule::v}\mbox{[}DIM\mbox{]}\hspace{0.3cm}{\tt  \mbox{[}private\mbox{]}}}}
+\label{classMolecule_91748f8e6a013950f86e50861eb7fc2f}
+
+
+velocity of center of mass 
+
+
+
+Definition at line 40 of file model.h.
+
+Referenced by copy(), KineticEnergy(), Move(), setVelocity(), and Velocity().\hypertarget{classMolecule_21a3fe802207db2ce796f30864c4d131}{
+\index{Molecule@{Molecule}!x@{x}}
+\index{x@{x}!Molecule@{Molecule}}
+\subsubsection[{x}]{\setlength{\rightskip}{0pt plus 5cm}REAL {\bf Molecule::x}\mbox{[}DIM\mbox{]}\hspace{0.3cm}{\tt  \mbox{[}private\mbox{]}}}}
+\label{classMolecule_21a3fe802207db2ce796f30864c4d131}
+
+
+position of center of mass 
+
+
+
+Definition at line 40 of file model.h.
+
+Referenced by Coordinate(), Coordinates(), copy(), Move(), and setCoordinates().
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+\hyperlink{model_8h}{model.h}\item 
+\hyperlink{model_8cc}{model.cc}\end{CompactItemize}

@@ -1,0 +1,229 @@
+\hypertarget{namespaceIO}{
+\section{IO Namespace Reference}
+\label{namespaceIO}\index{IO@{IO}}
+}
+Some \hyperlink{namespaceIO}{IO} routines.  
+
+
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+void \hyperlink{namespaceIO_2b0843f1085e5877aa8a10051f3e4f2c}{initxwd} (int i)
+\item 
+void \hyperlink{namespaceIO_86c41e7ac36635653e7ebf4b72df9801}{xwd} (char $\ast$windowname)
+\item 
+int \hyperlink{namespaceIO_26ddf14f09f4920f5578ffbf80e37cb5}{getCharAttr} (xmlNodePtr cur, char $\ast$attr, char $\ast$result)
+\item 
+int \hyperlink{namespaceIO_b5b9ada82ed259c520bb673e1c4258dc}{getIntAttr} (xmlNodePtr cur, char $\ast$attr)
+\item 
+int \hyperlink{namespaceIO_cede0d1cb29c928037684467fda0b02a}{getIntAttr} (xmlDocPtr doc, char $\ast$tag, char $\ast$keyname, char $\ast$key, char $\ast$attr)
+\item 
+int \hyperlink{namespaceIO_300fd8cb58ab398ac9ad83ce857b874e}{parseWord} (xmlDocPtr doc, xmlNodePtr cur, char $\ast$keyword, char $\ast$result)
+\item 
+int \hyperlink{namespaceIO_d0eeab644b5eaf9455f04c84be01af30}{parseInt} (xmlDocPtr doc, xmlNodePtr cur, char $\ast$keyword)
+\item 
+int \hyperlink{namespaceIO_d779767981775bbcac51a4a6cbd5ce60}{parseFloat} (xmlDocPtr doc, xmlNodePtr cur, char $\ast$keyword, REAL \&result)
+\item 
+double \hyperlink{namespaceIO_0fce622fef6e4870e9a4ae547a5e759d}{parseFloat} (xmlDocPtr doc, xmlNodePtr cur, char $\ast$keyword)
+\item 
+void \hyperlink{namespaceIO_d86f2db07db8938db8a574e4e7392cad}{getTimeXML} (char inpfilename\mbox{[}$\,$\mbox{]})
+\item 
+void \hyperlink{namespaceIO_c2c6e9ae8fe7b5879dcf6383cb132f78}{getTime} (char inpfilename\mbox{[}$\,$\mbox{]})
+\item 
+int \hyperlink{namespaceIO_515d0f0fecb2223a56797e610ab7fd55}{getIter} (char inpfilename\mbox{[}$\,$\mbox{]})
+\end{CompactItemize}
+\subsection*{Variables}
+\begin{CompactItemize}
+\item 
+int \hyperlink{namespaceIO_01c166ef9176fbdc6b1f96de7ca861a4}{ioutput} = 0
+\item 
+int \hyperlink{namespaceIO_ab2504f45fec1bcec679af841fa5065c}{nxwdump} = 0
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+Some \hyperlink{namespaceIO}{IO} routines. 
+
+
+
+\subsection{Function Documentation}
+\hypertarget{namespaceIO_26ddf14f09f4920f5578ffbf80e37cb5}{
+\index{IO@{IO}!getCharAttr@{getCharAttr}}
+\index{getCharAttr@{getCharAttr}!IO@{IO}}
+\subsubsection[{getCharAttr}]{\setlength{\rightskip}{0pt plus 5cm}int IO::getCharAttr (xmlNodePtr {\em cur}, \/  char $\ast$ {\em attr}, \/  char $\ast$ {\em result})}}
+\label{namespaceIO_26ddf14f09f4920f5578ffbf80e37cb5}
+
+
+
+
+Definition at line 40 of file io.cc.
+
+References MAXLINLEN, and Run::option.
+
+Referenced by Domain::Domain(), and getIntAttr().\hypertarget{namespaceIO_cede0d1cb29c928037684467fda0b02a}{
+\index{IO@{IO}!getIntAttr@{getIntAttr}}
+\index{getIntAttr@{getIntAttr}!IO@{IO}}
+\subsubsection[{getIntAttr}]{\setlength{\rightskip}{0pt plus 5cm}int IO::getIntAttr (xmlDocPtr {\em doc}, \/  char $\ast$ {\em tag}, \/  char $\ast$ {\em keyname}, \/  char $\ast$ {\em key}, \/  char $\ast$ {\em attr})}}
+\label{namespaceIO_cede0d1cb29c928037684467fda0b02a}
+
+
+
+
+xmlChar $\ast$key;
+
+val=getIntAttr(cur,attr); 
+
+Definition at line 77 of file io.cc.
+
+References getCharAttr(), MAXLINLEN, Run::option, parseInt(), and Potential::value().\hypertarget{namespaceIO_b5b9ada82ed259c520bb673e1c4258dc}{
+\index{IO@{IO}!getIntAttr@{getIntAttr}}
+\index{getIntAttr@{getIntAttr}!IO@{IO}}
+\subsubsection[{getIntAttr}]{\setlength{\rightskip}{0pt plus 5cm}int IO::getIntAttr (xmlNodePtr {\em cur}, \/  char $\ast$ {\em attr})}}
+\label{namespaceIO_b5b9ada82ed259c520bb673e1c4258dc}
+
+
+
+
+Definition at line 57 of file io.cc.
+
+References Run::option.\hypertarget{namespaceIO_515d0f0fecb2223a56797e610ab7fd55}{
+\index{IO@{IO}!getIter@{getIter}}
+\index{getIter@{getIter}!IO@{IO}}
+\subsubsection[{getIter}]{\setlength{\rightskip}{0pt plus 5cm}int IO::getIter (char {\em inpfilename}\mbox{[}$\,$\mbox{]})}}
+\label{namespaceIO_515d0f0fecb2223a56797e610ab7fd55}
+
+
+
+
+Definition at line 249 of file io.cc.
+
+References DOCTYPE, MAXLINLEN, and Run::option.
+
+Referenced by main().\hypertarget{namespaceIO_c2c6e9ae8fe7b5879dcf6383cb132f78}{
+\index{IO@{IO}!getTime@{getTime}}
+\index{getTime@{getTime}!IO@{IO}}
+\subsubsection[{getTime}]{\setlength{\rightskip}{0pt plus 5cm}void IO::getTime (char {\em inpfilename}\mbox{[}$\,$\mbox{]})}}
+\label{namespaceIO_c2c6e9ae8fe7b5879dcf6383cb132f78}
+
+
+
+
+Definition at line 239 of file io.cc.
+
+References getTimeXML(), Run::option, and Run::time.
+
+Referenced by Run::init().\hypertarget{namespaceIO_d86f2db07db8938db8a574e4e7392cad}{
+\index{IO@{IO}!getTimeXML@{getTimeXML}}
+\index{getTimeXML@{getTimeXML}!IO@{IO}}
+\subsubsection[{getTimeXML}]{\setlength{\rightskip}{0pt plus 5cm}void IO::getTimeXML (char {\em inpfilename}\mbox{[}$\,$\mbox{]})}}
+\label{namespaceIO_d86f2db07db8938db8a574e4e7392cad}
+
+
+
+
+Definition at line 198 of file io.cc.
+
+References DOCTYPE, MAXLINLEN, parseFloat(), and Run::time.
+
+Referenced by getTime().\hypertarget{namespaceIO_2b0843f1085e5877aa8a10051f3e4f2c}{
+\index{IO@{IO}!initxwd@{initxwd}}
+\index{initxwd@{initxwd}!IO@{IO}}
+\subsubsection[{initxwd}]{\setlength{\rightskip}{0pt plus 5cm}void IO::initxwd (int {\em i})}}
+\label{namespaceIO_2b0843f1085e5877aa8a10051f3e4f2c}
+
+
+
+
+Definition at line 15 of file io.cc.
+
+References nxwdump.\hypertarget{namespaceIO_0fce622fef6e4870e9a4ae547a5e759d}{
+\index{IO@{IO}!parseFloat@{parseFloat}}
+\index{parseFloat@{parseFloat}!IO@{IO}}
+\subsubsection[{parseFloat}]{\setlength{\rightskip}{0pt plus 5cm}double IO::parseFloat (xmlDocPtr {\em doc}, \/  xmlNodePtr {\em cur}, \/  char $\ast$ {\em keyword})}}
+\label{namespaceIO_0fce622fef6e4870e9a4ae547a5e759d}
+
+
+
+
+Definition at line 178 of file io.cc.
+
+References Run::option.
+
+Referenced by Domain::Domain().\hypertarget{namespaceIO_d779767981775bbcac51a4a6cbd5ce60}{
+\index{IO@{IO}!parseFloat@{parseFloat}}
+\index{parseFloat@{parseFloat}!IO@{IO}}
+\subsubsection[{parseFloat}]{\setlength{\rightskip}{0pt plus 5cm}int IO::parseFloat (xmlDocPtr {\em doc}, \/  xmlNodePtr {\em cur}, \/  char $\ast$ {\em keyword}, \/  REAL \& {\em result})}}
+\label{namespaceIO_d779767981775bbcac51a4a6cbd5ce60}
+
+
+
+
+Definition at line 158 of file io.cc.
+
+References Run::option, and REAL.
+
+Referenced by getTimeXML().\hypertarget{namespaceIO_d0eeab644b5eaf9455f04c84be01af30}{
+\index{IO@{IO}!parseInt@{parseInt}}
+\index{parseInt@{parseInt}!IO@{IO}}
+\subsubsection[{parseInt}]{\setlength{\rightskip}{0pt plus 5cm}int IO::parseInt (xmlDocPtr {\em doc}, \/  xmlNodePtr {\em cur}, \/  char $\ast$ {\em keyword})}}
+\label{namespaceIO_d0eeab644b5eaf9455f04c84be01af30}
+
+
+
+
+Definition at line 138 of file io.cc.
+
+References Run::option.
+
+Referenced by getIntAttr().\hypertarget{namespaceIO_300fd8cb58ab398ac9ad83ce857b874e}{
+\index{IO@{IO}!parseWord@{parseWord}}
+\index{parseWord@{parseWord}!IO@{IO}}
+\subsubsection[{parseWord}]{\setlength{\rightskip}{0pt plus 5cm}int IO::parseWord (xmlDocPtr {\em doc}, \/  xmlNodePtr {\em cur}, \/  char $\ast$ {\em keyword}, \/  char $\ast$ {\em result})}}
+\label{namespaceIO_300fd8cb58ab398ac9ad83ce857b874e}
+
+
+
+
+Definition at line 117 of file io.cc.
+
+References MAXLINLEN, and Run::option.
+
+Referenced by Domain::Domain(), and Gui::readconf().\hypertarget{namespaceIO_86c41e7ac36635653e7ebf4b72df9801}{
+\index{IO@{IO}!xwd@{xwd}}
+\index{xwd@{xwd}!IO@{IO}}
+\subsubsection[{xwd}]{\setlength{\rightskip}{0pt plus 5cm}void IO::xwd (char $\ast$ {\em windowname})}}
+\label{namespaceIO_86c41e7ac36635653e7ebf4b72df9801}
+
+
+
+
+Definition at line 19 of file io.cc.
+
+References MAXLINLEN, nxwdump, and Run::option.
+
+Referenced by Gui::dumpwindow().
+
+\subsection{Variable Documentation}
+\hypertarget{namespaceIO_01c166ef9176fbdc6b1f96de7ca861a4}{
+\index{IO@{IO}!ioutput@{ioutput}}
+\index{ioutput@{ioutput}!IO@{IO}}
+\subsubsection[{ioutput}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf IO::ioutput} = 0}}
+\label{namespaceIO_01c166ef9176fbdc6b1f96de7ca861a4}
+
+
+
+
+Definition at line 13 of file io.cc.
+
+Referenced by Domain::load(), Domain::run(), and Domain::save().\hypertarget{namespaceIO_ab2504f45fec1bcec679af841fa5065c}{
+\index{IO@{IO}!nxwdump@{nxwdump}}
+\index{nxwdump@{nxwdump}!IO@{IO}}
+\subsubsection[{nxwdump}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf IO::nxwdump} = 0}}
+\label{namespaceIO_ab2504f45fec1bcec679af841fa5065c}
+
+
+
+
+Definition at line 14 of file io.cc.
+
+Referenced by initxwd(), and xwd().

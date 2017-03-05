@@ -1,0 +1,196 @@
+\hypertarget{classBulk}{
+\section{Bulk Class Reference}
+\label{classBulk}\index{Bulk@{Bulk}}
+}
+\hyperlink{classDomain}{Domain} \hyperlink{classBulk}{Bulk} Properties.  
+
+
+{\tt \#include $<$domain.h$>$}
+
+Collaboration diagram for Bulk:\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+REAL \hyperlink{classBulk_144b86ce82e59e0fc17ff6d3fe137ee2}{Temperature} ()
+\item 
+void \hyperlink{classBulk_7b569f588bb4e079a23a28a843a05004}{Temperature} (REAL temp)
+\item 
+REAL \hyperlink{classBulk_8963a26979d5c6b828efeb4ab9705066}{Volume} ()
+\item 
+void \hyperlink{classBulk_0be4e849c0cc7db4a4d630fc702dfea8}{Volume} (REAL vol)
+\item 
+void \hyperlink{classBulk_0c85c5e3ec7be306c8f5d09178647b21}{init} (REAL \hyperlink{classBulk_5dadbb8571e0fef63e38bcc26c47637e}{xmin}\mbox{[}$\,$\mbox{]}, REAL \hyperlink{classBulk_3297dbcf83d7c66815a5c713ebf1bfd4}{xmax}\mbox{[}$\,$\mbox{]})
+\begin{CompactList}\small\item\em Initializing bulk: setting volume. \item\end{CompactList}\item 
+\hyperlink{classMolecule}{Molecule} $\ast$ \hyperlink{classBulk_201f623418ac1056a3b1a34a5a02ed12}{inject} (int specie, REAL velocity, \hyperlink{classCollection}{Collection}$<$ \hyperlink{classMolecule}{Molecule} $>$ $\ast$molecules)
+\begin{CompactList}\small\item\em Adding a molecule to the pool with not registering on the grid. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Public Attributes}
+\begin{CompactItemize}
+\item 
+\hyperlink{classList}{List}$<$ Gas $>$ \hyperlink{classBulk_fd6da0b732d536d58c95ccda093d8994}{gases}
+\begin{CompactList}\small\item\em list of gases initially present in the bulk \item\end{CompactList}\end{CompactItemize}
+\subsection*{Private Attributes}
+\begin{CompactItemize}
+\item 
+REAL \hyperlink{classBulk_502aae16bd537c2989f66b0553841eec}{temperature}
+\item 
+REAL \hyperlink{classBulk_9ffe7d1a5699e06ab7d59245f7bddcd4}{volume}
+\item 
+REAL \hyperlink{classBulk_5dadbb8571e0fef63e38bcc26c47637e}{xmin} \mbox{[}DIM\mbox{]}
+\item 
+REAL \hyperlink{classBulk_3297dbcf83d7c66815a5c713ebf1bfd4}{xmax} \mbox{[}DIM\mbox{]}
+\begin{CompactList}\small\item\em box-dimensions \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classDomain}{Domain} \hyperlink{classBulk}{Bulk} Properties. 
+
+Holds thermodynamics properties and the list of species in the bulk of the domain. Initialized only when the new run. If Run::option.restart=1, it is ingored and the bulk properties and species are retrieved from the input file. 
+
+Definition at line 63 of file domain.h.
+
+\subsection{Member Function Documentation}
+\hypertarget{classBulk_0c85c5e3ec7be306c8f5d09178647b21}{
+\index{Bulk@{Bulk}!init@{init}}
+\index{init@{init}!Bulk@{Bulk}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}void Bulk::init (REAL {\em xmin}\mbox{[}$\,$\mbox{]}, \/  REAL {\em xmax}\mbox{[}$\,$\mbox{]})}}
+\label{classBulk_0c85c5e3ec7be306c8f5d09178647b21}
+
+
+Initializing bulk: setting volume. 
+
+
+
+Definition at line 657 of file domain.cc.
+
+References DIM, volume, xmax, and xmin.
+
+Referenced by Domain::Domain().\hypertarget{classBulk_201f623418ac1056a3b1a34a5a02ed12}{
+\index{Bulk@{Bulk}!inject@{inject}}
+\index{inject@{inject}!Bulk@{Bulk}}
+\subsubsection[{inject}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Molecule} $\ast$ Bulk::inject (int {\em specie}, \/  REAL {\em velocity}, \/  {\bf Collection}$<$ {\bf Molecule} $>$ $\ast$ {\em molecules})}}
+\label{classBulk_201f623418ac1056a3b1a34a5a02ed12}
+
+
+Adding a molecule to the pool with not registering on the grid. 
+
+Injecting a specie into the bulk with a specified velocity (no registering in the grid). 
+
+Definition at line 665 of file domain.cc.
+
+References Collection$<$ Element $>$::append(), Molecule::Coordinate(), DIM, GAUSS, REAL, RND, Species::Specie::Size(), SMALL, Species::species, Run::time, Molecule::Type(), Molecule::Velocity(), xmax, and xmin.
+
+Referenced by Domain::init().\hypertarget{classBulk_7b569f588bb4e079a23a28a843a05004}{
+\index{Bulk@{Bulk}!Temperature@{Temperature}}
+\index{Temperature@{Temperature}!Bulk@{Bulk}}
+\subsubsection[{Temperature}]{\setlength{\rightskip}{0pt plus 5cm}void Bulk::Temperature (REAL {\em temp})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classBulk_7b569f588bb4e079a23a28a843a05004}
+
+
+
+
+Definition at line 69 of file domain.h.
+
+References temperature.\hypertarget{classBulk_144b86ce82e59e0fc17ff6d3fe137ee2}{
+\index{Bulk@{Bulk}!Temperature@{Temperature}}
+\index{Temperature@{Temperature}!Bulk@{Bulk}}
+\subsubsection[{Temperature}]{\setlength{\rightskip}{0pt plus 5cm}REAL Bulk::Temperature ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classBulk_144b86ce82e59e0fc17ff6d3fe137ee2}
+
+
+
+
+Definition at line 68 of file domain.h.
+
+References temperature.
+
+Referenced by Domain::Domain(), and Domain::init().\hypertarget{classBulk_0be4e849c0cc7db4a4d630fc702dfea8}{
+\index{Bulk@{Bulk}!Volume@{Volume}}
+\index{Volume@{Volume}!Bulk@{Bulk}}
+\subsubsection[{Volume}]{\setlength{\rightskip}{0pt plus 5cm}void Bulk::Volume (REAL {\em vol})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classBulk_0be4e849c0cc7db4a4d630fc702dfea8}
+
+
+
+
+Definition at line 71 of file domain.h.
+
+References volume.\hypertarget{classBulk_8963a26979d5c6b828efeb4ab9705066}{
+\index{Bulk@{Bulk}!Volume@{Volume}}
+\index{Volume@{Volume}!Bulk@{Bulk}}
+\subsubsection[{Volume}]{\setlength{\rightskip}{0pt plus 5cm}REAL Bulk::Volume ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classBulk_8963a26979d5c6b828efeb4ab9705066}
+
+
+
+
+Definition at line 70 of file domain.h.
+
+References volume.
+
+Referenced by Domain::init().
+
+\subsection{Member Data Documentation}
+\hypertarget{classBulk_fd6da0b732d536d58c95ccda093d8994}{
+\index{Bulk@{Bulk}!gases@{gases}}
+\index{gases@{gases}!Bulk@{Bulk}}
+\subsubsection[{gases}]{\setlength{\rightskip}{0pt plus 5cm}{\bf List}$<$Gas$>$ {\bf Bulk::gases}}}
+\label{classBulk_fd6da0b732d536d58c95ccda093d8994}
+
+
+list of gases initially present in the bulk 
+
+
+
+Definition at line 67 of file domain.h.
+
+Referenced by Domain::Domain(), and Domain::init().\hypertarget{classBulk_502aae16bd537c2989f66b0553841eec}{
+\index{Bulk@{Bulk}!temperature@{temperature}}
+\index{temperature@{temperature}!Bulk@{Bulk}}
+\subsubsection[{temperature}]{\setlength{\rightskip}{0pt plus 5cm}REAL {\bf Bulk::temperature}\hspace{0.3cm}{\tt  \mbox{[}private\mbox{]}}}}
+\label{classBulk_502aae16bd537c2989f66b0553841eec}
+
+
+
+
+Definition at line 64 of file domain.h.
+
+Referenced by Temperature().\hypertarget{classBulk_9ffe7d1a5699e06ab7d59245f7bddcd4}{
+\index{Bulk@{Bulk}!volume@{volume}}
+\index{volume@{volume}!Bulk@{Bulk}}
+\subsubsection[{volume}]{\setlength{\rightskip}{0pt plus 5cm}REAL {\bf Bulk::volume}\hspace{0.3cm}{\tt  \mbox{[}private\mbox{]}}}}
+\label{classBulk_9ffe7d1a5699e06ab7d59245f7bddcd4}
+
+
+
+
+Definition at line 64 of file domain.h.
+
+Referenced by init(), and Volume().\hypertarget{classBulk_3297dbcf83d7c66815a5c713ebf1bfd4}{
+\index{Bulk@{Bulk}!xmax@{xmax}}
+\index{xmax@{xmax}!Bulk@{Bulk}}
+\subsubsection[{xmax}]{\setlength{\rightskip}{0pt plus 5cm}REAL {\bf Bulk::xmax}\mbox{[}DIM\mbox{]}\hspace{0.3cm}{\tt  \mbox{[}private\mbox{]}}}}
+\label{classBulk_3297dbcf83d7c66815a5c713ebf1bfd4}
+
+
+box-dimensions 
+
+
+
+Definition at line 64 of file domain.h.
+
+Referenced by init(), and inject().\hypertarget{classBulk_5dadbb8571e0fef63e38bcc26c47637e}{
+\index{Bulk@{Bulk}!xmin@{xmin}}
+\index{xmin@{xmin}!Bulk@{Bulk}}
+\subsubsection[{xmin}]{\setlength{\rightskip}{0pt plus 5cm}REAL {\bf Bulk::xmin}\mbox{[}DIM\mbox{]}\hspace{0.3cm}{\tt  \mbox{[}private\mbox{]}}}}
+\label{classBulk_5dadbb8571e0fef63e38bcc26c47637e}
+
+
+
+
+Definition at line 64 of file domain.h.
+
+Referenced by init(), and inject().
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+\hyperlink{domain_8h}{domain.h}\item 
+\hyperlink{domain_8cc}{domain.cc}\end{CompactItemize}

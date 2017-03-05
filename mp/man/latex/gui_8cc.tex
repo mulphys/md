@@ -1,0 +1,221 @@
+\hypertarget{gui_8cc}{
+\section{gui.cc File Reference}
+\label{gui_8cc}\index{gui.cc@{gui.cc}}
+}
+{\tt \#include $<$iostream$>$}\par
+{\tt \#include $<$fstream$>$}\par
+{\tt \#include $<$math.h$>$}\par
+{\tt \#include $<$string.h$>$}\par
+{\tt \#include $<$libxml/xmlmemory.h$>$}\par
+{\tt \#include $<$GL/glut.h$>$}\par
+{\tt \#include $<$GL/glx.h$>$}\par
+{\tt \#include $<$GL/glu.h$>$}\par
+{\tt \#include $<$X11/keysym.h$>$}\par
+{\tt \#include \char`\"{}def.h\char`\"{}}\par
+{\tt \#include \char`\"{}run.h\char`\"{}}\par
+{\tt \#include \char`\"{}io.h\char`\"{}}\par
+{\tt \#include \char`\"{}list.h\char`\"{}}\par
+{\tt \#include \char`\"{}collection.h\char`\"{}}\par
+{\tt \#include \char`\"{}model.h\char`\"{}}\par
+{\tt \#include \char`\"{}species.h\char`\"{}}\par
+{\tt \#include \char`\"{}domain.h\char`\"{}}\par
+{\tt \#include \char`\"{}gui.h\char`\"{}}\par
+
+
+Include dependency graph for gui.cc:\subsection*{Namespaces}
+\begin{CompactItemize}
+\item 
+namespace \hyperlink{namespaceGui}{Gui}
+\begin{CompactList}\small\item\em OpenGL window output routines. \item\end{CompactList}
+
+\item 
+namespace \hyperlink{namespacePalette}{Palette}
+\begin{CompactList}\small\item\em Defines color palette. \item\end{CompactList}
+
+\end{CompactItemize}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+int \hyperlink{namespaceGui_7fbca852fb0cacc6663ba5689441c628}{Gui::query\_\-extension} (char $\ast$extName)
+\item 
+void \hyperlink{namespaceGui_c7a8f5580648139e0b12062692cdf4d5}{Gui::init} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]}, \hyperlink{classDomain}{Domain} $\ast$newdomain)
+\item 
+void \hyperlink{namespaceGui_0e5d9f6cb4fd8f9ddb9f214e12b4e6e5}{Gui::helpDisplay} ()
+\item 
+int \hyperlink{namespaceGui_c367306deffcdaf711e6dfe0452b0b76}{Gui::readparam} (char $\ast$s, char $\ast$param\mbox{[}$\,$\mbox{]}, int maxparam, char $\ast$filename, int val\mbox{[}$\,$\mbox{]})
+\item 
+int \hyperlink{namespaceGui_2dfb340ad9e98cedbf5e4ef8022da1b9}{Gui::readparam} (char $\ast$s, char $\ast$param\mbox{[}$\,$\mbox{]}, int maxparam, char $\ast$filename, REAL val\mbox{[}$\,$\mbox{]})
+\item 
+void \hyperlink{namespaceGui_adc1ae9662345d502dd4bccf0ea58473}{Gui::readconf} ()
+\item 
+void \hyperlink{namespaceGui_5b94ce6e857635065a0c2053b95529b5}{Gui::refresh} ()
+\item 
+void \hyperlink{namespaceGui_6d4b87c2b4664134825955c4ff89f2df}{Gui::initdisp} ()
+\item 
+void \hyperlink{namespaceGui_14bb49f023f388f7b0ff25c7a9b963e2}{Gui::Materials} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\item 
+void \hyperlink{namespaceGui_f8cee9625f9a733c48a9dce46829368a}{Gui::showVector} (double $\ast$x, double $\ast$v)
+\item 
+void \hyperlink{namespaceGui_ffad4636da327fdb77959a672413695a}{Gui::showParticle} (double vmn, double vmx, double val, double $\ast$x)
+\item 
+void \hyperlink{namespaceGui_5c3ecb8dde5ba2aea7ef1d89ef30f66a}{Gui::showSphere} (double vmn, double vmx, double val, double rad, double $\ast$x)
+\item 
+void \hyperlink{namespaceGui_2e3009086a3b9c82c98613657675c89a}{Gui::displayAxes} ()
+\item 
+void \hyperlink{namespaceGui_e7d03455e3e501e3e58965a138c3aa6c}{Gui::getScaling} (double \&l0, double \&l1)
+\item 
+void \hyperlink{namespaceGui_ea3e30468c8a97723f3a69e8810b4b38}{Gui::getXLimits} (double $\ast$x0, double $\ast$x1)
+\item 
+void \hyperlink{namespaceGui_992c5b9e252d42f351c0b4559f3dc594}{Gui::Exit} ()
+\item 
+void \hyperlink{namespaceGui_6fda3017d1da246375076a92d719888e}{Gui::Quit} ()
+\item 
+void \hyperlink{namespaceGui_b76fb09eeb57cd517ef9161f1d69b9a5}{Gui::menu} (int value)
+\item 
+void \hyperlink{namespaceGui_5780bf157b4553f0002f9c0bac80c57c}{Gui::displayMenu} ()
+\item 
+void \hyperlink{namespaceGui_8b9da92ca9a1573368c0a085b1121d54}{Gui::consoleMenu} ()
+\item 
+void \hyperlink{namespaceGui_8ade665fa0c7e87786e08242f88eff40}{Gui::setBackgroundRun} ()
+\item 
+void \hyperlink{namespaceGui_273a116825827361f5a21f8226589d35}{Gui::setForegroundRun} ()
+\item 
+void \hyperlink{namespaceGui_565addf34ff426cb969e2c56ed140d39}{Gui::toggleSpheres} ()
+\item 
+void \hyperlink{namespaceGui_ab3a8248d4ef4514f77fd2a50d70728a}{Gui::switchColorScheme} ()
+\item 
+void \hyperlink{namespaceGui_7799b76168d5342d97a7db05630b4c3a}{Gui::runmany} ()
+\item 
+void \hyperlink{namespaceGui_f65e92132f04c4a318e60fd3b4e7fa38}{Gui::toggleWindowDump} ()
+\item 
+void \hyperlink{namespaceGui_6ad1b72a8dc01fe97af9fe591a365a5e}{Gui::dumpwindow} ()
+\item 
+void \hyperlink{namespaceGui_90f0cf49fd3ea753450fa24a2a9675af}{Gui::commandMode} ()
+\item 
+void \hyperlink{namespaceGui_cb047c1330f58d16c1f9336aef134bbf}{Gui::display} ()
+\item 
+void \hyperlink{namespaceGui_bc885686e998a79d9c98f86c678d6e69}{Gui::animate} ()
+\item 
+void \hyperlink{namespaceGui_88a5c559d5b4309bd2c3d1ff11f93692}{Gui::helpCommand} ()
+\item 
+void \hyperlink{namespaceGui_fe299b50153348bf53b6910e74098c42}{Gui::reshape} (int w, int h)
+\item 
+void \hyperlink{namespaceGui_3971df0804b9da39b2c9a1b40f708b50}{Gui::mouse} (int button, int state, int x, int y)
+\item 
+void \hyperlink{namespaceGui_c6941f396ae4c5f4a14ed6f39820bd93}{Gui::motion} (int x, int y)
+\item 
+void \hyperlink{namespaceGui_8c6bd3add9cc9a25f67c4bcb75fb3c11}{Gui::keyboard} (unsigned int key)
+\item 
+void \hyperlink{namespaceGui_225eb7edaace31eb6cc4ec3173b2a703}{Gui::run} ()
+\item 
+void \hyperlink{namespaceGui_3a5bf26c85086313b175ec4901ac04bd}{Gui::displaymessage} (char $\ast$msg)
+\item 
+void \hyperlink{namespaceGui_7ff1dbc60509be2005c1732738066a69}{Gui::setElementColor} (int element\_\-type, REAL rgbcolor\mbox{[}$\,$\mbox{]})
+\item 
+void \hyperlink{namespaceGui_b4972a7318cbe5e96312527816694e1e}{Gui::getElementColor} (int element\_\-type, REAL rgbcolor\mbox{[}$\,$\mbox{]})
+\item 
+void \hyperlink{namespacePalette_4dd1979a090b63cd9bcef668b8b6e254}{Palette::init} (REAL vmin, REAL vmax)
+\item 
+void \hyperlink{namespacePalette_f84836ad8d13add0db8b82462a42dd39}{Palette::pickcolor} (REAL var, REAL color\mbox{[}$\,$\mbox{]})
+\end{CompactItemize}
+\subsection*{Variables}
+\begin{CompactItemize}
+\item 
+\hyperlink{classDomain}{Domain} $\ast$ \hyperlink{namespaceGui_60f6d8ae2497f90f2e3bad7a69c27f1d}{Gui::domain}
+\item 
+ElementDisp \hyperlink{namespaceGui_a3da3aa4111d6dc26f3f40324c8f52d3}{Gui::disp} \mbox{[}maxelements\mbox{]}
+\item 
+char $\ast$ \hyperlink{namespaceGui_6702af97844e9ea00bded3ffb073c223}{Gui::configfile} = (char$\ast$)\char`\"{}gui.cfg\char`\"{}
+\item 
+char \hyperlink{namespaceGui_05e5a56061d9b709de0cbf9c54640465}{Gui::windowname} \mbox{[}MAXLINLEN\mbox{]}
+\item 
+int \hyperlink{namespaceGui_aa991dcea49b723b5d30bbf0fa3cec6c}{Gui::showpar} \mbox{[}maxshowpars\mbox{]}
+\item 
+int \hyperlink{namespaceGui_d167a9a00b5fcd633d94be01594f97c6}{Gui::finished}
+\item 
+int \hyperlink{namespaceGui_8e6788190d414f842e08826fcefa496c}{Gui::animation}
+\item 
+int \hyperlink{namespaceGui_d5d34028af9532dba173542e87d23f56}{Gui::nwdump}
+\item 
+int \hyperlink{namespaceGui_85922779b0101fa854b9b70a316998bd}{Gui::iwdump}
+\item 
+int \hyperlink{namespaceGui_a57d40ab8d008d5fd9e51830e254f2f8}{Gui::attributeList} \mbox{[}$\,$\mbox{]}
+\item 
+REAL \hyperlink{namespaceGui_8ef4f3e30c066fc451103c29d312ebfc}{Gui::step}
+\item 
+REAL \hyperlink{namespaceGui_7cfc73b4cf3c43f2eae07648ed332adf}{Gui::vecval} \mbox{[}maxlineprm\mbox{]}
+\item 
+REAL \hyperlink{namespaceGui_d8cd720a8150fa90f583d180f6a83b99}{Gui::axes} \mbox{[}maxaxesprm\mbox{]}
+\item 
+REAL \hyperlink{namespaceGui_e32ed5f0f6c168d88ee4dcfcb237aa7a}{Gui::rgbcolor} \mbox{[}maxcolor\mbox{]}\mbox{[}3\mbox{]}
+\item 
+REAL \hyperlink{namespaceGui_4e0f39982d5320819b7ce9a6aec7ee4f}{Gui::wdtime}
+\item 
+REAL \hyperlink{namespaceGui_0ed0ea23e3f4484056c1581a73b38f95}{Gui::xo} \mbox{[}3\mbox{]}
+\item 
+REAL \hyperlink{namespaceGui_447643e9fc2878cea10d5d51fe076fd8}{Gui::dx}
+\item 
+REAL \hyperlink{namespaceGui_9f9c724776b5bb133fbb54fbbaad8b6b}{Gui::dy}
+\item 
+REAL \hyperlink{namespaceGui_08f884685f2bc61bf9ba9f3a20f809c5}{Gui::dz}
+\item 
+REAL \hyperlink{namespaceGui_67e596ec4c26da38c4c16edd4d3d8ffd}{Gui::lastx}
+\item 
+REAL \hyperlink{namespaceGui_0a1d9c5f437e332539fd6a9059ab2e54}{Gui::lasty}
+\item 
+REAL \hyperlink{namespaceGui_47745f43ef1ca3e88dc4afb80e7d2f7e}{Gui::lastz}
+\item 
+int \hyperlink{namespaceGui_b7fec0b981b38104f3b9843f86c30839}{Gui::mouseButtons} \mbox{[}3\mbox{]}
+\item 
+REAL \hyperlink{namespaceGui_0da4588637a3890172d5a43efb250048}{Gui::zoom}
+\item 
+REAL \hyperlink{namespaceGui_67c138887f5c4630c5afd040e7a5294c}{Gui::rotx}
+\item 
+REAL \hyperlink{namespaceGui_d638ed2f20a59ff6c2d2b1b6cf1de469}{Gui::roty}
+\item 
+REAL \hyperlink{namespaceGui_0d144586c178c9eb8a740d3209e83111}{Gui::tx}
+\item 
+REAL \hyperlink{namespaceGui_ae6dc6eb71aeb72299e638a67fe2d1bd}{Gui::ty}
+\item 
+REAL \hyperlink{namespaceGui_0dfb5583ee08d6cf807efcd9813cf4c5}{Gui::xmin} \mbox{[}DIM\mbox{]}
+\item 
+REAL \hyperlink{namespaceGui_93f1d37d2bd27e638d68895f5d264cbc}{Gui::xmax} \mbox{[}DIM\mbox{]}
+\item 
+REAL \hyperlink{namespaceGui_29647b3a241e0ba782e3be2e6e328af2}{Gui::lx}
+\item 
+REAL \hyperlink{namespaceGui_c2a7515d6f755bd934cf19d75e7bc4d1}{Gui::ly}
+\item 
+REAL \hyperlink{namespaceGui_c87eeee68e3d6a4915b6d18e10eeca8b}{Gui::lz}
+\item 
+REAL \hyperlink{namespaceGui_56c94fbda09f27d64aa2e60813b5c72f}{Gui::lmin}
+\item 
+REAL \hyperlink{namespaceGui_ac727ddae788cc92ec47a42a42c624c1}{Gui::lmax}
+\item 
+enum Movement \hyperlink{namespaceGui_993ed2a8e49cde7369fa3578802b851d}{Gui::movement}
+\item 
+struct ColorScale \hyperlink{namespaceGui_4701d367312756fbf7b5f1950665a65a}{Gui::colorscale}
+\item 
+struct Scene \hyperlink{namespaceGui_ad072e1325427d8e1fbd4d978bce6cf0}{Gui::scene}
+\item 
+struct WindowGeom \hyperlink{namespaceGui_32823865b86d01eb5cc0797ef95b72d1}{Gui::window}
+\item 
+struct BFaceList $\ast$ \hyperlink{namespaceGui_f84d6dd43874bce8629a513c3cbaff73}{Gui::bface\_\-root}
+\item 
+Display $\ast$ \hyperlink{namespaceGui_7cffe1d85006be54ecc4edc51a9978be}{Gui::dpy}
+\item 
+Window \hyperlink{namespaceGui_ca6acfc184422daa4fa15bd0c6ce422b}{Gui::win}
+\item 
+int \hyperlink{namespaceGui_e1e212e4a0c46b3ff775b1aa017e7bfc}{Gui::firstR} = 1
+\item 
+int $\ast$ \hyperlink{namespaceGui_6f927abe8b3833f6de26cd97440c1598}{Gui::vars}
+\item 
+int $\ast$ \hyperlink{namespaceGui_a46e6ad4b192cdaba9efb1ada2133df9}{Gui::coms}
+\item 
+REAL \hyperlink{namespacePalette_17b5ab8ecd6038051c67291fb1428fdb}{Palette::vmn}
+\item 
+REAL \hyperlink{namespacePalette_811f17becae697d9244ef6fcde397618}{Palette::vmx}
+\item 
+REAL \hyperlink{namespacePalette_1e3ee247e7f094dd9c9ddbe9acbf1390}{Palette::vav}
+\item 
+REAL \hyperlink{namespacePalette_f145e3cb0ec135556136cb35b433ce9a}{Palette::dvi}
+\end{CompactItemize}

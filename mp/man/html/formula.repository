@@ -1,0 +1,54 @@
+\form#0:$s$
+\form#1:$f_s$
+\form#2:$A$
+\form#3:\[ f_s = \frac{N}{\Delta\,t} \]
+\form#4:$\Delta\,t_s$
+\form#5:$N$
+\form#6:$\Delta\,x$
+\form#7:$\Delta\,t$
+\form#8:$x$
+\form#9:$v_{sx}$
+\form#10:\[ \Delta\,t = \frac{2\Delta\,x}{v_{sx}} \]
+\form#11:$\rho$
+\form#12:\[ N = \frac{\rho}{\mu}\Delta\,x\,A \]
+\form#13:$\mu$
+\form#14:$A = \Delta\,y\,\Delta\,z$
+\form#15:\[ f_s = \frac{\rho}{\mu}\Delta\,x\,A\frac{v_{sx}}{2\Delta\,x} = \frac{\rho\,v_{sx}}{2\mu}A \]
+\form#16:\[ \frac{3}{2}kT = \frac{mV_{av}^2}{2} \]
+\form#17:\[ V_{av}^2 = 3V_{x,av}^2 \]
+\form#18:$V_{av,x} = kT$
+\form#19:\[ dt = \frac{d}{v} \]
+\form#20:$t_{coll}$
+\form#21:\[ t_{coll} = t + dt \]
+\form#22:\[ dt = \frac{D}{v} \]
+\form#23:$D >> d $
+\form#24:\[ mod(i_{mol}, N_{threads}) = i_{thread} \]
+\form#25:$mod(*,*)$
+\form#26:\[ energy = KE + IE + enthalpy \]
+\form#27:\[ dof_A = DOF(Cp_A) \]
+\form#28:\[ dof_B = DOF(Cp_B) \]
+\form#29:$dof_X$
+\form#30:$Cp_X$
+\form#31:\[ DOF = 3 + (2Cv/R-3)/2 = 3 + Cv/R - 1.5 = Cv/R + 1.5 = Cp/R + 0.5 \]
+\form#32:$Cv = Cp - R$
+\form#33:\[dofi = dof-6 \]
+\form#34:\[ rdofi_A = (dof_A - 3)/dofi \]
+\form#35:\[ rdofi_B = 1 - rdofi_A \]
+\form#36:$dofk_{CM}$
+\form#37:\[ dofk_{CM} = 6 - 3 = 3 \]
+\form#38:$dof_{CM} = dof - 3$
+\form#39:$dofi_{CM} = dofi$
+\form#40:\[ ke_{old} = \frac{ua_{old}^2}{2} + \frac{ub_{old}^2}{2} \]
+\form#41:\[ e_{old} = ke_{old} + iea + ieb \]
+\form#42:$a$
+\form#43:$b$
+\form#44:\[ e = e_{old} + h \]
+\form#45:\[ ke = \frac{dofk_{CM}}{dof_{CM}}\,e \]
+\form#46:\[ ie = energy - ke \]
+\form#47:\[\frac{ma\,ua^2}{2} = \frac{mb\,ub^2}{2} = \frac{ke}{2} \]
+\form#48:\[ ua = \sqrt{ke/ma} \]
+\form#49:\[ ub = \sqrt{ke/mb} \]
+\form#50:\[ uratio_A = ua/ua_{old} \]
+\form#51:\[ uratio_B = ub/ub_{old} \]
+\form#52:\[ u_X(i) = u_X(i)*uratio_X \]
+\form#53:\[ InternalEnergy_X = rdofi_X\,ie \]

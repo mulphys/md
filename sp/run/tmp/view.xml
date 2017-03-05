@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<remody xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="mesh.xsd">
+	<time>
+		<start>0.0</start>
+		<step>1e-5</step>
+		<end>10.0</end>
+		<output title="Time interval for file output (0 - no output)">0.0</output>
+	</time>
+	<!-- CHEMISTRY -->
+	<!--
+		For monotomic molecules dof=3, which corresponds to 
+		cp=(3/2+1)*R = 5/2*R
+		since dof=2*cv/R=2*(cp/R-1)
+		where R=BoltzmanConstant*AvogadroNumber 
+		http://en.wikipedia.org/wiki/Heat_capacity#Heat_capacity
+	-->
+	<molecules title="Maximum number of molecules used">10000000</molecules>
+	<species title="Species data: mass in au=1.66053886e-24 g, size in nm">
+		<specie id="H">
+			<mass title="Atomic Units: 1.0079">1.0</mass>
+			<size title="nanometers">0.158</size>
+			<cp "5/2*R[kJ/(mol*K)]">20.786</cp>
+		</specie>
+		<specie id="H2">
+			<mass title="Atomic Units: 2.0158">2.0</mass>
+			<size title="nanometers">0.240</size>
+		</specie>
+		<specie id="O">
+			<mass title="Atomic Units">16.0</mass>
+			<size title="nanometers">0.120</size>
+		</specie>
+		<specie id="O2">
+			<mass title="Atomic Units">32.0</mass>
+			<size title="nanometers">0.29</size>
+		</specie>
+		<specie id="OH">
+			<mass title="Atomic Units">17.0</mass>
+			<size title="nanometers ?">0.25</size>
+		</specie>
+		<specie id="H2O">
+			<mass title="Atomic Units: 18.015">18.0</mass>
+			<size title="nanometers">0.275</size>
+		</specie>
+		<specie id="HO2">
+			<!-- Approximate: Size(HO2) = Size(O2)+(Size(H2O) - Size(O))/2 -->
+			<mass title="Atomic Units: 33.007">33.0</mass>
+			<size title="nanometers">0.3275</size>
+		</specie>  
+		<specie id="N2">
+			<mass title="Atomic Units">28.0</mass>
+			<size title="nanometers">0.31</size>
+		</specie>
+<!--
+		<specie id="H2S">
+			<mass title="Atomic Units: 34.082">34.0</mass>
+			<size title="nanometers">0.36</size>
+		</specie>
+		<specie id="Ni">
+			<mass title="Atomic Units: 58.6934">58.0</mass>
+			<size title="nanometers">0.75</size>
+		</specie>
+-->    <!-- GAS PHASE REACTIONS:
+ 
+    Reaction                 T_a(K)    DH_r (kJ/mol)
+
+    OH + OH  - H2O + O         50.5     -70.64
+    OH + O2  - HO2 + O      24000.0     212.27
+    OH + O   - O2  + H        176.0     -70.17
+    OH + H2  - H2O + H       1090.0     -62.82
+    OH + H   - H2  + O       1095.0      -7.81  probability=0.5
+    OH + H   - H2O              0.0    -497.83  probability=0.5 
+    OH + HO2 - H2O + O2        56.5    -282.91
+    O2 + H2O - OH  + HO2    37200.0     282.91
+    O2 + H2  - OH  + OH     16600.0      77.98  probability=0.5
+    O2 + H2  - HO2 + H      28505.0     220.09  probability=0.5
+    O2 + H   - OH  + O       7470.0      70.17  probability=0.5
+    O2 + H   - HO2              0.0    -215.91  probability=0.5
+    O  + H2  - OH  + H       3160.0       7.82  
+    O  + H   - OH               0.0    -428.19    
+    O  + HO2 - OH  + O2       199.6    -212.28
+    H2O+ H   - H2  + OH      9720.0      62.82
+    H  + HO2 - H2  + O2      1070.0    -220.09 probability=0.5
+    H  + HO2 - H2O + O        866.0    -212.75 probability=0.5
+
+    
+    Reaction probability is used for multiple reaction outcomes to 
+			specify the probability of each outcome.
+			With a single reaction outcome the probability should be always given as 1.0
+		-->
+		<reaction reactants="OH H" products="H2 O">
+			<activation title="Activation temerature in K">1095.00</activation>
+			<probability title="Probability of rxn happening with same LHS">0.5</probability>
+			<enthalpy title="Enthalpy of Reaction in kJ/mol">7.81</enthalpy>
+		</reaction>
+		<reaction reactants="OH H" products="H2 O">
+			<activation title="Activation temerature in K">0.00</activation>
+			<probability title="Probability of rxn happening with same LHS">0.5</probability>
+			<enthalpy title="Enthalpy of Reaction in kJ/mol">497.83</enthalpy>
+		</reaction>
+		<reaction reactants="OH OH" products="H2O O">
+			<activation title="Activation temerature in K">50.50</activation>
+			<probability title="Probability of rxn happening with same LHS">1.0</probability>
+			<enthalpy title="Enthalpy of Reaction in kJ/mol">70.64</enthalpy>
+		</reaction>
+		<reaction reactants="OH O2" products="HO2 O">
+			<activation title="Activation temerature in K">24000.00</activation>
+			<probability title="Probability of rxn happening with same LHS">1.0</probability>
+			<enthalpy title="Enthalpy of Reaction in kJ/mol">-212.28</enthalpy>
+		</reaction>
+		<reaction reactants="OH O" products="O2 H">
+			<activation title="Activation temerature in K">176.00</activation>
+			<probability title="Probability of rxn happening with same LHS">1.0</probability>
+			<enthalpy title="Enthalpy of Reaction in kJ/mol">70.17</enthalpy>
+		</reaction>
+		<reaction reactants="OH H2" products="H2O H">
+			<activation title="Activation temerature in K">1090.00</activation>
+			<probability title="Probability of rxn happening with same LHS">1.0</probability>
+			<enthalpy title="Enthalpy of Reaction in kJ/mol">62.82</enthalpy>
+		</reaction>
+		<reaction reactants="OH HO2" products="H2O O2">
+			<activation title="Activation temerature in K">56.50</activation>
+			<probability title="Probability of rxn happening with same LHS">1.0</probability>
+			<enthalpy title="Enthalpy of Reaction in kJ/mol">282.91</enthalpy>
+		</reaction>
+		<reaction reactants="O2 H2O" products="HO2 OH">
+			<activation title="Activation temerature in K">37200.00</activation>
+			<probability title="Probability of rxn happening with same LHS">1.0</probability>
+			<enthalpy title="Enthalpy of Reaction in kJ/mol">-282.91</enthalpy>
+		</reaction>
+		<reaction reactants="O2 H2" products="OH OH">
+			<activation title="Activation temerature in K">16600.00</activation>
+			<probability title="Probability of rxn happening with same LHS">0.5</probability>
+			<enthalpy title="Enthalpy of Reaction in kJ/mol">-77.98</enthalpy>
+		</reaction>
+		<reaction reactants="O2 H2" products="HO2 H">
+			<activation title="Activation temerature in K">28505.00</activation>
+			<probability title="Probability of rxn happening with same LHS">0.5</probability>
+			<enthalpy title="Enthalpy of Reaction in kJ/mol">-220.09</enthalpy>
+		</reaction>
+		<reaction reactants="O2 H" products="OH O">
+			<activation title="Activation temerature in K">7470.00</activation>
+			<probability title="Probability of rxn happening with same LHS">0.5</probability>
+			<enthalpy title="Enthalpy of Reaction in kJ/mol">-70.17</enthalpy>
+		</reaction>
+		<reaction reactants="O2 H" products="HO2">
+			<activation title="Activation temerature in K">0.00</activation>
+			<probability title="Probability of rxn happening with same LHS">0.5</probability>
+			<enthalpy title="Enthalpy of Reaction in kJ/mol">215.90</enthalpy>
+		</reaction>
+		<reaction reactants="O H2" products="OH H">
+			<activation title="Activation temerature in K">3160.00</activation>
+			<probability title="Probability of rxn happening with same LHS">1.0</probability>
+			<enthalpy title="Enthalpy of Reaction in kJ/mol">-7.82</enthalpy>
+		</reaction>
+		<reaction reactants="O H" products="OH">
+			<activation title="Activation temerature in K">0.00</activation>
+			<probability title="Probability of rxn happening with same LHS">1.0</probability>
+			<enthalpy title="Enthalpy of Reaction in kJ/mol">428.19</enthalpy>
+		</reaction>
+		<reaction reactants="O HO2" products="OH O2">
+			<activation title="Activation temerature in K">199.60</activation>
+			<probability title="Probability of rxn happening with same LHS">1.0</probability>
+			<enthalpy title="Enthalpy of Reaction in kJ/mol">212.28</enthalpy>
+		</reaction>
+		<reaction reactants="H2O H" products="OH H2">
+			<activation title="Activation temerature in K">9720.00</activation>
+			<probability title="Probability of rxn happening with same LHS">1.0</probability>
+			<enthalpy title="Enthalpy of Reaction in kJ/mol">-62.82</enthalpy>
+		</reaction>
+		<reaction reactants="H HO2" products="H2 O2">
+			<activation title="Activation temerature in K">1070.00</activation>
+			<probability title="Probability of rxn happening with same LHS">0.5</probability>
+			<enthalpy title="Enthalpy of Reaction in kJ/mol">220.09</enthalpy>
+		</reaction>
+		<reaction reactants="H HO2" products="H2O O">
+			<activation title="Activation temerature in K">866.00</activation>
+			<probability title="Probability of rxn happening with same LHS">0.5</probability>
+			<enthalpy title="Enthalpy of Reaction in kJ/mol">212.75</enthalpy>
+		</reaction>
+	</species>
+	<!-- DOMAIN -->
+	<domain name="Box">
+		<type>box</type>
+		<grid>
+			<cellsize>10.0</cellsize>
+		</grid>
+		<energy title="not ussed: to be depricated">
+			<lengthscale>100</lengthscale>
+			<strength>50.0</strength>
+		</energy>
+		<bounds title="min max for each direction in nanometers">-500.0 500.0 -500.0 500.0 -500.0 500.0</bounds>
+		<!-- BOUNDARIES: 
+			Boundary types: inside, elastic, periodic, inlet, open.
+			Types determine default reaction of the boundary to particles: 
+			inside: the boundary is inside a domain (don't use)
+			elastic: particles bounce like from an elastic wall
+			periodic: particles crossing this boundary will re-appear 
+				from the opposite boundary
+			open: particles cross the boundary and disappear forever
+			<temperature> provides boundary temperature. If omitted the boundary
+				is considered adiabatic.
+			<specie> tags describe which specie can enter from across the boundary.
+			The frequency with which the species from across the boundary can enter 
+			into the domain ia derived by their pressure and boundary temperature.
+			Pressure units are kPa, density in kg/m^3, and temperature is in Kelvin.
+			As many <specie> tags can be given as necessary.
+			<reaction> tag describes surface reactions at the boundary for
+				specific species in the domain. As many reaction tags can be given 
+				as necessary. 
+			<probability> tag inside <reaction> should be 1.0 for single outcome
+				reactions, and a percentile for multiple-outcome reactions, 
+				for example, for one reaction of O2 with two possible outcomes:
+					O2 + H(s) -> OH + O
+					O2 + H(s) -> HO2
+				the probabilities can be given as 0.5 and 0.5 for each reaction,
+				or in any other ratio as appropriate, but such that all the
+				probabilities for multiple outcome reactions sum up to 1.
+		-->
+		<boundary id="left"><type>elastic</type></boundary>
+		<boundary id="right"><type>elastic</type></boundary>
+		<boundary id="bottom">
+			<type>elastic</type>
+			<temperature title="K">300.0</temperature><!-- Q: What 'fictitious temperature' to provide? -->
+<!--
+			<specie id="H2">
+			  <concentration title="surface site density: m^(-2)"></concentration>
+				<density title="kg/m^3">0.1</density>
+			</specie>
+			<reaction reactant="H2" products="VOID">
+				<activation title="Activation temepature in K">0.0</activation>
+				<enthalpy title="kJ/kmol">0.0</enthalpy>
+			</reaction>
+    SURFACE REACTIONS (Reactions with H) Assume low T_a to start reaction 
+    Reaction                    T_a(K)    DH_r (kJ/mol)
+    OH + H   - H2  + O       100.0      -7.81
+    O2 + H   - OH  + O       100.0      70.17   rate=0.5
+    O2 + H   - HO2           100.0     215.91   rate=0.5
+    O  + H   - OH            100.0    -428.19    
+    H2O+ H   - H2  + OH      100.0    -420.08
+    HO2+ H   - H2  + O2      100.0    -220.09   rate=??
+    HO2+ H   - H2O + O       100.0     270.92   rate=??
+    -->
+			<reaction reactant="OH" products="H2 O">
+				<activation title="Activation temepature in K">100.0</activation>
+				<probability title="Activation probability">0.1</probability>
+				<enthalpy title="kJ/kmol">7.82</enthalpy>
+			</reaction>
+			<reaction reactant="OH" products="H2O">
+				<activation title="Activation temepature in K">0.0</activation>
+				<probability title="Activation probability">0.9</probability>
+				<enthalpy title="kJ/kmol">497.83</enthalpy>
+			</reaction>
+			<reaction reactant="O2" products="OH O">
+				<activation title="Activation temepature in K">100.0</activation>
+				<probability title="Activation probability">0.5</probability>
+				<enthalpy title="kJ/kmol">-70.16</enthalpy>
+			</reaction>
+			<reaction reactant="O2" products="HO2">
+				<activation title="Activation temepature in K">100.0</activation>
+				<probability title="Activation probability">0.5</probability>
+				<enthalpy title="kJ/kmol">215.91</enthalpy>
+			</reaction>
+			<reaction reactant="O" products="OH">
+				<activation title="Activation temepature in K">100.0</activation>
+				<probability title="Activation probability">1.0</probability>
+				<enthalpy title="kJ/kmol">428.19</enthalpy>
+			</reaction>
+			<reaction reactant="H2O" products="H2 OH">
+				<activation title="Activation temepature in K">100.0</activation>
+				<probability title="Activation probability">0.1</probability>
+				<enthalpy title="kJ/kmol">-62.82</enthalpy>
+			</reaction>
+			<reaction reactant="HO2" products="H2 O2">
+				<activation title="Activation temepature in K">100.0</activation>
+				<probability title="Activation probability">0.5</probability>
+				<enthalpy title="kJ/kmol">220.09</enthalpy>
+			</reaction>
+			<reaction reactant="HO2" products="H2O O">
+				<activation title="Activation temepature in K">100.0</activation>
+				<probability title="Activation probability">0.5</probability>
+				<enthalpy title="kJ/kmol">212.75</enthalpy>
+			</reaction>
+		</boundary>
+		<boundary id="top">
+			<type>open</type>
+			<temperature title="K">300.0</temperature>
+			<!-- Composition of the atomosphere from http://en.wikipedia.org/wiki/Earth's_atmosphere#Composition 
+				Nitrogen (N2) 	780,840 ppmv (78.084%)
+				Oxygen (O2) 	209,460 ppmv (20.946%)
+				Argon (Ar) 	9,340 ppmv (0.9340%)
+				Carbon dioxide (CO2) 	383 ppmv (0.0383%)
+				Neon (Ne) 	18.18 ppmv (0.001818%)
+				Helium (He) 	5.24 ppmv (0.000524%)
+				Methane (CH4) 	1.745 ppmv (0.0001745%)
+				Krypton (Kr) 	1.14 ppmv (0.000114%)
+				Hydrogen (H2) 	0.55 ppmv (0.000055%)
+				Not included in above dry atmosphere:
+				Water vapor (H2O) 	~0.25% over full atmosphere, typically 1% to 4% near surface
+
+species=['N2'; 'O2'; 'H2O'];
+volfracs=[0.78 0.21 0.01]
+molweights=[28 32 18]
+molweightav=volfracs*molweights'
+massfracs=volfracs.*molweights/molweightav
+totdensity=1.2 % kg/m^3
+density=massfracs*totdensity
+density =
+
+   0.9118998   0.2805846   0.0075157
+
+			-->
+			<specie id="O2">
+				<density title="kg/m^3: 0.2805846">0.2805846</density>
+			</specie>
+<!--
+			<specie id="N2">
+				<density title="kg/m^3">0.9118998</density>
+			</specie>
+-->
+			<specie id="H2O">
+				<density title="kg/m^3">0.0075157</density>
+			</specie>
+		</boundary>
+		<boundary id="front"> <type>elastic</type></boundary>
+		<boundary id="rear"> <type>elastic</type></boundary>
+	</domain>
+	<!-- GUI -->
+	<gui>
+		<translation>
+			<step>0.01</step>
+		</translation>
+		<vector>
+			<length>2.0</length>
+			<thickness>1.0</thickness>
+			<color>
+				<red>0.5</red>
+				<green>1.0</green>
+				<blue>1.0</blue>
+			</color>
+		</vector>
+		<frame>
+			<line>
+				<thickness>1.0</thickness>
+				<color>
+					<red>1.0</red>
+					<green>0.0</green>
+					<blue>0.0</blue>
+				</color>
+			</line>
+		</frame>
+		<mesh>
+			<!-- Possible Color Schemes:
+				0: by boundary
+				1: by time
+			-->
+			<node>
+				<type title="types: spere point">point</type>
+				<!--<type>point</type>-->
+				<colorscheme>
+					<variable text="Values: mass type">type</variable>
+					<minvalue>0.0</minvalue>
+					<maxvalue>4.0</maxvalue>
+				</colorscheme>
+				<size>1.0</size>
+				<value>
+					<min>-1.0</min>
+					<max>1.0</max>
+				</value>
+				<color>
+					<!-- Basic colors: -->
+					<red>0.0</red>
+					<green>1.0</green>
+					<blue>0.0</blue>
+				</color>
+			</node>
+			<line>
+				<thickness>1.0</thickness>
+				<color>
+					<red>1.0</red>
+					<green>0.5</green>
+					<blue>0.0</blue>
+				</color>
+				<boundary_color>
+					<red>0.0</red>
+					<green>1.0</green>
+					<blue>0.5</blue>
+				</boundary_color>
+			</line>
+		</mesh>
+	</gui>	
+	<xterm>1</xterm>
+</remody>

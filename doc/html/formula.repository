@@ -1,0 +1,75 @@
+\form#0:$f$
+\form#1:$A$
+\form#2:\[ \frac{f}{A} = \frac{N}{\Delta\,t} \]
+\form#3:$s$
+\form#4:$f_s$
+\form#5:\[ f_s = \frac{N}{\Delta\,t} \]
+\form#6:$\Delta\,t_s$
+\form#7:$N$
+\form#8:$\Delta\,Z$
+\form#9:$\Delta\,t$
+\form#10:$x$
+\form#11:$v_{sx}$
+\form#12:\[ \Delta\,t = \frac{\Delta\,z}{v_{sx}} \]
+\form#13:$\rho$
+\form#14:\[ N = \frac{\rho}{\mu}\Delta\,z\,A \]
+\form#15:$\mu$
+\form#16:$A = \Delta\,x\,\Delta\,y$
+\form#17:\[ f_s = \frac{\rho}{\mu}\Delta\,z\,A\frac{v_{sx}}{\Delta\,z} = \frac{\rho\,v_{sx}}{\mu}A \]
+\form#18:$\Delta\,x$
+\form#19:\[ \Delta\,t = \frac{2\Delta\,x}{v_{sx}} \]
+\form#20:\[ N = \frac{\rho}{\mu}\Delta\,x\,A \]
+\form#21:$A = \Delta\,y\,\Delta\,z$
+\form#22:\[ f_s = \frac{\rho}{\mu}\Delta\,x\,A\frac{v_{sx}}{2\Delta\,x} = \frac{\rho\,v_{sx}}{2\mu}A \]
+\form#23:\[ energy = KE + IE + enthalpy \]
+\form#24:\[ dof_A = 2(Cp_A/R -1) \]
+\form#25:\[ dof_B = 2(Cp_B/R -1) \]
+\form#26:$dof_X$
+\form#27:$Cp_X$
+\form#28:\[idof = dof-6 \]
+\form#29:\[ ridof_A = (dof_A - 3)/idof \]
+\form#30:\[ ridof_B = 1 - ridof_A \]
+\form#31:\[ ke = 6\,energy/dof \]
+\form#32:\[ ie = energy - ke \]
+\form#33:\[ mratio=mnew_A/mnew_B \]
+\form#34:\[ unew_A = \sqrt{\frac{2ke}{mnew_A(1-mratio)}} \]
+\form#35:\[ unew_B = unew_A\,mratio \]
+\form#36:\[ uratio_A = unew_A/uold_A \]
+\form#37:\[ uratio_B = unew_B/uold_B \]
+\form#38:$mnew_X$
+\form#39:\[ u_X(i) = u_X(i)*uratio_X \]
+\form#40:\[ InternalEnergy_X = ridof_X\,ie \]
+\form#41:\[ \frac{3}{2}kT = \frac{mV_{av}^2}{2} \]
+\form#42:\[ V_{av}^2 = 3V_{x,av}^2 \]
+\form#43:$V_{av,x} = kT$
+\form#44:\[ i_{mol} \% N_{threads} == i_{thread} \]
+\form#45:\[ mod(i_{mol}, N_{threads}) = i_{thread} \]
+\form#46:$mod(*,*)$
+\form#47:\[ dt = \frac{d}{v} \]
+\form#48:$t_{coll}$
+\form#49:\[ t_{coll} = t + dt \]
+\form#50:\[ dt = \frac{D}{v} \]
+\form#51:$D >> d $
+\form#52:\[ dof_A = DOF(Cp_A) \]
+\form#53:\[ dof_B = DOF(Cp_B) \]
+\form#54:\[ DOF = 3 + (2Cv/R-3)/2 = 3 + Cv/R - 1.5 = Cv/R + 1.5 = Cp/R + 0.5 \]
+\form#55:$Cv = Cp - R$
+\form#56:\[dofi = dof-6 \]
+\form#57:\[ rdofi_A = (dof_A - 3)/dofi \]
+\form#58:\[ rdofi_B = 1 - rdofi_A \]
+\form#59:$dofk_{CM}$
+\form#60:\[ dofk_{CM} = 6 - 3 = 3 \]
+\form#61:$dof_{CM} = dof - 3$
+\form#62:$dofi_{CM} = dofi$
+\form#63:\[ ke_{old} = \frac{ua_{old}^2}{2} + \frac{ub_{old}^2}{2} \]
+\form#64:\[ e_{old} = ke_{old} + iea + ieb \]
+\form#65:$a$
+\form#66:$b$
+\form#67:\[ e = e_{old} + h \]
+\form#68:\[ ke = \frac{dofk_{CM}}{dof_{CM}}\,e \]
+\form#69:\[\frac{ma\,ua^2}{2} = \frac{mb\,ub^2}{2} = \frac{ke}{2} \]
+\form#70:\[ ua = \sqrt{ke/ma} \]
+\form#71:\[ ub = \sqrt{ke/mb} \]
+\form#72:\[ uratio_A = ua/ua_{old} \]
+\form#73:\[ uratio_B = ub/ub_{old} \]
+\form#74:\[ InternalEnergy_X = rdofi_X\,ie \]

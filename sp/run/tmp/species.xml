@@ -1,0 +1,52 @@
+<specie id="H">
+	<mass title="Atomic Units: 1.0079">1.0</mass>
+	<size title="nanometers">?</size>
+	<dof>1</dof>
+</specie>
+<specie id="H2">
+	<mass title="Atomic Units: 2.0158">2.0</mass>
+	<size title="nanometers">0.240</size>
+	<dof>3</dof>
+</specie>
+<specie id="O">
+	<mass title="Atomic Units">16.0</mass>
+	<size title="nanometers">?</size>
+	<dof>1</dof>
+</specie>
+<specie id="O2">
+	<mass title="Atomic Units">32.0</mass>
+	<size title="nanometers">0.29</size>
+	<dof>3</dof>
+</specie>
+<specie id="OH">
+	<mass title="Atomic Units">17.0</mass>
+	<size title="nanometers ?">0.25</size>
+	<dof>3</dof>
+</specie>
+<specie id="H2O">
+	<mass title="Atomic Units: 18.015">18.0</mass>
+	<size title="nanometers">0.275</size>
+	<dof>?</dof>
+</specie>
+<specie id="HO2">
+	<!-- Approximate: Size(HO2) = Size(O2)+(Size(H2O) - Size(O))/2 -->
+	<mass title="Atomic Units: 33.007">33.0</mass>
+	<size title="nanometers">0.3275</size>
+	<dof>?</dof>
+</specie>
+<specie id="N2">
+	<mass title="Atomic Units">28.0</mass>
+	<size title="nanometers">0.31</size>
+	<dof>3</dof>
+</specie>
+<specie id="H2S">
+	<mass title="Atomic Units: 34.082">34.0</mass>
+	<size title="nanometers">0.36</size>
+	<dof>?</dof>
+</specie>
+<specie id="Ni">
+	<mass title="Atomic Units: 58.6934">58.0</mass>
+	<size title="nanometers">0.75</size>
+	<dof>1</dof>
+</specie>
+

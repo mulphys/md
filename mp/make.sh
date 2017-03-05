@@ -1,0 +1,1 @@
+make THREADED=1 OPTIONS=-g

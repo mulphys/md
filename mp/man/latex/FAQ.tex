@@ -1,0 +1,154 @@
+\hypertarget{FAQ_SecFAQ}{}\section{FAQs}\label{FAQ_SecFAQ}
+\begin{itemize}
+\item {\bf Q:}{\em \char`\"{}When I run remody with a larger domain the program doesn't run and show me this message:\char`\"{}\/} \par
+\par
+{\bf CAN'T INSERT ELEMENT: \hyperlink{classCollection}{Collection} OF 99999 IS FULL}\par
+\par
+ {\bf A:} Increase the number of molecules above 100000 in $<$molecules$>$....$<$/molecules$>$ section of the config file (syngas.xml) You can estimate the number of molecules you should use from the ideal gas law, that is how many molecules you can have in the domain size you selected and increase that number by 10\% to avoid that error condition above.\end{itemize}
+
+
+\begin{itemize}
+\item {\bf Q:} {\em \char`\"{}How to make the code run faster?\char`\"{}\/}\par
+ {\bf A:} When you run the code check how much memory the program is using. For example, you can do it running 'top' from a terminal. If it is using less than 80\%, then decrease the parameter inside {\bf $<$grid$>$$<$cellsize$>$...$<$/cellsize$>$$<$/grid$>$} tag. This will make code run a bit faster but it will also increase the memory utilization. It may not even start if you decrease it too much. If the memory utilization is still less than 80\%, you can keep decreasing that parameter. Do not decrease it below twice the size of the biggetst molecule in your composition.\end{itemize}
+
+
+\begin{itemize}
+\item {\bf Q:} {\em \char`\"{}How do I restart the run?\char`\"{}\/}\par
+ {\bf A:} When the code is running it generates output files at regular time interval (physical time, that is) which is set inside {\bf $<$time$>$$<$output$>$...$<$/output$>$$<$/time$>$} tag. The output is dumped to the gzipped-files named like remody-$<$timestamp$>$.dat.gz. To restart the run from the output file you should start the run as: \par
+\par
+{\bf ./remody -f configfile.xml remody-$<$timestamp$>$.dat.gz}\par
+\par
+\end{itemize}
+
+
+\begin{itemize}
+\item {\bf Q:}\label{_readlog}
+ {\em \char`\"{}How do I produce time-curves of various parameters?\char`\"{}\/}\par
+ {\bf A:} You can produce time curves for such parameters as temperature (T), number of molecules in the domain (N), average energy per molecule (E), and various specie concentrations. For T,N, and E follow the procedure as described below, using the syntax with an equal sign (=), for species do not use equal sign as described in the following two questions.\end{itemize}
+
+
+\begin{itemize}
+\item {\bf Q:} {\em \char`\"{}How do I construct the temperature curve?\char`\"{}\/}\par
+ {\bf A:} \hyperlink{namespaceRun}{Run} the readlog.py utility with the remody terminal output log file as input. For example, when you start the batch job, use the command like this:\par
+\par
+{\bf  ./job -f config.xml $>$ job.log \& }\par
+\par
+ This will dump temperature, concentrations, and other parameters into the job.log file every iteration. Then you can run the readlog.py utility to produce the temperature curve file from the log file, like: \par
+\par
+{\bf  python readlog.py T= $<$ job.log $>$ temp.dat }\par
+\par
+ where the temp.dat file contains two columns of temperature versus time, which be displayed in gnuplot with a command like:\par
+\par
+{\bf plot 'temp.dat' w l}\par
+\par
+\end{itemize}
+
+
+\begin{itemize}
+\item {\bf Q:} {\em \char`\"{}\char`\"{}\/} {\bf A:}\end{itemize}
+
+
+\begin{itemize}
+\item {\bf Q:} {\em \char`\"{}How do I construct specie concentration time curves?\char`\"{}\/}\par
+ {\bf A:} Do similarly as for the temperature curve above, except when running the readlog specify the specie chemical formula as provided in the input xml file, and do not use the equal sign (=) after the specie name as in the case above, like this:\par
+\par
+{\bf  python readlog.py CO2 $<$ job.log $>$ co2.dat }\par
+\par
+\end{itemize}
+
+
+\begin{itemize}
+\item {\bf Q:} {\em \char`\"{}How can I retrieve the results of simulation?\char`\"{}\/} \par
+{\bf A:} Here is how you can produce the results from the simulation run. First check if the run is going with top: \par
+\par
+{\bf  top }\par
+\par
+ This will show the table like this: \par
+\par
+{\tt  top - 04:29:40 up 42 days, 3:41, 2 users, load average: 1.03, 1.10, 1.20\par
+ Tasks: 126 total, 3 running, 123 sleeping, 0 stopped, 0 zombie\par
+ Cpu(s): 25.2us, 0.1sy, 0.0ni, 74.7id, 0.0wa, 0.0hi, 0.0si, 0.0st\par
+ Mem: 4031520k total, 3878180k used, 153340k free, 336828k buffers\par
+ Swap: 10241428k total, 1454736k used, 8786692k free, 552436k cached\par
+ \par
+ PID USER PR NI VIRT RES SHR S CPU MEM TIME+ COMMAND\par
+ 29283 rolando 25 0 3353m 2.0g 1336 R 100 52.8 9843:09 job\par
+ 1 root 15 0 10308 596 544 S 0 0.0 0:04.77 init\par
+ ...\par
+ } There you can see that job is running. Quit it by pressing 'q'-key. Then check how far the run has gone: \par
+\par
+{\bf  tail -f syngas2.log }\par
+\par
+ This will show the something like:\par
+\par
+{\tt  Time=6.103e-01 Step=2.439e-06 Memory=41\% N=8279309 T=1039.63K E=1.188e-13J\par
+ H H2 OH H2O CH3 CH4\par
+ 5.45126 31.48455 0.00104 18.91287 0.00041 13.87211\par
+ CO2 CO N2\par
+ 8.70242 10.84918 10.72622\par
+ \par
+\par
+ Note that syngas2.log file above was used because the job started with the command: \par
+\par
+{\bf  ./job -f syngas2.xml job-4.dat.gz 1$>$ syngas2.log 2$>$ syngas2.err \& }\par
+\par
+ If you used a different log file you should use that one above. From the table you can see all the species currently in the simulation. Now you can quit tail -f with pressing $^\wedge$C (Cntrl.C). \par
+\par
+ To produce the time sequence do this: \par
+\par
+\begin{enumerate}
+\item \hyperlink{namespaceRun}{Run} this command: \par
+\par
+{\bf  python readlog.py H2 $<$ syngas2.log $>$ H2-time.dat }\par
+\par
+ Note that readlog.py program is in your remody/util directory. This should create the H2-time.dat file.\par
+ \par
+\item Check the file with gnuplot: \par
+\par
+{\bf  gnuplot$>$ plot 'H2-time.dat' w l }\par
+\par
+ And then you do the same for H2O, CO2, etc.\end{enumerate}
+}\end{itemize}
+
+
+{\tt \begin{itemize}
+\item {\bf Q:} {\em \char`\"{}How to produce a spatial distribution along one axis?\char`\"{}\/} \par
+{\bf A:}\begin{enumerate}
+\item Check that you have the hist program in run directory: ls hist if you dont, compile it if necessary in your remody/util directory by running make and link it or copy into your run directory, like ln -s ../util/hist .\par
+\item Select the time step for which you want the distribution. For example, for 5 nanoseconds, you should use job-5.dat.gz file.\item \hyperlink{namespaceRun}{Run} the command: \par
+\par
+{\bf  gunzip job-5.dat.gz -c $|$ grep H2 $|$ grep -v H2O $|$ cut -f 3 $|$ ./hist $>$ H2-5.dat }\par
+\par
+ This will create the H2-5.dat file, which you can see with gnuplot as: \par
+\par
+{\bf  plot 'H2-5.dat' w l }\par
+\par
+ Note, that the line above has 'grep -v H2O' part. This is needed to preclude all H2O molecules from the H2 list. Similarily, when you produce CO distribution, you should use: \par
+\par
+{\bf  gunzip job-5.dat.gz -c $|$ grep CO $|$ grep -v CO2 $|$ cut -f 3 $|$ ./hist $>$ CO-5.dat }\par
+\par
+ But to produce H2O or CO2 distributions, you should use: \par
+\par
+{\bf  gunzip job-5.dat.gz -c $|$ grep H2O $|$ cut -f 3 $|$ ./hist $>$ H2O-5.dat gunzip job-5.dat.gz -c $|$ grep CO2 $|$ cut -f 3 $|$ ./hist $>$ CO2-5.dat }\par
+\par
+ Then you can produce plot of all of them like: \par
+\par
+{\bf  plot 'H2-5.dat' w l, 'H2O-5.dat w l, 'CO-5.dat' w l, 'CO2-5.dat' w l }\par
+\par
+ etc. The same for other nanoseconds. You may need to set the axes labels, like \par
+\par
+{\bf  set xlabel 'TIME \mbox{[}ns\mbox{]}' set ylabel 'NUMBER OF MOLECULES' }\par
+\par
+ To save the plot into a png-file, use: \par
+\par
+{\bf  set term png set output 'concentrations-5ns.png' }\par
+\par
+ and then run the above plot command again. This will create the concentrations-5ns.png file, which you can include into a presentation or a paper. But don't forget to get the output back to the screen with: \par
+\par
+{\bf  set output set term x11 }\par
+\par
+ before you try other plot commands, or everything will be written to that png file. \par
+\par
+ Of course if you are proficient with Python, you can use the \href{http://matplotlib.sourceforge.net}{\tt matplotlib} module to plot and alalyze the results. \end{enumerate}
+\end{itemize}
+}

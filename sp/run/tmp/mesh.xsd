@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--<xsd:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">-->
+	<xsd:import namespace="http://www.w3.org/XML/1998/namespace">
+		<xsd:annotation>
+			<xsd:documentation>
+				The schemaLocation of the relevant file is
+				"http://www.w3.org/2001/xml.xsd"; however,
+				we don't want to assume people are always
+				connected to the 'net when playing with this file.
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:import>
+	<xsd:element name="mesh">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="time" type="Time" minOccurs='0' maxOccurs='1'/>
+				<xsd:element name="domain" type="Domain" minOccurs='1' maxOccurs='unbounded'/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:complexType name="Time">
+		<xsd:sequence>
+			<xsd:element name="start" type="xsd:float"/>
+			<xsd:element name="step" type="xsd:float" 
+			             minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="end" type="xsd:float" 
+			             minOccurs="0" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="Domain">
+		<xsd:sequence>
+			<xsd:element name="type"   type="xsd:string"/>
+			<xsd:element name="energy" type="Energy"/>
+			<xsd:element name="geometry" type="Geometry"/>
+			<xsd:element name="mesh" type="Mesh"/>
+			<xsd:element name="time" type="Time" minOccurs='0' maxOccurs='1'/>
+		</xsd:sequence>
+		<xsd:attribute name="name" type="xsd:ID" use="required"/>
+	</xsd:complexType>
+
+	<xsd:complexType name="Energy">
+		<xsd:sequence>
+			<xsd:element name="lengthscale" type="xsd:float"/>
+			<xsd:element name="strength" type="xsd:float"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="Geometry">
+		<xsd:sequence>
+			<xsd:element name="bounds" type="Bounds" minOccurs='0' maxOccurs='1'/>
+			<xsd:element name="lengthscale" type="xsd:integer" minOccurs='0' maxOccurs='1'/>
+			<xsd:choice minOccurs='0'>
+				<xsd:element name="shape" type="Shape"/>
+				<xsd:element name="mesh" type="Mesh"/>
+				<xsd:element name="grid" type="Grid"/>
+			</xsd:choice>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="Shape">
+		<xsd:sequence>
+			<xsd:element name="type" type="xsd:string"/>
+			<xsd:element name="dimensions" type="IntList" minOccurs='0' maxOccurs='1'/>
+			<xsd:element name="bounds" type="FloatList" minOccurs='0' maxOccurs='1'/>
+			<xsd:element name="boundary" type="IntList" minOccurs='0' maxOccurs='1'/>
+			<xsd:element name="origin" type="Coordinates" minOccurs='0' maxOccurs='1'/>
+			<xsd:element name="elements" type="IntList" minOccurs='0' maxOccurs='1'/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="Grid">
+		<xsd:sequence>
+			<xsd:element name="type" type="xsd:string"/>
+			<xsd:element name="dimensions" type="Dimensions"/>
+			<xsd:element name="origin" type="Coordinates" minOccurs='0' maxOccurs='1'/>
+			<xsd:element name="boundary" type="Dimensions" minOccurs='0' maxOccurs='1'/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="Mesh">
+		<xsd:sequence>
+			<xsd:element name="type" type="xsd:string"/>
+			<xsd:choice>
+				<xsd:sequence>
+					<xsd:element name="nodes" type="Nodes"/>
+					<xsd:element name="cells" type="Cells"/>
+				</xsd:sequence>
+				<xsd:element name="file" type="xsd:string"/>
+			</xsd:choice>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="Mesh">
+		<xsd:sequence>
+			<xsd:element name="type" type="xsd:string"/>
+			<xsd:element name="number" type="xsd:integer"/>
+			<xsd:element name="size" type="xsd:float"/>
+			<xsd:element name="coordinates" type="Coordinates" minOccurs='0'/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="Nodes">
+		<xsd:sequence>
+			<xsd:element name="number" type="xsd:positiveInteger"/>
+			<xsd:element name="coordinates" type="FloatList" minOccurs='0'/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="Cells">
+		<xsd:sequence>
+			<xsd:element name="number" type="xsd:nonNegativeInteger"/>
+			<xsd:element name="nodes" type="IntList" minOccurs='0'/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:simpleType name="Dimensions">
+		<xsd:restriction base="IntList">
+			<xsd:length value="6"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="Bounds">
+		<xsd:restriction base="FloatList">
+			<xsd:length value="6"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="IntList">
+		<xsd:list itemType="xsd:positiveInteger"/>
+	</xsd:simpleType>
+
+	<xsd:complexType name="numberedIntList">
+		<xsd:simpleContent>
+			<xsd:extension base="IntList">
+				<xsd:attribute name="number" type="xsd:positiveInteger"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+
+	<xsd:simpleType name="Coordinates">
+		<xsd:restriction base="FloatList">
+			<xsd:length value="3"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="FloatList">
+		<xsd:list itemType="xsd:float"/>
+	</xsd:simpleType>
+
+</xsd:schema>

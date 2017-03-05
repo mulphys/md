@@ -1,0 +1,108 @@
+/*! \mainpage ReMoDy Source Code Documentation
+ \version 1.0
+ \author Andrei Smirnov andrei.v.smirnov@gmail.com
+ 
+\section SecCont Contents
+ - \ref SecIntro 
+ - \ref SecModel
+ - \ref SecInstall
+ - \ref SecSetup
+ - \ref SecConfig
+ - \ref SecGUI
+ - \ref SecOutput
+ - \ref SecExamples
+ - \ref FAQ
+ - \ref SecMisc
+
+<hr/>
+\section SecIntro Introduction
+
+This is the documentation of the ReMoDy (Reactive Molecular Dynamics) program, which implements the
+model of reactive molecular dynamics based on the 
+<a href="http://en.wikipedia.org/wiki/Collision_theory">Collision Theory</a>.
+
+<hr/>
+\section SecInstall Installation and Execution
+
+\subsection step1 Step 1: Extracting the archive
+ 
+If you have the archive file, like remody.tbz (tar-bzipped) or 
+remody.tgz (tar-gzipped) then files can be retrieved into a current 
+directory as:
+<br/><br/><b>
+        tar cvjf remody.tbz
+<br/><br/></b>
+or
+<br/><br/><b>
+        tar cvzf remody.tgz
+<br/><br/></b>
+respectively. 
+
+\subsection step2 Step 2: Compiling
+
+To compile the executable on Linux run make from the remody root directory,
+where the makefile was saved. Note that the subdirectories src/, run/, and obj/ should 
+be also present.
+
+\subsection step3 Step 3: Running
+
+The executables are saved in the run/ directory. It should also contain the example
+remody.xml and demo.xml files, as well as an initial empty input file empty.dat.gz.
+To run the program with an OpenGL window active (slow, good for debugging), one can use 
+the command: 
+<br/><br/><b>
+./view -f demo.xml empty.dat.gz
+</b><br/><br/>
+This will start the program with the initial parameters read from the demo.xml file and the initial
+data read from empty.dat.gz file. On startup the program will open the window. 
+One can point at the window with the mouse and press 'f' key to show the frame and 'r' key to run the
+simulation. Alternatively, one can use 's' key to run iterations step-by-step.
+Other key functions are described by pressing the '?' key. 
+
+To run the program in a batch mode without OpenGL output, one can use this command:
+<br/><br/><b>
+./job -f demo.xml empty.dat.gz &
+</b><br/><br/>
+This will start the run. To change the parameters of the job, one should modify 
+the input xml file accordingly (demo.xml, remody.xml, etc.).
+A link with the name remody is also set to one of the executables, like
+<br/><br/><b>
+ln -s ./job remody
+</b><br/><br/>
+
+<hr/>
+\section SecSetup Setup
+
+Both view (OpenGL based) and job (batch mode) executables read the configuration xml file.
+By default the file will have the same name as the executable, for example: job.xml or view.xml.
+This can be overwritten with the '-f' option. Two example files 
+<a href="../../run/remody.xml">remody.xml</a> and <a href="../../run/demo.xml">demo.xml</a> are
+provided with the distribution.
+
+The format of the xml file is in most cases self-explanatory with explanations provided in the
+"title" fields and comments. The main sections include: run, species, domain, and gui.
+
+The <b>run</b> section specifies the number of iterations, time steps, output intervals, and the maximum
+number of molecules to be used.
+
+The <b>species</b> section provides the list of species, and reactions between them.
+
+The <b>domain</b> section provides the specifications of the boundary conditions and the surface reactions
+and species.
+
+The <b>gui</b> section specifies the parameters used in the OpenGL output window, such as colors, line
+width, etc.
+
+See also Section \ref SecConfig
+
+<hr/>
+\section SecMisc Licencing and Support
+
+The rest of this documentation provides the descriptioin of the structure and functionality of the
+classes, namespaces, and files of the code.  
+
+The code is provided under the <a href="http://www.gnu.org/licenses/gpl.html">GPL licence</a>. Any
+suggestions/requests can be directed to the developers team at <a
+href="http://nift.wvu.edu">NIFT</a>.  
+
+ */

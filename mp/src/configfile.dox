@@ -1,0 +1,102 @@
+/*! \page Configfile Configfile
+\section SecConfig Configuration File
+
+\subsection SSecInvocation Invocation
+
+The config file is in XML format. It is loaded at program startup and contains the specification of 
+all the main parameters, grouped in respective sections. An example <a href="../syngas.xml">syngas.xml</a> 
+file is provided which includes the setup of syngas reaction on the anode side
+of a high-temperature solid-oxide fuel cell.
+
+
+The default name of the config file is &lt;progname&gt;.xml, where &lt;progname&gt; is the name of the 
+executable, such as <tt>view</tt>, <tt>job</tt>, or <tt>remody</tt>. One can override the default name
+by using -f command line option, like:
+<br/><br/><b>
+remody -f syngas.xml 
+</b><br/><br/>
+
+\subsection SSecSections Sections
+
+The sections are enclosed in XML tag pairs, like &lt;tag&gt;...&lt;/tag&gt;.
+where the tags are as follows:
+
+ - <tt>iterations</tt>: specifies the integer number of iterations the code should run
+ - <tt>time</tt>: several parameters of physical execution time in seconds, such as
+   <tt>start</tt>=start time, <tt>end</tt>=end time, and <tt>step</tt>=time step.
+	The code will run until either the number of iterations as specified in
+   the <tt>iterations</tt> section or the end time is reached.
+ - <tt>molecules</tt>: integer number equal to the maximum number of molecules that 
+   the program will be able to handle. It will determine the memory allocated at the
+   beginning of execution.
+ - <tt>species</tt>: this section lists all chemical species and reactions between them.
+   Correspondingly, each specie is described in <tt>specie</tt> section as:
+ -# <tt>specie</tt>: includes such parameters as <tt>mass</tt> in Atomic units [au],
+    <tt>size</tt> in nanometers [nm], and specific heat, <tt>cp</tt> in kJ/(mol*K).
+    The <tt>specie</tt> tag should also include an attribute <tt>id</tt>, identifying
+    a specie chemical formula, such as CO2, H2O, etc.
+ -# <tt>reaction</tt>: reaction tag has two attributes: <tt>reactants</tt> and <tt>products</tt>.
+    The reactants tag should contain two species identifiers. Since only elementary (binary) reactions
+    are considered, there should be exactly two identifiers for reactants. Each of the identifiers 
+    should correspond to one specie identifiers listed in the list of species. The products attribute 
+    should consist of one or two identifiers of reaction products. Also in the reaction section
+    the following parameters are specified:<br/> 
+    <tt>activation</tt> = reaction activation temperature in K, <br/>
+    <tt>probability</tt> = probability of reaction outcome as given by the
+    <tt>products</tt> attribute. This parameter should always be 1.0 if there is only one
+    reaction with the given reactants. In case of several reactions with the same reactants,
+    but with different products, this parameter should indicate the probability of 
+    this particular branch with given reaction products. <br/>
+    <tt>enthalpy</tt> = enthalpy of reaction in kJ/mol.
+ - <tt>domain</tt>: The <tt>domain</tt> section consists of the set of parameters
+   describing the geometry and physical properties of the modeled media inside the
+   computational domain, including:
+ -# <tt>type</tt>: specifies the geometry. Currently only <tt>box</tt> type is
+    supported.
+ -# <tt>grid</tt>: Specifies parameters of the rectangular grid used in segmentation
+    algorithm for accelerating the interaction scheme. In particular, the
+    <tt>cellsize</tt> parameter determines the size of the grid cell. This size should
+    be selected as small as possible but no less than twice the size of the largest
+    specie. Decreasing the cell size will speed-up code execution in better than linear
+    proportion of the cell-size (but no better than quadratic). At the same time it
+    will increase memory utilization in proportion to it's 3-rd power. 
+    It is not recommended to increase the memory utilization above
+    90%. One can use Unix 'top' utility to check memory utilization.
+ -# <tt>energy</tt>: Only used for Lennart-Jones type potentials, currently under
+    development.
+ -# <tt>bounds</tt>: specifies spatial bounds of the computational domain as: xmin xmax
+    ymin ymax zmin zmax.
+ -# <tt>bulk</tt>: this section specifies thermodynamic properties and gas composition inside the bulk of
+    the domain. In particular, <tt>temperature</tt> is given in Kelvin [K], and for each
+    specie, its <tt>density</tt> is specified in [kg/m^3].
+ -# <tt>boundary</tt>: each boundary of the domain contains the description of
+    thermodynamic properties and gas composition on the other side of the
+    boundary in the same format as for the bulk of the domain. In addition to these, the
+    boundary tag should have the boundary identifier <tt>id</tt>-attribute, such as
+    "top", "bottom", "right", "left", "front", and "rear". Also additional boundary tag
+    is <tt>type</tt>, which can be one of: "open", "elastic", and "periodic". In the
+    case of open boundary the molecules can freely cross the boundary, in which case they will
+    be removed from the domain. In case of elastic boundary the molecules will bounce from the
+    boundary like from an elastic wall. For periodic boundaries, the molecules crossing the
+    boundary will reappear from the opposite boundary. Boundary description can also
+    contain the list reactions, between the boundary species given in the same format as in
+    the <tt>species</tt> section.
+
+   - <tt>gui</tt>: the gui section describes parameters related to graphical output used
+     when running an OpenGL based version with a visual window output.
+   -# <tt>translation</tt>: initial translation of the scene.
+   -# <tt>vector</tt>: parameters for displaying vectors.
+   -# <tt>frame</tt>: parameters for displaying a domain frame.
+   -# <tt>mesh</tt>: parameters for displaying mesh. In particular the <tt>node</tt> tag
+      specifies the parameters for displaying particles, or molecules, such as using points or
+      spheres (<tt>type</tt>), etc. Note that using 'spehere' for type may significantly
+      slow-down simulation in GUI mode.
+
+ - <tt>xterm</tt>: if set to 1 this parameter will force terminal dumping of certain parameters,
+   like temperature, energy, number of molecules, and species concentrations after every
+   time-step. This can be useful if the time-dependence of concentrations and other
+   parameters needs to be retrieved. In the last case the output can be redirected to a file,
+   which can be processed with the <tt>readlog</tt> utility (see \ref SecFAQ "How do I
+   produce time-curves ...?").
+ */ 
+

@@ -1,0 +1,282 @@
+\hypertarget{namespaceRun}{
+\section{Run Namespace Reference}
+\label{namespaceRun}\index{Run@{Run}}
+}
+Processing command-line and execution control parameters.  
+
+
+\subsection*{Classes}
+\begin{CompactItemize}
+\item 
+struct \hyperlink{structRun_1_1Time}{Time}
+\begin{CompactList}\small\item\em Execution time-control structure. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+void \hyperlink{namespaceRun_a186b3a7a41e8fe7a5fa65e70577ebfd}{testrnd} ()
+\begin{CompactList}\small\item\em Test random numer generator. \item\end{CompactList}\item 
+REAL \hyperlink{namespaceRun_61c4192fdab078a931b0b143c2489a66}{rnd} ()
+\begin{CompactList}\small\item\em Seeds random number. \item\end{CompactList}\item 
+REAL \hyperlink{namespaceRun_d4c4416d555619b82bbaad195bbb1dcc}{gauss} ()
+\begin{CompactList}\small\item\em normal random number generator \item\end{CompactList}\item 
+void \hyperlink{namespaceRun_719eff34d155bf728b3c621f7c6b1c92}{init} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\begin{CompactList}\small\item\em Initialize all variables, and execution options. \item\end{CompactList}\item 
+void \hyperlink{namespaceRun_bce2c6229363ea0c1a164b61fcd06f89}{readcmdline} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\begin{CompactList}\small\item\em Parses command-line options. \item\end{CompactList}\item 
+int \hyperlink{namespaceRun_4062bda6143a9042da86a5f48ad6daf5}{elapsed} ()
+\begin{CompactList}\small\item\em time (sec) elapsed since the start of the run \item\end{CompactList}\item 
+void \hyperlink{namespaceRun_cc78ebcab78e6893272ed9d3c2a550f1}{seed} ()
+\begin{CompactList}\small\item\em seed random number generator \item\end{CompactList}\item 
+void($\ast$) \hyperlink{namespaceRun_ec4aa644c976688fe218a95f27c8430e}{usage} ()
+\end{CompactItemize}
+\subsection*{Variables}
+\begin{CompactItemize}
+\item 
+struct \hyperlink{structOption}{Option} \hyperlink{namespaceRun_724100d30eed9a8f5ac9ec41e76e4c40}{option} = \{0,0,0,0\}
+\begin{CompactList}\small\item\em command-line options \item\end{CompactList}\item 
+void($\ast$ \hyperlink{namespaceRun_110719db892c2b065597a3ded0d90c2d}{usage} )()
+\item 
+char \hyperlink{namespaceRun_f2d1163d068ab8ea8c75abd469c4a43f}{programname} \mbox{[}MAXLINLEN\mbox{]}
+\item 
+char \hyperlink{namespaceRun_3a8e039898acf6eb150d36bfc1b799b6}{configfile} \mbox{[}MAXLINLEN\mbox{]}
+\item 
+char \hyperlink{namespaceRun_4f57473c9c02d920b7b738c37597f972}{outputfile} \mbox{[}MAXLINLEN\mbox{]}
+\item 
+char \hyperlink{namespaceRun_70e0ce554030dedb8ebc665cfb95167a}{inputfile} \mbox{[}MAXLINLEN\mbox{]}
+\item 
+char \hyperlink{namespaceRun_764ba544be98b57556f317ca171d7969}{outputname} \mbox{[}MAXLINLEN\mbox{]}
+\item 
+int \hyperlink{namespaceRun_b8a2ab3c70feb348697b53df22451f3c}{nthreads}
+\item 
+struct timeb \hyperlink{namespaceRun_73327ac5b154c258e9b88ea0260d50ad}{worldtime}
+\item 
+struct \hyperlink{structRun_1_1Time}{Time} \hyperlink{namespaceRun_0b48df515ddd51b80cedcfd90d8c1dc3}{time}
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+Processing command-line and execution control parameters. 
+
+
+
+\subsection{Function Documentation}
+\hypertarget{namespaceRun_4062bda6143a9042da86a5f48ad6daf5}{
+\index{Run@{Run}!elapsed@{elapsed}}
+\index{elapsed@{elapsed}!Run@{Run}}
+\subsubsection[{elapsed}]{\setlength{\rightskip}{0pt plus 5cm}int Run::elapsed ()}}
+\label{namespaceRun_4062bda6143a9042da86a5f48ad6daf5}
+
+
+time (sec) elapsed since the start of the run 
+
+
+
+Definition at line 138 of file run.cc.
+
+References worldtime.
+
+Referenced by Domain::save().\hypertarget{namespaceRun_d4c4416d555619b82bbaad195bbb1dcc}{
+\index{Run@{Run}!gauss@{gauss}}
+\index{gauss@{gauss}!Run@{Run}}
+\subsubsection[{gauss}]{\setlength{\rightskip}{0pt plus 5cm}REAL Run::gauss ()}}
+\label{namespaceRun_d4c4416d555619b82bbaad195bbb1dcc}
+
+
+normal random number generator 
+
+From Numerical Recepes in C, Ch.7.2 Zero mean and unit variance 
+
+Definition at line 57 of file run.cc.
+
+References REAL, and rnd().\hypertarget{namespaceRun_719eff34d155bf728b3c621f7c6b1c92}{
+\index{Run@{Run}!init@{init}}
+\index{init@{init}!Run@{Run}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}void Run::init (int {\em argc}, \/  char $\ast$ {\em argv}\mbox{[}$\,$\mbox{]})}}
+\label{namespaceRun_719eff34d155bf728b3c621f7c6b1c92}
+
+
+Initialize all variables, and execution options. 
+
+
+
+Definition at line 79 of file run.cc.
+
+References configfile, Option::debug, IO::getTime(), Option::mesh, option, readcmdline(), Option::restart, Option::verbose, worldtime, and Option::xterm.
+
+Referenced by main().\hypertarget{namespaceRun_bce2c6229363ea0c1a164b61fcd06f89}{
+\index{Run@{Run}!readcmdline@{readcmdline}}
+\index{readcmdline@{readcmdline}!Run@{Run}}
+\subsubsection[{readcmdline}]{\setlength{\rightskip}{0pt plus 5cm}void Run::readcmdline (int {\em argc}, \/  char $\ast$ {\em argv}\mbox{[}$\,$\mbox{]})}}
+\label{namespaceRun_bce2c6229363ea0c1a164b61fcd06f89}
+
+
+Parses command-line options. 
+
+
+
+Definition at line 93 of file run.cc.
+
+References configfile, Option::debug, inputfile, Option::mesh, option, outputfile, outputname, programname, Option::restart, and Option::verbose.
+
+Referenced by init().\hypertarget{namespaceRun_61c4192fdab078a931b0b143c2489a66}{
+\index{Run@{Run}!rnd@{rnd}}
+\index{rnd@{rnd}!Run@{Run}}
+\subsubsection[{rnd}]{\setlength{\rightskip}{0pt plus 5cm}REAL Run::rnd ()}}
+\label{namespaceRun_61c4192fdab078a931b0b143c2489a66}
+
+
+Seeds random number. 
+
+random number generator
+
+Generates random number between 0 and 1 
+
+Definition at line 51 of file run.cc.
+
+References RAND\_\-MAX, and REAL.
+
+Referenced by gauss(), and testrnd().\hypertarget{namespaceRun_cc78ebcab78e6893272ed9d3c2a550f1}{
+\index{Run@{Run}!seed@{seed}}
+\index{seed@{seed}!Run@{Run}}
+\subsubsection[{seed}]{\setlength{\rightskip}{0pt plus 5cm}void Run::seed ()}}
+\label{namespaceRun_cc78ebcab78e6893272ed9d3c2a550f1}
+
+
+seed random number generator 
+
+\hypertarget{namespaceRun_a186b3a7a41e8fe7a5fa65e70577ebfd}{
+\index{Run@{Run}!testrnd@{testrnd}}
+\index{testrnd@{testrnd}!Run@{Run}}
+\subsubsection[{testrnd}]{\setlength{\rightskip}{0pt plus 5cm}void Run::testrnd ()}}
+\label{namespaceRun_a186b3a7a41e8fe7a5fa65e70577ebfd}
+
+
+Test random numer generator. 
+
+
+
+Definition at line 31 of file run.cc.
+
+References RAND\_\-MAX, REAL, and rnd().\hypertarget{namespaceRun_ec4aa644c976688fe218a95f27c8430e}{
+\index{Run@{Run}!usage@{usage}}
+\index{usage@{usage}!Run@{Run}}
+\subsubsection[{usage}]{\setlength{\rightskip}{0pt plus 5cm}void($\ast$) {\bf Run::usage} ()}}
+\label{namespaceRun_ec4aa644c976688fe218a95f27c8430e}
+
+
+
+
+Definition at line 23 of file job.cc.
+
+References programname.
+
+\subsection{Variable Documentation}
+\hypertarget{namespaceRun_3a8e039898acf6eb150d36bfc1b799b6}{
+\index{Run@{Run}!configfile@{configfile}}
+\index{configfile@{configfile}!Run@{Run}}
+\subsubsection[{configfile}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf Run::configfile}}}
+\label{namespaceRun_3a8e039898acf6eb150d36bfc1b799b6}
+
+
+
+
+Definition at line 20 of file run.cc.
+
+Referenced by Domain::Domain(), init(), main(), readcmdline(), and Gui::readconf().\hypertarget{namespaceRun_70e0ce554030dedb8ebc665cfb95167a}{
+\index{Run@{Run}!inputfile@{inputfile}}
+\index{inputfile@{inputfile}!Run@{Run}}
+\subsubsection[{inputfile}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf Run::inputfile}}}
+\label{namespaceRun_70e0ce554030dedb8ebc665cfb95167a}
+
+
+
+
+Definition at line 20 of file run.cc.
+
+Referenced by main(), and readcmdline().\hypertarget{namespaceRun_b8a2ab3c70feb348697b53df22451f3c}{
+\index{Run@{Run}!nthreads@{nthreads}}
+\index{nthreads@{nthreads}!Run@{Run}}
+\subsubsection[{nthreads}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf Run::nthreads}}}
+\label{namespaceRun_b8a2ab3c70feb348697b53df22451f3c}
+
+
+
+
+Definition at line 26 of file run.cc.
+
+Referenced by Domain::interaction(), and Domain::run().\hypertarget{namespaceRun_724100d30eed9a8f5ac9ec41e76e4c40}{
+\index{Run@{Run}!option@{option}}
+\index{option@{option}!Run@{Run}}
+\subsubsection[{option}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf Option} {\bf Run::option} = \{0,0,0,0\}\hspace{0.3cm}{\tt  \mbox{[}read\mbox{]}}}}
+\label{namespaceRun_724100d30eed9a8f5ac9ec41e76e4c40}
+
+
+command-line options 
+
+
+
+Definition at line 17 of file run.cc.
+
+Referenced by Gui::animate(), Gui::display(), Domain::Domain(), IO::getCharAttr(), IO::getIntAttr(), IO::getIter(), IO::getTime(), init(), Gui::init(), GridContainer::init(), Domain::init(), Gui::initdisp(), Gui::keyboard(), Domain::load(), main(), Gui::Materials(), IO::parseFloat(), IO::parseInt(), IO::parseWord(), Pool$<$ Element $>$::Pool(), readcmdline(), Gui::readconf(), Domain::run(), Domain::save(), IO::xwd(), and Domain::$\sim$Domain().\hypertarget{namespaceRun_4f57473c9c02d920b7b738c37597f972}{
+\index{Run@{Run}!outputfile@{outputfile}}
+\index{outputfile@{outputfile}!Run@{Run}}
+\subsubsection[{outputfile}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf Run::outputfile}}}
+\label{namespaceRun_4f57473c9c02d920b7b738c37597f972}
+
+
+
+
+Definition at line 20 of file run.cc.
+
+Referenced by readcmdline().\hypertarget{namespaceRun_764ba544be98b57556f317ca171d7969}{
+\index{Run@{Run}!outputname@{outputname}}
+\index{outputname@{outputname}!Run@{Run}}
+\subsubsection[{outputname}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf Run::outputname}}}
+\label{namespaceRun_764ba544be98b57556f317ca171d7969}
+
+
+
+
+Definition at line 20 of file run.cc.
+
+Referenced by Gui::helpCommand(), Gui::helpDisplay(), Gui::keyboard(), readcmdline(), and Domain::run().\hypertarget{namespaceRun_f2d1163d068ab8ea8c75abd469c4a43f}{
+\index{Run@{Run}!programname@{programname}}
+\index{programname@{programname}!Run@{Run}}
+\subsubsection[{programname}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf Run::programname}}}
+\label{namespaceRun_f2d1163d068ab8ea8c75abd469c4a43f}
+
+
+
+
+Definition at line 20 of file run.cc.
+
+Referenced by main(), readcmdline(), usage(), and usage().\hypertarget{namespaceRun_0b48df515ddd51b80cedcfd90d8c1dc3}{
+\index{Run@{Run}!time@{time}}
+\index{time@{time}!Run@{Run}}
+\subsubsection[{time}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf Time} {\bf Run::time}\hspace{0.3cm}{\tt  \mbox{[}read\mbox{]}}}}
+\label{namespaceRun_0b48df515ddd51b80cedcfd90d8c1dc3}
+
+
+
+
+Definition at line 29 of file run.cc.
+
+Referenced by Gui::animate(), Domain::boundary(), Gui::display(), IO::getTime(), IO::getTimeXML(), Bulk::inject(), Boundary::Inject(), Domain::injection(), Domain::interaction(), Gui::keyboard(), Domain::load(), Molecule::Molecule(), Molecule::Move(), GridContainer::put(), Domain::run(), Domain::save(), and Gui::toggleWindowDump().\hypertarget{namespaceRun_110719db892c2b065597a3ded0d90c2d}{
+\index{Run@{Run}!usage@{usage}}
+\index{usage@{usage}!Run@{Run}}
+\subsubsection[{usage}]{\setlength{\rightskip}{0pt plus 5cm}void($\ast$ {\bf Run::usage})() ()}}
+\label{namespaceRun_110719db892c2b065597a3ded0d90c2d}
+
+
+\hypertarget{namespaceRun_73327ac5b154c258e9b88ea0260d50ad}{
+\index{Run@{Run}!worldtime@{worldtime}}
+\index{worldtime@{worldtime}!Run@{Run}}
+\subsubsection[{worldtime}]{\setlength{\rightskip}{0pt plus 5cm}struct timeb {\bf Run::worldtime}}}
+\label{namespaceRun_73327ac5b154c258e9b88ea0260d50ad}
+
+
+
+
+Definition at line 28 of file run.cc.
+
+Referenced by elapsed(), and init().

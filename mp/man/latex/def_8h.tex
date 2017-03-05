@@ -1,0 +1,717 @@
+\hypertarget{def_8h}{
+\section{def.h File Reference}
+\label{def_8h}\index{def.h@{def.h}}
+}
+
+
+This graph shows which files directly or indirectly include this file:\subsection*{Defines}
+\begin{CompactItemize}
+\item 
+\#define \hyperlink{def_8h_fb212d6c7153207eaa622fb59e8b0898}{ABOUT}~\char`\"{}MOLECULAR DYNAMICS SIMULATOR BY A.V.SMIRNOV$\backslash$nandrei.v.smirnov@gmail.com$\backslash$n\char`\"{}
+\item 
+\#define \hyperlink{def_8h_c9efbbfc5cbf97a0e950358def339325}{DOCTYPE}~\char`\"{}remody\char`\"{}
+\item 
+\#define \hyperlink{def_8h_4b654506f18b8bfd61ad2a29a7e38c25}{REAL}~double
+\item 
+\#define \hyperlink{def_8h_cf1c38f71f39386356edb151a131ad11}{TINY}~1e-10
+\item 
+\#define \hyperlink{def_8h_09c78d2f8feb311dd9fc969a0bf84979}{SMALL}~1e-30
+\item 
+\#define \hyperlink{def_8h_c27c2124ca2aed651e06aba3a1468ecb}{LARGE}~1e30
+\item 
+\#define \hyperlink{def_8h_5485937e9b13fdc33a3856f1a8e774a0}{MAXLINLEN}~510
+\item 
+\#define \hyperlink{def_8h_6b0935026b61d08b1c2b1a12234d2480}{WORDLENGTH}~64
+\item 
+\#define \hyperlink{def_8h_4af1b6159e447ba72652bb7fcdfa726e}{ESC}~0x1B
+\item 
+\#define \hyperlink{def_8h_598a3330b3c21701223ee0ca14316eca}{PI}~3.14159265358979323846
+\item 
+\#define \hyperlink{def_8h_fdc7328bee4ba0620668d1868c919734}{SQRTPIo8}~0.62666
+\item 
+\#define \hyperlink{def_8h_e225ab718bd4f5e2221129f026d3d8f1}{ERROR}(message)~\{	fprintf(stderr,\char`\"{}$\backslash$nERROR: \%s$\backslash$n\char`\"{},message);exit(1);\}
+\item 
+\#define \hyperlink{def_8h_a8cecfc5c5c054d2875c03e77b7be15d}{TRUE}~1
+\item 
+\#define \hyperlink{def_8h_a93f0eb578d23995850d61f7d61c55c1}{FALSE}~0
+\item 
+\#define \hyperlink{def_8h_70961aa05357419a449bf2070cf4c3c6}{OMP}
+\item 
+\#define \hyperlink{def_8h_ef72fe86b7c60b1a86920496456edeac}{WAIT}~for(int i=0;i$<$999999\&\&locked;i++)
+\item 
+\#define \hyperlink{def_8h_3758dd5d300a594312c95bc393378df0}{LOCAL}
+\item 
+\#define \hyperlink{def_8h_08895b09487c27a1e5530bdb22a9a749}{COLLISIONTIME}
+\item 
+\#define \hyperlink{def_8h_64d6f5c8106c7e39c1cc3b5d2b9699af}{RND}~(REAL)((double)rand()/RAND\_\-MAX)
+\item 
+\#define \hyperlink{def_8h_fa99ec4acc4ecb2dc3c2d05da15d0e3f}{MAX}(a, b)~((a)$>$(b)?a:b)
+\item 
+\#define \hyperlink{def_8h_04417b9a38d12e64d999e029d543ce9d}{ZERO}(n, x)~for (int i=0; i$<$(n); i++)x\mbox{[}i\mbox{]}=0.0
+\item 
+\#define \hyperlink{def_8h_19d11daee5a7ed4ef1580416d2aa5bfe}{ADD}(n, x, y)~for (int i=0; i$<$(n); i++) (x)\mbox{[}i\mbox{]} += (y)\mbox{[}i\mbox{]}
+\item 
+\#define \hyperlink{def_8h_0e1e26f5ed40378467e53d3781d23bfe}{SUB}(n, x, y)~for (int i=0; i$<$(n); i++) (x)\mbox{[}i\mbox{]} -= (y)\mbox{[}i\mbox{]}
+\item 
+\#define \hyperlink{def_8h_ecee0729e3b2c913f16926d74329adea}{ADDC}(n, x, y, d)~for (int i=0; i$<$(n); i++) (x)\mbox{[}i\mbox{]} += (y)\mbox{[}i\mbox{]}$\ast$(d)
+\item 
+\#define \hyperlink{def_8h_704dfb5882df492e7d6b1e5b33854804}{SUBC}(n, x, y, d)~for (int i=0; i$<$(n); i++) (x)\mbox{[}i\mbox{]} -= (y)\mbox{[}i\mbox{]}$\ast$(d)
+\item 
+\#define \hyperlink{def_8h_65cedf5bdf550219f6c48028fdcef790}{MUL}(n, x, y)~for (int i=0; i$<$(n); i++) (x)\mbox{[}i\mbox{]} $\ast$= (y)\mbox{[}i\mbox{]}
+\item 
+\#define \hyperlink{def_8h_82c51aa3311856a78086a77440cdd320}{MULC}(n, x, c)~for (int i=0; i$<$(n); i++) (x)\mbox{[}i\mbox{]} $\ast$= (c)
+\item 
+\#define \hyperlink{def_8h_73edf8a068f9a72a843a1b19d6f95aa1}{DIV}(n, x, y)~for (int i=0; i$<$(n); i++) (x)\mbox{[}i\mbox{]} /= (y)\mbox{[}i\mbox{]}
+\item 
+\#define \hyperlink{def_8h_70700ad765bb996768f1d19f4f11f538}{MULVEC}(x, s)~for (int i=0; i$<$DIM; i++) (x)\mbox{[}i\mbox{]} $\ast$= (s)
+\item 
+\#define \hyperlink{def_8h_4536ec98e3dd32b5db8aa4be1afc3c69}{ADDVEC}(x, y)~for (int i=0; i$<$DIM; i++) (x)\mbox{[}i\mbox{]} += (y)\mbox{[}i\mbox{]}
+\item 
+\#define \hyperlink{def_8h_86a1db581626b03e2262046f0f189398}{COPYVEC}(x, y)~for (int i=0; i$<$DIM; i++) (x)\mbox{[}i\mbox{]} = (y)\mbox{[}i\mbox{]}
+\item 
+\#define \hyperlink{def_8h_3742eb983cff75813588606c3e0798d7}{ZEROVEC}(x)~for (int i=0; i$<$DIM; i++) (x)\mbox{[}i\mbox{]} = 0.
+\item 
+\#define \hyperlink{def_8h_ed915713104faf9a412e363d7b39b311}{SCLP}(A, B)~(A\mbox{[}0\mbox{]}$\ast$B\mbox{[}0\mbox{]}+A\mbox{[}1\mbox{]}$\ast$B\mbox{[}1\mbox{]}+A\mbox{[}2\mbox{]}$\ast$B\mbox{[}2\mbox{]})
+\item 
+\#define \hyperlink{def_8h_4bdd133568e935fc95d80ded278b5deb}{VECP}(A, B, C)
+\item 
+\#define \hyperlink{def_8h_f597b6a6b5badddc6a00aab646a86471}{LENGTH}(A)~sqrt(SCLP(A,A))
+\item 
+\#define \hyperlink{def_8h_e2408a0c3a5bda3c81e96d519e82de84}{VOIDSPECIE}~nspecies
+\item 
+\#define \hyperlink{def_8h_2ab977afa83a0fa2d145186876db4044}{GAUSS}~Run::gauss()
+\item 
+\#define \hyperlink{def_8h_c25189db92959bff3c6c2adf4c34b50a}{DIM}~3
+\item 
+\#define \hyperlink{def_8h_e09599c5c01cab44cff14cc8203a7125}{BoltzmannConstant}~1.38066e-23
+\item 
+\#define \hyperlink{def_8h_384c493d97a798cf57f96cac8786b40d}{AtomicMassUnit}~1.66053886e-27
+\item 
+\#define \hyperlink{def_8h_be1d649a14db9e46d4ffe80b84a4f44f}{AvogadroNumber}~6.02214179e23
+\begin{CompactList}\small\item\em Avogadro Number in 1/mol. \item\end{CompactList}\item 
+\#define \hyperlink{def_8h_d10566f5c665cf18988fa7b4e9a2dab1}{DOFK}~3
+\item 
+\#define \hyperlink{def_8h_209720e83dae866cf7ca0973c6fc074a}{DOF}(cp)~MAX(2.0$\ast$((cp)$\ast$\hyperlink{def_8h_dda205ab2d1cd4307ae38a05cbbaf91d}{GasConstantInv}-1.0),DOFK)
+\item 
+\#define \hyperlink{def_8h_ee1e84b3d16f776c746bc319d5b2a1b9}{DOFI}(dof)~(dof-DOFK)
+\end{CompactItemize}
+\subsection*{Variables}
+\begin{CompactItemize}
+\item 
+const int \hyperlink{def_8h_70cd7898027f297d8d8d478b87f896d2}{maxcounters} = 4
+\item 
+const REAL \hyperlink{def_8h_320d9f156793d214bb01f332de1e77d8}{onethird} = 1.0/3.0
+\item 
+const REAL \hyperlink{def_8h_d19f5713bcde4cb61fd31971ebb49180}{twothirds} = 2.0/3.0
+\item 
+const REAL \hyperlink{def_8h_2cc8eb9a6249eccc0b406688fbcef8c0}{Sqrt2} = sqrt(2.0)
+\item 
+const REAL \hyperlink{def_8h_f5bae05b9f8f7574a63a050b8c493080}{Sqrt2Over2} = 0.5$\ast$\hyperlink{def_8h_2cc8eb9a6249eccc0b406688fbcef8c0}{Sqrt2}
+\item 
+const REAL \hyperlink{def_8h_38fde8ecfb5cf12d9b47c111013c460a}{sqrt1p5} = sqrt(1.5)
+\item 
+const REAL \hyperlink{def_8h_bdba9f1d8faa1212595dec74793aae63}{sqrt1p25} = sqrt(1.25)
+\item 
+const REAL \hyperlink{def_8h_bc97227add3e211cb1085916be48bd47}{Sqrt3} = sqrt(3.0)
+\item 
+const REAL \hyperlink{def_8h_f9aa2e292709b34d011758aa4f4203e1}{OneOverSqrt2} = 1.0/\hyperlink{def_8h_2cc8eb9a6249eccc0b406688fbcef8c0}{Sqrt2}
+\item 
+const REAL \hyperlink{def_8h_a4213d4daabf171eed3b1ab7aeb14980}{OneOverSqrt3} = 1.0/\hyperlink{def_8h_bc97227add3e211cb1085916be48bd47}{Sqrt3}
+\item 
+const REAL \hyperlink{def_8h_f6b9997679498867cfe83fadff268beb}{Sqrt3Over2} = 0.5$\ast$\hyperlink{def_8h_bc97227add3e211cb1085916be48bd47}{Sqrt3}
+\item 
+const REAL \hyperlink{def_8h_439f8de3782ff3e83bc26daf84f331e0}{GasConstant} = BoltzmannConstant$\ast$AvogadroNumber
+\item 
+const REAL \hyperlink{def_8h_dda205ab2d1cd4307ae38a05cbbaf91d}{GasConstantInv} = 1.0/\hyperlink{def_8h_439f8de3782ff3e83bc26daf84f331e0}{GasConstant}
+\end{CompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{def_8h_fb212d6c7153207eaa622fb59e8b0898}{
+\index{def.h@{def.h}!ABOUT@{ABOUT}}
+\index{ABOUT@{ABOUT}!def.h@{def.h}}
+\subsubsection[{ABOUT}]{\setlength{\rightskip}{0pt plus 5cm}\#define ABOUT~\char`\"{}MOLECULAR DYNAMICS SIMULATOR BY A.V.SMIRNOV$\backslash$nandrei.v.smirnov@gmail.com$\backslash$n\char`\"{}}}
+\label{def_8h_fb212d6c7153207eaa622fb59e8b0898}
+
+
+
+
+Definition at line 1 of file def.h.
+
+Referenced by Gui::menu().\hypertarget{def_8h_19d11daee5a7ed4ef1580416d2aa5bfe}{
+\index{def.h@{def.h}!ADD@{ADD}}
+\index{ADD@{ADD}!def.h@{def.h}}
+\subsubsection[{ADD}]{\setlength{\rightskip}{0pt plus 5cm}\#define ADD(n, \/  x, \/  y)~for (int i=0; i$<$(n); i++) (x)\mbox{[}i\mbox{]} += (y)\mbox{[}i\mbox{]}}}
+\label{def_8h_19d11daee5a7ed4ef1580416d2aa5bfe}
+
+
+
+
+Definition at line 46 of file def.h.\hypertarget{def_8h_ecee0729e3b2c913f16926d74329adea}{
+\index{def.h@{def.h}!ADDC@{ADDC}}
+\index{ADDC@{ADDC}!def.h@{def.h}}
+\subsubsection[{ADDC}]{\setlength{\rightskip}{0pt plus 5cm}\#define ADDC(n, \/  x, \/  y, \/  d)~for (int i=0; i$<$(n); i++) (x)\mbox{[}i\mbox{]} += (y)\mbox{[}i\mbox{]}$\ast$(d)}}
+\label{def_8h_ecee0729e3b2c913f16926d74329adea}
+
+
+
+
+Definition at line 48 of file def.h.\hypertarget{def_8h_4536ec98e3dd32b5db8aa4be1afc3c69}{
+\index{def.h@{def.h}!ADDVEC@{ADDVEC}}
+\index{ADDVEC@{ADDVEC}!def.h@{def.h}}
+\subsubsection[{ADDVEC}]{\setlength{\rightskip}{0pt plus 5cm}\#define ADDVEC(x, \/  y)~for (int i=0; i$<$DIM; i++) (x)\mbox{[}i\mbox{]} += (y)\mbox{[}i\mbox{]}}}
+\label{def_8h_4536ec98e3dd32b5db8aa4be1afc3c69}
+
+
+
+
+Definition at line 54 of file def.h.\hypertarget{def_8h_384c493d97a798cf57f96cac8786b40d}{
+\index{def.h@{def.h}!AtomicMassUnit@{AtomicMassUnit}}
+\index{AtomicMassUnit@{AtomicMassUnit}!def.h@{def.h}}
+\subsubsection[{AtomicMassUnit}]{\setlength{\rightskip}{0pt plus 5cm}\#define AtomicMassUnit~1.66053886e-27}}
+\label{def_8h_384c493d97a798cf57f96cac8786b40d}
+
+
+
+
+Definition at line 68 of file def.h.
+
+Referenced by Domain::boundary(), Domain::Domain(), Domain::init(), Domain::injection(), Domain::run(), and Molecule::Temperature().\hypertarget{def_8h_be1d649a14db9e46d4ffe80b84a4f44f}{
+\index{def.h@{def.h}!AvogadroNumber@{AvogadroNumber}}
+\index{AvogadroNumber@{AvogadroNumber}!def.h@{def.h}}
+\subsubsection[{AvogadroNumber}]{\setlength{\rightskip}{0pt plus 5cm}\#define AvogadroNumber~6.02214179e23}}
+\label{def_8h_be1d649a14db9e46d4ffe80b84a4f44f}
+
+
+Avogadro Number in 1/mol. 
+
+
+
+Definition at line 69 of file def.h.
+
+Referenced by Domain::Domain().\hypertarget{def_8h_e09599c5c01cab44cff14cc8203a7125}{
+\index{def.h@{def.h}!BoltzmannConstant@{BoltzmannConstant}}
+\index{BoltzmannConstant@{BoltzmannConstant}!def.h@{def.h}}
+\subsubsection[{BoltzmannConstant}]{\setlength{\rightskip}{0pt plus 5cm}\#define BoltzmannConstant~1.38066e-23}}
+\label{def_8h_e09599c5c01cab44cff14cc8203a7125}
+
+
+
+
+Definition at line 67 of file def.h.
+
+Referenced by Domain::boundary(), Domain::Domain(), Domain::init(), Domain::injection(), Domain::run(), and Molecule::Temperature().\hypertarget{def_8h_08895b09487c27a1e5530bdb22a9a749}{
+\index{def.h@{def.h}!COLLISIONTIME@{COLLISIONTIME}}
+\index{COLLISIONTIME@{COLLISIONTIME}!def.h@{def.h}}
+\subsubsection[{COLLISIONTIME}]{\setlength{\rightskip}{0pt plus 5cm}\#define COLLISIONTIME}}
+\label{def_8h_08895b09487c27a1e5530bdb22a9a749}
+
+
+
+
+Definition at line 38 of file def.h.\hypertarget{def_8h_86a1db581626b03e2262046f0f189398}{
+\index{def.h@{def.h}!COPYVEC@{COPYVEC}}
+\index{COPYVEC@{COPYVEC}!def.h@{def.h}}
+\subsubsection[{COPYVEC}]{\setlength{\rightskip}{0pt plus 5cm}\#define COPYVEC(x, \/  y)~for (int i=0; i$<$DIM; i++) (x)\mbox{[}i\mbox{]} = (y)\mbox{[}i\mbox{]}}}
+\label{def_8h_86a1db581626b03e2262046f0f189398}
+
+
+
+
+Definition at line 55 of file def.h.\hypertarget{def_8h_c25189db92959bff3c6c2adf4c34b50a}{
+\index{def.h@{def.h}!DIM@{DIM}}
+\index{DIM@{DIM}!def.h@{def.h}}
+\subsubsection[{DIM}]{\setlength{\rightskip}{0pt plus 5cm}\#define DIM~3}}
+\label{def_8h_c25189db92959bff3c6c2adf4c34b50a}
+
+
+
+
+Definition at line 66 of file def.h.
+
+Referenced by Geom::area(), Domain::boundary(), Domain::BoundaryType(), Domain::computeBounds(), Molecule::Coordinate(), Molecule::Coordinates(), Molecule::copy(), Geom::distance(), Geom::distvec(), Domain::Domain(), GridContainer::index(), GridContainer::init(), Bulk::init(), Gui::initdisp(), Bulk::inject(), Boundary::Inject(), Domain::injection(), Domain::interact(), Domain::interaction(), Molecule::KineticEnergy(), Geom::length(), Domain::load(), Molecule::Move(), Geom::normalize(), GridContainer::put(), Gui::readconf(), Domain::run(), Geom::sclp(), Molecule::setCoordinates(), Molecule::setVelocity(), Species::Specie::Specie(), and Molecule::Velocity().\hypertarget{def_8h_73edf8a068f9a72a843a1b19d6f95aa1}{
+\index{def.h@{def.h}!DIV@{DIV}}
+\index{DIV@{DIV}!def.h@{def.h}}
+\subsubsection[{DIV}]{\setlength{\rightskip}{0pt plus 5cm}\#define DIV(n, \/  x, \/  y)~for (int i=0; i$<$(n); i++) (x)\mbox{[}i\mbox{]} /= (y)\mbox{[}i\mbox{]}}}
+\label{def_8h_73edf8a068f9a72a843a1b19d6f95aa1}
+
+
+
+
+Definition at line 52 of file def.h.\hypertarget{def_8h_c9efbbfc5cbf97a0e950358def339325}{
+\index{def.h@{def.h}!DOCTYPE@{DOCTYPE}}
+\index{DOCTYPE@{DOCTYPE}!def.h@{def.h}}
+\subsubsection[{DOCTYPE}]{\setlength{\rightskip}{0pt plus 5cm}\#define DOCTYPE~\char`\"{}remody\char`\"{}}}
+\label{def_8h_c9efbbfc5cbf97a0e950358def339325}
+
+
+
+
+Definition at line 3 of file def.h.
+
+Referenced by Domain::Domain(), IO::getIter(), IO::getTimeXML(), and Gui::readconf().\hypertarget{def_8h_209720e83dae866cf7ca0973c6fc074a}{
+\index{def.h@{def.h}!DOF@{DOF}}
+\index{DOF@{DOF}!def.h@{def.h}}
+\subsubsection[{DOF}]{\setlength{\rightskip}{0pt plus 5cm}\#define DOF(cp)~MAX(2.0$\ast$((cp)$\ast${\bf GasConstantInv}-1.0),DOFK)}}
+\label{def_8h_209720e83dae866cf7ca0973c6fc074a}
+
+
+
+
+Definition at line 77 of file def.h.
+
+Referenced by Domain::boundary(), Domain::interact(), Domain::run(), and Molecule::Temperature().\hypertarget{def_8h_ee1e84b3d16f776c746bc319d5b2a1b9}{
+\index{def.h@{def.h}!DOFI@{DOFI}}
+\index{DOFI@{DOFI}!def.h@{def.h}}
+\subsubsection[{DOFI}]{\setlength{\rightskip}{0pt plus 5cm}\#define DOFI(dof)~(dof-DOFK)}}
+\label{def_8h_ee1e84b3d16f776c746bc319d5b2a1b9}
+
+
+
+
+Definition at line 78 of file def.h.
+
+Referenced by Domain::boundary(), Domain::interact(), Domain::run(), and Molecule::Temperature().\hypertarget{def_8h_d10566f5c665cf18988fa7b4e9a2dab1}{
+\index{def.h@{def.h}!DOFK@{DOFK}}
+\index{DOFK@{DOFK}!def.h@{def.h}}
+\subsubsection[{DOFK}]{\setlength{\rightskip}{0pt plus 5cm}\#define DOFK~3}}
+\label{def_8h_d10566f5c665cf18988fa7b4e9a2dab1}
+
+
+
+
+Definition at line 75 of file def.h.
+
+Referenced by Domain::boundary(), and Domain::interact().\hypertarget{def_8h_e225ab718bd4f5e2221129f026d3d8f1}{
+\index{def.h@{def.h}!ERROR@{ERROR}}
+\index{ERROR@{ERROR}!def.h@{def.h}}
+\subsubsection[{ERROR}]{\setlength{\rightskip}{0pt plus 5cm}\#define ERROR(message)~\{	fprintf(stderr,\char`\"{}$\backslash$nERROR: \%s$\backslash$n\char`\"{},message);exit(1);\}}}
+\label{def_8h_e225ab718bd4f5e2221129f026d3d8f1}
+
+
+
+
+Definition at line 13 of file def.h.
+
+Referenced by Gui::init().\hypertarget{def_8h_4af1b6159e447ba72652bb7fcdfa726e}{
+\index{def.h@{def.h}!ESC@{ESC}}
+\index{ESC@{ESC}!def.h@{def.h}}
+\subsubsection[{ESC}]{\setlength{\rightskip}{0pt plus 5cm}\#define ESC~0x1B}}
+\label{def_8h_4af1b6159e447ba72652bb7fcdfa726e}
+
+
+
+
+Definition at line 10 of file def.h.
+
+Referenced by Gui::animate(), Gui::keyboard(), main(), and Domain::run().\hypertarget{def_8h_a93f0eb578d23995850d61f7d61c55c1}{
+\index{def.h@{def.h}!FALSE@{FALSE}}
+\index{FALSE@{FALSE}!def.h@{def.h}}
+\subsubsection[{FALSE}]{\setlength{\rightskip}{0pt plus 5cm}\#define FALSE~0}}
+\label{def_8h_a93f0eb578d23995850d61f7d61c55c1}
+
+
+
+
+Definition at line 16 of file def.h.\hypertarget{def_8h_2ab977afa83a0fa2d145186876db4044}{
+\index{def.h@{def.h}!GAUSS@{GAUSS}}
+\index{GAUSS@{GAUSS}!def.h@{def.h}}
+\subsubsection[{GAUSS}]{\setlength{\rightskip}{0pt plus 5cm}\#define GAUSS~Run::gauss()}}
+\label{def_8h_2ab977afa83a0fa2d145186876db4044}
+
+
+
+
+Definition at line 63 of file def.h.
+
+Referenced by Bulk::inject(), and Boundary::Inject().\hypertarget{def_8h_c27c2124ca2aed651e06aba3a1468ecb}{
+\index{def.h@{def.h}!LARGE@{LARGE}}
+\index{LARGE@{LARGE}!def.h@{def.h}}
+\subsubsection[{LARGE}]{\setlength{\rightskip}{0pt plus 5cm}\#define LARGE~1e30}}
+\label{def_8h_c27c2124ca2aed651e06aba3a1468ecb}
+
+
+
+
+Definition at line 7 of file def.h.
+
+Referenced by Domain::computeBounds(), Gui::initdisp(), Domain::load(), and Domain::run().\hypertarget{def_8h_f597b6a6b5badddc6a00aab646a86471}{
+\index{def.h@{def.h}!LENGTH@{LENGTH}}
+\index{LENGTH@{LENGTH}!def.h@{def.h}}
+\subsubsection[{LENGTH}]{\setlength{\rightskip}{0pt plus 5cm}\#define LENGTH(A)~sqrt(SCLP(A,A))}}
+\label{def_8h_f597b6a6b5badddc6a00aab646a86471}
+
+
+
+
+Definition at line 61 of file def.h.
+
+Referenced by Geom::area(), and Domain::boundary().\hypertarget{def_8h_3758dd5d300a594312c95bc393378df0}{
+\index{def.h@{def.h}!LOCAL@{LOCAL}}
+\index{LOCAL@{LOCAL}!def.h@{def.h}}
+\subsubsection[{LOCAL}]{\setlength{\rightskip}{0pt plus 5cm}\#define LOCAL}}
+\label{def_8h_3758dd5d300a594312c95bc393378df0}
+
+
+
+
+Definition at line 37 of file def.h.\hypertarget{def_8h_fa99ec4acc4ecb2dc3c2d05da15d0e3f}{
+\index{def.h@{def.h}!MAX@{MAX}}
+\index{MAX@{MAX}!def.h@{def.h}}
+\subsubsection[{MAX}]{\setlength{\rightskip}{0pt plus 5cm}\#define MAX(a, \/  b)~((a)$>$(b)?a:b)}}
+\label{def_8h_fa99ec4acc4ecb2dc3c2d05da15d0e3f}
+
+
+
+
+Definition at line 42 of file def.h.\hypertarget{def_8h_5485937e9b13fdc33a3856f1a8e774a0}{
+\index{def.h@{def.h}!MAXLINLEN@{MAXLINLEN}}
+\index{MAXLINLEN@{MAXLINLEN}!def.h@{def.h}}
+\subsubsection[{MAXLINLEN}]{\setlength{\rightskip}{0pt plus 5cm}\#define MAXLINLEN~510}}
+\label{def_8h_5485937e9b13fdc33a3856f1a8e774a0}
+
+
+
+
+Definition at line 8 of file def.h.
+
+Referenced by Gui::commandMode(), Gui::consoleMenu(), Domain::Domain(), Gui::Exit(), IO::getCharAttr(), IO::getIntAttr(), IO::getIter(), IO::getTimeXML(), Gui::keyboard(), Domain::load(), IO::parseWord(), Gui::Quit(), Gui::readconf(), Domain::save(), and IO::xwd().\hypertarget{def_8h_65cedf5bdf550219f6c48028fdcef790}{
+\index{def.h@{def.h}!MUL@{MUL}}
+\index{MUL@{MUL}!def.h@{def.h}}
+\subsubsection[{MUL}]{\setlength{\rightskip}{0pt plus 5cm}\#define MUL(n, \/  x, \/  y)~for (int i=0; i$<$(n); i++) (x)\mbox{[}i\mbox{]} $\ast$= (y)\mbox{[}i\mbox{]}}}
+\label{def_8h_65cedf5bdf550219f6c48028fdcef790}
+
+
+
+
+Definition at line 50 of file def.h.\hypertarget{def_8h_82c51aa3311856a78086a77440cdd320}{
+\index{def.h@{def.h}!MULC@{MULC}}
+\index{MULC@{MULC}!def.h@{def.h}}
+\subsubsection[{MULC}]{\setlength{\rightskip}{0pt plus 5cm}\#define MULC(n, \/  x, \/  c)~for (int i=0; i$<$(n); i++) (x)\mbox{[}i\mbox{]} $\ast$= (c)}}
+\label{def_8h_82c51aa3311856a78086a77440cdd320}
+
+
+
+
+Definition at line 51 of file def.h.
+
+Referenced by Domain::boundary().\hypertarget{def_8h_70700ad765bb996768f1d19f4f11f538}{
+\index{def.h@{def.h}!MULVEC@{MULVEC}}
+\index{MULVEC@{MULVEC}!def.h@{def.h}}
+\subsubsection[{MULVEC}]{\setlength{\rightskip}{0pt plus 5cm}\#define MULVEC(x, \/  s)~for (int i=0; i$<$DIM; i++) (x)\mbox{[}i\mbox{]} $\ast$= (s)}}
+\label{def_8h_70700ad765bb996768f1d19f4f11f538}
+
+
+
+
+Definition at line 53 of file def.h.\hypertarget{def_8h_70961aa05357419a449bf2070cf4c3c6}{
+\index{def.h@{def.h}!OMP@{OMP}}
+\index{OMP@{OMP}!def.h@{def.h}}
+\subsubsection[{OMP}]{\setlength{\rightskip}{0pt plus 5cm}\#define OMP}}
+\label{def_8h_70961aa05357419a449bf2070cf4c3c6}
+
+
+
+
+Definition at line 19 of file def.h.\hypertarget{def_8h_598a3330b3c21701223ee0ca14316eca}{
+\index{def.h@{def.h}!PI@{PI}}
+\index{PI@{PI}!def.h@{def.h}}
+\subsubsection[{PI}]{\setlength{\rightskip}{0pt plus 5cm}\#define PI~3.14159265358979323846}}
+\label{def_8h_598a3330b3c21701223ee0ca14316eca}
+
+
+
+
+Definition at line 11 of file def.h.
+
+Referenced by Gui::showParticle(), and Gui::showSphere().\hypertarget{def_8h_4b654506f18b8bfd61ad2a29a7e38c25}{
+\index{def.h@{def.h}!REAL@{REAL}}
+\index{REAL@{REAL}!def.h@{def.h}}
+\subsubsection[{REAL}]{\setlength{\rightskip}{0pt plus 5cm}\#define REAL~double}}
+\label{def_8h_4b654506f18b8bfd61ad2a29a7e38c25}
+
+
+
+
+Definition at line 4 of file def.h.
+
+Referenced by Geom::area(), Domain::boundary(), Domain::computeBounds(), Gui::display(), Geom::distance(), Domain::Domain(), Run::gauss(), GridContainer::init(), Gui::initdisp(), Bulk::inject(), Boundary::Inject(), Domain::injection(), Domain::interact(), Domain::interaction(), Molecule::KineticEnergy(), Geom::length(), Domain::load(), Gui::motion(), Molecule::Move(), Geom::normalize(), IO::parseFloat(), Palette::pickcolor(), GridContainer::put(), Gui::readconf(), Run::rnd(), Domain::run(), Geom::sclp(), Gui::showParticle(), Gui::showSphere(), Molecule::Temperature(), Run::testrnd(), and Potential::value().\hypertarget{def_8h_64d6f5c8106c7e39c1cc3b5d2b9699af}{
+\index{def.h@{def.h}!RND@{RND}}
+\index{RND@{RND}!def.h@{def.h}}
+\subsubsection[{RND}]{\setlength{\rightskip}{0pt plus 5cm}\#define RND~(REAL)((double)rand()/RAND\_\-MAX)}}
+\label{def_8h_64d6f5c8106c7e39c1cc3b5d2b9699af}
+
+
+
+
+Definition at line 40 of file def.h.
+
+Referenced by Domain::boundary(), Bulk::inject(), Boundary::Inject(), Domain::injection(), and Domain::interact().\hypertarget{def_8h_ed915713104faf9a412e363d7b39b311}{
+\index{def.h@{def.h}!SCLP@{SCLP}}
+\index{SCLP@{SCLP}!def.h@{def.h}}
+\subsubsection[{SCLP}]{\setlength{\rightskip}{0pt plus 5cm}\#define SCLP(A, \/  B)~(A\mbox{[}0\mbox{]}$\ast$B\mbox{[}0\mbox{]}+A\mbox{[}1\mbox{]}$\ast$B\mbox{[}1\mbox{]}+A\mbox{[}2\mbox{]}$\ast$B\mbox{[}2\mbox{]})}}
+\label{def_8h_ed915713104faf9a412e363d7b39b311}
+
+
+
+
+Definition at line 57 of file def.h.
+
+Referenced by Domain::interact().\hypertarget{def_8h_09c78d2f8feb311dd9fc969a0bf84979}{
+\index{def.h@{def.h}!SMALL@{SMALL}}
+\index{SMALL@{SMALL}!def.h@{def.h}}
+\subsubsection[{SMALL}]{\setlength{\rightskip}{0pt plus 5cm}\#define SMALL~1e-30}}
+\label{def_8h_09c78d2f8feb311dd9fc969a0bf84979}
+
+
+
+
+Definition at line 6 of file def.h.
+
+Referenced by Domain::boundary(), Bulk::inject(), Boundary::Inject(), Domain::interact(), Molecule::Move(), and Domain::run().\hypertarget{def_8h_fdc7328bee4ba0620668d1868c919734}{
+\index{def.h@{def.h}!SQRTPIo8@{SQRTPIo8}}
+\index{SQRTPIo8@{SQRTPIo8}!def.h@{def.h}}
+\subsubsection[{SQRTPIo8}]{\setlength{\rightskip}{0pt plus 5cm}\#define SQRTPIo8~0.62666}}
+\label{def_8h_fdc7328bee4ba0620668d1868c919734}
+
+
+
+
+Definition at line 12 of file def.h.\hypertarget{def_8h_0e1e26f5ed40378467e53d3781d23bfe}{
+\index{def.h@{def.h}!SUB@{SUB}}
+\index{SUB@{SUB}!def.h@{def.h}}
+\subsubsection[{SUB}]{\setlength{\rightskip}{0pt plus 5cm}\#define SUB(n, \/  x, \/  y)~for (int i=0; i$<$(n); i++) (x)\mbox{[}i\mbox{]} -= (y)\mbox{[}i\mbox{]}}}
+\label{def_8h_0e1e26f5ed40378467e53d3781d23bfe}
+
+
+
+
+Definition at line 47 of file def.h.\hypertarget{def_8h_704dfb5882df492e7d6b1e5b33854804}{
+\index{def.h@{def.h}!SUBC@{SUBC}}
+\index{SUBC@{SUBC}!def.h@{def.h}}
+\subsubsection[{SUBC}]{\setlength{\rightskip}{0pt plus 5cm}\#define SUBC(n, \/  x, \/  y, \/  d)~for (int i=0; i$<$(n); i++) (x)\mbox{[}i\mbox{]} -= (y)\mbox{[}i\mbox{]}$\ast$(d)}}
+\label{def_8h_704dfb5882df492e7d6b1e5b33854804}
+
+
+
+
+Definition at line 49 of file def.h.\hypertarget{def_8h_cf1c38f71f39386356edb151a131ad11}{
+\index{def.h@{def.h}!TINY@{TINY}}
+\index{TINY@{TINY}!def.h@{def.h}}
+\subsubsection[{TINY}]{\setlength{\rightskip}{0pt plus 5cm}\#define TINY~1e-10}}
+\label{def_8h_cf1c38f71f39386356edb151a131ad11}
+
+
+
+
+Definition at line 5 of file def.h.
+
+Referenced by Domain::Domain().\hypertarget{def_8h_a8cecfc5c5c054d2875c03e77b7be15d}{
+\index{def.h@{def.h}!TRUE@{TRUE}}
+\index{TRUE@{TRUE}!def.h@{def.h}}
+\subsubsection[{TRUE}]{\setlength{\rightskip}{0pt plus 5cm}\#define TRUE~1}}
+\label{def_8h_a8cecfc5c5c054d2875c03e77b7be15d}
+
+
+
+
+Definition at line 15 of file def.h.\hypertarget{def_8h_4bdd133568e935fc95d80ded278b5deb}{
+\index{def.h@{def.h}!VECP@{VECP}}
+\index{VECP@{VECP}!def.h@{def.h}}
+\subsubsection[{VECP}]{\setlength{\rightskip}{0pt plus 5cm}\#define VECP(A, \/  B, \/  C)}}
+\label{def_8h_4bdd133568e935fc95d80ded278b5deb}
+
+
+\textbf{Value:}
+
+\begin{Code}\begin{verbatim}A[0]=B[1]*C[2]-B[2]*C[1];\
+                                                        A[1]=B[2]*C[0]-B[0]*C[2];\
+                                                        A[2]=B[0]*C[1]-B[1]*C[0];
+\end{verbatim}
+\end{Code}
+
+
+Definition at line 58 of file def.h.
+
+Referenced by Geom::area().\hypertarget{def_8h_e2408a0c3a5bda3c81e96d519e82de84}{
+\index{def.h@{def.h}!VOIDSPECIE@{VOIDSPECIE}}
+\index{VOIDSPECIE@{VOIDSPECIE}!def.h@{def.h}}
+\subsubsection[{VOIDSPECIE}]{\setlength{\rightskip}{0pt plus 5cm}\#define VOIDSPECIE~nspecies}}
+\label{def_8h_e2408a0c3a5bda3c81e96d519e82de84}
+
+
+
+
+Definition at line 62 of file def.h.
+
+Referenced by Domain::boundary(), Domain::Domain(), Domain::interact(), Domain::interaction(), Species::Reaction::Reaction::Outcome::Outcome(), GridContainer::put(), Domain::run(), and Domain::save().\hypertarget{def_8h_ef72fe86b7c60b1a86920496456edeac}{
+\index{def.h@{def.h}!WAIT@{WAIT}}
+\index{WAIT@{WAIT}!def.h@{def.h}}
+\subsubsection[{WAIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define WAIT~for(int i=0;i$<$999999\&\&locked;i++)}}
+\label{def_8h_ef72fe86b7c60b1a86920496456edeac}
+
+
+
+
+Definition at line 20 of file def.h.
+
+Referenced by Container$<$ Element $>$::append(), Collection$<$ Element $>$::append(), Container$<$ Element $>$::append1(), Container$<$ Element $>$::insert(), Collection$<$ Element $>$::insert(), Container$<$ Element $>$::insert1(), Container$<$ Element $>$::link(), Container$<$ Element $>$::remove(), Collection$<$ Element $>$::remove(), and Container$<$ Element $>$::unlink().\hypertarget{def_8h_6b0935026b61d08b1c2b1a12234d2480}{
+\index{def.h@{def.h}!WORDLENGTH@{WORDLENGTH}}
+\index{WORDLENGTH@{WORDLENGTH}!def.h@{def.h}}
+\subsubsection[{WORDLENGTH}]{\setlength{\rightskip}{0pt plus 5cm}\#define WORDLENGTH~64}}
+\label{def_8h_6b0935026b61d08b1c2b1a12234d2480}
+
+
+
+
+Definition at line 9 of file def.h.
+
+Referenced by Domain::Domain(), Domain::load(), and main().\hypertarget{def_8h_04417b9a38d12e64d999e029d543ce9d}{
+\index{def.h@{def.h}!ZERO@{ZERO}}
+\index{ZERO@{ZERO}!def.h@{def.h}}
+\subsubsection[{ZERO}]{\setlength{\rightskip}{0pt plus 5cm}\#define ZERO(n, \/  x)~for (int i=0; i$<$(n); i++)x\mbox{[}i\mbox{]}=0.0}}
+\label{def_8h_04417b9a38d12e64d999e029d543ce9d}
+
+
+
+
+Definition at line 44 of file def.h.\hypertarget{def_8h_3742eb983cff75813588606c3e0798d7}{
+\index{def.h@{def.h}!ZEROVEC@{ZEROVEC}}
+\index{ZEROVEC@{ZEROVEC}!def.h@{def.h}}
+\subsubsection[{ZEROVEC}]{\setlength{\rightskip}{0pt plus 5cm}\#define ZEROVEC(x)~for (int i=0; i$<$DIM; i++) (x)\mbox{[}i\mbox{]} = 0.}}
+\label{def_8h_3742eb983cff75813588606c3e0798d7}
+
+
+
+
+Definition at line 56 of file def.h.
+
+\subsection{Variable Documentation}
+\hypertarget{def_8h_439f8de3782ff3e83bc26daf84f331e0}{
+\index{def.h@{def.h}!GasConstant@{GasConstant}}
+\index{GasConstant@{GasConstant}!def.h@{def.h}}
+\subsubsection[{GasConstant}]{\setlength{\rightskip}{0pt plus 5cm}const REAL {\bf GasConstant} = BoltzmannConstant$\ast$AvogadroNumber}}
+\label{def_8h_439f8de3782ff3e83bc26daf84f331e0}
+
+
+
+
+Definition at line 72 of file def.h.
+
+Referenced by Domain::Domain().\hypertarget{def_8h_dda205ab2d1cd4307ae38a05cbbaf91d}{
+\index{def.h@{def.h}!GasConstantInv@{GasConstantInv}}
+\index{GasConstantInv@{GasConstantInv}!def.h@{def.h}}
+\subsubsection[{GasConstantInv}]{\setlength{\rightskip}{0pt plus 5cm}const REAL {\bf GasConstantInv} = 1.0/{\bf GasConstant}}}
+\label{def_8h_dda205ab2d1cd4307ae38a05cbbaf91d}
+
+
+
+
+Definition at line 73 of file def.h.\hypertarget{def_8h_70cd7898027f297d8d8d478b87f896d2}{
+\index{def.h@{def.h}!maxcounters@{maxcounters}}
+\index{maxcounters@{maxcounters}!def.h@{def.h}}
+\subsubsection[{maxcounters}]{\setlength{\rightskip}{0pt plus 5cm}const int {\bf maxcounters} = 4}}
+\label{def_8h_70cd7898027f297d8d8d478b87f896d2}
+
+
+
+
+Definition at line 21 of file def.h.
+
+Referenced by Container$<$ Element $>$::append(), Collection$<$ Element $>$::append(), Container$<$ Element $>$::append0(), Collection$<$ Element $>$::append0(), Collection$<$ Element $>$::Collection(), Container$<$ Element $>$::Container(), Container$<$ Element $>$::goFirst(), Collection$<$ Molecule $>$::goFirst(), Collection$<$ Element $>$::init(), Container$<$ Element $>$::insert(), Collection$<$ Element $>$::insert(), Container$<$ Element $>$::insert0(), Collection$<$ Element $>$::insert0(), Container$<$ Element $>$::insert1(), Collection$<$ Element $>$::insertAfter(), Container$<$ Element $>$::link(), Container$<$ Element $>$::link0(), Collection$<$ Molecule $>$::maxCounters(), Container$<$ Element $>$::remove(), Collection$<$ Element $>$::remove(), Container$<$ Element $>$::remove0(), Collection$<$ Element $>$::remove0(), Domain::run(), Container$<$ Element $>$::unlink(), Container$<$ Element $>$::unlink0(), Collection$<$ Element $>$::$\sim$Collection(), and Container$<$ Element $>$::$\sim$Container().\hypertarget{def_8h_f9aa2e292709b34d011758aa4f4203e1}{
+\index{def.h@{def.h}!OneOverSqrt2@{OneOverSqrt2}}
+\index{OneOverSqrt2@{OneOverSqrt2}!def.h@{def.h}}
+\subsubsection[{OneOverSqrt2}]{\setlength{\rightskip}{0pt plus 5cm}const REAL {\bf OneOverSqrt2} = 1.0/{\bf Sqrt2}}}
+\label{def_8h_f9aa2e292709b34d011758aa4f4203e1}
+
+
+
+
+Definition at line 32 of file def.h.\hypertarget{def_8h_a4213d4daabf171eed3b1ab7aeb14980}{
+\index{def.h@{def.h}!OneOverSqrt3@{OneOverSqrt3}}
+\index{OneOverSqrt3@{OneOverSqrt3}!def.h@{def.h}}
+\subsubsection[{OneOverSqrt3}]{\setlength{\rightskip}{0pt plus 5cm}const REAL {\bf OneOverSqrt3} = 1.0/{\bf Sqrt3}}}
+\label{def_8h_a4213d4daabf171eed3b1ab7aeb14980}
+
+
+
+
+Definition at line 33 of file def.h.\hypertarget{def_8h_320d9f156793d214bb01f332de1e77d8}{
+\index{def.h@{def.h}!onethird@{onethird}}
+\index{onethird@{onethird}!def.h@{def.h}}
+\subsubsection[{onethird}]{\setlength{\rightskip}{0pt plus 5cm}const REAL {\bf onethird} = 1.0/3.0}}
+\label{def_8h_320d9f156793d214bb01f332de1e77d8}
+
+
+
+
+Definition at line 25 of file def.h.
+
+Referenced by Domain::run().\hypertarget{def_8h_bdba9f1d8faa1212595dec74793aae63}{
+\index{def.h@{def.h}!sqrt1p25@{sqrt1p25}}
+\index{sqrt1p25@{sqrt1p25}!def.h@{def.h}}
+\subsubsection[{sqrt1p25}]{\setlength{\rightskip}{0pt plus 5cm}const REAL {\bf sqrt1p25} = sqrt(1.25)}}
+\label{def_8h_bdba9f1d8faa1212595dec74793aae63}
+
+
+
+
+Definition at line 30 of file def.h.\hypertarget{def_8h_38fde8ecfb5cf12d9b47c111013c460a}{
+\index{def.h@{def.h}!sqrt1p5@{sqrt1p5}}
+\index{sqrt1p5@{sqrt1p5}!def.h@{def.h}}
+\subsubsection[{sqrt1p5}]{\setlength{\rightskip}{0pt plus 5cm}const REAL {\bf sqrt1p5} = sqrt(1.5)}}
+\label{def_8h_38fde8ecfb5cf12d9b47c111013c460a}
+
+
+
+
+Definition at line 29 of file def.h.\hypertarget{def_8h_2cc8eb9a6249eccc0b406688fbcef8c0}{
+\index{def.h@{def.h}!Sqrt2@{Sqrt2}}
+\index{Sqrt2@{Sqrt2}!def.h@{def.h}}
+\subsubsection[{Sqrt2}]{\setlength{\rightskip}{0pt plus 5cm}const REAL {\bf Sqrt2} = sqrt(2.0)}}
+\label{def_8h_2cc8eb9a6249eccc0b406688fbcef8c0}
+
+
+
+
+Definition at line 27 of file def.h.\hypertarget{def_8h_f5bae05b9f8f7574a63a050b8c493080}{
+\index{def.h@{def.h}!Sqrt2Over2@{Sqrt2Over2}}
+\index{Sqrt2Over2@{Sqrt2Over2}!def.h@{def.h}}
+\subsubsection[{Sqrt2Over2}]{\setlength{\rightskip}{0pt plus 5cm}const REAL {\bf Sqrt2Over2} = 0.5$\ast${\bf Sqrt2}}}
+\label{def_8h_f5bae05b9f8f7574a63a050b8c493080}
+
+
+
+
+Definition at line 28 of file def.h.\hypertarget{def_8h_bc97227add3e211cb1085916be48bd47}{
+\index{def.h@{def.h}!Sqrt3@{Sqrt3}}
+\index{Sqrt3@{Sqrt3}!def.h@{def.h}}
+\subsubsection[{Sqrt3}]{\setlength{\rightskip}{0pt plus 5cm}const REAL {\bf Sqrt3} = sqrt(3.0)}}
+\label{def_8h_bc97227add3e211cb1085916be48bd47}
+
+
+
+
+Definition at line 31 of file def.h.
+
+Referenced by Domain::boundary().\hypertarget{def_8h_f6b9997679498867cfe83fadff268beb}{
+\index{def.h@{def.h}!Sqrt3Over2@{Sqrt3Over2}}
+\index{Sqrt3Over2@{Sqrt3Over2}!def.h@{def.h}}
+\subsubsection[{Sqrt3Over2}]{\setlength{\rightskip}{0pt plus 5cm}const REAL {\bf Sqrt3Over2} = 0.5$\ast${\bf Sqrt3}}}
+\label{def_8h_f6b9997679498867cfe83fadff268beb}
+
+
+
+
+Definition at line 34 of file def.h.\hypertarget{def_8h_d19f5713bcde4cb61fd31971ebb49180}{
+\index{def.h@{def.h}!twothirds@{twothirds}}
+\index{twothirds@{twothirds}!def.h@{def.h}}
+\subsubsection[{twothirds}]{\setlength{\rightskip}{0pt plus 5cm}const REAL {\bf twothirds} = 2.0/3.0}}
+\label{def_8h_d19f5713bcde4cb61fd31971ebb49180}
+
+
+
+
+Definition at line 26 of file def.h.
+
+Referenced by Domain::run().

@@ -1,0 +1,103 @@
+\hypertarget{domain_8h}{
+\section{domain.h File Reference}
+\label{domain_8h}\index{domain.h@{domain.h}}
+}
+
+
+This graph shows which files directly or indirectly include this file:\subsection*{Classes}
+\begin{CompactItemize}
+\item 
+class \hyperlink{structBoundary}{Boundary}
+\begin{CompactList}\small\item\em \hyperlink{classDomain}{Domain} \hyperlink{structBoundary}{Boundary} Definition. \item\end{CompactList}\item 
+class \hyperlink{classBulk}{Bulk}
+\begin{CompactList}\small\item\em \hyperlink{classDomain}{Domain} \hyperlink{classBulk}{Bulk} Properties. \item\end{CompactList}\item 
+class \hyperlink{classDomain}{Domain}
+\begin{CompactList}\small\item\em Computational \hyperlink{classDomain}{Domain}. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Defines}
+\begin{CompactItemize}
+\item 
+\#define \hyperlink{domain_8h_6aee779504f876f9bed834f36b392da9}{XMIN}~bounds\mbox{[}0\mbox{]}
+\item 
+\#define \hyperlink{domain_8h_0312cb6d6cbc719075d4e5380c387ab3}{XMAX}~bounds\mbox{[}1\mbox{]}
+\end{CompactItemize}
+\subsection*{Enumerations}
+\begin{CompactItemize}
+\item 
+enum \hyperlink{domain_8h_81abc9b219bae49710486f00fe2456fa}{BoundaryTypes} \{ \par
+\hyperlink{domain_8h_81abc9b219bae49710486f00fe2456fa7acc9c608402ce56a73c8697ad5ae321}{insideBoundary} = 0, 
+\hyperlink{domain_8h_81abc9b219bae49710486f00fe2456fa95167562f92c760f5833ea28adceca3f}{periodicBoundary}, 
+\hyperlink{domain_8h_81abc9b219bae49710486f00fe2456fa9320a715ae10e49c914eb78e78244426}{elasticBoundary}, 
+\hyperlink{domain_8h_81abc9b219bae49710486f00fe2456fa8383d736cbf7fa75879884912f5c8db6}{openBoundary}, 
+\par
+\hyperlink{domain_8h_81abc9b219bae49710486f00fe2456fa5c632fe3fc76bbe83e0ce628f42444c2}{maxBoundaryTypes}
+ \}
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+Main definitions of the \hyperlink{classDomain}{Domain} class and its associate class \hyperlink{structBoundary}{Boundary} 
+
+Definition in file \hyperlink{domain_8h-source}{domain.h}.
+
+\subsection{Define Documentation}
+\hypertarget{domain_8h_0312cb6d6cbc719075d4e5380c387ab3}{
+\index{domain.h@{domain.h}!XMAX@{XMAX}}
+\index{XMAX@{XMAX}!domain.h@{domain.h}}
+\subsubsection[{XMAX}]{\setlength{\rightskip}{0pt plus 5cm}\#define XMAX~bounds\mbox{[}1\mbox{]}}}
+\label{domain_8h_0312cb6d6cbc719075d4e5380c387ab3}
+
+
+
+
+Definition at line 2 of file domain.h.
+
+Referenced by Domain::boundary(), Domain::Domain(), and Domain::interaction().\hypertarget{domain_8h_6aee779504f876f9bed834f36b392da9}{
+\index{domain.h@{domain.h}!XMIN@{XMIN}}
+\index{XMIN@{XMIN}!domain.h@{domain.h}}
+\subsubsection[{XMIN}]{\setlength{\rightskip}{0pt plus 5cm}\#define XMIN~bounds\mbox{[}0\mbox{]}}}
+\label{domain_8h_6aee779504f876f9bed834f36b392da9}
+
+
+
+
+Definition at line 1 of file domain.h.
+
+Referenced by Domain::boundary(), Domain::Domain(), and Domain::interaction().
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{domain_8h_81abc9b219bae49710486f00fe2456fa}{
+\index{domain.h@{domain.h}!BoundaryTypes@{BoundaryTypes}}
+\index{BoundaryTypes@{BoundaryTypes}!domain.h@{domain.h}}
+\subsubsection[{BoundaryTypes}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf BoundaryTypes}}}
+\label{domain_8h_81abc9b219bae49710486f00fe2456fa}
+
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{insideBoundary@{insideBoundary}!domain.h@{domain.h}}\index{domain.h@{domain.h}!insideBoundary@{insideBoundary}}\item[{\em 
+\hypertarget{domain_8h_81abc9b219bae49710486f00fe2456fa7acc9c608402ce56a73c8697ad5ae321}{
+insideBoundary}
+\label{domain_8h_81abc9b219bae49710486f00fe2456fa7acc9c608402ce56a73c8697ad5ae321}
+}]\index{periodicBoundary@{periodicBoundary}!domain.h@{domain.h}}\index{domain.h@{domain.h}!periodicBoundary@{periodicBoundary}}\item[{\em 
+\hypertarget{domain_8h_81abc9b219bae49710486f00fe2456fa95167562f92c760f5833ea28adceca3f}{
+periodicBoundary}
+\label{domain_8h_81abc9b219bae49710486f00fe2456fa95167562f92c760f5833ea28adceca3f}
+}]\index{elasticBoundary@{elasticBoundary}!domain.h@{domain.h}}\index{domain.h@{domain.h}!elasticBoundary@{elasticBoundary}}\item[{\em 
+\hypertarget{domain_8h_81abc9b219bae49710486f00fe2456fa9320a715ae10e49c914eb78e78244426}{
+elasticBoundary}
+\label{domain_8h_81abc9b219bae49710486f00fe2456fa9320a715ae10e49c914eb78e78244426}
+}]\index{openBoundary@{openBoundary}!domain.h@{domain.h}}\index{domain.h@{domain.h}!openBoundary@{openBoundary}}\item[{\em 
+\hypertarget{domain_8h_81abc9b219bae49710486f00fe2456fa8383d736cbf7fa75879884912f5c8db6}{
+openBoundary}
+\label{domain_8h_81abc9b219bae49710486f00fe2456fa8383d736cbf7fa75879884912f5c8db6}
+}]\index{maxBoundaryTypes@{maxBoundaryTypes}!domain.h@{domain.h}}\index{domain.h@{domain.h}!maxBoundaryTypes@{maxBoundaryTypes}}\item[{\em 
+\hypertarget{domain_8h_81abc9b219bae49710486f00fe2456fa5c632fe3fc76bbe83e0ce628f42444c2}{
+maxBoundaryTypes}
+\label{domain_8h_81abc9b219bae49710486f00fe2456fa5c632fe3fc76bbe83e0ce628f42444c2}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 7 of file domain.h.

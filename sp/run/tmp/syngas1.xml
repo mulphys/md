@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<remody xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="mesh.xsd">
+	<iterations>9999999999</iterations> 
+	<time>
+		<start>0.0</start>
+		<step>1e-5</step>
+		<end>10.0</end>
+		<output title="Time interval for file output (0 - no output)">1.0e-1</output>
+	</time>
+	<molecules title="Maximum number of molecules used">3000000</molecules>
+<!-- CHEMISTRY -->
+   <!--
+      Specific heats:
+      cv=dof/2*R
+      cp=cv+R =(dof/2+1)*R
+      For monotomic molecules dof=3, which corresponds to 
+      cp=(3/2+1)*R = 5/2*R
+      since dof=2*cv/R=2*(cp/R-1)
+      where R=BoltzmanConstant*AvogadroNumber = 0.00831447 KJ/mol.K 
+      These are distributed between the translational dof:
+      doft=3
+      and internal dof:
+      dofi=dof-dofi=2*cp/R-5 
+      http://en.wikipedia.org/wiki/Heat_capacity#Heat_capacity
+		The pressure of the system is: 1 atm.
+		The temperature of the system is: 800 C = 1073 K.
+   -->
+	<species title="Species data: mass in au=1.66053886e-24 g, size in nm">
+		<specie id="H">
+			<mass title="Atomic Units: 1.0079">1.0</mass>
+			<size title="nanometers">0.050</size>
+			<cp title="heat capacity=(dof/2+1)*R[kJ/(mol*K)]">0.020786</cp>
+		</specie>
+		<specie id="H2">
+			<mass title="Atomic Units: 2.0158">2.0</mass>
+			<size title="nanometers">0.232</size>
+			<cp title="heat capacity=(dof/2+1)*R[kJ/(mol*K)]">0.03326</cp>
+		</specie>
+		<specie id="O">
+			<mass title="Atomic Units">16.0</mass>
+			<size title="nanometers">0.140</size>
+			<cp title="heat capacity=(dof/2+1)*R[kJ/(mol*K)]">0.020786</cp>
+		</specie>
+		<specie id="C">
+			<mass title="Atomic Units">12.0</mass>
+			<size title="nanometers">0.140</size>			<!--Ref. 2-->
+			<cp title="heat capacity=(dof/2+1)*R[kJ/(mol*K)]">0.020786</cp>
+		</specie>
+		<specie id="O2">
+			<mass title="Atomic Units">32.0</mass>
+			<size title="nanometers">0.290</size>
+			<cp title="heat capacity=(dof/2+1)*R[kJ/(mol*K)]">0.03326</cp>
+		</specie>
+		<specie id="OH">
+			<mass title="Atomic Units">17.0</mass>
+			<size title="nanometers">0.25</size>
+			<cp title="heat capacity=(dof/2+1)*R[kJ/(mol*K)]">0.03326</cp>
+		</specie>
+		<specie id="H2O">
+			<mass title="Atomic Units: 18.015">18.0</mass>
+			<size title="nanometers">0.275</size>
+			<cp title="heat capacity=(dof/2+1)*R[kJ/(mol*K)]">0.04573</cp>
+		</specie>
+		<specie id="CH4">
+			<mass title="Atomic Units: 16.011">16.0</mass>
+			<size title="nanometers">0.380</size>			<!--Ref.1-->
+			<cp title="heat capacity=(dof/2+1)*R[kJ/(mol*K)]">0.07067</cp>
+		</specie>
+		<specie id="CO2">
+			<mass title="Atomic Units: 44.009">44.0</mass>
+			<size title="nanometers">0.330</size>			<!--Ref.1-->
+			<cp title="heat capacity=(dof/2+1)*R[kJ/(mol*K)]">0.04573</cp>
+		</specie>
+		<specie id="CO">
+		 	<!-- Approximate: Size(CO) = Size(C)+Size(O) -->
+			<mass title="Atomic Units: 28.010">28.0</mass>
+			<size title="nanometers">0.280</size>
+			<cp title="heat capacity=(dof/2+1)*R[kJ/(mol*K)]">0.03326</cp>
+		</specie>
+		<specie id="N2">
+			<mass title="Atomic Units">28.0</mass>
+			<size title="nanometers">0.360</size>			<!--Ref. 1-->
+			<cp title="heat capacity=(dof/2+1)*R[kJ/(mol*K)]">0.03326</cp>
+		</specie>
+		<specie id="H2S">
+			<mass title="Atomic Units: 34.082">34.0</mass>
+			<size title="nanometers">0.408</size>			<!--Ref. 3-->
+			<cp title="heat capacity=(dof/2+1)*R[kJ/(mol*K)]">0.04573</cp>
+		</specie>
+		<specie id="Ni">
+			<mass title="Atomic Units: 58.6934">58.0</mass>
+			<size title="nanometers">0.270</size>			<!--Ref. 2-->
+			<cp title="heat capacity=(dof/2+1)*R[kJ/(mol*K)]">0.02079</cp>
+		</specie>
+		<specie id="PH3">
+			<mass title="Atomic Units: 33.9978">34.0</mass>
+			<size title="nanometers">0.446</size>        <!--Ref. 3-->
+			<cp title="heat capacity=(dof/2+1)*R[kJ/(mol*K)]">0.05820</cp>
+		</specie>
+		<specie id="O--">
+			<mass title="Atomic Units">16.0</mass>
+			<size title="nanometers">0.280</size>
+			<cp title="heat capacity=(dof/2+1)*R[kJ/(mol*K)]?">0.020786</cp>
+		</specie>
+		<specie id="OH-">
+			<mass title="Atomic Units">17.0</mass>
+			<size title="nanometers">0.274</size>
+			<cp title="heat capacity=(dof/2+1)*R[kJ/(mol*K)]?">0.03326</cp>
+		</specie>
+		<specie id="H-">
+			<mass title="Atomic Units">1.0</mass>
+			<size title="nanometers">0.280</size>
+			<cp title="heat capacity=(dof/2+1)*R[kJ/(mol*K)]?">0.020786</cp>
+		</specie>
+
+	<!--References:
+		1. http://www.moleculargate.com/nitrogen-rejection-N2-removal/Coal-Bed-Methane-Upgrading.html
+		2. http://en.wikipedia.org/wiki/Atomic_radii_of_the_elements_%28data_page%29
+		3. The J. of Chem. Phys., volume 56, number 9, 1972
+	-->
+
+ <!-- SYNGAS - GAS PHASE GLOBAL REACTIONS
+
+      Reaction                       T_a(K)    DH_r (kJ/mol)
+
+		CH4 + H2O     - CO + 3H2      100.0     206.17
+		CH4 + CO2     - 2CO+ 2H2      100.0     247.32
+		CH4 + O2      - CO2+ 2H2      100.0    -318.64
+      CO  + H2O     - CO2+ H2       100.0     -41.15
+      CO2 + 4H2     - CH4+ 2H2O     100.0    -165.02
+    -->
+
+		<reaction reactants="CH4 H2O" products="CO 3H2"> 	<!--Methane steam reforming-->
+			<activation title="Activation temperature in K">100.00</activation>
+			<probability title="Probability of rxn happening with same LHS">1.0</probability>
+			<enthalpy title="Enthalpy of Reaction in kJ/mol">-206.17</enthalpy>
+		</reaction>
+		<reaction reactants="CO 3H2" products="CH4 H2O">    
+			<activation title="Activation temperature in K">100.00</activation>
+			<probability title="Probability of rxn happening with same LHS">1.0</probability>
+			<enthalpy title="Enthalpy of Reaction in kJ/mol">206.17</enthalpy>
+		</reaction>
+		<reaction reactants="CH4 CO2" products="2CO 2H2">   
+			<activation title="Activation temperature in K">100.00</activation>
+			<probability title="Probability of rxn happening with same LHS">1.0</probability>
+			<enthalpy title="Enthalpy of Reaction in kJ/mol">-247.32</enthalpy>
+		</reaction>
+		<reaction reactants="2CO 2H2" products="CH4 CO2">   
+			<activation title="Activation temperature in K">100.00</activation>
+			<probability title="Probability of rxn happening with same LHS">1.0</probability>
+			<enthalpy title="Enthalpy of Reaction in kJ/mol">247.32</enthalpy>
+		</reaction>
+		<reaction reactants="CH4 O2" products="CO2 2H2">    
+			<activation title="Activation temperature in K">100.00</activation>
+			<probability title="Probability of rxn happening with same LHS">1.0</probability>
+			<enthalpy title="Enthalpy of Reaction in kJ/mol">318.64</enthalpy>
+		</reaction>
+		<reaction reactants="CO2 2H2" products="CH4 O2">    
+			<activation title="Activation temperature in K">100.00</activation>
+			<probability title="Probability of rxn happening with same LHS">1.0</probability>
+			<enthalpy title="Enthalpy of Reaction in kJ/mol">-318.64</enthalpy>
+		</reaction>
+		<reaction reactants="CO H2O" products="CO2 H2"> 		<!--Water-gas shift-->
+			<activation title="Activation temperature in K">100.00</activation>
+			<probability title="Probability of rxn happening with same LHS">1.0</probability>
+			<enthalpy title="Enthalpy of Reaction in kJ/mol">41.15</enthalpy>
+		</reaction>
+		<reaction reactants="CO2 H2" products="CO H2O">    
+			<activation title="Activation temperature in K">100.00</activation>
+			<probability title="Probability of rxn happening with same LHS">1.0</probability>
+			<enthalpy title="Enthalpy of Reaction in kJ/mol">-41.15</enthalpy>
+		</reaction>
+		<reaction reactants="CO2 4H2" products="CH4 2H2O">     
+			<activation title="Activation temperature in K">100.00</activation>
+			<probability title="Probability of rxn happening with same LHS">1.0</probability>
+			<enthalpy title="Enthalpy of Reaction in kJ/mol">165.02</enthalpy>
+		</reaction>
+		<reaction reactants="CH4 2H2O" products="CO2 4H2">
+			<activation title="Activation temperature in K">100.00</activation>
+			<probability title="Probability of rxn happening with same LHS">1.0</probability>
+			<enthalpy title="Enthalpy of Reaction in kJ/mol">-165.02</enthalpy>
+		</reaction>
+
+	</species>
+	<!-- DOMAIN -->
+	<domain name="Box">
+		<type>box</type>
+		<grid>
+		<cellsize>10.0</cellsize>
+		</grid>
+		<energy title="not ussed: to be depricated">
+		<lengthscale>100</lengthscale>
+		<strength>50.0</strength>
+		</energy>
+		<bounds title="min max for each direction in nanometers">-50.0 50.0 -50.0 50.0 -50.0 50.0</bounds>
+
+	<!--BOUNDARIES: 
+			Boundary types: inside, elastic, periodic, inlet, open.
+			Types determine default reaction of the boundary to particles: 
+			inside: the boundary is inside a domain (don't use)
+			elastic: particles bounce like from an elastic wall
+			periodic: particles crossing this boundary will re-appear 
+				from the opposite boundary
+			open: particles cross the boundary and disappear forever
+			<temperature> provides boundary temperature. If omitted the boundary
+				is considered adiabatic.
+			<specie> tags describe which specie can enter from across the boundary.
+			The frequency with which the species from across the boundary can enter 
+			into the domain ia derived by their pressure and boundary temperature.
+			Pressure units are kPa, density in kg/m^3, and temperature is in Kelvin.
+			As many <specie> tags can be given as necessary.
+			<reaction> tag describes surface reactions at the boundary for
+				specific species in the domain. As many reaction tags can be given 
+				as necessary. 
+			<probability> tag inside <reaction> should be 1.0 for single outcome
+				reactions, and a percentile for multiple-outcome reactions, 
+				for example, for one reaction of O2 with two possible outcomes:
+					O2 + H(s) -> OH + O
+					O2 + H(s) -> HO2
+				the probabilities can be given as 0.5 and 0.5 for each reaction,
+				or in any other ratio as appropriate, but such that all the
+				probabilities for multiple outcome reactions sum up to 1.0.		
+		-->
+
+ 		<!--  SOFC SYNGAS PARAMETERS:
+
+					R =  8.31457 kPa.m3/(kmol*K)
+					T =  1073.15 K (800 C)
+					P =  101.325 kPa (1 atm)
+					den=p/((R/M)*T)  
+					M = molecular weight
+					The Syngas composition is: CH4 = 0.009 vol.%, 
+														 CO = 29.1 
+														CO2 = 11.8 
+														 H2 = 28.5
+														H20 = 27.6
+														 N2 =  2.1
+       -->
+
+			<boundary id="top"><type>open</type>
+			<temperature title="K">1073.15</temperature>
+
+			<specie id="CH4">
+				<density title="kg/m^3">0.182159</density>
+			</specie>
+			<specie id="CO2">
+				<density title="kg/m^3">0.499688</density>
+			</specie>
+			<specie id="CO">
+				<density title="kg/m^3">0.318097</density>
+			</specie>
+			<specie id="H2O">
+				<density title="kg/m^3">0.204531</density>
+				</specie>
+			<specie id="H2">
+				<density title="kg/m^3">0.022713</density>
+			</specie>
+			<specie id="N2">
+				<density title="kg/m^3">0.317983</density>
+			</specie>
+
+		</boundary>
+		<boundary id="left"><type>elastic</type></boundary>
+		<boundary id="right"><type>elastic</type></boundary>
+		<boundary id="front"> <type>elastic</type></boundary>
+		<boundary id="rear"> <type>elastic</type></boundary>
+
+		<boundary id="bottom">
+			<type>elastic</type>
+			<temperature title="K">1073.15</temperature> 
+	
+	<!-- SURFACE REACTIONS
+
+    	Reaction   						    T_a(K)    DH_r (kJ/mol)
+
+      H2  +  O(s)    - H2O         	 100.0      -491.01
+      2H2 +  C(s)    - CH4           100.0      -791.55
+		H2O +  C(s)    - H2  + CO 	    100.0      -585.38
+		2H2O+  C(s)    - 2H2 + CO2     100.0      -626.53
+      CO2 +  C(s)    - 2CO           100.0      -544.24
+      O2  +  C(s)    - CO2           100.0     -1110.19
+      CO  +  O(s)    - CO2          1509.4      -532.16
+      CH4 		      - C(s) + 2H2    100.0       791.55
+    -->
+
+		<reaction reactant="H2" products="H2O">
+			<activation title="Activation temperature in K">100.00</activation>
+			<probability title="Probability of rxn happening with same LHS">1.0</probability>
+			<enthalpy title="Enthalpy of Reaction in kJ/mol">491.01</enthalpy>
+		</reaction>
+		<reaction reactant="2H2" products="CH4">
+			<activation title="Activation temperature in K">100.00</activation>
+			<probability title="Probability of rxn happening with same LHS">1.0</probability>
+			<enthalpy title="Enthalpy of Reaction in kJ/mol">791.55</enthalpy>
+			</reaction>
+		<reaction reactant="H2O" products="H2 CO">
+			<activation title="Activation temperature in K">100.00</activation>
+			<probability title="Probability of rxn happening with same LHS">1.0</probability>
+			<enthalpy title="Enthalpy of Reaction in kJ/mol">585.38</enthalpy>
+			</reaction>
+		<reaction reactant="2H2O" products="2H2 CO2">
+			<activation title="Activation temperature in K">100.00</activation>
+			<probability title="Probability of rxn happening with same LHS">1.0</probability>
+			<enthalpy title="Enthalpy of Reaction in kJ/mol">626.53</enthalpy>
+		</reaction>
+		<reaction reactant="CO2" products="2CO">
+			<activation title="Activation temperature in K">100.00</activation>
+			<probability title="Probability of rxn happening with same LHS">1.00</probability>
+			<enthalpy title="Enthalpy of Reaction in kJ/mol">544.24</enthalpy>
+		</reaction>
+		<reaction reactant="O2" products="CO2">
+			<activation title="Activation temperature in K">100.00</activation>
+			<probability title="Probability of rxn happening with same LHS">1.0</probability>
+			<enthalpy title="Enthalpy of Reaction in kJ/mol">1110.19</enthalpy>
+		</reaction>
+		<reaction reactant="CO" products="CO2">
+			<activation title="Activation temperature in K">1509.42</activation>
+			<probability title="Probability of rxn happening with same LHS">1.0</probability>
+			<enthalpy title="Enthalpy of Reaction in kJ/mol">532.16</enthalpy>
+		</reaction>
+		<reaction reactant="CH4" products="2H2">     <!--CH4 = C(s)+2H2-->
+			<activation title="Activation temperature in K">100.00</activation>
+			<probability title="Probability of rxn happening with same LHS">1.0</probability>
+			<enthalpy title="Enthalpy of Reaction in kJ/mol">-791.55</enthalpy>
+		</reaction>
+
+		<!--
+    		Reaction probability is used for multiple reaction outcomes to 
+         specify the probability of each outcome.
+         With a single reaction outcome the probability should be always given as 1.0.
+         Negate all the DH_r values.
+      -->
+		</boundary>
+
+	</domain>
+	<!-- GUI -->
+	<gui>
+		<translation>
+			<step>0.01</step>
+		</translation>
+		<vector>
+			<length>2.0</length>
+			<thickness>1.0</thickness>
+			<color>
+				<red>0.5</red>
+				<green>1.0</green>
+				<blue>1.0</blue>
+			</color>
+		</vector>
+		<frame>
+			<line>
+				<thickness>1.0</thickness>
+				<color>
+					<red>1.0</red>
+					<green>0.0</green>
+					<blue>0.0</blue>
+				</color>
+			</line>
+		</frame>
+		<mesh>
+			<!-- Possible Color Schemes:
+				0: by boundary
+				1: by time
+			-->
+			<node>
+				<type title="types: spere point">point</type>
+				<!--<type>point</type>-->
+				<colorscheme>
+					<variable text="Values: mass type">type</variable>
+					<minvalue>0.0</minvalue>
+					<maxvalue>4.0</maxvalue>
+				</colorscheme>
+				<size>2.0</size>
+				<value>
+					<min>-1.0</min>
+					<max>1.0</max>
+				</value>
+				<color>
+					<!-- Basic colors: -->
+					<red>0.0</red>
+					<green>1.0</green>
+					<blue>0.0</blue>
+				</color>
+			</node>
+			<line>
+				<thickness>1.0</thickness>
+				<color>
+					<red>1.0</red>
+					<green>0.5</green>
+					<blue>0.0</blue>
+				</color>
+				<boundary_color>
+					<red>0.0</red>
+					<green>1.0</green>
+					<blue>0.5</blue>
+				</boundary_color>
+			</line>
+		</mesh>
+	</gui>	
+	<xterm>1</xterm>
+</remody>

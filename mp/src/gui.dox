@@ -1,0 +1,57 @@
+/*! \page GUI GUI
+\section SecGUI Graphical User Interface
+
+ReMoDy can be compiled in two versions: with and without a graphical user interface (GUI).
+The former is used to visualize the simulation progress on a small set of data, while the
+latter is to perform larger-scale simulations where the concurrent visualization is not
+possible.
+
+After the GUI-enabled version (view) is started, a display window pops up, showing the computational domain.
+The initial parameters of the scene can be set in the config file (see Sec. \ref SecConfig).
+The configfile can be reloaded by making the display window active and hitting the 'l' key for 'load'.
+The keyboard control of the simulation has two modes: <i>keystroke</i>, and <i>commandline</i>. This is similar to
+vi text editor in UNIX. Initially the keystroke mode is active.
+
+ -# In the keystroke model the single-key-strokes can be used while the display window is
+active. These include:
+
+   - <b>ESC</b>: exit. The same as 'q';
+   - <b>?</b>: show help. 
+   - <b>:</b>: switch to a terminal command mode (similar to vi). The same as '.';
+   - <b>a</b>: show/hide the axes.
+   - <b>b</b>: show/hide boundary faces of the mesh (not used when mesh is absent).
+   - <b>c</b>: switch the color-scheme.
+   - <b>f</b>: show the box frame.
+   - <b>G</b>: show all the mesh edges.
+   - <b>g</b>: show only the boundary mesh edges.
+   - <b>l</b>: read configuration file.
+   - <b>m</b>: display the menue on the console.
+   - <b>N</b>: show mesh nodes.
+   - <b>n</b>: show boundary vertexes.
+   - <b>r</b>: start/stop the continuous run.
+   - <b>s</b>: perform one step of the simulation. Analogous to '+'.
+   - <b>v</b>: show boundary vectors.
+   - <b>w</b>: dump current window into a xwd file.
+   - <b>Z</b>: zoom-in view.
+   - <b>z</b>: zoom-out view.
+
+ -# The command mode is switched from the keystroke mode by hitting the ':' or '.' keys. To
+  switch back from the command mode one has to enter an empty command, that is, press
+ENTER, while the command line is empty. In the command mode, the command line appears in
+the terminal windows from which the program has started. The commands one can enter in the
+command line include:
+
+   - <b>bg</b>: go to background run mode. During this mode the all controls are disabled.
+   - <b>cs</b>: switch the color scheme.
+   - <b>fg</b>: go to foreground mode.
+   - <b>?, h, or help</b>: show help. 
+   - <b>r</b>: run a number of iterations.
+   - <b>sp</b>: toggle between spheres and points in particle (molecule) display.
+   - <b>wd</b>: start/stop window dump every fixed number of iterations.
+   - <b>dw</b>: dump current window picture into a xwd file.
+   - <b>e</b>: exit the program. Also saves current data.
+   - <b>q</b>: quit without saving.
+   - <b>.</b>: quit the command mode. Also hitting ENTER with empty command line.
+
+
+*/

@@ -1,0 +1,110 @@
+\hypertarget{namespaceSpecies}{
+\section{Species Namespace Reference}
+\label{namespaceSpecies}\index{Species@{Species}}
+}
+Description of \hyperlink{classSpecies_1_1Specie}{Specie} and \hyperlink{structSpecies_1_1Reaction}{Reaction} classes.  
+
+
+\subsection*{Classes}
+\begin{CompactItemize}
+\item 
+class \hyperlink{classSpecies_1_1Specie}{Specie}
+\item 
+struct \hyperlink{structSpecies_1_1Gas}{Gas}
+\begin{CompactList}\small\item\em \hyperlink{structSpecies_1_1Gas}{Gas} is a specie with some additional parameters. \item\end{CompactList}\item 
+struct \hyperlink{structSpecies_1_1Reaction}{Reaction}
+\begin{CompactList}\small\item\em \hyperlink{structSpecies_1_1Reaction}{Reaction} determines the two products only. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Enumerations}
+\begin{CompactItemize}
+\item 
+enum \hyperlink{namespaceSpecies_aa897d386b20b57b719a044b5bb30a83}{Interaction} \{ \hyperlink{namespaceSpecies_aa897d386b20b57b719a044b5bb30a8342bcabda00198979743ea42e32c522b1}{missed} = 0, 
+\hyperlink{namespaceSpecies_aa897d386b20b57b719a044b5bb30a839c7a9e713300cb3b94c377519fbdf10d}{collided}, 
+\hyperlink{namespaceSpecies_aa897d386b20b57b719a044b5bb30a83491eee3c39e7857ff7fa635f42fe9b63}{reacted}, 
+\hyperlink{namespaceSpecies_aa897d386b20b57b719a044b5bb30a83990b6073e485754c526763e07c59a031}{annihalated}
+ \}
+\end{CompactItemize}
+\subsection*{Variables}
+\begin{CompactItemize}
+\item 
+int \hyperlink{namespaceSpecies_ae2c14c915d4e318d3f91c7c923703c2}{nspecies}
+\item 
+\hyperlink{classSpecies_1_1Specie}{Specie} $\ast$ \hyperlink{namespaceSpecies_fd6fa7c938aa29a1b23b04e0aaed469f}{species}
+\item 
+\hyperlink{structSpecies_1_1Reaction}{Reaction} $\ast$ \hyperlink{namespaceSpecies_e880334166f7d3eb95e744b0d895d483}{reactions}
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+Description of \hyperlink{classSpecies_1_1Specie}{Specie} and \hyperlink{structSpecies_1_1Reaction}{Reaction} classes. 
+
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{namespaceSpecies_aa897d386b20b57b719a044b5bb30a83}{
+\index{Species@{Species}!Interaction@{Interaction}}
+\index{Interaction@{Interaction}!Species@{Species}}
+\subsubsection[{Interaction}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Species::Interaction}}}
+\label{namespaceSpecies_aa897d386b20b57b719a044b5bb30a83}
+
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{missed@{missed}!Species@{Species}}\index{Species@{Species}!missed@{missed}}\item[{\em 
+\hypertarget{namespaceSpecies_aa897d386b20b57b719a044b5bb30a8342bcabda00198979743ea42e32c522b1}{
+missed}
+\label{namespaceSpecies_aa897d386b20b57b719a044b5bb30a8342bcabda00198979743ea42e32c522b1}
+}]\index{collided@{collided}!Species@{Species}}\index{Species@{Species}!collided@{collided}}\item[{\em 
+\hypertarget{namespaceSpecies_aa897d386b20b57b719a044b5bb30a839c7a9e713300cb3b94c377519fbdf10d}{
+collided}
+\label{namespaceSpecies_aa897d386b20b57b719a044b5bb30a839c7a9e713300cb3b94c377519fbdf10d}
+}]\index{reacted@{reacted}!Species@{Species}}\index{Species@{Species}!reacted@{reacted}}\item[{\em 
+\hypertarget{namespaceSpecies_aa897d386b20b57b719a044b5bb30a83491eee3c39e7857ff7fa635f42fe9b63}{
+reacted}
+\label{namespaceSpecies_aa897d386b20b57b719a044b5bb30a83491eee3c39e7857ff7fa635f42fe9b63}
+}]two reactants -$>$ two products \index{annihalated@{annihalated}!Species@{Species}}\index{Species@{Species}!annihalated@{annihalated}}\item[{\em 
+\hypertarget{namespaceSpecies_aa897d386b20b57b719a044b5bb30a83990b6073e485754c526763e07c59a031}{
+annihalated}
+\label{namespaceSpecies_aa897d386b20b57b719a044b5bb30a83990b6073e485754c526763e07c59a031}
+}]two reactants -$>$ one product \end{description}
+\end{Desc}
+
+
+
+Definition at line 164 of file species.h.
+
+\subsection{Variable Documentation}
+\hypertarget{namespaceSpecies_ae2c14c915d4e318d3f91c7c923703c2}{
+\index{Species@{Species}!nspecies@{nspecies}}
+\index{nspecies@{nspecies}!Species@{Species}}
+\subsubsection[{nspecies}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf Species::nspecies}}}
+\label{namespaceSpecies_ae2c14c915d4e318d3f91c7c923703c2}
+
+
+
+
+Definition at line 8 of file species.cc.
+
+Referenced by Domain::Domain(), Domain::interact(), Domain::load(), Molecule::Move(), Species::Reaction::Reaction::Outcome::Outcome(), and Domain::run().\hypertarget{namespaceSpecies_e880334166f7d3eb95e744b0d895d483}{
+\index{Species@{Species}!reactions@{reactions}}
+\index{reactions@{reactions}!Species@{Species}}
+\subsubsection[{reactions}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Reaction} $\ast$ {\bf Species::reactions}}}
+\label{namespaceSpecies_e880334166f7d3eb95e744b0d895d483}
+
+
+
+
+Definition at line 10 of file species.cc.
+
+Referenced by Domain::Domain(), and Domain::interact().\hypertarget{namespaceSpecies_fd6fa7c938aa29a1b23b04e0aaed469f}{
+\index{Species@{Species}!species@{species}}
+\index{species@{species}!Species@{Species}}
+\subsubsection[{species}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Specie} $\ast$ {\bf Species::species}}}
+\label{namespaceSpecies_fd6fa7c938aa29a1b23b04e0aaed469f}
+
+
+
+
+Definition at line 9 of file species.cc.
+
+Referenced by Domain::boundary(), Gui::display(), Domain::Domain(), Domain::init(), Bulk::inject(), Boundary::Inject(), Domain::injection(), Domain::interact(), Molecule::KineticEnergy(), Domain::load(), Molecule::Move(), GridContainer::put(), Domain::run(), Domain::save(), and Molecule::Temperature().

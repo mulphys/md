@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mesh xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="mesh.xsd">
+	<time>
+		<start>0.0</start>
+		<step>1.0</step>
+		<end>100.0</end>
+	</time>
+	<!-- DOMAINS -->
+	<domain name="Box">
+		<type>box</type>
+		<energy>
+			<lengthscale>15.0</lengthscale>
+			<strength>1.0</strength>
+		</energy>
+		<geometry>
+			<bounds>-50.0 50.0 -50.0 50.0 -50.0 50.0</bounds>
+		</geometry>
+	</domain>
+	<!-- MODELS -->
+</mesh>

@@ -1,0 +1,287 @@
+\hypertarget{structSpecies_1_1Reaction_1_1Outcome}{
+\section{Species::Reaction::Reaction::Outcome Struct Reference}
+\label{structSpecies_1_1Reaction_1_1Outcome}\index{Species::Reaction::Outcome@{Species::Reaction::Outcome}}
+}
+Possible outcomes of a reaction.  
+
+
+{\tt \#include $<$species.h$>$}
+
+Collaboration diagram for Species::Reaction::Reaction::Outcome:\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{structSpecies_1_1Reaction_1_1Outcome_f0372a4ff441442b95fb549c2822e443}{Outcome} ()
+\item 
+\hyperlink{structSpecies_1_1Reaction_1_1Outcome_86196a9fb4193115c2c6517c3b52c8e7}{Outcome} (int ip0, int ip1, REAL a, REAL p, REAL h)
+\item 
+void \hyperlink{structSpecies_1_1Reaction_1_1Outcome_25af855f57626fde3dc99c9f723bf3c4}{Products} (int ip0, int ip1)
+\item 
+int \hyperlink{structSpecies_1_1Reaction_1_1Outcome_27ca27f30fd0a0f36c0ca2b41be69eb1}{Product} (int i)
+\item 
+void \hyperlink{structSpecies_1_1Reaction_1_1Outcome_b0bec41a7b80a0bdc969212ded2bd903}{Time} (REAL t)
+\item 
+REAL \hyperlink{structSpecies_1_1Reaction_1_1Outcome_9a666d72a707308722a7271b9dbbda13}{Time} ()
+\item 
+void \hyperlink{structSpecies_1_1Reaction_1_1Outcome_5af56168a504050654b3be2573176ea8}{ActivationEnergy} (REAL a)
+\item 
+REAL \hyperlink{structSpecies_1_1Reaction_1_1Outcome_7643a1714101a15a49b52137a414bcb3}{ActivationEnergy} ()
+\item 
+void \hyperlink{structSpecies_1_1Reaction_1_1Outcome_c1287cbdc6b08733b48cbb57d5d3fc72}{Probability} (REAL r)
+\item 
+REAL \hyperlink{structSpecies_1_1Reaction_1_1Outcome_765753f408399d91d8cc94566042db1b}{Probability} ()
+\item 
+void \hyperlink{structSpecies_1_1Reaction_1_1Outcome_55e9f04c416460fadb84788ba9e5108c}{Enthalpy} (REAL h)
+\item 
+REAL \hyperlink{structSpecies_1_1Reaction_1_1Outcome_499c792cd3b6b76ff268184c46c3a4d6}{Enthalpy} ()
+\end{CompactItemize}
+\subsection*{Public Attributes}
+\begin{CompactItemize}
+\item 
+int \hyperlink{structSpecies_1_1Reaction_1_1Outcome_a9db2fbca0e21ce3059f4bfc3867d637}{product} \mbox{[}2\mbox{]}
+\begin{CompactList}\small\item\em two indexes of the products of a reaction \item\end{CompactList}\item 
+REAL \hyperlink{structSpecies_1_1Reaction_1_1Outcome_0508262e12d36ea36e1cd3c3c8f02a0b}{activationEnergy}
+\item 
+REAL \hyperlink{structSpecies_1_1Reaction_1_1Outcome_7db6b3e12d84984760d20418877463e4}{probability}
+\item 
+REAL \hyperlink{structSpecies_1_1Reaction_1_1Outcome_1b5db8fd0f9fa996a6c7624c83201141}{enthalpy}
+\item 
+REAL \hyperlink{structSpecies_1_1Reaction_1_1Outcome_654cf802ce7437099ab5fcb4cb1a670d}{time}
+\item 
+\hyperlink{structSpecies_1_1Reaction_1_1Outcome}{Outcome} $\ast$ \hyperlink{structSpecies_1_1Reaction_1_1Outcome_fc6cab6ededafb32e7fabd312a18bb0b}{next}
+\begin{CompactList}\small\item\em linked list of outcomes \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+Possible outcomes of a reaction. 
+
+Definition at line 37 of file species.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{structSpecies_1_1Reaction_1_1Outcome_f0372a4ff441442b95fb549c2822e443}{
+\index{Species::Reaction::Outcome@{Species::Reaction::Outcome}!Outcome@{Outcome}}
+\index{Outcome@{Outcome}!Species::Reaction::Outcome@{Species::Reaction::Outcome}}
+\subsubsection[{Outcome}]{\setlength{\rightskip}{0pt plus 5cm}Species::Reaction::Reaction::Outcome::Outcome ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{structSpecies_1_1Reaction_1_1Outcome_f0372a4ff441442b95fb549c2822e443}
+
+
+
+
+Definition at line 44 of file species.h.
+
+References Species::Reaction::Reaction::Outcome::enthalpy, Species::Reaction::Reaction::Outcome::next, Species::Reaction::Reaction::Outcome::probability, Species::Reaction::Reaction::Outcome::product, Species::Reaction::Reaction::Outcome::time, and VOIDSPECIE.\hypertarget{structSpecies_1_1Reaction_1_1Outcome_86196a9fb4193115c2c6517c3b52c8e7}{
+\index{Species::Reaction::Outcome@{Species::Reaction::Outcome}!Outcome@{Outcome}}
+\index{Outcome@{Outcome}!Species::Reaction::Outcome@{Species::Reaction::Outcome}}
+\subsubsection[{Outcome}]{\setlength{\rightskip}{0pt plus 5cm}Species::Reaction::Reaction::Outcome::Outcome (int {\em ip0}, \/  int {\em ip1}, \/  REAL {\em a}, \/  REAL {\em p}, \/  REAL {\em h})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{structSpecies_1_1Reaction_1_1Outcome_86196a9fb4193115c2c6517c3b52c8e7}
+
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em ip0}]index of the first reaction product \item[{\em ip1}]index of the second reaction product \item[{\em a}]activation energy \item[{\em p}]outcome probability \item[{\em h}]enthalpy of reaction \end{description}
+\end{Desc}
+
+
+Definition at line 49 of file species.h.
+
+References Species::Reaction::Reaction::Outcome::activationEnergy, Species::Reaction::Reaction::Outcome::enthalpy, Species::Reaction::Reaction::Outcome::next, Species::nspecies, Species::Reaction::Reaction::Outcome::probability, Species::Reaction::Reaction::Outcome::product, and Species::Reaction::Reaction::Outcome::time.
+
+\subsection{Member Function Documentation}
+\hypertarget{structSpecies_1_1Reaction_1_1Outcome_7643a1714101a15a49b52137a414bcb3}{
+\index{Species::Reaction::Outcome@{Species::Reaction::Outcome}!ActivationEnergy@{ActivationEnergy}}
+\index{ActivationEnergy@{ActivationEnergy}!Species::Reaction::Outcome@{Species::Reaction::Outcome}}
+\subsubsection[{ActivationEnergy}]{\setlength{\rightskip}{0pt plus 5cm}REAL Species::Reaction::Reaction::Outcome::ActivationEnergy ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{structSpecies_1_1Reaction_1_1Outcome_7643a1714101a15a49b52137a414bcb3}
+
+
+
+
+Definition at line 120 of file species.h.
+
+References Species::Reaction::Reaction::Outcome::activationEnergy.\hypertarget{structSpecies_1_1Reaction_1_1Outcome_5af56168a504050654b3be2573176ea8}{
+\index{Species::Reaction::Outcome@{Species::Reaction::Outcome}!ActivationEnergy@{ActivationEnergy}}
+\index{ActivationEnergy@{ActivationEnergy}!Species::Reaction::Outcome@{Species::Reaction::Outcome}}
+\subsubsection[{ActivationEnergy}]{\setlength{\rightskip}{0pt plus 5cm}void Species::Reaction::Reaction::Outcome::ActivationEnergy (REAL {\em a})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{structSpecies_1_1Reaction_1_1Outcome_5af56168a504050654b3be2573176ea8}
+
+
+
+
+Definition at line 119 of file species.h.
+
+References Species::Reaction::Reaction::Outcome::activationEnergy.
+
+Referenced by Domain::interact().\hypertarget{structSpecies_1_1Reaction_1_1Outcome_499c792cd3b6b76ff268184c46c3a4d6}{
+\index{Species::Reaction::Outcome@{Species::Reaction::Outcome}!Enthalpy@{Enthalpy}}
+\index{Enthalpy@{Enthalpy}!Species::Reaction::Outcome@{Species::Reaction::Outcome}}
+\subsubsection[{Enthalpy}]{\setlength{\rightskip}{0pt plus 5cm}REAL Species::Reaction::Reaction::Outcome::Enthalpy ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{structSpecies_1_1Reaction_1_1Outcome_499c792cd3b6b76ff268184c46c3a4d6}
+
+
+
+
+Definition at line 124 of file species.h.
+
+References Species::Reaction::Reaction::Outcome::enthalpy.\hypertarget{structSpecies_1_1Reaction_1_1Outcome_55e9f04c416460fadb84788ba9e5108c}{
+\index{Species::Reaction::Outcome@{Species::Reaction::Outcome}!Enthalpy@{Enthalpy}}
+\index{Enthalpy@{Enthalpy}!Species::Reaction::Outcome@{Species::Reaction::Outcome}}
+\subsubsection[{Enthalpy}]{\setlength{\rightskip}{0pt plus 5cm}void Species::Reaction::Reaction::Outcome::Enthalpy (REAL {\em h})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{structSpecies_1_1Reaction_1_1Outcome_55e9f04c416460fadb84788ba9e5108c}
+
+
+
+
+Definition at line 123 of file species.h.
+
+References Species::Reaction::Reaction::Outcome::enthalpy.
+
+Referenced by Domain::boundary(), Domain::Domain(), and Domain::interact().\hypertarget{structSpecies_1_1Reaction_1_1Outcome_765753f408399d91d8cc94566042db1b}{
+\index{Species::Reaction::Outcome@{Species::Reaction::Outcome}!Probability@{Probability}}
+\index{Probability@{Probability}!Species::Reaction::Outcome@{Species::Reaction::Outcome}}
+\subsubsection[{Probability}]{\setlength{\rightskip}{0pt plus 5cm}REAL Species::Reaction::Reaction::Outcome::Probability ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{structSpecies_1_1Reaction_1_1Outcome_765753f408399d91d8cc94566042db1b}
+
+
+
+
+Definition at line 122 of file species.h.
+
+References Species::Reaction::Reaction::Outcome::probability.\hypertarget{structSpecies_1_1Reaction_1_1Outcome_c1287cbdc6b08733b48cbb57d5d3fc72}{
+\index{Species::Reaction::Outcome@{Species::Reaction::Outcome}!Probability@{Probability}}
+\index{Probability@{Probability}!Species::Reaction::Outcome@{Species::Reaction::Outcome}}
+\subsubsection[{Probability}]{\setlength{\rightskip}{0pt plus 5cm}void Species::Reaction::Reaction::Outcome::Probability (REAL {\em r})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{structSpecies_1_1Reaction_1_1Outcome_c1287cbdc6b08733b48cbb57d5d3fc72}
+
+
+
+
+Definition at line 121 of file species.h.
+
+References Species::Reaction::Reaction::Outcome::probability.
+
+Referenced by Domain::boundary(), Domain::Domain(), and Domain::interact().\hypertarget{structSpecies_1_1Reaction_1_1Outcome_27ca27f30fd0a0f36c0ca2b41be69eb1}{
+\index{Species::Reaction::Outcome@{Species::Reaction::Outcome}!Product@{Product}}
+\index{Product@{Product}!Species::Reaction::Outcome@{Species::Reaction::Outcome}}
+\subsubsection[{Product}]{\setlength{\rightskip}{0pt plus 5cm}int Species::Reaction::Reaction::Outcome::Product (int {\em i})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{structSpecies_1_1Reaction_1_1Outcome_27ca27f30fd0a0f36c0ca2b41be69eb1}
+
+
+
+
+Definition at line 110 of file species.h.
+
+References Species::Reaction::Reaction::Outcome::product.
+
+Referenced by Domain::boundary(), Domain::Domain(), and Domain::interact().\hypertarget{structSpecies_1_1Reaction_1_1Outcome_25af855f57626fde3dc99c9f723bf3c4}{
+\index{Species::Reaction::Outcome@{Species::Reaction::Outcome}!Products@{Products}}
+\index{Products@{Products}!Species::Reaction::Outcome@{Species::Reaction::Outcome}}
+\subsubsection[{Products}]{\setlength{\rightskip}{0pt plus 5cm}void Species::Reaction::Reaction::Outcome::Products (int {\em ip0}, \/  int {\em ip1})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{structSpecies_1_1Reaction_1_1Outcome_25af855f57626fde3dc99c9f723bf3c4}
+
+
+
+
+Definition at line 98 of file species.h.
+
+References Species::Reaction::Reaction::Outcome::product.\hypertarget{structSpecies_1_1Reaction_1_1Outcome_9a666d72a707308722a7271b9dbbda13}{
+\index{Species::Reaction::Outcome@{Species::Reaction::Outcome}!Time@{Time}}
+\index{Time@{Time}!Species::Reaction::Outcome@{Species::Reaction::Outcome}}
+\subsubsection[{Time}]{\setlength{\rightskip}{0pt plus 5cm}REAL Species::Reaction::Reaction::Outcome::Time ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{structSpecies_1_1Reaction_1_1Outcome_9a666d72a707308722a7271b9dbbda13}
+
+
+
+
+Definition at line 118 of file species.h.
+
+References Species::Reaction::Reaction::Outcome::time.\hypertarget{structSpecies_1_1Reaction_1_1Outcome_b0bec41a7b80a0bdc969212ded2bd903}{
+\index{Species::Reaction::Outcome@{Species::Reaction::Outcome}!Time@{Time}}
+\index{Time@{Time}!Species::Reaction::Outcome@{Species::Reaction::Outcome}}
+\subsubsection[{Time}]{\setlength{\rightskip}{0pt plus 5cm}void Species::Reaction::Reaction::Outcome::Time (REAL {\em t})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{structSpecies_1_1Reaction_1_1Outcome_b0bec41a7b80a0bdc969212ded2bd903}
+
+
+
+
+Definition at line 117 of file species.h.
+
+References Species::Reaction::Reaction::Outcome::time.
+
+Referenced by Domain::boundary().
+
+\subsection{Member Data Documentation}
+\hypertarget{structSpecies_1_1Reaction_1_1Outcome_0508262e12d36ea36e1cd3c3c8f02a0b}{
+\index{Species::Reaction::Outcome@{Species::Reaction::Outcome}!activationEnergy@{activationEnergy}}
+\index{activationEnergy@{activationEnergy}!Species::Reaction::Outcome@{Species::Reaction::Outcome}}
+\subsubsection[{activationEnergy}]{\setlength{\rightskip}{0pt plus 5cm}REAL Species::Reaction::Reaction::Outcome::activationEnergy}}
+\label{structSpecies_1_1Reaction_1_1Outcome_0508262e12d36ea36e1cd3c3c8f02a0b}
+
+
+
+
+Definition at line 39 of file species.h.
+
+Referenced by Species::Reaction::Reaction::Outcome::ActivationEnergy(), and Species::Reaction::Reaction::Outcome::Outcome().\hypertarget{structSpecies_1_1Reaction_1_1Outcome_1b5db8fd0f9fa996a6c7624c83201141}{
+\index{Species::Reaction::Outcome@{Species::Reaction::Outcome}!enthalpy@{enthalpy}}
+\index{enthalpy@{enthalpy}!Species::Reaction::Outcome@{Species::Reaction::Outcome}}
+\subsubsection[{enthalpy}]{\setlength{\rightskip}{0pt plus 5cm}REAL Species::Reaction::Reaction::Outcome::enthalpy}}
+\label{structSpecies_1_1Reaction_1_1Outcome_1b5db8fd0f9fa996a6c7624c83201141}
+
+
+
+
+Definition at line 39 of file species.h.
+
+Referenced by Species::Reaction::Reaction::Outcome::Enthalpy(), and Species::Reaction::Reaction::Outcome::Outcome().\hypertarget{structSpecies_1_1Reaction_1_1Outcome_fc6cab6ededafb32e7fabd312a18bb0b}{
+\index{Species::Reaction::Outcome@{Species::Reaction::Outcome}!next@{next}}
+\index{next@{next}!Species::Reaction::Outcome@{Species::Reaction::Outcome}}
+\subsubsection[{next}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Outcome}$\ast$ Species::Reaction::Reaction::Outcome::next}}
+\label{structSpecies_1_1Reaction_1_1Outcome_fc6cab6ededafb32e7fabd312a18bb0b}
+
+
+linked list of outcomes 
+
+
+
+Definition at line 43 of file species.h.
+
+Referenced by Species::Reaction::Add(), Species::Reaction::Erase(), Species::Reaction::Next(), and Species::Reaction::Reaction::Outcome::Outcome().\hypertarget{structSpecies_1_1Reaction_1_1Outcome_7db6b3e12d84984760d20418877463e4}{
+\index{Species::Reaction::Outcome@{Species::Reaction::Outcome}!probability@{probability}}
+\index{probability@{probability}!Species::Reaction::Outcome@{Species::Reaction::Outcome}}
+\subsubsection[{probability}]{\setlength{\rightskip}{0pt plus 5cm}REAL Species::Reaction::Reaction::Outcome::probability}}
+\label{structSpecies_1_1Reaction_1_1Outcome_7db6b3e12d84984760d20418877463e4}
+
+
+
+
+Definition at line 39 of file species.h.
+
+Referenced by Species::Reaction::Reaction::Outcome::Outcome(), and Species::Reaction::Reaction::Outcome::Probability().\hypertarget{structSpecies_1_1Reaction_1_1Outcome_a9db2fbca0e21ce3059f4bfc3867d637}{
+\index{Species::Reaction::Outcome@{Species::Reaction::Outcome}!product@{product}}
+\index{product@{product}!Species::Reaction::Outcome@{Species::Reaction::Outcome}}
+\subsubsection[{product}]{\setlength{\rightskip}{0pt plus 5cm}int Species::Reaction::Reaction::Outcome::product\mbox{[}2\mbox{]}}}
+\label{structSpecies_1_1Reaction_1_1Outcome_a9db2fbca0e21ce3059f4bfc3867d637}
+
+
+two indexes of the products of a reaction 
+
+
+
+Definition at line 38 of file species.h.
+
+Referenced by Species::Reaction::Reaction::Outcome::Outcome(), Species::Reaction::Reaction::Outcome::Product(), and Species::Reaction::Reaction::Outcome::Products().\hypertarget{structSpecies_1_1Reaction_1_1Outcome_654cf802ce7437099ab5fcb4cb1a670d}{
+\index{Species::Reaction::Outcome@{Species::Reaction::Outcome}!time@{time}}
+\index{time@{time}!Species::Reaction::Outcome@{Species::Reaction::Outcome}}
+\subsubsection[{time}]{\setlength{\rightskip}{0pt plus 5cm}REAL Species::Reaction::Reaction::Outcome::time}}
+\label{structSpecies_1_1Reaction_1_1Outcome_654cf802ce7437099ab5fcb4cb1a670d}
+
+
+time of reaction: used primarily for surface reactions, where there is a time delay between species adsorption on the surface and product formation. 
+
+Definition at line 39 of file species.h.
+
+Referenced by Species::Reaction::Reaction::Outcome::Outcome(), and Species::Reaction::Reaction::Outcome::Time().
+
+The documentation for this struct was generated from the following file:\begin{CompactItemize}
+\item 
+\hyperlink{species_8h}{species.h}\end{CompactItemize}

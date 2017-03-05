@@ -1,0 +1,16 @@
+digraph G
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  Node1 [label="domain.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir=back,color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="domain.cc",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$domain_8cc.html",tooltip="Implementation of Domain and Boundary classes."];
+  Node1 -> Node3 [dir=back,color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="gui.cc",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$gui_8cc.html"];
+  Node1 -> Node4 [dir=back,color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="job.cc",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$job_8cc.html",tooltip="The ReMoDy backend."];
+  Node1 -> Node5 [dir=back,color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="model.cc",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$model_8cc.html"];
+  Node1 -> Node6 [dir=back,color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="view.cc",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$view_8cc.html",tooltip="The frontend of ReMoDy with the OpenGL Visualizer."];
+}

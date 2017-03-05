@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<remody xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="mesh.xsd">
+	<time>
+		<start>0.0</start>
+		<step>1e-5</step>
+		<end>10.0</end>
+		<output title="Time interval for file output (0 - no output)">1.0e3</output>
+	</time>
+	<!-- CHEMISTRY -->
+	<molecules title="Maximum number of molecules used">10000000</molecules>
+	<species title="Species data: mass in au=1.66053886e-24 g, size in nm">
+		<specie id="H">
+			<mass title="Atomic Units: 1.0079">1.0</mass>
+			<size title="nanometers ?">0.111</size>
+		</specie>
+		<specie id="H2">
+			<mass title="Atomic Units: 2.0158">2.0</mass>
+			<size title="nanometers">0.240</size>
+		</specie>
+		<specie id="O">
+			<mass title="Atomic Units">16.0</mass>
+			<size title="nanometers ?">0.20</size>
+		</specie>
+		<specie id="O2">
+			<mass title="Atomic Units">32.0</mass>
+			<size title="nanometers">0.29</size>
+		</specie>
+		<specie id="OH">
+			<mass title="Atomic Units">17.0</mass>
+			<size title="nanometers ?">0.25</size>
+		</specie>
+		<specie id="H2O">
+			<mass title="Atomic Units: 18.015">18.0</mass>
+			<size title="nanometers">0.275</size>
+		</specie>
+		<specie id="N2">
+			<mass title="Atomic Units">28.0</mass>
+			<size title="nanometers">0.31</size>
+		</specie>
+		<specie id="H2S">
+			<mass title="Atomic Units: 34.082">34.0</mass>
+			<size title="nanometers">0.36</size>
+		</specie>
+		<specie id="Ni">
+			<mass title="Atomic Units: 58.6934">58.0</mass>
+			<size title="nanometers">0.75</size>
+		</specie>
+		<!-- Reaction rate is used for multiple reaction outcomes to 
+			specify the probability of each outcome.
+			With a single reaction outcome the rate should be always given as 1.0
+		-->
+		<reaction reactants="H2 O2" products="OH OH">
+			<activation title="Activation temerature in K">300</activation>
+			<rate>0.5</rate>
+			<enthalpy title="?">1.0</enthalpy>
+		</reaction>
+		<reaction reactants="H2 O2" products="H2O O">
+			<activation title="Activation temerature in K">300</activation>
+			<rate>0.5</rate>
+			<enthalpy title="?">1.0</enthalpy>
+		</reaction>
+		<reaction reactants="O H2" products="H2O">
+			<activation title="Activation temerature in K">300</activation>
+			<rate>1.0</rate>
+			<enthalpy title="?">1.0</enthalpy>
+		</reaction>
+		<reaction reactants="OH H2" products="H2O H">
+			<activation title="Activation temerature in K">300</activation>
+			<rate>1.0</rate>
+			<enthalpy title="?">1.0</enthalpy>
+		</reaction>
+		<reaction reactants="H O2" products="OH O">
+			<activation title="Activation temerature in K">300</activation>
+			<rate>1.0</rate>
+			<enthalpy title="?">1.0</enthalpy>
+		</reaction>
+		<reaction reactants="H O" products="OH">
+			<activation title="Activation temerature in K">300</activation>
+			<rate>1.0</rate>
+			<enthalpy title="?">1.0</enthalpy>
+		</reaction>
+	</species>
+	<!-- DOMAIN -->
+	<domain name="Box">
+		<type>box</type>
+		<grid>
+			<cellsize>10.0</cellsize>
+		</grid>
+		<energy title="not ussed: to be depricated">
+			<lengthscale>100</lengthscale>
+			<strength>50.0</strength>
+		</energy>
+		<bounds title="min max for each direction in nanometers">-500.0 500.0 -500.0 500.0 -500.0 500.0</bounds>
+		<!-- BOUNDARIES: 
+			Boundary types: inside, elastic, periodic, inlet, open.
+			Types determine default reaction of the boundary to particles: 
+			inside: the boundary is inside a domain (don't use)
+			elastic: particles bounce like from an elastic wall
+			periodic: particles crossing this boundary will re-appear 
+				from the opposite boundary
+			open: particles cross the boundary and disappear forever
+			<temperature> provides boundary temperature. If omitted the boundary
+				is considered adiabatic.
+			<specie> tags describe which specie can enter from across the boundary.
+			The frequency with which the species from across the boundary can enter 
+			into the domain ia derived by their pressure and boundary temperature.
+			Pressure units are kPa, density in kg/m^3, and temperature is in Kelvin.
+			As many <specie> tags can be given as necessary.
+			<reaction> tag describes surface reactions at the boundary for
+				specific species in the domain. As many reaction tags can be given 
+				as necessary.
+		-->
+		<boundary id="left"><type>elastic</type></boundary>
+		<boundary id="right"><type>elastic</type></boundary>
+		<boundary id="bottom">
+			<type>elastic</type>
+			<temperature title="K">1.0</temperature><!-- Q: What 'fictitious temperature' to provide? -->
+<!--
+			<specie id="H2">
+				<density title="kg/m^3">0.1</density>
+			</specie>
+			<reaction reactant="H2" products="VOID">
+				<activation title="Activation temepature in K">0.0</activation>
+				<enthalpy title="kJ/kmol">0.0</enthalpy>
+			</reaction>
+-->
+			<reaction reactant="O2" products="OH OH">
+				<activation title="Activation temepature in K">300.0</activation>
+				<probability title="Activation probability">0.5</probability>
+				<enthalpy title="kJ/kmol">0.0</enthalpy>
+			</reaction>
+			<reaction reactant="O2" products="OH O">
+				<activation title="Activation temepature in K">300.0</activation>
+				<probability title="Activation probability">0.5</probability>
+				<enthalpy title="kJ/kmol">0.0</enthalpy>
+			</reaction>
+			<reaction reactant="OH" products="H2O">
+				<activation title="Activation temepature in K">300.0</activation>
+				<probability title="Activation probability">1.0</probability>
+				<enthalpy title="kJ/kmol">0.0</enthalpy>
+			</reaction>
+			<reaction reactant="O" products="OH">
+				<activation title="Activation temepature in K">300.0</activation>
+				<probability title="Activation probability">1.0</probability>
+				<enthalpy title="kJ/kmol">0.0</enthalpy>
+			</reaction>
+		</boundary>
+		<boundary id="top">
+			<type>open</type>
+			<temperature title="K">300.0</temperature>
+			<!-- Composition of the atomosphere from http://en.wikipedia.org/wiki/Earth's_atmosphere#Composition 
+				Nitrogen (N2) 	780,840 ppmv (78.084%)
+				Oxygen (O2) 	209,460 ppmv (20.946%)
+				Argon (Ar) 	9,340 ppmv (0.9340%)
+				Carbon dioxide (CO2) 	383 ppmv (0.0383%)
+				Neon (Ne) 	18.18 ppmv (0.001818%)
+				Helium (He) 	5.24 ppmv (0.000524%)
+				Methane (CH4) 	1.745 ppmv (0.0001745%)
+				Krypton (Kr) 	1.14 ppmv (0.000114%)
+				Hydrogen (H2) 	0.55 ppmv (0.000055%)
+				Not included in above dry atmosphere:
+				Water vapor (H2O) 	~0.25% over full atmosphere, typically 1% to 4% near surface
+
+Q: Could you check on the calculations below?
+species=['N2'; 'O2'; 'H2O'];
+volfracs=[0.78 0.21 0.01]
+molweights=[28 32 18]
+molweightav=volfracs*molweights'
+massfracs=volfracs.*molweights/molweightav
+totdensity=1.2 % kg/m^3
+density=massfracs*totdensity
+density =
+
+   0.9118998   0.2805846   0.0075157
+
+			-->
+			<specie id="O2">
+				<density title="kg/m^3: 0.2805846">0.2805846</density>
+			</specie>
+			<specie id="N2">
+				<density title="kg/m^3">0.9118998</density>
+			</specie>
+<!--
+			<specie id="H2O">
+				<density title="kg/m^3">0.0075157</density>
+			</specie>
+-->
+		</boundary>
+		<boundary id="front"> <type>elastic</type></boundary>
+		<boundary id="rear"> <type>elastic</type></boundary>
+	</domain>
+	<!-- GUI -->
+	<gui>
+		<translation>
+			<step>0.01</step>
+		</translation>
+		<vector>
+			<length>2.0</length>
+			<thickness>1.0</thickness>
+			<color>
+				<red>0.5</red>
+				<green>1.0</green>
+				<blue>1.0</blue>
+			</color>
+		</vector>
+		<frame>
+			<line>
+				<thickness>1.0</thickness>
+				<color>
+					<red>1.0</red>
+					<green>0.0</green>
+					<blue>0.0</blue>
+				</color>
+			</line>
+		</frame>
+		<mesh>
+			<!-- Possible Color Schemes:
+				0: by boundary
+				1: by time
+			-->
+			<node>
+				<type title="types: spere point">point</type>
+				<!--<type>point</type>-->
+				<colorscheme>
+					<variable text="Values: mass type">type</variable>
+					<minvalue>0.0</minvalue>
+					<maxvalue>4.0</maxvalue>
+				</colorscheme>
+				<size>1.0</size>
+				<value>
+					<min>-1.0</min>
+					<max>1.0</max>
+				</value>
+				<color>
+					<!-- Basic colors: -->
+					<red>0.0</red>
+					<green>1.0</green>
+					<blue>0.0</blue>
+				</color>
+			</node>
+			<line>
+				<thickness>1.0</thickness>
+				<color>
+					<red>1.0</red>
+					<green>0.5</green>
+					<blue>0.0</blue>
+				</color>
+				<boundary_color>
+					<red>0.0</red>
+					<green>1.0</green>
+					<blue>0.5</blue>
+				</boundary_color>
+			</line>
+		</mesh>
+	</gui>	
+	<xterm>1</xterm>
+</remody>

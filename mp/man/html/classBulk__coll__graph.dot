@@ -1,0 +1,13 @@
+digraph G
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  Node1 [label="Bulk",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node2 -> Node1 [dir=back,color="darkorchid3",fontsize="10",style="dashed",label="gases",fontname="FreeSans"];
+  Node2 [label="List\< Gas \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classList.html"];
+  Node3 -> Node2 [dir=back,color="darkorchid3",fontsize="10",style="dashed",label="last\nfirst\ncurrent",fontname="FreeSans"];
+  Node3 [label="Pointer\< Gas \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structPointer.html"];
+  Node4 -> Node3 [dir=back,color="darkorchid3",fontsize="10",style="dashed",label="prev\nnext",fontname="FreeSans"];
+  Node4 [label="Pointer\< Element \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structPointer.html"];
+  Node4 -> Node4 [dir=back,color="darkorchid3",fontsize="10",style="dashed",label="prev\nnext",fontname="FreeSans"];
+}

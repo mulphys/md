@@ -1,0 +1,688 @@
+\hypertarget{classList}{
+\section{List$<$ Element $>$ Class Template Reference}
+\label{classList}\index{List@{List}}
+}
+{\tt \#include $<$list.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{classList_cdfa9a2a43d22f973fe2ecc55318847a}{List} ()
+\item 
+\hyperlink{classList_2115cdf859728c641b7426ccd29036a5}{List} (int n)
+\item 
+\hyperlink{classList_d60d01b9c7003b77fd3370a7f3468a62}{$\sim$List} ()
+\item 
+int \hyperlink{classList_b9c6ee975d247a73b16a72c509596c0e}{number} ()
+\item 
+void \hyperlink{classList_79098dd3b93d00c5d2d4fa7f7cfcfd7e}{setFirst} ()
+\item 
+void \hyperlink{classList_283cd30e6cdd0223d137b2a0ff77bfe1}{setFirstLast} ()
+\item 
+void \hyperlink{classList_6157f161c709d4ffea0e021d99c212cd}{goFirst} ()
+\item 
+void \hyperlink{classList_e3565e27cc863240e43808e7278dad2f}{goFirstNext} ()
+\item 
+void \hyperlink{classList_6826ef4c46c838156e9cbb839b4ae20f}{FirstNext} ()
+\item 
+void \hyperlink{classList_841b8ba447b229dafa684faa36cd23ae}{FirstPrev} ()
+\item 
+bool \hyperlink{classList_a51d4b73577c4875f1c4ad82b7aa388c}{isFirstLast} ()
+\item 
+void \hyperlink{classList_60201d0166b5481b1eb178d3b4f5c5ef}{goLastNext} ()
+\item 
+void \hyperlink{classList_8c492b1f7cbd39c780785a4e9720f9f7}{goLast} ()
+\item 
+void \hyperlink{classList_1bec5a68e53c10d76d5286d19c1b52e0}{goNext} ()
+\item 
+void \hyperlink{classList_655c3217de571cbb357c20285692e86d}{goPrev} ()
+\item 
+bool \hyperlink{classList_3cdb77229517a14bd028316d401be814}{isFirst} ()
+\item 
+bool \hyperlink{classList_72c834a30a14c91afbcb4a23537a7a95}{isLast} ()
+\item 
+void \hyperlink{classList_16464ad4ad6ecb1daef625d2cad44db2}{LastNext} ()
+\item 
+void \hyperlink{classList_bcd5880a9c91c1007a7f977aee2bee12}{LastPrev} ()
+\item 
+void \hyperlink{classList_cef5fb9410906f968eefb7f4af8c9d05}{go} (\hyperlink{structPointer}{Pointer}$<$ Element $>$ $\ast$p)
+\item 
+Element $\ast$ \hyperlink{classList_ce217a2fdab3ec404fd4f6d9609af830}{First} ()
+\item 
+Element $\ast$ \hyperlink{classList_191fcfa17a21244d46e47d848f361cdf}{Last} ()
+\item 
+Element $\ast$ \hyperlink{classList_9427eb3a61700d4271ff0c2462b8d1ec}{Next} ()
+\item 
+Element $\ast$ \hyperlink{classList_64cac9b28ca614fea3914a4c1e218a47}{getNext} ()
+\item 
+Element $\ast$ \hyperlink{classList_4891b8f96a259673aa3f7ae84a940116}{Prev} ()
+\item 
+Element $\ast$ \hyperlink{classList_b0424d273b7072f2b7381232590b3f37}{getPrev} ()
+\item 
+Element $\ast$ \hyperlink{classList_1e1f9ae5124cf7d18871fcd68e579d29}{Current} ()
+\item 
+\hyperlink{structPointer}{Pointer}$<$ Element $>$ $\ast$ \hyperlink{classList_696cc1fe666cd3c0d22d29c38541f8d0}{getPointer} ()
+\item 
+\hyperlink{structPointer}{Pointer}$<$ Element $>$ $\ast$ \hyperlink{classList_b019684a93ca7667f242419f23fc3229}{getFirstPointer} ()
+\item 
+\hyperlink{structPointer}{Pointer}$<$ Element $>$ $\ast$ \hyperlink{classList_bc5adccd5f9c6e18e753347e27c1e2bb}{getLastPointer} ()
+\item 
+int \hyperlink{classList_3e35a7778134a389e6bc935869efb2ba}{init} (int n)
+\item 
+int \hyperlink{classList_77411bba9fc76562ff903493ccf059a0}{insert} (Element $\ast$element)
+\item 
+int \hyperlink{classList_3e0734f98d7a50f15323f9b6131a2503}{insert} ()
+\item 
+int \hyperlink{classList_504217c2e6f8db0342556f8a50306a13}{append} (Element $\ast$element)
+\item 
+int \hyperlink{classList_c23e16a949972776ee9b9213681db8ad}{append} ()
+\item 
+int \hyperlink{classList_d2d9499975ef0a258d56a9167f589a32}{link} (\hyperlink{structPointer}{Pointer}$<$ Element $>$ $\ast$p)
+\item 
+void \hyperlink{classList_adc4059521dfe0939e87da556ad566c5}{unlink} (\hyperlink{structPointer}{Pointer}$<$ Element $>$ $\ast$p)
+\item 
+int \hyperlink{classList_24f0afaa932fd67d06dfb547056e7e8e}{prepend} (Element $\ast$element)
+\item 
+bool \hyperlink{classList_8d5c272adc1ff7f4dfa91a973bed46aa}{locate} (Element $\ast$element)
+\item 
+bool \hyperlink{classList_b065dc615002ea349deaa40f356b6ba9}{locate} (\hyperlink{structPointer}{Pointer}$<$ Element $>$ $\ast$pointer)
+\item 
+void \hyperlink{classList_65b63c90e638ab1fe2345bfbbd259a1c}{moveAfterFirst} ()
+\item 
+void \hyperlink{classList_16a214a0049ad988ca5ca33bd5723a70}{swapAfterFirst} ()
+\item 
+void \hyperlink{classList_fcf5aaa43e909b0a83d84ba8ffc763b2}{moveBehindFirst} ()
+\item 
+int \hyperlink{classList_a6817f9dc3c692ec329e876bf947438b}{erase} ()
+\item 
+bool \hyperlink{classList_c32f4741e6ac1c9115a062a3bbf7f945}{erase} (Element $\ast$element)
+\item 
+void \hyperlink{classList_b69f9a25fa64a36b2682617ee4e366db}{eraseall} ()
+\item 
+bool \hyperlink{classList_33f0e5433999d425b9f96570e2920c44}{remove} ()
+\item 
+void \hyperlink{classList_c07b709edf8b846d79990b4f1fea2aee}{cleanup} ()
+\item 
+void \hyperlink{classList_0cedb2527218b02e95b0106db775a10f}{remove} (\hyperlink{structPointer}{Pointer}$<$ Element $>$ $\ast$pointer)
+\end{CompactItemize}
+\subsection*{Private Attributes}
+\begin{CompactItemize}
+\item 
+int \hyperlink{classList_60ebdaf4722b1bb0f7f800d3491de16d}{nelements}
+\item 
+struct \hyperlink{structPointer}{Pointer}$<$ Element $>$ $\ast$ \hyperlink{classList_1d25ef8162358067241410ef16a12911}{first}
+\item 
+struct \hyperlink{structPointer}{Pointer}$<$ Element $>$ $\ast$ \hyperlink{classList_f829e5f1698163f2820daf40dba9fc89}{last}
+\item 
+struct \hyperlink{structPointer}{Pointer}$<$ Element $>$ $\ast$ \hyperlink{classList_5c6e1ded5f9bf10f79df628d7970390f}{current}
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class Element$>$ class List$<$ Element $>$}
+
+
+
+Definition at line 24 of file list.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classList_cdfa9a2a43d22f973fe2ecc55318847a}{
+\index{List@{List}!List@{List}}
+\index{List@{List}!List@{List}}
+\subsubsection[{List}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element $>$ {\bf List}$<$ Element $>$::{\bf List} ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classList_cdfa9a2a43d22f973fe2ecc55318847a}
+
+
+
+
+Definition at line 80 of file list.h.
+
+References List$<$ Element $>$::current, List$<$ Element $>$::first, List$<$ Element $>$::last, and List$<$ Element $>$::nelements.\hypertarget{classList_2115cdf859728c641b7426ccd29036a5}{
+\index{List@{List}!List@{List}}
+\index{List@{List}!List@{List}}
+\subsubsection[{List}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ {\bf List}$<$ Element $>$::{\bf List} (int {\em n})}}
+\label{classList_2115cdf859728c641b7426ccd29036a5}
+
+
+\hypertarget{classList_d60d01b9c7003b77fd3370a7f3468a62}{
+\index{List@{List}!$\sim$List@{$\sim$List}}
+\index{$\sim$List@{$\sim$List}!List@{List}}
+\subsubsection[{$\sim$List}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element $>$ {\bf List}$<$ Element $>$::$\sim${\bf List} ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classList_d60d01b9c7003b77fd3370a7f3468a62}
+
+
+
+
+Definition at line 90 of file list.h.
+
+References List$<$ Element $>$::cleanup().
+
+\subsection{Member Function Documentation}
+\hypertarget{classList_c23e16a949972776ee9b9213681db8ad}{
+\index{List@{List}!append@{append}}
+\index{append@{append}!List@{List}}
+\subsubsection[{append}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ int {\bf List}$<$ Element $>$::append ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classList_c23e16a949972776ee9b9213681db8ad}
+
+
+
+
+Definition at line 159 of file list.h.
+
+References Pointer$<$ Element $>$::element.
+
+Referenced by List$<$ Element $>$::init().\hypertarget{classList_504217c2e6f8db0342556f8a50306a13}{
+\index{List@{List}!append@{append}}
+\index{append@{append}!List@{List}}
+\subsubsection[{append}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ int {\bf List}$<$ Element $>$::append (Element $\ast$ {\em element})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classList_504217c2e6f8db0342556f8a50306a13}
+
+
+
+
+Definition at line 136 of file list.h.
+
+References List$<$ Element $>$::current, List$<$ Element $>$::first, List$<$ Element $>$::last, List$<$ Element $>$::nelements, and Pointer$<$ Element $>$::prev.
+
+Referenced by Domain::Domain().\hypertarget{classList_c07b709edf8b846d79990b4f1fea2aee}{
+\index{List@{List}!cleanup@{cleanup}}
+\index{cleanup@{cleanup}!List@{List}}
+\subsubsection[{cleanup}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element $>$ void {\bf List}$<$ Element $>$::cleanup ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classList_c07b709edf8b846d79990b4f1fea2aee}
+
+
+
+
+Definition at line 100 of file list.h.
+
+References List$<$ Element $>$::current, List$<$ Element $>$::first, List$<$ Element $>$::last, and List$<$ Element $>$::nelements.
+
+Referenced by List$<$ Element $>$::$\sim$List().\hypertarget{classList_1e1f9ae5124cf7d18871fcd68e579d29}{
+\index{List@{List}!Current@{Current}}
+\index{Current@{Current}!List@{List}}
+\subsubsection[{Current}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ Element$\ast$ {\bf List}$<$ Element $>$::Current ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classList_1e1f9ae5124cf7d18871fcd68e579d29}
+
+
+
+
+Definition at line 54 of file list.h.
+
+Referenced by Domain::init().\hypertarget{classList_c32f4741e6ac1c9115a062a3bbf7f945}{
+\index{List@{List}!erase@{erase}}
+\index{erase@{erase}!List@{List}}
+\subsubsection[{erase}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ bool {\bf List}$<$ Element $>$::erase (Element $\ast$ {\em element})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classList_c32f4741e6ac1c9115a062a3bbf7f945}
+
+
+
+
+Definition at line 287 of file list.h.
+
+References List$<$ Element $>$::erase(), and List$<$ Element $>$::locate().\hypertarget{classList_a6817f9dc3c692ec329e876bf947438b}{
+\index{List@{List}!erase@{erase}}
+\index{erase@{erase}!List@{List}}
+\subsubsection[{erase}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element $>$ int {\bf List}$<$ Element $>$::erase ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classList_a6817f9dc3c692ec329e876bf947438b}
+
+
+
+
+Definition at line 235 of file list.h.
+
+References List$<$ Element $>$::current, Pointer$<$ Element $>$::element, List$<$ Element $>$::first, List$<$ Element $>$::last, and List$<$ Element $>$::nelements.
+
+Referenced by List$<$ Element $>$::erase(), and List$<$ Element $>$::eraseall().\hypertarget{classList_b69f9a25fa64a36b2682617ee4e366db}{
+\index{List@{List}!eraseall@{eraseall}}
+\index{eraseall@{eraseall}!List@{List}}
+\subsubsection[{eraseall}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element $>$ void {\bf List}$<$ Element $>$::eraseall ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classList_b69f9a25fa64a36b2682617ee4e366db}
+
+
+
+
+Definition at line 94 of file list.h.
+
+References List$<$ Element $>$::current, List$<$ Element $>$::erase(), List$<$ Element $>$::first, List$<$ Element $>$::last, and List$<$ Element $>$::nelements.\hypertarget{classList_ce217a2fdab3ec404fd4f6d9609af830}{
+\index{List@{List}!First@{First}}
+\index{First@{First}!List@{List}}
+\subsubsection[{First}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ Element$\ast$ {\bf List}$<$ Element $>$::First ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classList_ce217a2fdab3ec404fd4f6d9609af830}
+
+
+
+
+Definition at line 48 of file list.h.\hypertarget{classList_6826ef4c46c838156e9cbb839b4ae20f}{
+\index{List@{List}!FirstNext@{FirstNext}}
+\index{FirstNext@{FirstNext}!List@{List}}
+\subsubsection[{FirstNext}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ void {\bf List}$<$ Element $>$::FirstNext ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classList_6826ef4c46c838156e9cbb839b4ae20f}
+
+
+
+
+Definition at line 36 of file list.h.\hypertarget{classList_841b8ba447b229dafa684faa36cd23ae}{
+\index{List@{List}!FirstPrev@{FirstPrev}}
+\index{FirstPrev@{FirstPrev}!List@{List}}
+\subsubsection[{FirstPrev}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ void {\bf List}$<$ Element $>$::FirstPrev ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classList_841b8ba447b229dafa684faa36cd23ae}
+
+
+
+
+Definition at line 37 of file list.h.\hypertarget{classList_b019684a93ca7667f242419f23fc3229}{
+\index{List@{List}!getFirstPointer@{getFirstPointer}}
+\index{getFirstPointer@{getFirstPointer}!List@{List}}
+\subsubsection[{getFirstPointer}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ {\bf Pointer}$<$Element$>$$\ast$ {\bf List}$<$ Element $>$::getFirstPointer ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classList_b019684a93ca7667f242419f23fc3229}
+
+
+
+
+Definition at line 56 of file list.h.\hypertarget{classList_bc5adccd5f9c6e18e753347e27c1e2bb}{
+\index{List@{List}!getLastPointer@{getLastPointer}}
+\index{getLastPointer@{getLastPointer}!List@{List}}
+\subsubsection[{getLastPointer}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ {\bf Pointer}$<$Element$>$$\ast$ {\bf List}$<$ Element $>$::getLastPointer ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classList_bc5adccd5f9c6e18e753347e27c1e2bb}
+
+
+
+
+Definition at line 57 of file list.h.\hypertarget{classList_64cac9b28ca614fea3914a4c1e218a47}{
+\index{List@{List}!getNext@{getNext}}
+\index{getNext@{getNext}!List@{List}}
+\subsubsection[{getNext}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ Element$\ast$ {\bf List}$<$ Element $>$::getNext ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classList_64cac9b28ca614fea3914a4c1e218a47}
+
+
+
+
+Definition at line 51 of file list.h.\hypertarget{classList_696cc1fe666cd3c0d22d29c38541f8d0}{
+\index{List@{List}!getPointer@{getPointer}}
+\index{getPointer@{getPointer}!List@{List}}
+\subsubsection[{getPointer}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ {\bf Pointer}$<$Element$>$$\ast$ {\bf List}$<$ Element $>$::getPointer ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classList_696cc1fe666cd3c0d22d29c38541f8d0}
+
+
+
+
+Definition at line 55 of file list.h.\hypertarget{classList_b0424d273b7072f2b7381232590b3f37}{
+\index{List@{List}!getPrev@{getPrev}}
+\index{getPrev@{getPrev}!List@{List}}
+\subsubsection[{getPrev}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ Element$\ast$ {\bf List}$<$ Element $>$::getPrev ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classList_b0424d273b7072f2b7381232590b3f37}
+
+
+
+
+Definition at line 53 of file list.h.\hypertarget{classList_cef5fb9410906f968eefb7f4af8c9d05}{
+\index{List@{List}!go@{go}}
+\index{go@{go}!List@{List}}
+\subsubsection[{go}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ void {\bf List}$<$ Element $>$::go ({\bf Pointer}$<$ Element $>$ $\ast$ {\em p})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classList_cef5fb9410906f968eefb7f4af8c9d05}
+
+
+
+
+Definition at line 47 of file list.h.\hypertarget{classList_6157f161c709d4ffea0e021d99c212cd}{
+\index{List@{List}!goFirst@{goFirst}}
+\index{goFirst@{goFirst}!List@{List}}
+\subsubsection[{goFirst}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ void {\bf List}$<$ Element $>$::goFirst ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classList_6157f161c709d4ffea0e021d99c212cd}
+
+
+
+
+Definition at line 34 of file list.h.
+
+Referenced by Domain::init(), and Domain::injection().\hypertarget{classList_e3565e27cc863240e43808e7278dad2f}{
+\index{List@{List}!goFirstNext@{goFirstNext}}
+\index{goFirstNext@{goFirstNext}!List@{List}}
+\subsubsection[{goFirstNext}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ void {\bf List}$<$ Element $>$::goFirstNext ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classList_e3565e27cc863240e43808e7278dad2f}
+
+
+
+
+Definition at line 35 of file list.h.\hypertarget{classList_8c492b1f7cbd39c780785a4e9720f9f7}{
+\index{List@{List}!goLast@{goLast}}
+\index{goLast@{goLast}!List@{List}}
+\subsubsection[{goLast}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ void {\bf List}$<$ Element $>$::goLast ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classList_8c492b1f7cbd39c780785a4e9720f9f7}
+
+
+
+
+Definition at line 40 of file list.h.\hypertarget{classList_60201d0166b5481b1eb178d3b4f5c5ef}{
+\index{List@{List}!goLastNext@{goLastNext}}
+\index{goLastNext@{goLastNext}!List@{List}}
+\subsubsection[{goLastNext}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ void {\bf List}$<$ Element $>$::goLastNext ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classList_60201d0166b5481b1eb178d3b4f5c5ef}
+
+
+
+
+Definition at line 39 of file list.h.\hypertarget{classList_1bec5a68e53c10d76d5286d19c1b52e0}{
+\index{List@{List}!goNext@{goNext}}
+\index{goNext@{goNext}!List@{List}}
+\subsubsection[{goNext}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ void {\bf List}$<$ Element $>$::goNext ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classList_1bec5a68e53c10d76d5286d19c1b52e0}
+
+
+
+
+Definition at line 41 of file list.h.
+
+Referenced by Domain::init().\hypertarget{classList_655c3217de571cbb357c20285692e86d}{
+\index{List@{List}!goPrev@{goPrev}}
+\index{goPrev@{goPrev}!List@{List}}
+\subsubsection[{goPrev}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ void {\bf List}$<$ Element $>$::goPrev ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classList_655c3217de571cbb357c20285692e86d}
+
+
+
+
+Definition at line 42 of file list.h.\hypertarget{classList_3e35a7778134a389e6bc935869efb2ba}{
+\index{List@{List}!init@{init}}
+\index{init@{init}!List@{List}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element $>$ int {\bf List}$<$ Element $>$::init (int {\em n})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classList_3e35a7778134a389e6bc935869efb2ba}
+
+
+
+
+Definition at line 106 of file list.h.
+
+References List$<$ Element $>$::append(), and List$<$ Element $>$::nelements.\hypertarget{classList_3e0734f98d7a50f15323f9b6131a2503}{
+\index{List@{List}!insert@{insert}}
+\index{insert@{insert}!List@{List}}
+\subsubsection[{insert}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ int {\bf List}$<$ Element $>$::insert ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classList_3e0734f98d7a50f15323f9b6131a2503}
+
+
+
+
+Definition at line 209 of file list.h.
+
+References Pointer$<$ Element $>$::element.\hypertarget{classList_77411bba9fc76562ff903493ccf059a0}{
+\index{List@{List}!insert@{insert}}
+\index{insert@{insert}!List@{List}}
+\subsubsection[{insert}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ int {\bf List}$<$ Element $>$::insert (Element $\ast$ {\em element})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classList_77411bba9fc76562ff903493ccf059a0}
+
+
+
+
+Definition at line 186 of file list.h.
+
+References List$<$ Element $>$::current, List$<$ Element $>$::first, List$<$ Element $>$::last, List$<$ Element $>$::nelements, and Pointer$<$ Element $>$::prev.\hypertarget{classList_3cdb77229517a14bd028316d401be814}{
+\index{List@{List}!isFirst@{isFirst}}
+\index{isFirst@{isFirst}!List@{List}}
+\subsubsection[{isFirst}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ bool {\bf List}$<$ Element $>$::isFirst ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classList_3cdb77229517a14bd028316d401be814}
+
+
+
+
+Definition at line 43 of file list.h.
+
+Referenced by Domain::init().\hypertarget{classList_a51d4b73577c4875f1c4ad82b7aa388c}{
+\index{List@{List}!isFirstLast@{isFirstLast}}
+\index{isFirstLast@{isFirstLast}!List@{List}}
+\subsubsection[{isFirstLast}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ bool {\bf List}$<$ Element $>$::isFirstLast ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classList_a51d4b73577c4875f1c4ad82b7aa388c}
+
+
+
+
+Definition at line 38 of file list.h.\hypertarget{classList_72c834a30a14c91afbcb4a23537a7a95}{
+\index{List@{List}!isLast@{isLast}}
+\index{isLast@{isLast}!List@{List}}
+\subsubsection[{isLast}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ bool {\bf List}$<$ Element $>$::isLast ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classList_72c834a30a14c91afbcb4a23537a7a95}
+
+
+
+
+Definition at line 44 of file list.h.\hypertarget{classList_191fcfa17a21244d46e47d848f361cdf}{
+\index{List@{List}!Last@{Last}}
+\index{Last@{Last}!List@{List}}
+\subsubsection[{Last}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ Element$\ast$ {\bf List}$<$ Element $>$::Last ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classList_191fcfa17a21244d46e47d848f361cdf}
+
+
+
+
+Definition at line 49 of file list.h.\hypertarget{classList_16464ad4ad6ecb1daef625d2cad44db2}{
+\index{List@{List}!LastNext@{LastNext}}
+\index{LastNext@{LastNext}!List@{List}}
+\subsubsection[{LastNext}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ void {\bf List}$<$ Element $>$::LastNext ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classList_16464ad4ad6ecb1daef625d2cad44db2}
+
+
+
+
+Definition at line 45 of file list.h.\hypertarget{classList_bcd5880a9c91c1007a7f977aee2bee12}{
+\index{List@{List}!LastPrev@{LastPrev}}
+\index{LastPrev@{LastPrev}!List@{List}}
+\subsubsection[{LastPrev}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ void {\bf List}$<$ Element $>$::LastPrev ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classList_bcd5880a9c91c1007a7f977aee2bee12}
+
+
+
+
+Definition at line 46 of file list.h.\hypertarget{classList_d2d9499975ef0a258d56a9167f589a32}{
+\index{List@{List}!link@{link}}
+\index{link@{link}!List@{List}}
+\subsubsection[{link}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ int {\bf List}$<$ Element $>$::link ({\bf Pointer}$<$ Element $>$ $\ast$ {\em p})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classList_d2d9499975ef0a258d56a9167f589a32}
+
+
+
+
+Definition at line 165 of file list.h.
+
+References List$<$ Element $>$::current, List$<$ Element $>$::first, List$<$ Element $>$::last, List$<$ Element $>$::nelements, and Pointer$<$ Element $>$::prev.\hypertarget{classList_b065dc615002ea349deaa40f356b6ba9}{
+\index{List@{List}!locate@{locate}}
+\index{locate@{locate}!List@{List}}
+\subsubsection[{locate}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ bool {\bf List}$<$ Element $>$::locate ({\bf Pointer}$<$ Element $>$ $\ast$ {\em pointer})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classList_b065dc615002ea349deaa40f356b6ba9}
+
+
+
+
+Definition at line 303 of file list.h.
+
+References List$<$ Element $>$::current, and List$<$ Element $>$::first.\hypertarget{classList_8d5c272adc1ff7f4dfa91a973bed46aa}{
+\index{List@{List}!locate@{locate}}
+\index{locate@{locate}!List@{List}}
+\subsubsection[{locate}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ bool {\bf List}$<$ Element $>$::locate (Element $\ast$ {\em element})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classList_8d5c272adc1ff7f4dfa91a973bed46aa}
+
+
+
+
+Definition at line 293 of file list.h.
+
+References List$<$ Element $>$::current, and List$<$ Element $>$::first.
+
+Referenced by List$<$ Element $>$::erase(), and List$<$ Element $>$::remove().\hypertarget{classList_65b63c90e638ab1fe2345bfbbd259a1c}{
+\index{List@{List}!moveAfterFirst@{moveAfterFirst}}
+\index{moveAfterFirst@{moveAfterFirst}!List@{List}}
+\subsubsection[{moveAfterFirst}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element $>$ void {\bf List}$<$ Element $>$::moveAfterFirst ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classList_65b63c90e638ab1fe2345bfbbd259a1c}
+
+
+
+
+Definition at line 320 of file list.h.
+
+References List$<$ Element $>$::current, List$<$ Element $>$::first, and Pointer$<$ Element $>$::prev.\hypertarget{classList_fcf5aaa43e909b0a83d84ba8ffc763b2}{
+\index{List@{List}!moveBehindFirst@{moveBehindFirst}}
+\index{moveBehindFirst@{moveBehindFirst}!List@{List}}
+\subsubsection[{moveBehindFirst}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element $>$ void {\bf List}$<$ Element $>$::moveBehindFirst ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classList_fcf5aaa43e909b0a83d84ba8ffc763b2}
+
+
+
+
+Definition at line 331 of file list.h.
+
+References List$<$ Element $>$::current, List$<$ Element $>$::first, and Pointer$<$ Element $>$::next.\hypertarget{classList_9427eb3a61700d4271ff0c2462b8d1ec}{
+\index{List@{List}!Next@{Next}}
+\index{Next@{Next}!List@{List}}
+\subsubsection[{Next}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ Element$\ast$ {\bf List}$<$ Element $>$::Next ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classList_9427eb3a61700d4271ff0c2462b8d1ec}
+
+
+
+
+Definition at line 50 of file list.h.\hypertarget{classList_b9c6ee975d247a73b16a72c509596c0e}{
+\index{List@{List}!number@{number}}
+\index{number@{number}!List@{List}}
+\subsubsection[{number}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ int {\bf List}$<$ Element $>$::number ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classList_b9c6ee975d247a73b16a72c509596c0e}
+
+
+
+
+Definition at line 31 of file list.h.
+
+Referenced by Domain::init().\hypertarget{classList_24f0afaa932fd67d06dfb547056e7e8e}{
+\index{List@{List}!prepend@{prepend}}
+\index{prepend@{prepend}!List@{List}}
+\subsubsection[{prepend}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ int {\bf List}$<$ Element $>$::prepend (Element $\ast$ {\em element})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classList_24f0afaa932fd67d06dfb547056e7e8e}
+
+
+
+
+Definition at line 113 of file list.h.
+
+References List$<$ Element $>$::current, List$<$ Element $>$::first, List$<$ Element $>$::last, List$<$ Element $>$::nelements, and Pointer$<$ Element $>$::next.\hypertarget{classList_4891b8f96a259673aa3f7ae84a940116}{
+\index{List@{List}!Prev@{Prev}}
+\index{Prev@{Prev}!List@{List}}
+\subsubsection[{Prev}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ Element$\ast$ {\bf List}$<$ Element $>$::Prev ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classList_4891b8f96a259673aa3f7ae84a940116}
+
+
+
+
+Definition at line 52 of file list.h.\hypertarget{classList_0cedb2527218b02e95b0106db775a10f}{
+\index{List@{List}!remove@{remove}}
+\index{remove@{remove}!List@{List}}
+\subsubsection[{remove}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ void {\bf List}$<$ Element $>$::remove ({\bf Pointer}$<$ Element $>$ $\ast$ {\em pointer})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classList_0cedb2527218b02e95b0106db775a10f}
+
+
+
+
+DDD: slow but safe
+
+DDD 
+
+Definition at line 272 of file list.h.
+
+References List$<$ Element $>$::current, and List$<$ Element $>$::locate().\hypertarget{classList_33f0e5433999d425b9f96570e2920c44}{
+\index{List@{List}!remove@{remove}}
+\index{remove@{remove}!List@{List}}
+\subsubsection[{remove}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element $>$ bool {\bf List}$<$ Element $>$::remove ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classList_33f0e5433999d425b9f96570e2920c44}
+
+
+
+
+Definition at line 215 of file list.h.
+
+References List$<$ Element $>$::current, List$<$ Element $>$::first, List$<$ Element $>$::last, and List$<$ Element $>$::nelements.\hypertarget{classList_79098dd3b93d00c5d2d4fa7f7cfcfd7e}{
+\index{List@{List}!setFirst@{setFirst}}
+\index{setFirst@{setFirst}!List@{List}}
+\subsubsection[{setFirst}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ void {\bf List}$<$ Element $>$::setFirst ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classList_79098dd3b93d00c5d2d4fa7f7cfcfd7e}
+
+
+
+
+Definition at line 32 of file list.h.\hypertarget{classList_283cd30e6cdd0223d137b2a0ff77bfe1}{
+\index{List@{List}!setFirstLast@{setFirstLast}}
+\index{setFirstLast@{setFirstLast}!List@{List}}
+\subsubsection[{setFirstLast}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ void {\bf List}$<$ Element $>$::setFirstLast ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classList_283cd30e6cdd0223d137b2a0ff77bfe1}
+
+
+
+
+Definition at line 33 of file list.h.\hypertarget{classList_16a214a0049ad988ca5ca33bd5723a70}{
+\index{List@{List}!swapAfterFirst@{swapAfterFirst}}
+\index{swapAfterFirst@{swapAfterFirst}!List@{List}}
+\subsubsection[{swapAfterFirst}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element $>$ void {\bf List}$<$ Element $>$::swapAfterFirst ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classList_16a214a0049ad988ca5ca33bd5723a70}
+
+
+
+
+Definition at line 313 of file list.h.
+
+References List$<$ Element $>$::current, and List$<$ Element $>$::first.\hypertarget{classList_adc4059521dfe0939e87da556ad566c5}{
+\index{List@{List}!unlink@{unlink}}
+\index{unlink@{unlink}!List@{List}}
+\subsubsection[{unlink}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ void {\bf List}$<$ Element $>$::unlink ({\bf Pointer}$<$ Element $>$ $\ast$ {\em p})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classList_adc4059521dfe0939e87da556ad566c5}
+
+
+
+
+Definition at line 257 of file list.h.
+
+References List$<$ Element $>$::current, List$<$ Element $>$::first, List$<$ Element $>$::last, List$<$ Element $>$::nelements, Pointer$<$ Element $>$::next, and Pointer$<$ Element $>$::prev.
+
+\subsection{Member Data Documentation}
+\hypertarget{classList_5c6e1ded5f9bf10f79df628d7970390f}{
+\index{List@{List}!current@{current}}
+\index{current@{current}!List@{List}}
+\subsubsection[{current}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ struct {\bf Pointer}$<$ Element $>$ $\ast$ {\bf List}$<$ Element $>$::{\bf current}\hspace{0.3cm}{\tt  \mbox{[}read, private\mbox{]}}}}
+\label{classList_5c6e1ded5f9bf10f79df628d7970390f}
+
+
+
+
+Definition at line 26 of file list.h.
+
+Referenced by List$<$ Element $>$::append(), List$<$ Element $>$::cleanup(), List$<$ Gas $>$::Current(), List$<$ Element $>$::erase(), List$<$ Element $>$::eraseall(), List$<$ Gas $>$::getNext(), List$<$ Gas $>$::getPointer(), List$<$ Gas $>$::getPrev(), List$<$ Gas $>$::go(), List$<$ Gas $>$::goFirst(), List$<$ Gas $>$::goFirstNext(), List$<$ Gas $>$::goLast(), List$<$ Gas $>$::goLastNext(), List$<$ Gas $>$::goNext(), List$<$ Gas $>$::goPrev(), List$<$ Element $>$::insert(), List$<$ Gas $>$::isFirst(), List$<$ Gas $>$::isLast(), List$<$ Element $>$::link(), List$<$ Element $>$::List(), List$<$ Element $>$::locate(), List$<$ Element $>$::moveAfterFirst(), List$<$ Element $>$::moveBehindFirst(), List$<$ Gas $>$::Next(), List$<$ Element $>$::prepend(), List$<$ Gas $>$::Prev(), List$<$ Element $>$::remove(), List$<$ Element $>$::swapAfterFirst(), and List$<$ Element $>$::unlink().\hypertarget{classList_1d25ef8162358067241410ef16a12911}{
+\index{List@{List}!first@{first}}
+\index{first@{first}!List@{List}}
+\subsubsection[{first}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ struct {\bf Pointer}$<$ Element $>$$\ast$ {\bf List}$<$ Element $>$::{\bf first}\hspace{0.3cm}{\tt  \mbox{[}read, private\mbox{]}}}}
+\label{classList_1d25ef8162358067241410ef16a12911}
+
+
+
+
+Definition at line 26 of file list.h.
+
+Referenced by List$<$ Element $>$::append(), List$<$ Element $>$::cleanup(), List$<$ Element $>$::erase(), List$<$ Element $>$::eraseall(), List$<$ Gas $>$::First(), List$<$ Gas $>$::FirstNext(), List$<$ Gas $>$::FirstPrev(), List$<$ Gas $>$::getFirstPointer(), List$<$ Gas $>$::goFirst(), List$<$ Gas $>$::goFirstNext(), List$<$ Element $>$::insert(), List$<$ Gas $>$::isFirst(), List$<$ Gas $>$::isFirstLast(), List$<$ Element $>$::link(), List$<$ Element $>$::List(), List$<$ Element $>$::locate(), List$<$ Element $>$::moveAfterFirst(), List$<$ Element $>$::moveBehindFirst(), List$<$ Element $>$::prepend(), List$<$ Element $>$::remove(), List$<$ Gas $>$::setFirst(), List$<$ Gas $>$::setFirstLast(), List$<$ Element $>$::swapAfterFirst(), and List$<$ Element $>$::unlink().\hypertarget{classList_f829e5f1698163f2820daf40dba9fc89}{
+\index{List@{List}!last@{last}}
+\index{last@{last}!List@{List}}
+\subsubsection[{last}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ struct {\bf Pointer}$<$ Element $>$ $\ast$ {\bf List}$<$ Element $>$::{\bf last}\hspace{0.3cm}{\tt  \mbox{[}read, private\mbox{]}}}}
+\label{classList_f829e5f1698163f2820daf40dba9fc89}
+
+
+
+
+Definition at line 26 of file list.h.
+
+Referenced by List$<$ Element $>$::append(), List$<$ Element $>$::cleanup(), List$<$ Element $>$::erase(), List$<$ Element $>$::eraseall(), List$<$ Gas $>$::getLastPointer(), List$<$ Gas $>$::goLast(), List$<$ Gas $>$::goLastNext(), List$<$ Element $>$::insert(), List$<$ Gas $>$::isFirstLast(), List$<$ Gas $>$::isLast(), List$<$ Gas $>$::Last(), List$<$ Gas $>$::LastNext(), List$<$ Gas $>$::LastPrev(), List$<$ Element $>$::link(), List$<$ Element $>$::List(), List$<$ Element $>$::prepend(), List$<$ Element $>$::remove(), List$<$ Gas $>$::setFirst(), List$<$ Gas $>$::setFirstLast(), and List$<$ Element $>$::unlink().\hypertarget{classList_60ebdaf4722b1bb0f7f800d3491de16d}{
+\index{List@{List}!nelements@{nelements}}
+\index{nelements@{nelements}!List@{List}}
+\subsubsection[{nelements}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ int {\bf List}$<$ Element $>$::{\bf nelements}\hspace{0.3cm}{\tt  \mbox{[}private\mbox{]}}}}
+\label{classList_60ebdaf4722b1bb0f7f800d3491de16d}
+
+
+
+
+Definition at line 25 of file list.h.
+
+Referenced by List$<$ Element $>$::append(), List$<$ Element $>$::cleanup(), List$<$ Element $>$::erase(), List$<$ Element $>$::eraseall(), List$<$ Element $>$::init(), List$<$ Element $>$::insert(), List$<$ Element $>$::link(), List$<$ Element $>$::List(), List$<$ Gas $>$::number(), List$<$ Element $>$::prepend(), List$<$ Element $>$::remove(), and List$<$ Element $>$::unlink().
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+\hyperlink{list_8h}{list.h}\end{CompactItemize}

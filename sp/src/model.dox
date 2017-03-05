@@ -1,0 +1,109 @@
+/*! \page Model Model
+\section SecModel Physical Model
+
+The physical model of ReMoDy is uses the  
+<a href="http://en.wikipedia.org/wiki/Collision_theory">Collision_theory</a> 
+to describe elementary chemical reactions, and
+<a href="http://en.wikipedia.org/wiki/Kinetic_theory">Kinetic theory</a> 
+to describe molecular gas dynamics. Reactions occur probabilistically during molecular collisions,
+with the probabilities determined by the activation energies and reaction probabilities, if more
+than one outcome for the reaction exists.
+
+The thermodynamic properties of the gas species include 
+<a href="http://en.wikipedia.org/wiki/Heat_capacity">heat capacities</a> 
+which are used to distribute thermal energy among molecular degrees of freedom during the collisions.
+
+\subsection SReact Chemical Reactions
+
+The interaction of the two molecules is modeled through the binary collision approximation whereby only two molecules can
+interact at a time. The interaction between the molecules can be of two kinds: (1) simple mechanical collision, (2) collision
+with subsequent chemical reaction. The fact of the collision is detected when the distance between the centers of two molecules
+becomes less than the sum of their radii, and their relative velocities are directed toward each-other.
+
+Collision is modeled in the center-of-mass (CM) frame of reference. The velocities of the two molecules are first recalculated into
+the CM frame. The total energy of the two molecules is first calculated as their combined internal energy plus their combined
+kinetic energy in the CM coordinate frame. Chemical reactions are triggered when this energy is in excess of the
+activation energy for the reaction. In this case the enthalpy of the reaction is added to the total energy.
+This energy is then redistributed between the degrees of freedom of the product molecules according to the following scheme:
+
+\f[ energy = KE + IE + enthalpy \f]
+\f[ dof_A = 2(Cp_A/R -1) \f]
+\f[ dof_B = 2(Cp_B/R -1) \f]
+
+where \f$dof_X\f$ are total degrees of freedom (kinetic + internal) for molecule X=(A,B), and \f$Cp_X\f$ is the specific heat of
+molecule X. The combined kinetic degrees of freedom are 6, then the combined internal degrees of freedom are calculated as:
+
+\f[idof = dof-6 \f]
+
+Then for each molecule the ratio of its internal degrees of freedom to the total internal degrees of freedom is computed as:
+
+\f[ ridof_A = (dof_A - 3)/idof \f]
+\f[ ridof_B = 1 - ridof_A \f]
+
+Then the total kinetic and internal energies of the product molecules are computed as:
+
+\f[ ke = 6\,energy/dof \f]
+\f[ ie = energy - ke \f]
+
+The new velocities of the molecules in the CM frame are then updated from the old ones. The old velocities were computed
+according the the elastic collision scheme between two hard-balls. So, if the energy was released or absorbed during the
+reaction, and some of it was absorbed into the internal degrees of freedom, the old velocities shold be recalculated. This is
+done according to the following scheme (see interact(...) function in domain.cc):
+
+\f[ mratio=mnew_A/mnew_B  \f]
+\f[ unew_A = \sqrt{\frac{2ke}{mnew_A(1-mratio)}} \f]
+\f[ unew_B = unew_A\,mratio \f]
+\f[ uratio_A = unew_A/uold_A \f]
+\f[ uratio_B = unew_B/uold_B \f]
+
+where \f$mnew_X\f$ is the new mass of the molecule X=(A,B) after the reaction.
+Then the velocities compted according to the hard-ball collision scheme are updated as:
+
+\f[ u_X(i) = u_X(i)*uratio_X \f]
+
+where i=(x,y,z) is the Cartesian direction of velocity vector.
+The remaining internal energy, ie, is distribued among the internal degrees of freedom of each molecule X as:
+
+\f[ InternalEnergy_X = ridof_X\,ie  \f] 
+
+It should be noted, that in the above calculations, the value of kinetic energy was that computed in CM frame of referecne. This
+means that he actual kinetic energy of the molecule will have a somewhat higher value that what would be expected from an equal
+distribution of energy among the internal and exeternal degrees of freedom. Nevertheles, this scheme is considered accurate,
+since the resistribution of energy is indeed taking place in the center-of-mass reference frame, and this will inevitably lead
+to a higher contribution of energy to kinetic degrees of freedom. 
+
+\subsection SSec Cross-Boundary Species
+
+The code provides the possibility of specifying cross-boundary gases, which can enter the computational domain 
+from the other side of the open boundary (the boundary with the type="open"
+inside the <tt>&lt;boundary&gt;</tt> tag of the XML input file (see Sec.\ref SecConfig).
+
+The algorithm uses the density and temperature to calculate the
+frequency of injection of molecules of specie, \f$s\f$ at the boundary.
+The injection frequency, \f$f_s\f$ per unit area, \f$A\f$ is computed as
+\f[
+f_s = \frac{N}{\Delta\,t}
+\f]
+where \f$\Delta\,t_s\f$ is the time interval at which 
+a molecule hits the boundary area \f$A\f$, and
+\f$N\f$ is the number of molecules in a volume with the base \f$A\f$
+and length \f$\Delta\,x\f$ as shown in the figure:
+\image html 'injectionfrequency.png'
+The time inteval, \f$\Delta\,t\f$, between the collisions
+can be related to the component of velocity of the molecule of species \f$s\f$,
+in direction \f$x\f$, \f$v_{sx}\f$, as follows:
+\f[
+\Delta\,t = \frac{2\Delta\,x}{v_{sx}}
+\f]
+The number of molecules, \f$N\f$ can be related to density, \f$\rho\f$, as:
+\f[
+N = \frac{\rho}{\mu}\Delta\,x\,A
+\f]
+where \f$\mu\f$ is the mass of one molecule and \f$A = \Delta\,y\,\Delta\,z\f$. 
+Thus, the frequency is:
+\f[
+f_s = \frac{\rho}{\mu}\Delta\,x\,A\frac{v_{sx}}{2\Delta\,x}
+    = \frac{\rho\,v_{sx}}{2\mu}A
+\f]
+
+*/

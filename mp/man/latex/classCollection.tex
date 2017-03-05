@@ -1,0 +1,888 @@
+\hypertarget{classCollection}{
+\section{Collection$<$ Element $>$ Class Template Reference}
+\label{classCollection}\index{Collection@{Collection}}
+}
+{\tt \#include $<$collection.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{classCollection_12a4fc0e5c8ce642ed3ea13f0fcfaccf}{Collection} ()
+\item 
+\hyperlink{classCollection_50af9ee71acaf70b0754bbab0f3d9a9a}{$\sim$Collection} ()
+\item 
+int \hyperlink{classCollection_bb3cb48f763445fa80a5d47f42457fd9}{maxCounters} ()
+\item 
+int \hyperlink{classCollection_ad4dec45255eaf93f2652c06a7076119}{number} ()
+\item 
+int \hyperlink{classCollection_5ed56e4ca2e6a9e416628c8996599839}{maxnumber} ()
+\item 
+void \hyperlink{classCollection_024e58c57f4f773ddf327b730001cf0f}{setFirst} ()
+\item 
+void \hyperlink{classCollection_12caadbe9b3b41f0ba74b23b6260143f}{setFirstLast} ()
+\item 
+void \hyperlink{classCollection_2abbefcde25d182a33c95d70a37139f9}{goFirst} ()
+\item 
+void \hyperlink{classCollection_0ad266a9e0f7ba45615bab587dee740d}{goFirst} (int i)
+\item 
+void \hyperlink{classCollection_cb98f5d24cd1888894d5e219b6a125b5}{goFirstNext} ()
+\item 
+void \hyperlink{classCollection_43d729470bb3ede87a0c682ac032cec2}{goFirstNext} (int i)
+\item 
+void \hyperlink{classCollection_c0f247418e298e0723bccd1f333ba94c}{FirstNext} ()
+\item 
+void \hyperlink{classCollection_512a3f686fb0676fc9b76750b81cfb6c}{FirstPrev} ()
+\item 
+bool \hyperlink{classCollection_9680a2f3857625a450cbf6eb75d1af90}{isFirstLast} ()
+\item 
+void \hyperlink{classCollection_ae18eb14625c9f4742d0c90e437f6035}{goLastNext} ()
+\item 
+void \hyperlink{classCollection_c8d2b742e6ccaf94d0e2511840a1783c}{goLastNext} (int i)
+\item 
+void \hyperlink{classCollection_24f595ff9a3daddd71e9625e12086b8d}{goLast} ()
+\item 
+void \hyperlink{classCollection_6729c15aabfe51403936a00551bcbaf7}{goLast} (int i)
+\item 
+void \hyperlink{classCollection_71ab918a6e6938f9e8bf1ce9ac36c25a}{goNext} ()
+\item 
+void \hyperlink{classCollection_8fe6a6dbc35949197de73013bb67fa07}{goNext} (int i)
+\item 
+void \hyperlink{classCollection_ba0170475fe3ff507bbcd8dc48a8f658}{goPrev} ()
+\item 
+void \hyperlink{classCollection_c3d18037a745f47a28b2ea652fdc564f}{goPrev} (int i)
+\item 
+bool \hyperlink{classCollection_3c644d87c5fe1109b3110c9bce5f55be}{isFirst} ()
+\item 
+bool \hyperlink{classCollection_2b74d7145a6497de50e7577a9e9bd8a0}{isFirst} (int i)
+\item 
+bool \hyperlink{classCollection_d78260d61be71fe6a0f8ccc949e64c97}{isLast} ()
+\item 
+bool \hyperlink{classCollection_d38ade90824908e6ad66ed29e48a617d}{isLast} (int i)
+\item 
+void \hyperlink{classCollection_8df9a591b311c789a49b9e7ebc8982b5}{LastNext} ()
+\item 
+void \hyperlink{classCollection_c72a422277e0f0b0964de5bf098ccfcb}{LastPrev} ()
+\item 
+void \hyperlink{classCollection_9e206e3c49e72d153b52eaa808d6f5c0}{go} (\hyperlink{structItem}{Item}$<$ Element $>$ $\ast$p)
+\item 
+Element $\ast$ \hyperlink{classCollection_40aead667bc00ad6a89d58c76add2f1f}{First} ()
+\item 
+Element $\ast$ \hyperlink{classCollection_4db73392b0ef7120c311226e3061eeb5}{Last} ()
+\item 
+Element $\ast$ \hyperlink{classCollection_8ffdd965b1d80ce385691cc1baffbfac}{Next} ()
+\item 
+Element $\ast$ \hyperlink{classCollection_83ab50404b4cab96cca07e314a93d829}{Next} (int i)
+\item 
+Element $\ast$ \hyperlink{classCollection_b26674c8b7ed8867faafa6d6456fffd6}{getNext} ()
+\item 
+Element $\ast$ \hyperlink{classCollection_d26b55661b223de57ce88c2d6a190961}{getNext} (int i)
+\item 
+Element $\ast$ \hyperlink{classCollection_696a19ba00545ca8092e57ac7dd7cb93}{Prev} ()
+\item 
+Element $\ast$ \hyperlink{classCollection_34e5aa5d88188ee145a34afd5da685cd}{Prev} (int i)
+\item 
+Element $\ast$ \hyperlink{classCollection_fd1ab2a6e64a0c928422bfac3e86070c}{getPrev} ()
+\item 
+Element $\ast$ \hyperlink{classCollection_89c9afd1417e3cef4f4ff4cc872d3d76}{getPrev} (int i)
+\item 
+Element $\ast$ \hyperlink{classCollection_1fc1b94ca31de8d5e45de65dac9d911f}{Current} ()
+\item 
+Element $\ast$ \hyperlink{classCollection_c6e395083a0e027102bc3ed3d22c9aa5}{Current} (int i)
+\item 
+\hyperlink{structItem}{Item}$<$ Element $>$ $\ast$ \hyperlink{classCollection_4b50da91af510addb076f61de9bbe34c}{getItem} ()
+\item 
+\hyperlink{structItem}{Item}$<$ Element $>$ $\ast$ \hyperlink{classCollection_7b9cb5b38e5c0cffba982b61e4f86376}{getItem} (int i)
+\item 
+\hyperlink{structItem}{Item}$<$ Element $>$ $\ast$ \hyperlink{classCollection_e98ed52c991335611a6b1ef313ca4f10}{getFirstItem} ()
+\item 
+\hyperlink{structItem}{Item}$<$ Element $>$ $\ast$ \hyperlink{classCollection_a00b700b2845ae6cb655fbc4168c291e}{getLastItem} ()
+\item 
+bool \hyperlink{classCollection_8196ceec2c64fa65f139fac1f9c30b85}{init} (int n)
+\item 
+Element $\ast$ \hyperlink{classCollection_f0ec60d9037837a41b1090e1ce752bf8}{insertAfter} ()
+\item 
+Element $\ast$ \hyperlink{classCollection_18f2aa5b3aa20fbbb5954fc5cf8db21f}{insert0} ()
+\item 
+Element $\ast$ \hyperlink{classCollection_e6f51634a19b49137358e4f49cad02fb}{insert} ()
+\item 
+Element $\ast$ \hyperlink{classCollection_dafbeadb36716406356b4824c5eff6e9}{insert} (int icounter)
+\item 
+bool \hyperlink{classCollection_a1a1cc17e7583a7d6716ec1faa5a2647}{insert0} (Element $\ast$element)
+\item 
+bool \hyperlink{classCollection_80e96043819f7cc78bf4a8f51aa12b2e}{insert} (Element $\ast$element)
+\item 
+bool \hyperlink{classCollection_9a79776d894a27aea555a5a50ed5d073}{insert} (Element $\ast$element, int icounter)
+\item 
+Element $\ast$ \hyperlink{classCollection_527bca208e29a6fe75053e054cfc1835}{append0} ()
+\item 
+Element $\ast$ \hyperlink{classCollection_fcf23b25470a1695983118c153244838}{append} ()
+\item 
+Element $\ast$ \hyperlink{classCollection_c80cf8e48d9d4363eea79d46c682b468}{append} (int icounter)
+\item 
+bool \hyperlink{classCollection_b89740f405067954a0e0c62d8f5b4faa}{append0} (Element $\ast$element)
+\item 
+bool \hyperlink{classCollection_026fa2048a7922f82c3dd6a3a29a5583}{append} (Element $\ast$element)
+\item 
+bool \hyperlink{classCollection_f510892bc93afe0cfc889a2dec875e51}{append} (Element $\ast$element, int icounter)
+\item 
+bool \hyperlink{classCollection_d106f32d2b9201c2d6bf37912387d4f6}{remove0} ()
+\item 
+bool \hyperlink{classCollection_167f3b300994369663deef64361affa9}{remove} ()
+\item 
+bool \hyperlink{classCollection_c14a82d2f927c0e8fc43213c91612e2b}{remove} (int icounter)
+\end{CompactItemize}
+\subsection*{Private Attributes}
+\begin{CompactItemize}
+\item 
+int \hyperlink{classCollection_f9021665376590331cb1f8c759b949ea}{mitems}
+\item 
+int \hyperlink{classCollection_df47f62cd4ec8aac331a4af10ed5e690}{nitems}
+\item 
+bool \hyperlink{classCollection_1780bf38d158ceb26302c9a4956757d0}{locked}
+\item 
+struct \hyperlink{structItem}{Item}$<$ Element $>$ $\ast$ \hyperlink{classCollection_a0de31b7883b3920f0e049710517b7bb}{items}
+\item 
+struct \hyperlink{structItem}{Item}$<$ Element $>$ $\ast$ \hyperlink{classCollection_f67771496391118583fcebee252a96cc}{dead}
+\item 
+struct \hyperlink{structItem}{Item}$<$ Element $>$ $\ast$ \hyperlink{classCollection_976b583be3920e77c69b754e09d0cae4}{first}
+\item 
+struct \hyperlink{structItem}{Item}$<$ Element $>$ $\ast$ \hyperlink{classCollection_fc2fe7eb6eda33100b7bfd6dedbe38cc}{last}
+\item 
+struct \hyperlink{structItem}{Item}$<$ Element $>$ $\ast$ \hyperlink{classCollection_9a563b3861767ca3dbed06dc587dd972}{current}
+\item 
+struct \hyperlink{structItem}{Item}$<$ Element $>$ $\ast$ \hyperlink{classCollection_7b976f15029014ee3e7a168d19dbe324}{current1} \mbox{[}\hyperlink{def_8h_70cd7898027f297d8d8d478b87f896d2}{maxcounters}\mbox{]}
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class Element$>$ class Collection$<$ Element $>$}
+
+
+
+Definition at line 25 of file collection.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classCollection_12a4fc0e5c8ce642ed3ea13f0fcfaccf}{
+\index{Collection@{Collection}!Collection@{Collection}}
+\index{Collection@{Collection}!Collection@{Collection}}
+\subsubsection[{Collection}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element $>$ {\bf Collection}$<$ Element $>$::{\bf Collection} ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classCollection_12a4fc0e5c8ce642ed3ea13f0fcfaccf}
+
+
+
+
+Definition at line 103 of file collection.h.
+
+References Collection$<$ Element $>$::current, Collection$<$ Element $>$::current1, Collection$<$ Element $>$::dead, Collection$<$ Element $>$::first, Collection$<$ Element $>$::last, Collection$<$ Element $>$::locked, maxcounters, Collection$<$ Element $>$::mitems, and Collection$<$ Element $>$::nitems.\hypertarget{classCollection_50af9ee71acaf70b0754bbab0f3d9a9a}{
+\index{Collection@{Collection}!$\sim$Collection@{$\sim$Collection}}
+\index{$\sim$Collection@{$\sim$Collection}!Collection@{Collection}}
+\subsubsection[{$\sim$Collection}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element $>$ {\bf Collection}$<$ Element $>$::$\sim${\bf Collection} ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classCollection_50af9ee71acaf70b0754bbab0f3d9a9a}
+
+
+
+
+Definition at line 110 of file collection.h.
+
+References Collection$<$ Element $>$::current, Collection$<$ Element $>$::current1, Collection$<$ Element $>$::dead, Collection$<$ Element $>$::first, Collection$<$ Element $>$::last, maxcounters, Collection$<$ Element $>$::mitems, and Collection$<$ Element $>$::nitems.
+
+\subsection{Member Function Documentation}
+\hypertarget{classCollection_f510892bc93afe0cfc889a2dec875e51}{
+\index{Collection@{Collection}!append@{append}}
+\index{append@{append}!Collection@{Collection}}
+\subsubsection[{append}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ bool {\bf Collection}$<$ Element $>$::append (Element $\ast$ {\em element}, \/  int {\em icounter})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classCollection_f510892bc93afe0cfc889a2dec875e51}
+
+
+
+
+Definition at line 329 of file collection.h.
+
+References Collection$<$ Element $>$::append0(), Collection$<$ Element $>$::current, Collection$<$ Element $>$::current1, Collection$<$ Element $>$::locked, maxcounters, and WAIT.\hypertarget{classCollection_026fa2048a7922f82c3dd6a3a29a5583}{
+\index{Collection@{Collection}!append@{append}}
+\index{append@{append}!Collection@{Collection}}
+\subsubsection[{append}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ bool {\bf Collection}$<$ Element $>$::append (Element $\ast$ {\em element})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classCollection_026fa2048a7922f82c3dd6a3a29a5583}
+
+
+
+
+Definition at line 322 of file collection.h.
+
+References Collection$<$ Element $>$::append().\hypertarget{classCollection_c80cf8e48d9d4363eea79d46c682b468}{
+\index{Collection@{Collection}!append@{append}}
+\index{append@{append}!Collection@{Collection}}
+\subsubsection[{append}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element $>$ Element $\ast$ {\bf Collection}$<$ Element $>$::append (int {\em icounter})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classCollection_c80cf8e48d9d4363eea79d46c682b468}
+
+
+
+
+Definition at line 308 of file collection.h.
+
+References Collection$<$ Element $>$::append0(), Collection$<$ Element $>$::current, Collection$<$ Element $>$::current1, Item$<$ Element $>$::element, Collection$<$ Element $>$::locked, maxcounters, and WAIT.\hypertarget{classCollection_fcf23b25470a1695983118c153244838}{
+\index{Collection@{Collection}!append@{append}}
+\index{append@{append}!Collection@{Collection}}
+\subsubsection[{append}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element $>$ Element $\ast$ {\bf Collection}$<$ Element $>$::append ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classCollection_fcf23b25470a1695983118c153244838}
+
+
+
+
+Definition at line 297 of file collection.h.
+
+References Collection$<$ Element $>$::append0(), Item$<$ Element $>$::element, Collection$<$ Element $>$::locked, and WAIT.
+
+Referenced by Collection$<$ Element $>$::append(), Bulk::inject(), Boundary::Inject(), and Domain::load().\hypertarget{classCollection_b89740f405067954a0e0c62d8f5b4faa}{
+\index{Collection@{Collection}!append0@{append0}}
+\index{append0@{append0}!Collection@{Collection}}
+\subsubsection[{append0}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ bool {\bf Collection}$<$ Element $>$::append0 (Element $\ast$ {\em element})}}
+\label{classCollection_b89740f405067954a0e0c62d8f5b4faa}
+
+
+\hypertarget{classCollection_527bca208e29a6fe75053e054cfc1835}{
+\index{Collection@{Collection}!append0@{append0}}
+\index{append0@{append0}!Collection@{Collection}}
+\subsubsection[{append0}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element $>$ Element $\ast$ {\bf Collection}$<$ Element $>$::append0 ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classCollection_527bca208e29a6fe75053e054cfc1835}
+
+
+
+
+Definition at line 263 of file collection.h.
+
+References Collection$<$ Element $>$::current, Collection$<$ Element $>$::current1, Collection$<$ Element $>$::dead, Collection$<$ Element $>$::first, Collection$<$ Element $>$::last, maxcounters, Item$<$ Element $>$::next, Collection$<$ Element $>$::nitems, and Item$<$ Element $>$::prev.
+
+Referenced by Collection$<$ Element $>$::append().\hypertarget{classCollection_c6e395083a0e027102bc3ed3d22c9aa5}{
+\index{Collection@{Collection}!Current@{Current}}
+\index{Current@{Current}!Collection@{Collection}}
+\subsubsection[{Current}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ Element$\ast$ {\bf Collection}$<$ Element $>$::Current (int {\em i})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classCollection_c6e395083a0e027102bc3ed3d22c9aa5}
+
+
+
+
+Definition at line 79 of file collection.h.\hypertarget{classCollection_1fc1b94ca31de8d5e45de65dac9d911f}{
+\index{Collection@{Collection}!Current@{Current}}
+\index{Current@{Current}!Collection@{Collection}}
+\subsubsection[{Current}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ Element$\ast$ {\bf Collection}$<$ Element $>$::Current ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classCollection_1fc1b94ca31de8d5e45de65dac9d911f}
+
+
+
+
+Definition at line 78 of file collection.h.
+
+Referenced by Domain::computeBounds(), Gui::display(), Domain::Domain(), Domain::run(), and Domain::save().\hypertarget{classCollection_40aead667bc00ad6a89d58c76add2f1f}{
+\index{Collection@{Collection}!First@{First}}
+\index{First@{First}!Collection@{Collection}}
+\subsubsection[{First}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ Element$\ast$ {\bf Collection}$<$ Element $>$::First ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classCollection_40aead667bc00ad6a89d58c76add2f1f}
+
+
+
+
+Definition at line 68 of file collection.h.\hypertarget{classCollection_c0f247418e298e0723bccd1f333ba94c}{
+\index{Collection@{Collection}!FirstNext@{FirstNext}}
+\index{FirstNext@{FirstNext}!Collection@{Collection}}
+\subsubsection[{FirstNext}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ void {\bf Collection}$<$ Element $>$::FirstNext ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classCollection_c0f247418e298e0723bccd1f333ba94c}
+
+
+
+
+Definition at line 50 of file collection.h.\hypertarget{classCollection_512a3f686fb0676fc9b76750b81cfb6c}{
+\index{Collection@{Collection}!FirstPrev@{FirstPrev}}
+\index{FirstPrev@{FirstPrev}!Collection@{Collection}}
+\subsubsection[{FirstPrev}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ void {\bf Collection}$<$ Element $>$::FirstPrev ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classCollection_512a3f686fb0676fc9b76750b81cfb6c}
+
+
+
+
+Definition at line 51 of file collection.h.\hypertarget{classCollection_e98ed52c991335611a6b1ef313ca4f10}{
+\index{Collection@{Collection}!getFirstItem@{getFirstItem}}
+\index{getFirstItem@{getFirstItem}!Collection@{Collection}}
+\subsubsection[{getFirstItem}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ {\bf Item}$<$Element$>$$\ast$ {\bf Collection}$<$ Element $>$::getFirstItem ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classCollection_e98ed52c991335611a6b1ef313ca4f10}
+
+
+
+
+Definition at line 82 of file collection.h.\hypertarget{classCollection_7b9cb5b38e5c0cffba982b61e4f86376}{
+\index{Collection@{Collection}!getItem@{getItem}}
+\index{getItem@{getItem}!Collection@{Collection}}
+\subsubsection[{getItem}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ {\bf Item}$<$Element$>$$\ast$ {\bf Collection}$<$ Element $>$::getItem (int {\em i})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classCollection_7b9cb5b38e5c0cffba982b61e4f86376}
+
+
+
+
+Definition at line 81 of file collection.h.\hypertarget{classCollection_4b50da91af510addb076f61de9bbe34c}{
+\index{Collection@{Collection}!getItem@{getItem}}
+\index{getItem@{getItem}!Collection@{Collection}}
+\subsubsection[{getItem}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ {\bf Item}$<$Element$>$$\ast$ {\bf Collection}$<$ Element $>$::getItem ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classCollection_4b50da91af510addb076f61de9bbe34c}
+
+
+
+
+Definition at line 80 of file collection.h.\hypertarget{classCollection_a00b700b2845ae6cb655fbc4168c291e}{
+\index{Collection@{Collection}!getLastItem@{getLastItem}}
+\index{getLastItem@{getLastItem}!Collection@{Collection}}
+\subsubsection[{getLastItem}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ {\bf Item}$<$Element$>$$\ast$ {\bf Collection}$<$ Element $>$::getLastItem ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classCollection_a00b700b2845ae6cb655fbc4168c291e}
+
+
+
+
+Definition at line 83 of file collection.h.\hypertarget{classCollection_d26b55661b223de57ce88c2d6a190961}{
+\index{Collection@{Collection}!getNext@{getNext}}
+\index{getNext@{getNext}!Collection@{Collection}}
+\subsubsection[{getNext}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ Element$\ast$ {\bf Collection}$<$ Element $>$::getNext (int {\em i})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classCollection_d26b55661b223de57ce88c2d6a190961}
+
+
+
+
+Definition at line 73 of file collection.h.\hypertarget{classCollection_b26674c8b7ed8867faafa6d6456fffd6}{
+\index{Collection@{Collection}!getNext@{getNext}}
+\index{getNext@{getNext}!Collection@{Collection}}
+\subsubsection[{getNext}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ Element$\ast$ {\bf Collection}$<$ Element $>$::getNext ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classCollection_b26674c8b7ed8867faafa6d6456fffd6}
+
+
+
+
+Definition at line 72 of file collection.h.\hypertarget{classCollection_89c9afd1417e3cef4f4ff4cc872d3d76}{
+\index{Collection@{Collection}!getPrev@{getPrev}}
+\index{getPrev@{getPrev}!Collection@{Collection}}
+\subsubsection[{getPrev}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ Element$\ast$ {\bf Collection}$<$ Element $>$::getPrev (int {\em i})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classCollection_89c9afd1417e3cef4f4ff4cc872d3d76}
+
+
+
+
+Definition at line 77 of file collection.h.\hypertarget{classCollection_fd1ab2a6e64a0c928422bfac3e86070c}{
+\index{Collection@{Collection}!getPrev@{getPrev}}
+\index{getPrev@{getPrev}!Collection@{Collection}}
+\subsubsection[{getPrev}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ Element$\ast$ {\bf Collection}$<$ Element $>$::getPrev ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classCollection_fd1ab2a6e64a0c928422bfac3e86070c}
+
+
+
+
+Definition at line 76 of file collection.h.\hypertarget{classCollection_9e206e3c49e72d153b52eaa808d6f5c0}{
+\index{Collection@{Collection}!go@{go}}
+\index{go@{go}!Collection@{Collection}}
+\subsubsection[{go}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ void {\bf Collection}$<$ Element $>$::go ({\bf Item}$<$ Element $>$ $\ast$ {\em p})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classCollection_9e206e3c49e72d153b52eaa808d6f5c0}
+
+
+
+
+Definition at line 67 of file collection.h.\hypertarget{classCollection_0ad266a9e0f7ba45615bab587dee740d}{
+\index{Collection@{Collection}!goFirst@{goFirst}}
+\index{goFirst@{goFirst}!Collection@{Collection}}
+\subsubsection[{goFirst}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ void {\bf Collection}$<$ Element $>$::goFirst (int {\em i})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classCollection_0ad266a9e0f7ba45615bab587dee740d}
+
+
+
+
+Definition at line 47 of file collection.h.\hypertarget{classCollection_2abbefcde25d182a33c95d70a37139f9}{
+\index{Collection@{Collection}!goFirst@{goFirst}}
+\index{goFirst@{goFirst}!Collection@{Collection}}
+\subsubsection[{goFirst}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ void {\bf Collection}$<$ Element $>$::goFirst ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classCollection_2abbefcde25d182a33c95d70a37139f9}
+
+
+
+
+Definition at line 41 of file collection.h.
+
+Referenced by Domain::computeBounds(), Gui::display(), Domain::Domain(), Domain::run(), and Domain::save().\hypertarget{classCollection_43d729470bb3ede87a0c682ac032cec2}{
+\index{Collection@{Collection}!goFirstNext@{goFirstNext}}
+\index{goFirstNext@{goFirstNext}!Collection@{Collection}}
+\subsubsection[{goFirstNext}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ void {\bf Collection}$<$ Element $>$::goFirstNext (int {\em i})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classCollection_43d729470bb3ede87a0c682ac032cec2}
+
+
+
+
+Definition at line 49 of file collection.h.\hypertarget{classCollection_cb98f5d24cd1888894d5e219b6a125b5}{
+\index{Collection@{Collection}!goFirstNext@{goFirstNext}}
+\index{goFirstNext@{goFirstNext}!Collection@{Collection}}
+\subsubsection[{goFirstNext}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ void {\bf Collection}$<$ Element $>$::goFirstNext ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classCollection_cb98f5d24cd1888894d5e219b6a125b5}
+
+
+
+
+Definition at line 48 of file collection.h.\hypertarget{classCollection_6729c15aabfe51403936a00551bcbaf7}{
+\index{Collection@{Collection}!goLast@{goLast}}
+\index{goLast@{goLast}!Collection@{Collection}}
+\subsubsection[{goLast}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ void {\bf Collection}$<$ Element $>$::goLast (int {\em i})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classCollection_6729c15aabfe51403936a00551bcbaf7}
+
+
+
+
+Definition at line 56 of file collection.h.\hypertarget{classCollection_24f595ff9a3daddd71e9625e12086b8d}{
+\index{Collection@{Collection}!goLast@{goLast}}
+\index{goLast@{goLast}!Collection@{Collection}}
+\subsubsection[{goLast}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ void {\bf Collection}$<$ Element $>$::goLast ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classCollection_24f595ff9a3daddd71e9625e12086b8d}
+
+
+
+
+Definition at line 55 of file collection.h.\hypertarget{classCollection_c8d2b742e6ccaf94d0e2511840a1783c}{
+\index{Collection@{Collection}!goLastNext@{goLastNext}}
+\index{goLastNext@{goLastNext}!Collection@{Collection}}
+\subsubsection[{goLastNext}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ void {\bf Collection}$<$ Element $>$::goLastNext (int {\em i})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classCollection_c8d2b742e6ccaf94d0e2511840a1783c}
+
+
+
+
+Definition at line 54 of file collection.h.\hypertarget{classCollection_ae18eb14625c9f4742d0c90e437f6035}{
+\index{Collection@{Collection}!goLastNext@{goLastNext}}
+\index{goLastNext@{goLastNext}!Collection@{Collection}}
+\subsubsection[{goLastNext}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ void {\bf Collection}$<$ Element $>$::goLastNext ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classCollection_ae18eb14625c9f4742d0c90e437f6035}
+
+
+
+
+Definition at line 53 of file collection.h.\hypertarget{classCollection_8fe6a6dbc35949197de73013bb67fa07}{
+\index{Collection@{Collection}!goNext@{goNext}}
+\index{goNext@{goNext}!Collection@{Collection}}
+\subsubsection[{goNext}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ void {\bf Collection}$<$ Element $>$::goNext (int {\em i})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classCollection_8fe6a6dbc35949197de73013bb67fa07}
+
+
+
+
+Definition at line 58 of file collection.h.\hypertarget{classCollection_71ab918a6e6938f9e8bf1ce9ac36c25a}{
+\index{Collection@{Collection}!goNext@{goNext}}
+\index{goNext@{goNext}!Collection@{Collection}}
+\subsubsection[{goNext}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ void {\bf Collection}$<$ Element $>$::goNext ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classCollection_71ab918a6e6938f9e8bf1ce9ac36c25a}
+
+
+
+
+Definition at line 57 of file collection.h.
+
+Referenced by Domain::computeBounds(), Gui::display(), Domain::Domain(), Domain::run(), and Domain::save().\hypertarget{classCollection_c3d18037a745f47a28b2ea652fdc564f}{
+\index{Collection@{Collection}!goPrev@{goPrev}}
+\index{goPrev@{goPrev}!Collection@{Collection}}
+\subsubsection[{goPrev}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ void {\bf Collection}$<$ Element $>$::goPrev (int {\em i})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classCollection_c3d18037a745f47a28b2ea652fdc564f}
+
+
+
+
+Definition at line 60 of file collection.h.\hypertarget{classCollection_ba0170475fe3ff507bbcd8dc48a8f658}{
+\index{Collection@{Collection}!goPrev@{goPrev}}
+\index{goPrev@{goPrev}!Collection@{Collection}}
+\subsubsection[{goPrev}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ void {\bf Collection}$<$ Element $>$::goPrev ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classCollection_ba0170475fe3ff507bbcd8dc48a8f658}
+
+
+
+
+Definition at line 59 of file collection.h.\hypertarget{classCollection_8196ceec2c64fa65f139fac1f9c30b85}{
+\index{Collection@{Collection}!init@{init}}
+\index{init@{init}!Collection@{Collection}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element $>$ bool {\bf Collection}$<$ Element $>$::init (int {\em n})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classCollection_8196ceec2c64fa65f139fac1f9c30b85}
+
+
+
+
+Definition at line 117 of file collection.h.
+
+References Collection$<$ Element $>$::current, Collection$<$ Element $>$::current1, Collection$<$ Element $>$::dead, Collection$<$ Element $>$::first, Collection$<$ Element $>$::last, maxcounters, Collection$<$ Element $>$::mitems, and Collection$<$ Element $>$::nitems.
+
+Referenced by Domain::Domain().\hypertarget{classCollection_9a79776d894a27aea555a5a50ed5d073}{
+\index{Collection@{Collection}!insert@{insert}}
+\index{insert@{insert}!Collection@{Collection}}
+\subsubsection[{insert}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ bool {\bf Collection}$<$ Element $>$::insert (Element $\ast$ {\em element}, \/  int {\em icounter})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classCollection_9a79776d894a27aea555a5a50ed5d073}
+
+
+
+
+Definition at line 247 of file collection.h.
+
+References Collection$<$ Element $>$::current, Collection$<$ Element $>$::current1, Collection$<$ Element $>$::insert0(), Collection$<$ Element $>$::locked, maxcounters, and WAIT.\hypertarget{classCollection_80e96043819f7cc78bf4a8f51aa12b2e}{
+\index{Collection@{Collection}!insert@{insert}}
+\index{insert@{insert}!Collection@{Collection}}
+\subsubsection[{insert}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ bool {\bf Collection}$<$ Element $>$::insert (Element $\ast$ {\em element})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classCollection_80e96043819f7cc78bf4a8f51aa12b2e}
+
+
+
+
+Definition at line 240 of file collection.h.
+
+References Collection$<$ Element $>$::insert().\hypertarget{classCollection_dafbeadb36716406356b4824c5eff6e9}{
+\index{Collection@{Collection}!insert@{insert}}
+\index{insert@{insert}!Collection@{Collection}}
+\subsubsection[{insert}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element $>$ Element $\ast$ {\bf Collection}$<$ Element $>$::insert (int {\em icounter})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classCollection_dafbeadb36716406356b4824c5eff6e9}
+
+
+
+
+Definition at line 226 of file collection.h.
+
+References Collection$<$ Element $>$::current, Collection$<$ Element $>$::current1, Item$<$ Element $>$::element, Collection$<$ Element $>$::insert0(), Collection$<$ Element $>$::locked, maxcounters, and WAIT.\hypertarget{classCollection_e6f51634a19b49137358e4f49cad02fb}{
+\index{Collection@{Collection}!insert@{insert}}
+\index{insert@{insert}!Collection@{Collection}}
+\subsubsection[{insert}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element $>$ Element $\ast$ {\bf Collection}$<$ Element $>$::insert ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classCollection_e6f51634a19b49137358e4f49cad02fb}
+
+
+
+
+Definition at line 214 of file collection.h.
+
+References Collection$<$ Element $>$::insert0(), Collection$<$ Element $>$::locked, Collection$<$ Element $>$::number(), and WAIT.
+
+Referenced by Collection$<$ Element $>$::insert().\hypertarget{classCollection_a1a1cc17e7583a7d6716ec1faa5a2647}{
+\index{Collection@{Collection}!insert0@{insert0}}
+\index{insert0@{insert0}!Collection@{Collection}}
+\subsubsection[{insert0}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ bool {\bf Collection}$<$ Element $>$::insert0 (Element $\ast$ {\em element})}}
+\label{classCollection_a1a1cc17e7583a7d6716ec1faa5a2647}
+
+
+\hypertarget{classCollection_18f2aa5b3aa20fbbb5954fc5cf8db21f}{
+\index{Collection@{Collection}!insert0@{insert0}}
+\index{insert0@{insert0}!Collection@{Collection}}
+\subsubsection[{insert0}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element $>$ Element $\ast$ {\bf Collection}$<$ Element $>$::insert0 ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classCollection_18f2aa5b3aa20fbbb5954fc5cf8db21f}
+
+
+
+
+Definition at line 179 of file collection.h.
+
+References Collection$<$ Element $>$::current, Collection$<$ Element $>$::current1, Collection$<$ Element $>$::dead, Item$<$ Element $>$::element, Collection$<$ Element $>$::first, Collection$<$ Element $>$::last, maxcounters, Item$<$ Element $>$::next, Collection$<$ Element $>$::nitems, and Item$<$ Element $>$::prev.
+
+Referenced by Collection$<$ Element $>$::insert().\hypertarget{classCollection_f0ec60d9037837a41b1090e1ce752bf8}{
+\index{Collection@{Collection}!insertAfter@{insertAfter}}
+\index{insertAfter@{insertAfter}!Collection@{Collection}}
+\subsubsection[{insertAfter}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element $>$ Element $\ast$ {\bf Collection}$<$ Element $>$::insertAfter ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classCollection_f0ec60d9037837a41b1090e1ce752bf8}
+
+
+
+
+Definition at line 144 of file collection.h.
+
+References Collection$<$ Element $>$::current, Collection$<$ Element $>$::current1, Collection$<$ Element $>$::dead, Item$<$ Element $>$::element, Collection$<$ Element $>$::first, Collection$<$ Element $>$::last, maxcounters, Item$<$ Element $>$::next, Collection$<$ Element $>$::nitems, and Item$<$ Element $>$::prev.
+
+Referenced by Domain::boundary().\hypertarget{classCollection_2b74d7145a6497de50e7577a9e9bd8a0}{
+\index{Collection@{Collection}!isFirst@{isFirst}}
+\index{isFirst@{isFirst}!Collection@{Collection}}
+\subsubsection[{isFirst}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ bool {\bf Collection}$<$ Element $>$::isFirst (int {\em i})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classCollection_2b74d7145a6497de50e7577a9e9bd8a0}
+
+
+
+
+Definition at line 62 of file collection.h.\hypertarget{classCollection_3c644d87c5fe1109b3110c9bce5f55be}{
+\index{Collection@{Collection}!isFirst@{isFirst}}
+\index{isFirst@{isFirst}!Collection@{Collection}}
+\subsubsection[{isFirst}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ bool {\bf Collection}$<$ Element $>$::isFirst ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classCollection_3c644d87c5fe1109b3110c9bce5f55be}
+
+
+
+
+Definition at line 61 of file collection.h.
+
+Referenced by Domain::computeBounds(), Gui::display(), Domain::Domain(), Domain::run(), and Domain::save().\hypertarget{classCollection_9680a2f3857625a450cbf6eb75d1af90}{
+\index{Collection@{Collection}!isFirstLast@{isFirstLast}}
+\index{isFirstLast@{isFirstLast}!Collection@{Collection}}
+\subsubsection[{isFirstLast}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ bool {\bf Collection}$<$ Element $>$::isFirstLast ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classCollection_9680a2f3857625a450cbf6eb75d1af90}
+
+
+
+
+Definition at line 52 of file collection.h.\hypertarget{classCollection_d38ade90824908e6ad66ed29e48a617d}{
+\index{Collection@{Collection}!isLast@{isLast}}
+\index{isLast@{isLast}!Collection@{Collection}}
+\subsubsection[{isLast}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ bool {\bf Collection}$<$ Element $>$::isLast (int {\em i})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classCollection_d38ade90824908e6ad66ed29e48a617d}
+
+
+
+
+Definition at line 64 of file collection.h.\hypertarget{classCollection_d78260d61be71fe6a0f8ccc949e64c97}{
+\index{Collection@{Collection}!isLast@{isLast}}
+\index{isLast@{isLast}!Collection@{Collection}}
+\subsubsection[{isLast}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ bool {\bf Collection}$<$ Element $>$::isLast ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classCollection_d78260d61be71fe6a0f8ccc949e64c97}
+
+
+
+
+Definition at line 63 of file collection.h.\hypertarget{classCollection_4db73392b0ef7120c311226e3061eeb5}{
+\index{Collection@{Collection}!Last@{Last}}
+\index{Last@{Last}!Collection@{Collection}}
+\subsubsection[{Last}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ Element$\ast$ {\bf Collection}$<$ Element $>$::Last ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classCollection_4db73392b0ef7120c311226e3061eeb5}
+
+
+
+
+Definition at line 69 of file collection.h.\hypertarget{classCollection_8df9a591b311c789a49b9e7ebc8982b5}{
+\index{Collection@{Collection}!LastNext@{LastNext}}
+\index{LastNext@{LastNext}!Collection@{Collection}}
+\subsubsection[{LastNext}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ void {\bf Collection}$<$ Element $>$::LastNext ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classCollection_8df9a591b311c789a49b9e7ebc8982b5}
+
+
+
+
+Definition at line 65 of file collection.h.\hypertarget{classCollection_c72a422277e0f0b0964de5bf098ccfcb}{
+\index{Collection@{Collection}!LastPrev@{LastPrev}}
+\index{LastPrev@{LastPrev}!Collection@{Collection}}
+\subsubsection[{LastPrev}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ void {\bf Collection}$<$ Element $>$::LastPrev ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classCollection_c72a422277e0f0b0964de5bf098ccfcb}
+
+
+
+
+Definition at line 66 of file collection.h.\hypertarget{classCollection_bb3cb48f763445fa80a5d47f42457fd9}{
+\index{Collection@{Collection}!maxCounters@{maxCounters}}
+\index{maxCounters@{maxCounters}!Collection@{Collection}}
+\subsubsection[{maxCounters}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ int {\bf Collection}$<$ Element $>$::maxCounters ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classCollection_bb3cb48f763445fa80a5d47f42457fd9}
+
+
+
+
+Definition at line 36 of file collection.h.
+
+Referenced by Domain::run().\hypertarget{classCollection_5ed56e4ca2e6a9e416628c8996599839}{
+\index{Collection@{Collection}!maxnumber@{maxnumber}}
+\index{maxnumber@{maxnumber}!Collection@{Collection}}
+\subsubsection[{maxnumber}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ int {\bf Collection}$<$ Element $>$::maxnumber ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classCollection_5ed56e4ca2e6a9e416628c8996599839}
+
+
+
+
+Definition at line 38 of file collection.h.
+
+Referenced by Domain::run().\hypertarget{classCollection_83ab50404b4cab96cca07e314a93d829}{
+\index{Collection@{Collection}!Next@{Next}}
+\index{Next@{Next}!Collection@{Collection}}
+\subsubsection[{Next}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ Element$\ast$ {\bf Collection}$<$ Element $>$::Next (int {\em i})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classCollection_83ab50404b4cab96cca07e314a93d829}
+
+
+
+
+Definition at line 71 of file collection.h.\hypertarget{classCollection_8ffdd965b1d80ce385691cc1baffbfac}{
+\index{Collection@{Collection}!Next@{Next}}
+\index{Next@{Next}!Collection@{Collection}}
+\subsubsection[{Next}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ Element$\ast$ {\bf Collection}$<$ Element $>$::Next ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classCollection_8ffdd965b1d80ce385691cc1baffbfac}
+
+
+
+
+Definition at line 70 of file collection.h.\hypertarget{classCollection_ad4dec45255eaf93f2652c06a7076119}{
+\index{Collection@{Collection}!number@{number}}
+\index{number@{number}!Collection@{Collection}}
+\subsubsection[{number}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ int {\bf Collection}$<$ Element $>$::number ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classCollection_ad4dec45255eaf93f2652c06a7076119}
+
+
+
+
+Definition at line 37 of file collection.h.
+
+Referenced by Gui::display(), Domain::Domain(), Gui::initdisp(), Collection$<$ Element $>$::insert(), Domain::load(), Domain::run(), and Domain::save().\hypertarget{classCollection_34e5aa5d88188ee145a34afd5da685cd}{
+\index{Collection@{Collection}!Prev@{Prev}}
+\index{Prev@{Prev}!Collection@{Collection}}
+\subsubsection[{Prev}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ Element$\ast$ {\bf Collection}$<$ Element $>$::Prev (int {\em i})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classCollection_34e5aa5d88188ee145a34afd5da685cd}
+
+
+
+
+Definition at line 75 of file collection.h.\hypertarget{classCollection_696a19ba00545ca8092e57ac7dd7cb93}{
+\index{Collection@{Collection}!Prev@{Prev}}
+\index{Prev@{Prev}!Collection@{Collection}}
+\subsubsection[{Prev}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ Element$\ast$ {\bf Collection}$<$ Element $>$::Prev ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classCollection_696a19ba00545ca8092e57ac7dd7cb93}
+
+
+
+
+Definition at line 74 of file collection.h.\hypertarget{classCollection_c14a82d2f927c0e8fc43213c91612e2b}{
+\index{Collection@{Collection}!remove@{remove}}
+\index{remove@{remove}!Collection@{Collection}}
+\subsubsection[{remove}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element $>$ bool {\bf Collection}$<$ Element $>$::remove (int {\em icounter})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classCollection_c14a82d2f927c0e8fc43213c91612e2b}
+
+
+
+
+Definition at line 393 of file collection.h.
+
+References Collection$<$ Element $>$::current, Collection$<$ Element $>$::current1, Collection$<$ Element $>$::locked, maxcounters, Collection$<$ Element $>$::remove0(), and WAIT.\hypertarget{classCollection_167f3b300994369663deef64361affa9}{
+\index{Collection@{Collection}!remove@{remove}}
+\index{remove@{remove}!Collection@{Collection}}
+\subsubsection[{remove}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element $>$ bool {\bf Collection}$<$ Element $>$::remove ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classCollection_167f3b300994369663deef64361affa9}
+
+
+
+
+Definition at line 379 of file collection.h.
+
+References Collection$<$ Element $>$::current, Collection$<$ Element $>$::current1, Collection$<$ Element $>$::locked, maxcounters, Collection$<$ Element $>$::remove0(), and WAIT.\hypertarget{classCollection_d106f32d2b9201c2d6bf37912387d4f6}{
+\index{Collection@{Collection}!remove0@{remove0}}
+\index{remove0@{remove0}!Collection@{Collection}}
+\subsubsection[{remove0}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element $>$ bool {\bf Collection}$<$ Element $>$::remove0 ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classCollection_d106f32d2b9201c2d6bf37912387d4f6}
+
+
+
+
+Definition at line 344 of file collection.h.
+
+References Collection$<$ Element $>$::current, Collection$<$ Element $>$::current1, Collection$<$ Element $>$::dead, Collection$<$ Element $>$::first, Collection$<$ Element $>$::last, maxcounters, Item$<$ Element $>$::next, and Collection$<$ Element $>$::nitems.
+
+Referenced by Collection$<$ Element $>$::remove(), and Domain::run().\hypertarget{classCollection_024e58c57f4f773ddf327b730001cf0f}{
+\index{Collection@{Collection}!setFirst@{setFirst}}
+\index{setFirst@{setFirst}!Collection@{Collection}}
+\subsubsection[{setFirst}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ void {\bf Collection}$<$ Element $>$::setFirst ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classCollection_024e58c57f4f773ddf327b730001cf0f}
+
+
+
+
+Definition at line 39 of file collection.h.\hypertarget{classCollection_12caadbe9b3b41f0ba74b23b6260143f}{
+\index{Collection@{Collection}!setFirstLast@{setFirstLast}}
+\index{setFirstLast@{setFirstLast}!Collection@{Collection}}
+\subsubsection[{setFirstLast}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ void {\bf Collection}$<$ Element $>$::setFirstLast ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classCollection_12caadbe9b3b41f0ba74b23b6260143f}
+
+
+
+
+Definition at line 40 of file collection.h.
+
+\subsection{Member Data Documentation}
+\hypertarget{classCollection_9a563b3861767ca3dbed06dc587dd972}{
+\index{Collection@{Collection}!current@{current}}
+\index{current@{current}!Collection@{Collection}}
+\subsubsection[{current}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ struct {\bf Item}$<$ Element $>$ $\ast$ {\bf Collection}$<$ Element $>$::{\bf current}\hspace{0.3cm}{\tt  \mbox{[}read, private\mbox{]}}}}
+\label{classCollection_9a563b3861767ca3dbed06dc587dd972}
+
+
+
+
+Definition at line 28 of file collection.h.
+
+Referenced by Collection$<$ Element $>$::append(), Collection$<$ Element $>$::append0(), Collection$<$ Element $>$::Collection(), Collection$<$ Molecule $>$::Current(), Collection$<$ Molecule $>$::getItem(), Collection$<$ Molecule $>$::getNext(), Collection$<$ Molecule $>$::getPrev(), Collection$<$ Molecule $>$::go(), Collection$<$ Molecule $>$::goFirst(), Collection$<$ Molecule $>$::goFirstNext(), Collection$<$ Molecule $>$::goLast(), Collection$<$ Molecule $>$::goLastNext(), Collection$<$ Molecule $>$::goNext(), Collection$<$ Molecule $>$::goPrev(), Collection$<$ Element $>$::init(), Collection$<$ Element $>$::insert(), Collection$<$ Element $>$::insert0(), Collection$<$ Element $>$::insertAfter(), Collection$<$ Molecule $>$::isFirst(), Collection$<$ Molecule $>$::isLast(), Collection$<$ Molecule $>$::Next(), Collection$<$ Molecule $>$::Prev(), Collection$<$ Element $>$::remove(), Collection$<$ Element $>$::remove0(), and Collection$<$ Element $>$::$\sim$Collection().\hypertarget{classCollection_7b976f15029014ee3e7a168d19dbe324}{
+\index{Collection@{Collection}!current1@{current1}}
+\index{current1@{current1}!Collection@{Collection}}
+\subsubsection[{current1}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ struct {\bf Item}$<$ Element $>$ $\ast$ {\bf Collection}$<$ Element $>$::{\bf current1}\mbox{[}{\bf maxcounters}\mbox{]}\hspace{0.3cm}{\tt  \mbox{[}read, private\mbox{]}}}}
+\label{classCollection_7b976f15029014ee3e7a168d19dbe324}
+
+
+
+
+Definition at line 28 of file collection.h.
+
+Referenced by Collection$<$ Element $>$::append(), Collection$<$ Element $>$::append0(), Collection$<$ Element $>$::Collection(), Collection$<$ Molecule $>$::Current(), Collection$<$ Molecule $>$::getItem(), Collection$<$ Molecule $>$::getNext(), Collection$<$ Molecule $>$::getPrev(), Collection$<$ Molecule $>$::goFirst(), Collection$<$ Molecule $>$::goFirstNext(), Collection$<$ Molecule $>$::goLast(), Collection$<$ Molecule $>$::goLastNext(), Collection$<$ Molecule $>$::goNext(), Collection$<$ Molecule $>$::goPrev(), Collection$<$ Element $>$::init(), Collection$<$ Element $>$::insert(), Collection$<$ Element $>$::insert0(), Collection$<$ Element $>$::insertAfter(), Collection$<$ Molecule $>$::isFirst(), Collection$<$ Molecule $>$::isLast(), Collection$<$ Molecule $>$::Next(), Collection$<$ Molecule $>$::Prev(), Collection$<$ Element $>$::remove(), Collection$<$ Element $>$::remove0(), and Collection$<$ Element $>$::$\sim$Collection().\hypertarget{classCollection_f67771496391118583fcebee252a96cc}{
+\index{Collection@{Collection}!dead@{dead}}
+\index{dead@{dead}!Collection@{Collection}}
+\subsubsection[{dead}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ struct {\bf Item}$<$ Element $>$ $\ast$ {\bf Collection}$<$ Element $>$::{\bf dead}\hspace{0.3cm}{\tt  \mbox{[}read, private\mbox{]}}}}
+\label{classCollection_f67771496391118583fcebee252a96cc}
+
+
+
+
+Definition at line 28 of file collection.h.
+
+Referenced by Collection$<$ Element $>$::append0(), Collection$<$ Element $>$::Collection(), Collection$<$ Element $>$::init(), Collection$<$ Element $>$::insert0(), Collection$<$ Element $>$::insertAfter(), Collection$<$ Element $>$::remove0(), and Collection$<$ Element $>$::$\sim$Collection().\hypertarget{classCollection_976b583be3920e77c69b754e09d0cae4}{
+\index{Collection@{Collection}!first@{first}}
+\index{first@{first}!Collection@{Collection}}
+\subsubsection[{first}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ struct {\bf Item}$<$ Element $>$ $\ast$ {\bf Collection}$<$ Element $>$::{\bf first}\hspace{0.3cm}{\tt  \mbox{[}read, private\mbox{]}}}}
+\label{classCollection_976b583be3920e77c69b754e09d0cae4}
+
+
+
+
+Definition at line 28 of file collection.h.
+
+Referenced by Collection$<$ Element $>$::append0(), Collection$<$ Element $>$::Collection(), Collection$<$ Molecule $>$::First(), Collection$<$ Molecule $>$::FirstNext(), Collection$<$ Molecule $>$::FirstPrev(), Collection$<$ Molecule $>$::getFirstItem(), Collection$<$ Molecule $>$::goFirst(), Collection$<$ Molecule $>$::goFirstNext(), Collection$<$ Element $>$::init(), Collection$<$ Element $>$::insert0(), Collection$<$ Element $>$::insertAfter(), Collection$<$ Molecule $>$::isFirst(), Collection$<$ Molecule $>$::isFirstLast(), Collection$<$ Element $>$::remove0(), Collection$<$ Molecule $>$::setFirst(), Collection$<$ Molecule $>$::setFirstLast(), and Collection$<$ Element $>$::$\sim$Collection().\hypertarget{classCollection_a0de31b7883b3920f0e049710517b7bb}{
+\index{Collection@{Collection}!items@{items}}
+\index{items@{items}!Collection@{Collection}}
+\subsubsection[{items}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ struct {\bf Item}$<$ Element $>$$\ast$ {\bf Collection}$<$ Element $>$::{\bf items}\hspace{0.3cm}{\tt  \mbox{[}read, private\mbox{]}}}}
+\label{classCollection_a0de31b7883b3920f0e049710517b7bb}
+
+
+
+
+Definition at line 28 of file collection.h.\hypertarget{classCollection_fc2fe7eb6eda33100b7bfd6dedbe38cc}{
+\index{Collection@{Collection}!last@{last}}
+\index{last@{last}!Collection@{Collection}}
+\subsubsection[{last}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ struct {\bf Item}$<$ Element $>$ $\ast$ {\bf Collection}$<$ Element $>$::{\bf last}\hspace{0.3cm}{\tt  \mbox{[}read, private\mbox{]}}}}
+\label{classCollection_fc2fe7eb6eda33100b7bfd6dedbe38cc}
+
+
+
+
+Definition at line 28 of file collection.h.
+
+Referenced by Collection$<$ Element $>$::append0(), Collection$<$ Element $>$::Collection(), Collection$<$ Molecule $>$::getLastItem(), Collection$<$ Molecule $>$::goLast(), Collection$<$ Molecule $>$::goLastNext(), Collection$<$ Element $>$::init(), Collection$<$ Element $>$::insert0(), Collection$<$ Element $>$::insertAfter(), Collection$<$ Molecule $>$::isFirstLast(), Collection$<$ Molecule $>$::isLast(), Collection$<$ Molecule $>$::Last(), Collection$<$ Molecule $>$::LastNext(), Collection$<$ Molecule $>$::LastPrev(), Collection$<$ Element $>$::remove0(), Collection$<$ Molecule $>$::setFirst(), Collection$<$ Molecule $>$::setFirstLast(), and Collection$<$ Element $>$::$\sim$Collection().\hypertarget{classCollection_1780bf38d158ceb26302c9a4956757d0}{
+\index{Collection@{Collection}!locked@{locked}}
+\index{locked@{locked}!Collection@{Collection}}
+\subsubsection[{locked}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ bool {\bf Collection}$<$ Element $>$::{\bf locked}\hspace{0.3cm}{\tt  \mbox{[}private\mbox{]}}}}
+\label{classCollection_1780bf38d158ceb26302c9a4956757d0}
+
+
+
+
+Definition at line 27 of file collection.h.
+
+Referenced by Collection$<$ Element $>$::append(), Collection$<$ Element $>$::Collection(), Collection$<$ Element $>$::insert(), and Collection$<$ Element $>$::remove().\hypertarget{classCollection_f9021665376590331cb1f8c759b949ea}{
+\index{Collection@{Collection}!mitems@{mitems}}
+\index{mitems@{mitems}!Collection@{Collection}}
+\subsubsection[{mitems}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ int {\bf Collection}$<$ Element $>$::{\bf mitems}\hspace{0.3cm}{\tt  \mbox{[}private\mbox{]}}}}
+\label{classCollection_f9021665376590331cb1f8c759b949ea}
+
+
+
+
+Definition at line 26 of file collection.h.
+
+Referenced by Collection$<$ Element $>$::Collection(), Collection$<$ Element $>$::init(), Collection$<$ Molecule $>$::maxnumber(), and Collection$<$ Element $>$::$\sim$Collection().\hypertarget{classCollection_df47f62cd4ec8aac331a4af10ed5e690}{
+\index{Collection@{Collection}!nitems@{nitems}}
+\index{nitems@{nitems}!Collection@{Collection}}
+\subsubsection[{nitems}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ int {\bf Collection}$<$ Element $>$::{\bf nitems}\hspace{0.3cm}{\tt  \mbox{[}private\mbox{]}}}}
+\label{classCollection_df47f62cd4ec8aac331a4af10ed5e690}
+
+
+
+
+Definition at line 26 of file collection.h.
+
+Referenced by Collection$<$ Element $>$::append0(), Collection$<$ Element $>$::Collection(), Collection$<$ Element $>$::init(), Collection$<$ Element $>$::insert0(), Collection$<$ Element $>$::insertAfter(), Collection$<$ Molecule $>$::number(), Collection$<$ Element $>$::remove0(), and Collection$<$ Element $>$::$\sim$Collection().
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+\hyperlink{collection_8h}{collection.h}\end{CompactItemize}

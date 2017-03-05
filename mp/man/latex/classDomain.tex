@@ -1,0 +1,538 @@
+\hypertarget{classDomain}{
+\section{Domain Class Reference}
+\label{classDomain}\index{Domain@{Domain}}
+}
+Computational \hyperlink{classDomain}{Domain}.  
+
+
+{\tt \#include $<$domain.h$>$}
+
+Collaboration diagram for Domain:\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{classDomain_00a6f779e32f40a899020a4114eb00c9}{Domain} (char $\ast$filename)
+\begin{CompactList}\small\item\em \hyperlink{classDomain}{Domain} constructor creates an instance of a domain. \item\end{CompactList}\item 
+\hyperlink{classDomain_29cec9afb2e54c810ba1f3c1a49543a8}{$\sim$Domain} ()
+\item 
+void \hyperlink{classDomain_aa7e3ba77943b470095a43fffff51ea7}{BoundaryType} (enum \hyperlink{domain_8h_81abc9b219bae49710486f00fe2456fa}{BoundaryTypes} b, int idir, int inside)
+\item 
+enum \hyperlink{domain_8h_81abc9b219bae49710486f00fe2456fa}{BoundaryTypes} \hyperlink{classDomain_040e0b00633af32e4bf293c87932003b}{BoundaryType} (int idir, int inside)
+\item 
+void \hyperlink{classDomain_7d1404792c54b3832a48561bac4996a3}{setMinBound} (int i, REAL x)
+\item 
+void \hyperlink{classDomain_dc09d059d5102a38d70714d894be49f0}{setMaxBound} (int i, REAL x)
+\item 
+REAL \hyperlink{classDomain_80f24f28a5bc6123f6554c01bded983b}{minBound} (int i)
+\item 
+REAL \hyperlink{classDomain_35f43f47b82f07881f0dd442263e28df}{maxBound} (int i)
+\item 
+int \hyperlink{classDomain_d648b8279c930c23ae094160bda427ac}{computeBounds} (REAL x0\mbox{[}$\,$\mbox{]}, REAL x1\mbox{[}$\,$\mbox{]})
+\item 
+\hyperlink{classCollection}{Collection}$<$ \hyperlink{classMolecule}{Molecule} $>$ $\ast$ \hyperlink{classDomain_4357e15e23a5f4d81103672a3c06f8f9}{Molecules} ()
+\item 
+int \hyperlink{classDomain_b5cc49686f4e35fb6deb30bdfeb906e0}{run} (int niter)
+\begin{CompactList}\small\item\em The \hyperlink{classDomain}{Domain} solver: running {\bf niter} iterations. \item\end{CompactList}\item 
+void \hyperlink{classDomain_9ca54d0631f30e5094f3843845821e5b}{step} (int iter)
+\item 
+int \hyperlink{classDomain_95f1918505199482138ce894f1f4e3ac}{boundary} (\hyperlink{classMolecule}{Molecule} $\ast$molecule)
+\item 
+void \hyperlink{classDomain_0ab601495bdb6dcb0b8001e6c23624d1}{injection} ()
+\begin{CompactList}\small\item\em Inject cross-boundary species:. \item\end{CompactList}\item 
+void \hyperlink{classDomain_567821d9c182227ce912ebae35793dd1}{interaction} ()
+\item 
+void \hyperlink{classDomain_2f93de66854d4fc26d4d326301e99214}{interaction} (int icounter)
+\item 
+\hyperlink{namespaceSpecies_aa897d386b20b57b719a044b5bb30a83}{Interaction} \hyperlink{classDomain_08b06bbed0954459ae2bb38c20c6a7a8}{interact} (\hyperlink{classMolecule}{Molecule} $\ast$a, \hyperlink{classMolecule}{Molecule} $\ast$b)
+\item 
+void \hyperlink{classDomain_12ba0b28c95d771109948d996ac25ef4}{init} ()
+\item 
+void \hyperlink{classDomain_8802986198af701f33acaccdedcfa2a2}{load} (char $\ast$filename)
+\begin{CompactList}\small\item\em Initializing molecules according to bulk properties (restart=0). \item\end{CompactList}\item 
+void \hyperlink{classDomain_e4ca51adef8bfebfa79963a486380749}{save} (char $\ast$taskname)
+\end{CompactItemize}
+\subsection*{Private Attributes}
+\begin{CompactItemize}
+\item 
+int $\ast$ \hyperlink{classDomain_a5fcd6dd2bde60ea042f2556862d532d}{distribution}
+\begin{CompactList}\small\item\em molecule counts for all species \item\end{CompactList}\item 
+REAL \hyperlink{classDomain_a7d71bbeda0ebb856c37e8deef6db9b2}{bounds} \mbox{[}2\mbox{]}\mbox{[}DIM\mbox{]}
+\item 
+char \hyperlink{classDomain_140781c8fcb1a5176ad70097379d9021}{boundaryName} \mbox{[}maxBoundaryTypes\mbox{]}\mbox{[}WORDLENGTH\mbox{]}
+\begin{CompactList}\small\item\em to be depricated \item\end{CompactList}\item 
+\hyperlink{classBulk}{Bulk} \hyperlink{classDomain_fbf03c1d162803247825d76ab12b8f36}{bulk}
+\begin{CompactList}\small\item\em bulk of the domain: initialized only if Run::option.restart=0 \item\end{CompactList}\item 
+\hyperlink{structBoundary}{Boundary} \hyperlink{classDomain_160ecf16968a52e57d29a1679118bfc2}{boundaries} \mbox{[}DIM\mbox{]}\mbox{[}2\mbox{]}
+\begin{CompactList}\small\item\em six boundaries of a hexahedral domain \item\end{CompactList}\item 
+\hyperlink{classCollection}{Collection}$<$ \hyperlink{classMolecule}{Molecule} $>$ \hyperlink{classDomain_a685b2d61313732d3f787186f900bac0}{molecules}
+\begin{CompactList}\small\item\em \hyperlink{classCollection}{Collection} of molecules. \item\end{CompactList}\item 
+\hyperlink{structPool}{Pool}$<$ \hyperlink{classMolecule}{Molecule} $>$ $\ast$ \hyperlink{classDomain_270c6f9b44dde16bd8a993f9dd6e63ba}{pool}
+\begin{CompactList}\small\item\em \hyperlink{classMolecule}{Molecule} pointer pool. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+Computational \hyperlink{classDomain}{Domain}. 
+
+Implements main data types inside a computational domain 
+
+Definition at line 83 of file domain.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classDomain_00a6f779e32f40a899020a4114eb00c9}{
+\index{Domain@{Domain}!Domain@{Domain}}
+\index{Domain@{Domain}!Domain@{Domain}}
+\subsubsection[{Domain}]{\setlength{\rightskip}{0pt plus 5cm}Domain::Domain (char $\ast$ {\em filename})}}
+\label{classDomain_00a6f779e32f40a899020a4114eb00c9}
+
+
+\hyperlink{classDomain}{Domain} constructor creates an instance of a domain. 
+
+
+
+get domain specs from XML configfile
+
+read XML input file
+
+Loop over file records
+
+set xterm output mode:
+
+Read the number of molecules:
+
+Read species:
+
+load reactions
+
+Read domain specs:
+
+Read domain bounds
+
+Read initial bulk properties
+
+Read boundary specs
+
+Read boundary reactions:
+
+$<$ probability for the formation of these products as opposed to different products If only one pair of products exists the probability = 1
+
+Definition at line 72 of file domain.cc.
+
+References Species::Reaction::Add(), Boundary::adiabatic, List$<$ Element $>$::append(), Boundary::area, Geom::area(), AtomicMassUnit, AvogadroNumber, BoltzmannConstant, boundaries, boundary(), boundaryName, bounds, bulk, GridContainer::cellsize, Run::configfile, Species::Specie::Cp(), Collection$<$ Element $>$::Current(), Species::Gas::density, DIM, distribution, DOCTYPE, elasticBoundary, Species::Reaction::Reaction::Outcome::Enthalpy(), Species::Reaction::First(), GasConstant, Boundary::gases, Bulk::gases, IO::getCharAttr(), Collection$<$ Element $>$::goFirst(), Collection$<$ Element $>$::goNext(), Species::Specie::Id(), init(), Bulk::init(), Boundary::init(), Collection$<$ Element $>$::init(), insideBoundary, Collection$<$ Element $>$::isFirst(), Potential::lengthscale(), load(), Species::Specie::Mass(), maxBound(), maxBoundaryTypes, MAXLINLEN, minBound(), molecules, Species::Reaction::Next(), Species::nspecies, Collection$<$ Element $>$::number(), openBoundary, Run::option, IO::parseFloat(), IO::parseWord(), periodicBoundary, pool, Species::Reaction::Reaction::Outcome::Probability(), Species::Reaction::Reaction::Outcome::Product(), GridContainer::put(), Boundary::reactions, Species::reactions, REAL, setMaxBound(), setMinBound(), Species::Specie::Size(), Gui::size, Species::species, Potential::strength(), Boundary::temperature, Bulk::Temperature(), TINY, Boundary::type, VOIDSPECIE, WORDLENGTH, XMAX, Gui::xmax, XMIN, Gui::xmin, and Option::xterm.\hypertarget{classDomain_29cec9afb2e54c810ba1f3c1a49543a8}{
+\index{Domain@{Domain}!$\sim$Domain@{$\sim$Domain}}
+\index{$\sim$Domain@{$\sim$Domain}!Domain@{Domain}}
+\subsubsection[{$\sim$Domain}]{\setlength{\rightskip}{0pt plus 5cm}Domain::$\sim$Domain ()}}
+\label{classDomain_29cec9afb2e54c810ba1f3c1a49543a8}
+
+
+
+
+Definition at line 617 of file domain.cc.
+
+References Run::option.
+
+\subsection{Member Function Documentation}
+\hypertarget{classDomain_95f1918505199482138ce894f1f4e3ac}{
+\index{Domain@{Domain}!boundary@{boundary}}
+\index{boundary@{boundary}!Domain@{Domain}}
+\subsubsection[{boundary}]{\setlength{\rightskip}{0pt plus 5cm}int Domain::boundary ({\bf Molecule} $\ast$ {\em molecule})}}
+\label{classDomain_95f1918505199482138ce894f1f4e3ac}
+
+
+
+
+$<$ do reaction: A + B =
+
+$<$ new molecule A type
+
+$<$ new molecule B type 
+
+Definition at line 1076 of file domain.cc.
+
+References Boundary::adiabatic, AtomicMassUnit, BoltzmannConstant, boundaries, bounds, Molecule::Coordinates(), Species::Specie::Cp(), DIM, DOF, DOFI, DOFK, Gui::dx, elasticBoundary, Species::Reaction::Reaction::Outcome::Enthalpy(), Species::Reaction::First(), Collection$<$ Element $>$::insertAfter(), insideBoundary, Molecule::InternalEnergy(), Molecule::KineticEnergy(), LENGTH, Species::Specie::Mass(), molecules, MULC, Species::Reaction::Next(), openBoundary, periodicBoundary, Species::Reaction::Reaction::Outcome::Probability(), Species::Reaction::Reaction::Outcome::Product(), Species::reacted, Boundary::reactions, REAL, RND, Species::Specie::Size(), SMALL, Species::species, Sqrt3, Boundary::temperature, Run::time, Species::Reaction::Reaction::Outcome::Time(), Molecule::Type(), Boundary::type, Molecule::Velocity(), VOIDSPECIE, XMAX, and XMIN.
+
+Referenced by Domain(), injection(), and run().\hypertarget{classDomain_040e0b00633af32e4bf293c87932003b}{
+\index{Domain@{Domain}!BoundaryType@{BoundaryType}}
+\index{BoundaryType@{BoundaryType}!Domain@{Domain}}
+\subsubsection[{BoundaryType}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf BoundaryTypes} Domain::BoundaryType (int {\em idir}, \/  int {\em inside})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classDomain_040e0b00633af32e4bf293c87932003b}
+
+
+
+
+Definition at line 101 of file domain.h.
+
+References boundaries, DIM, and Boundary::type.\hypertarget{classDomain_aa7e3ba77943b470095a43fffff51ea7}{
+\index{Domain@{Domain}!BoundaryType@{BoundaryType}}
+\index{BoundaryType@{BoundaryType}!Domain@{Domain}}
+\subsubsection[{BoundaryType}]{\setlength{\rightskip}{0pt plus 5cm}void Domain::BoundaryType (enum {\bf BoundaryTypes} {\em b}, \/  int {\em idir}, \/  int {\em inside})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classDomain_aa7e3ba77943b470095a43fffff51ea7}
+
+
+
+
+Definition at line 94 of file domain.h.
+
+References boundaries, DIM, and Boundary::type.\hypertarget{classDomain_d648b8279c930c23ae094160bda427ac}{
+\index{Domain@{Domain}!computeBounds@{computeBounds}}
+\index{computeBounds@{computeBounds}!Domain@{Domain}}
+\subsubsection[{computeBounds}]{\setlength{\rightskip}{0pt plus 5cm}int Domain::computeBounds (REAL {\em x0}\mbox{[}$\,$\mbox{]}, \/  REAL {\em x1}\mbox{[}$\,$\mbox{]})}}
+\label{classDomain_d648b8279c930c23ae094160bda427ac}
+
+
+
+
+Definition at line 829 of file domain.cc.
+
+References Molecule::Coordinates(), Collection$<$ Element $>$::Current(), DIM, Collection$<$ Element $>$::goFirst(), Collection$<$ Element $>$::goNext(), Collection$<$ Element $>$::isFirst(), LARGE, molecules, and REAL.\hypertarget{classDomain_12ba0b28c95d771109948d996ac25ef4}{
+\index{Domain@{Domain}!init@{init}}
+\index{init@{init}!Domain@{Domain}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}void Domain::init ()}}
+\label{classDomain_12ba0b28c95d771109948d996ac25ef4}
+
+
+
+
+create local gas-array
+
+Go over all gases
+
+point to current gas
+
+select current gas-specie
+
+Estimate the average velocity and the number of molecules of each specie to be injected into the bulk
+
+get molecule's mass in atomic units
+
+convert molecule's mass to kg
+
+average velocity in one direction
+
+get density in kg/m$^\wedge$3
+
+get the number of molecules in the bulk
+
+Inject all molecules: 
+
+Definition at line 621 of file domain.cc.
+
+References AtomicMassUnit, BoltzmannConstant, bulk, List$<$ Element $>$::Current(), Species::Gas::density, Bulk::gases, List$<$ Element $>$::goFirst(), List$<$ Element $>$::goNext(), Species::Specie::Id(), Bulk::inject(), List$<$ Element $>$::isFirst(), Species::Specie::Mass(), molecules, List$<$ Element $>$::number(), Run::option, Species::Gas::specie, Species::species, Molecule::Temperature(), Bulk::Temperature(), and Bulk::Volume().
+
+Referenced by Domain().\hypertarget{classDomain_0ab601495bdb6dcb0b8001e6c23624d1}{
+\index{Domain@{Domain}!injection@{injection}}
+\index{injection@{injection}!Domain@{Domain}}
+\subsubsection[{injection}]{\setlength{\rightskip}{0pt plus 5cm}void Domain::injection ()}}
+\label{classDomain_0ab601495bdb6dcb0b8001e6c23624d1}
+
+
+Inject cross-boundary species:. 
+
+Inject cross-boundary species. The algorithm uses the density and temperature to caclulate the frequency of injection of molecules of specie, $s$ at the boundary. The injection frequency, $f_s$ per unit area, $A$ is computed as \[ f_s = \frac{N}{\Delta\,t} \] where $\Delta\,t_s$ is the time interval at which a molecule hits the boundary area $A$, and $N$ is the number of molecules in a volume with the base $A$ and length $\Delta\,x$ as shown in the figure:  The time inteval, $\Delta\,t$, between the collisions can be related to the component of velocity of the molecule of species $s$, in direction $x$, $v_{sx}$, as follows: \[ \Delta\,t = \frac{2\Delta\,x}{v_{sx}} \] The number of molecules, $N$ can be related to density, $\rho$, as: \[ N = \frac{\rho}{\mu}\Delta\,x\,A \] where $\mu$ is the mass of one molecule and $A = \Delta\,y\,\Delta\,z$. Thus, the frequency is: \[ f_s = \frac{\rho}{\mu}\Delta\,x\,A\frac{v_{sx}}{2\Delta\,x} = \frac{\rho\,v_{sx}}{2\mu}A \] 
+
+get time-step in sec
+
+Go over all 6 boundaries:
+
+select a boundary
+
+get boundry area in m$^\wedge$2
+
+get boundary temperature in K
+
+create local gas-array
+
+Go over all gases
+
+point to current gas
+
+select current gas-specie
+
+Use kinetic theory of gases to estimate collision frequency with the wall and the number of molecules injected. This number can be fractional, so split it into integer and fractional part and inject the fractional part using probability.
+
+get molecule's mass in atomic units
+
+convert molecule's mass to kg
+
+get density in kg/m$^\wedge$3
+
+estimate collision frequency per unit area
+
+calculate the number of collisions with the boundary during the past time step
+
+get the whole integer number of molecules injected
+
+calculate the fractional part of a molecule injected
+
+Inject all whole molecules:
+
+Probabilistically inject the fractional molecules: 
+
+Definition at line 1291 of file domain.cc.
+
+References Boundary::area, Geom::area(), AtomicMassUnit, BoltzmannConstant, boundaries, boundary(), Species::Gas::density, DIM, Boundary::gases, List$<$ Element $>$::goFirst(), Boundary::Inject(), Species::Specie::Mass(), molecules, REAL, RND, Species::Gas::specie, Species::species, step(), Boundary::temperature, and Run::time.
+
+Referenced by run().\hypertarget{classDomain_08b06bbed0954459ae2bb38c20c6a7a8}{
+\index{Domain@{Domain}!interact@{interact}}
+\index{interact@{interact}!Domain@{Domain}}
+\subsubsection[{interact}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Interaction} Domain::interact ({\bf Molecule} $\ast$ {\em a}, \/  {\bf Molecule} $\ast$ {\em b})}}
+\label{classDomain_08b06bbed0954459ae2bb38c20c6a7a8}
+
+
+Computes interaction between two molecules with the exchange of energy and momentum according to hard-ball collisions, and the possibility of chemical reactions. Also estimates time to the next collision. Initializing molecules according to bulk properties (restart=0) The velocity of each molecule is set from given temperature according to: \[ \frac{3}{2}kT = \frac{mV_{av}^2}{2} \] Since the average velocity relates to the average velocity in one direction, x, as: \[ V_{av}^2 = 3V_{x,av}^2 \] we obtain for $V_{av,x} = kT$ 
+
+Definition at line 1517 of file domain.cc.
+
+References Species::Reaction::Reaction::Outcome::ActivationEnergy(), Species::annihalated, Species::collided, Molecule::Coordinates(), Species::Specie::Cp(), DIM, DOF, DOFI, DOFK, Palette::dvi, Gui::dx, Species::Reaction::Reaction::Outcome::Enthalpy(), Species::Reaction::First(), Species::Specie::Id(), Molecule::InternalEnergy(), Species::Specie::Mass(), Species::missed, Species::Reaction::Next(), Species::nspecies, Species::Reaction::Reaction::Outcome::Probability(), Species::Reaction::Reaction::Outcome::Product(), Species::reacted, Species::reactions, REAL, RND, SCLP, Species::Specie::Size(), SMALL, Species::species, Molecule::Type(), Molecule::Velocity(), and VOIDSPECIE.
+
+Referenced by interaction().\hypertarget{classDomain_2f93de66854d4fc26d4d326301e99214}{
+\index{Domain@{Domain}!interaction@{interaction}}
+\index{interaction@{interaction}!Domain@{Domain}}
+\subsubsection[{interaction}]{\setlength{\rightskip}{0pt plus 5cm}void Domain::interaction (int {\em icounter})}}
+\label{classDomain_2f93de66854d4fc26d4d326301e99214}
+
+
+
+
+DDD: dirty fix, should be as below, but did not work
+
+DDD: end dirty fix
+
+DDD: dirty fix, should be as below, but did not work
+
+DDD
+
+DDD: dirty fix: some interactions may go unaccounted
+
+DDD 
+
+Definition at line 1414 of file domain.cc.
+
+References Species::annihalated, Container$<$ Element $>$::Current(), DIM, Gui::dx, Container$<$ Element $>$::First(), Container$<$ Element $>$::FirstNext(), Container$<$ Element $>$::goFirst(), Container$<$ Element $>$::goNext(), GridContainer::index(), interact(), Container$<$ Element $>$::isFirst(), Container$<$ Element $>$::isFirstLast(), Container$<$ Element $>$::isLast(), Species::missed, GridContainer::ncells, Gui::nodes, Run::nthreads, Container$<$ Element $>$::number(), REAL, Container$<$ Element $>$::setFirst(), Container$<$ Element $>$::setFirstLast(), Run::time, Molecule::Type(), VOIDSPECIE, XMAX, and XMIN.\hypertarget{classDomain_567821d9c182227ce912ebae35793dd1}{
+\index{Domain@{Domain}!interaction@{interaction}}
+\index{interaction@{interaction}!Domain@{Domain}}
+\subsubsection[{interaction}]{\setlength{\rightskip}{0pt plus 5cm}void Domain::interaction ()}}
+\label{classDomain_567821d9c182227ce912ebae35793dd1}
+
+
+
+
+Definition at line 1337 of file domain.cc.
+
+References Species::annihalated, Container$<$ Element $>$::Current(), DIM, Gui::dx, Container$<$ Element $>$::First(), Container$<$ Element $>$::FirstNext(), Container$<$ Element $>$::goFirst(), Container$<$ Element $>$::goNext(), GridContainer::index(), interact(), Container$<$ Element $>$::isFirst(), Container$<$ Element $>$::isFirstLast(), Container$<$ Element $>$::isLast(), Species::missed, GridContainer::ncells, Gui::nodes, Container$<$ Element $>$::number(), REAL, Container$<$ Element $>$::remove(), Container$<$ Element $>$::setFirst(), Container$<$ Element $>$::setFirstLast(), Molecule::Type(), VOIDSPECIE, XMAX, and XMIN.
+
+Referenced by run().\hypertarget{classDomain_8802986198af701f33acaccdedcfa2a2}{
+\index{Domain@{Domain}!load@{load}}
+\index{load@{load}!Domain@{Domain}}
+\subsubsection[{load}]{\setlength{\rightskip}{0pt plus 5cm}void Domain::load (char $\ast$ {\em filename})}}
+\label{classDomain_8802986198af701f33acaccdedcfa2a2}
+
+
+Initializing molecules according to bulk properties (restart=0). 
+
+
+
+Definition at line 687 of file domain.cc.
+
+References Collection$<$ Element $>$::append(), Molecule::Coordinate(), Potential::Cutoff(), DIM, Molecule::InternalEnergy(), IO::ioutput, LARGE, Potential::lengthscale(), MAXLINLEN, molecules, Species::nspecies, Collection$<$ Element $>$::number(), Run::option, REAL, Species::Specie::Size(), Gui::size, Species::species, Run::time, Molecule::Type(), Molecule::Velocity(), and WORDLENGTH.
+
+Referenced by Domain().\hypertarget{classDomain_35f43f47b82f07881f0dd442263e28df}{
+\index{Domain@{Domain}!maxBound@{maxBound}}
+\index{maxBound@{maxBound}!Domain@{Domain}}
+\subsubsection[{maxBound}]{\setlength{\rightskip}{0pt plus 5cm}REAL Domain::maxBound (int {\em i})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classDomain_35f43f47b82f07881f0dd442263e28df}
+
+
+
+
+Definition at line 111 of file domain.h.
+
+References bounds.
+
+Referenced by Domain(), and Gui::readconf().\hypertarget{classDomain_80f24f28a5bc6123f6554c01bded983b}{
+\index{Domain@{Domain}!minBound@{minBound}}
+\index{minBound@{minBound}!Domain@{Domain}}
+\subsubsection[{minBound}]{\setlength{\rightskip}{0pt plus 5cm}REAL Domain::minBound (int {\em i})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classDomain_80f24f28a5bc6123f6554c01bded983b}
+
+
+
+
+Definition at line 110 of file domain.h.
+
+References bounds.
+
+Referenced by Domain(), and Gui::readconf().\hypertarget{classDomain_4357e15e23a5f4d81103672a3c06f8f9}{
+\index{Domain@{Domain}!Molecules@{Molecules}}
+\index{Molecules@{Molecules}!Domain@{Domain}}
+\subsubsection[{Molecules}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Collection}$<${\bf Molecule}$>$$\ast$ Domain::Molecules ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classDomain_4357e15e23a5f4d81103672a3c06f8f9}
+
+
+
+
+Definition at line 115 of file domain.h.
+
+References molecules.
+
+Referenced by Gui::display(), and Gui::initdisp().\hypertarget{classDomain_b5cc49686f4e35fb6deb30bdfeb906e0}{
+\index{Domain@{Domain}!run@{run}}
+\index{run@{run}!Domain@{Domain}}
+\subsubsection[{run}]{\setlength{\rightskip}{0pt plus 5cm}int Domain::run (int {\em niter})}}
+\label{classDomain_b5cc49686f4e35fb6deb30bdfeb906e0}
+
+
+The \hyperlink{classDomain}{Domain} solver: running {\bf niter} iterations. 
+
+
+
+The main loop over niter iterations or till the end of time: 
+
+Definition at line 849 of file domain.cc.
+
+References AtomicMassUnit, BoltzmannConstant, boundary(), GridContainer::cellsize, Species::Specie::Cp(), Collection$<$ Element $>$::Current(), DIM, distribution, DOF, DOFI, ESC, Collection$<$ Element $>$::goFirst(), Collection$<$ Element $>$::goNext(), injection(), interaction(), Molecule::InternalEnergy(), IO::ioutput, Collection$<$ Element $>$::isFirst(), Molecule::KineticEnergy(), LARGE, Collection$<$ Element $>$::maxCounters(), maxcounters, Collection$<$ Element $>$::maxnumber(), molecules, Molecule::Move(), GridContainer::nodes, Species::nspecies, Run::nthreads, Collection$<$ Element $>$::number(), onethird, Run::option, Run::outputname, GridContainer::put(), REAL, Container$<$ Element $>$::remove(), Collection$<$ Element $>$::remove0(), save(), SMALL, Species::species, step(), Run::time, twothirds, Molecule::Type(), Molecule::Velocity(), and VOIDSPECIE.
+
+Referenced by Gui::animate(), Gui::keyboard(), main(), and Gui::runmany().\hypertarget{classDomain_e4ca51adef8bfebfa79963a486380749}{
+\index{Domain@{Domain}!save@{save}}
+\index{save@{save}!Domain@{Domain}}
+\subsubsection[{save}]{\setlength{\rightskip}{0pt plus 5cm}void Domain::save (char $\ast$ {\em taskname})}}
+\label{classDomain_e4ca51adef8bfebfa79963a486380749}
+
+
+
+
+Definition at line 1966 of file domain.cc.
+
+References Molecule::Coordinate(), Collection$<$ Element $>$::Current(), Run::elapsed(), Collection$<$ Element $>$::goFirst(), Collection$<$ Element $>$::goNext(), Species::Specie::Id(), Molecule::InternalEnergy(), IO::ioutput, Collection$<$ Element $>$::isFirst(), MAXLINLEN, molecules, Collection$<$ Element $>$::number(), Run::option, Species::species, Run::time, Molecule::Type(), Molecule::Velocity(), and VOIDSPECIE.
+
+Referenced by Gui::keyboard(), main(), and run().\hypertarget{classDomain_dc09d059d5102a38d70714d894be49f0}{
+\index{Domain@{Domain}!setMaxBound@{setMaxBound}}
+\index{setMaxBound@{setMaxBound}!Domain@{Domain}}
+\subsubsection[{setMaxBound}]{\setlength{\rightskip}{0pt plus 5cm}void Domain::setMaxBound (int {\em i}, \/  REAL {\em x})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classDomain_dc09d059d5102a38d70714d894be49f0}
+
+
+
+
+Definition at line 109 of file domain.h.
+
+References bounds.
+
+Referenced by Domain(), and Gui::initdisp().\hypertarget{classDomain_7d1404792c54b3832a48561bac4996a3}{
+\index{Domain@{Domain}!setMinBound@{setMinBound}}
+\index{setMinBound@{setMinBound}!Domain@{Domain}}
+\subsubsection[{setMinBound}]{\setlength{\rightskip}{0pt plus 5cm}void Domain::setMinBound (int {\em i}, \/  REAL {\em x})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classDomain_7d1404792c54b3832a48561bac4996a3}
+
+
+
+
+Definition at line 108 of file domain.h.
+
+References bounds.
+
+Referenced by Domain(), and Gui::initdisp().\hypertarget{classDomain_9ca54d0631f30e5094f3843845821e5b}{
+\index{Domain@{Domain}!step@{step}}
+\index{step@{step}!Domain@{Domain}}
+\subsubsection[{step}]{\setlength{\rightskip}{0pt plus 5cm}void Domain::step (int {\em iter})}}
+\label{classDomain_9ca54d0631f30e5094f3843845821e5b}
+
+
+
+
+Referenced by injection(), and run().
+
+\subsection{Member Data Documentation}
+\hypertarget{classDomain_160ecf16968a52e57d29a1679118bfc2}{
+\index{Domain@{Domain}!boundaries@{boundaries}}
+\index{boundaries@{boundaries}!Domain@{Domain}}
+\subsubsection[{boundaries}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Boundary} {\bf Domain::boundaries}\mbox{[}DIM\mbox{]}\mbox{[}2\mbox{]}\hspace{0.3cm}{\tt  \mbox{[}private\mbox{]}}}}
+\label{classDomain_160ecf16968a52e57d29a1679118bfc2}
+
+
+six boundaries of a hexahedral domain 
+
+
+
+Definition at line 88 of file domain.h.
+
+Referenced by boundary(), BoundaryType(), Domain(), and injection().\hypertarget{classDomain_140781c8fcb1a5176ad70097379d9021}{
+\index{Domain@{Domain}!boundaryName@{boundaryName}}
+\index{boundaryName@{boundaryName}!Domain@{Domain}}
+\subsubsection[{boundaryName}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf Domain::boundaryName}\mbox{[}maxBoundaryTypes\mbox{]}\mbox{[}WORDLENGTH\mbox{]}\hspace{0.3cm}{\tt  \mbox{[}private\mbox{]}}}}
+\label{classDomain_140781c8fcb1a5176ad70097379d9021}
+
+
+to be depricated 
+
+
+
+Definition at line 86 of file domain.h.
+
+Referenced by Domain().\hypertarget{classDomain_a7d71bbeda0ebb856c37e8deef6db9b2}{
+\index{Domain@{Domain}!bounds@{bounds}}
+\index{bounds@{bounds}!Domain@{Domain}}
+\subsubsection[{bounds}]{\setlength{\rightskip}{0pt plus 5cm}REAL {\bf Domain::bounds}\mbox{[}2\mbox{]}\mbox{[}DIM\mbox{]}\hspace{0.3cm}{\tt  \mbox{[}private\mbox{]}}}}
+\label{classDomain_a7d71bbeda0ebb856c37e8deef6db9b2}
+
+
+
+
+Definition at line 85 of file domain.h.
+
+Referenced by boundary(), Domain(), maxBound(), minBound(), setMaxBound(), and setMinBound().\hypertarget{classDomain_fbf03c1d162803247825d76ab12b8f36}{
+\index{Domain@{Domain}!bulk@{bulk}}
+\index{bulk@{bulk}!Domain@{Domain}}
+\subsubsection[{bulk}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Bulk} {\bf Domain::bulk}\hspace{0.3cm}{\tt  \mbox{[}private\mbox{]}}}}
+\label{classDomain_fbf03c1d162803247825d76ab12b8f36}
+
+
+bulk of the domain: initialized only if Run::option.restart=0 
+
+
+
+Definition at line 87 of file domain.h.
+
+Referenced by Domain(), and init().\hypertarget{classDomain_a5fcd6dd2bde60ea042f2556862d532d}{
+\index{Domain@{Domain}!distribution@{distribution}}
+\index{distribution@{distribution}!Domain@{Domain}}
+\subsubsection[{distribution}]{\setlength{\rightskip}{0pt plus 5cm}int$\ast$ {\bf Domain::distribution}\hspace{0.3cm}{\tt  \mbox{[}private\mbox{]}}}}
+\label{classDomain_a5fcd6dd2bde60ea042f2556862d532d}
+
+
+molecule counts for all species 
+
+
+
+Definition at line 84 of file domain.h.
+
+Referenced by Domain(), and run().\hypertarget{classDomain_a685b2d61313732d3f787186f900bac0}{
+\index{Domain@{Domain}!molecules@{molecules}}
+\index{molecules@{molecules}!Domain@{Domain}}
+\subsubsection[{molecules}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Collection}$<${\bf Molecule}$>$ {\bf Domain::molecules}\hspace{0.3cm}{\tt  \mbox{[}private\mbox{]}}}}
+\label{classDomain_a685b2d61313732d3f787186f900bac0}
+
+
+\hyperlink{classCollection}{Collection} of molecules. 
+
+
+
+Definition at line 89 of file domain.h.
+
+Referenced by boundary(), computeBounds(), Domain(), init(), injection(), load(), Molecules(), run(), and save().\hypertarget{classDomain_270c6f9b44dde16bd8a993f9dd6e63ba}{
+\index{Domain@{Domain}!pool@{pool}}
+\index{pool@{pool}!Domain@{Domain}}
+\subsubsection[{pool}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Pool}$<${\bf Molecule}$>$$\ast$ {\bf Domain::pool}\hspace{0.3cm}{\tt  \mbox{[}private\mbox{]}}}}
+\label{classDomain_270c6f9b44dde16bd8a993f9dd6e63ba}
+
+
+\hyperlink{classMolecule}{Molecule} pointer pool. 
+
+
+
+Definition at line 90 of file domain.h.
+
+Referenced by Domain().
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+\hyperlink{domain_8h}{domain.h}\item 
+\hyperlink{domain_8cc}{domain.cc}\end{CompactItemize}

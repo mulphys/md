@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<remody xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="mesh.xsd">
+	<iterations>9999999999</iterations> 
+	<time>
+		<start>0.0</start>
+		<step>1e-5</step>
+		<end>100.0</end>
+		<output title="Time interval for file output (0 - no output)">1.0e1</output>
+	</time>
+	<molecules title="Maximum number of molecules used">910000</molecules>
+<!-- CHEMISTRY -->
+   <!--
+      Specific heats:
+      cv=dof/2*R
+      cp=cv+R =(dof/2+1)*R
+      For monotomic molecules dof=3, which corresponds to 
+      cp=(3/2+1)*R = 5/2*R
+      since dof=2*cv/R=2*(cp/R-1)
+      where R=BoltzmanConstant*AvogadroNumber = 0.00831447 KJ/mol.K 
+      These are distributed between the translational dof:
+      doft=3
+      and internal dof:
+      dofi=dof-dofi=2*cp/R-5 
+      http://en.wikipedia.org/wiki/Heat_capacity#Heat_capacity
+		The pressure of the system is: 1 atm.
+		The temperature of the system is: 300 K.
+   -->
+	<species title="Species data: mass in au=1.66053886e-24 g, size in nm">
+		<specie id="H">
+			<mass title="Atomic Units: 1.0079">1.0</mass>
+			<!-- <size title="nanometers">0.050</size> -->
+			<size title="nanometers">0.10</size> <!-- dirty fix: increase the size to make it go faster -->
+			<cp title="heat capacity[J/(mol*K)]">20.786</cp> <!--[4]-->
+		</specie>
+		<specie id="H2a">
+			<mass title="Atomic Units: 2.0158">2.0</mass>
+			<size title="nanometers">0.232</size>
+			<cp title="heat capacity[J/(mol*K)]">28.88</cp> <!--[4]-->
+		</specie>
+		<!--<specie id="H2b">
+			<mass title="Atomic Units: 2.0158">2.0</mass>
+			<size title="nanometers">0.232</size>
+			<cp title="heat capacity[J/(mol*K)]">28.88</cp> <![4]>
+		</specie>-->
+		<specie id="O">
+			<mass title="Atomic Units">16.0</mass>
+			<size title="nanometers">0.140</size>
+			<cp title="heat capacity[J/(mol*K)]">21.89</cp> <!--[4]-->
+		</specie>
+		<specie id="O2">
+			<mass title="Atomic Units">32.0</mass>
+			<size title="nanometers">0.290</size>
+			<cp title="heat capacity[J/(mol*K)]">29.33</cp> <!--[4]-->
+		</specie>
+		<specie id="OH">
+			<mass title="Atomic Units">17.0</mass>
+			<size title="nanometers">0.25</size>
+			<cp title="heat capacity[J/(mol*K)]">29.07</cp> <!--[4]-->
+		</specie>
+		<specie id="H2O">
+			<mass title="Atomic Units: 18.015">18.0</mass>
+			<size title="nanometers">0.275</size>
+			<cp title="heat capacity[J/(mol*K)]">33.47</cp> <!--[4]-->
+		</specie>
+		<specie id="HO2">
+    <!-- Approximate: Size(HO2) = Size(O2)+(Size(H2O) - Size(O))/2 -->
+			<mass title="Atomic Units: 33.007">33.0</mass>
+			<size title="nanometers">0.3275</size>
+			<cp title="heat capacity[J/(mol*K)]">34.93</cp> <!--[4]-->
+		</specie>
+		<specie id="H2O2">
+    <!-- Approximate: Size(H2O2) = 2*(Size(O) + Size(H)) -->
+			<mass title="Atomic Units: 34.016">34.0</mass>
+			<size title="nanometers">0.340</size> <!--[2]-->
+			<cp title="heat capacity[J/(mol*K)]">43.58</cp> <!--[4]-->
+		</specie>
+		<specie id="Ni">
+			<mass title="Atomic Units: 58.6934">58.0</mass>
+			<size title="nanometers">0.270</size>			<!--Ref. 2-->
+			<cp title="heat capacity=(dof/2+1)*R[J/(mol*K)]">20.79</cp>
+		</specie>
+		<specie id="O--">
+			<mass title="Atomic Units">16.0</mass>
+			<size title="nanometers">0.280</size>
+			<cp title="heat capacity=(dof/2+1)*R[J/(mol*K)]?">20.786</cp>
+		</specie>
+		<specie id="OH-">
+			<mass title="Atomic Units">17.0</mass>
+			<size title="nanometers">0.274</size>
+			<cp title="heat capacity=(dof/2+1)*R[J/(mol*K)]?">33.26</cp>
+		</specie>
+		<specie id="H-">
+			<mass title="Atomic Units">1.0</mass>
+			<size title="nanometers">0.280</size>
+			<cp title="heat capacity=(dof/2+1)*R[J/(mol*K)]?">20.786</cp>
+		</specie>
+		<specie id="Ar">
+			<mass title="Atomic Units">39.95</mass>
+			<size title="nanometers">0.142</size>   <!--[2]-->
+			<cp title="heat capacity[J/(mol*K)]">20.50</cp> <!--[4]-->
+		</specie>
+
+	<!--References:
+		1. http://www.moleculargate.com/nitrogen-rejection-N2-removal/Coal-Bed-Methane-Upgrading.html
+		2. http://en.wikipedia.org/wiki/Atomic_radii_of_the_elements_%28data_page%29
+		3. The J. of Chem. Phys., volume 56, number 9, 1972
+		4. Conaire, et. al., "A Comprehensive Modeling Study of Hydrogen Oxidation". Int. J. Chem. Kinet. 36: 603-622, 2004
+	-->
+
+ <!-- SYNGAS - GAS PHASE REACTIONS, [4] -->
+
+	</species> 
+
+	<!-- DOMAIN -->
+	<domain name="Box">
+		<type>box</type>
+		<grid>
+			<cellsize>2.0</cellsize>
+		</grid>
+		<energy title="not ussed: to be depricated">
+			<lengthscale>100</lengthscale>
+			<strength>50.0</strength>
+		</energy>
+		<bounds title="min max for each direction in nanometers">-12.0 12.0 -25.0 25.0 -12.0 12.0</bounds>
+
+		<!--Before this simulation, the program started just with H2a molecules 
+				and it was stopped at the first output file, job-1.dat.gz. The molecules 
+				of this file were rename as H2a and just H2b molecules upper 0.0 in the 
+				Y axis getting a new file called job-2.dat.gz from which this 
+				simulation was started. Parameters at 0.1 ns,
+						T = 300.00 K
+						P = 101.325 kPa (1 atm)	
+				Composition: H2a = 50 %, H2b = 50 % at file job-2.dat.gz. 
+ 		-->
+		<bulk title="bulk properties: initial conditions">
+			<temperature title="K">300.00</temperature>
+			<specie id="H2a">
+				<density title="kg/m^3">0.081893</density>
+			</specie>
+			<!--<specie id="H2b">
+				<density title="kg/m^3">0.040946</density>
+			</specie>--> 
+		<!--<specie id="H2O">
+					<density title="kg/m^3">0.731999</density>
+				</specie> -->
+		</bulk>
+
+	<!--BOUNDARIES: 
+			Boundary types: inside, elastic, periodic, inlet, open.
+			Types determine default reaction of the boundary to particles: 
+			inside: the boundary is inside a domain (don't use)
+			elastic: particles bounce like from an elastic wall
+			periodic: particles crossing this boundary will re-appear 
+				from the opposite boundary
+			open: particles cross the boundary and disappear forever
+			<temperature> provides boundary temperature. If omitted the boundary
+				is considered adiabatic.
+			<specie> tags describe which specie can enter from across the boundary.
+			The frequency with which the species from across the boundary can enter 
+			into the domain ia derived by their pressure and boundary temperature.
+			Pressure units are kPa, density in kg/m^3, and temperature is in Kelvin.
+			As many <specie> tags can be given as necessary.
+			<reaction> tag describes surface reactions at the boundary for
+				specific species in the domain. As many reaction tags can be given 
+				as necessary. 
+			<probability> tag inside <reaction> should be 1.0 for single outcome
+				reactions, and a percentile for multiple-outcome reactions, 
+				for example, for one reaction of O2 with two possible outcomes:
+					O2 + H(s) -> OH + O
+					O2 + H(s) -> HO2
+				the probabilities can be given as 0.5 and 0.5 for each reaction,
+				or in any other ratio as appropriate, but such that all the
+				probabilities for multiple outcome reactions sum up to 1.0.		
+		-->
+
+ 		<!--  HYDROGEN PARAMETERS:
+
+					R =  8.31457 kPa.m3/(kmol*K)
+					T =  300 K
+					P =  101.325 kPa (1 atm)
+					den=p/((R/M)*T)  
+					M = molecular weight (kg/kmol): H2 = 2.016; O2 = 32.00; H20 = 18.02
+       -->
+
+			<boundary id="top"><type>elastic</type>
+				<temperature title="K">300.00</temperature>
+				<!--<specie id="H2b">
+					<density title="kg/m^3">0.081893</density>
+				</specie>-->
+			</boundary>
+
+			<boundary id="left"><type>elastic</type></boundary>
+			<boundary id="right"><type>elastic</type></boundary>
+			<boundary id="front"> <type>elastic</type></boundary>
+			<boundary id="rear"> <type>elastic</type></boundary>
+
+			<boundary id="bottom">
+				<type>elastic</type>
+				<temperature title="K">300.00</temperature> 
+	
+	<!-- SURFACE REACTIONS -->
+
+		<!--
+    		Reaction probability is used for multiple reaction outcomes to 
+         specify the probability of each outcome.
+         With a single reaction outcome the probability should be always given as 1.0.
+         Negate all the DH_r values.
+      -->
+		</boundary>
+
+	</domain>
+	<!-- GUI -->
+	<gui>
+		<translation>
+			<step>0.01</step>
+		</translation>
+		<vector>
+			<length>2.0</length>
+			<thickness>1.0</thickness>
+			<color>
+				<red>0.5</red>
+				<green>1.0</green>
+				<blue>1.0</blue>
+			</color>
+		</vector>
+		<frame>
+			<line>
+				<thickness>1.0</thickness>
+				<color>
+					<red>1.0</red>
+					<green>0.0</green>
+					<blue>0.0</blue>
+				</color>
+			</line>
+		</frame>
+		<mesh>
+			<!-- Possible Color Schemes:
+				0: by boundary
+				1: by time
+			-->
+			<node>
+				<type title="types: sphere point">point</type>
+				<!--<type>point</type>-->
+				<colorscheme>
+					<variable text="Values: mass type">type</variable>
+					<minvalue>0.0</minvalue>
+					<maxvalue>4.0</maxvalue>
+				</colorscheme>
+				<size>2.0</size>
+				<value>
+					<min>-1.0</min>
+					<max>1.0</max>
+				</value>
+				<color>
+					<!-- Basic colors: -->
+					<red>0.0</red>
+					<green>1.0</green>
+					<blue>0.0</blue>
+				</color>
+			</node>
+			<line>
+				<thickness>1.0</thickness>
+				<color>
+					<red>1.0</red>
+					<green>0.5</green>
+					<blue>0.0</blue>
+				</color>
+				<boundary_color>
+					<red>0.0</red>
+					<green>1.0</green>
+					<blue>0.5</blue>
+				</boundary_color>
+			</line>
+		</mesh>
+	</gui>	
+	<xterm>1</xterm>
+</remody>

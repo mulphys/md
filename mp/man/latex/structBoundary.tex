@@ -1,0 +1,298 @@
+\hypertarget{structBoundary}{
+\section{Boundary Class Reference}
+\label{structBoundary}\index{Boundary@{Boundary}}
+}
+\hyperlink{classDomain}{Domain} \hyperlink{structBoundary}{Boundary} Definition.  
+
+
+{\tt \#include $<$domain.h$>$}
+
+Collaboration diagram for Boundary:\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{structBoundary_7c4c8db45b13dab630e4c6ed7a958e71}{Boundary} ()
+\begin{CompactList}\small\item\em \hyperlink{structBoundary}{Boundary} constructor: sets defaults. \item\end{CompactList}\item 
+\hyperlink{structBoundary_86eab4f2362618c5b1e3d0df3a5f7f42}{$\sim$Boundary} ()
+\begin{CompactList}\small\item\em \hyperlink{structBoundary}{Boundary} destructor. \item\end{CompactList}\item 
+REAL \hyperlink{structBoundary_1e938bb18aab00e839c0c6758229a1c3}{Area} ()
+\item 
+void \hyperlink{structBoundary_36aefb40ee2ca353bc730efd0bdf9c63}{Area} (REAL a)
+\item 
+REAL \hyperlink{structBoundary_7b08a692b28e1f4ddb6d503008c92da9}{Temperature} ()
+\item 
+void \hyperlink{structBoundary_127d3c02420e5d8ec675e91b4fad9030}{Temperature} (REAL t)
+\item 
+void \hyperlink{structBoundary_67865aec3cbeb86d72d70c6ddfefe51d}{init} (int i, int j, REAL ymin\mbox{[}$\,$\mbox{]}, REAL ymax\mbox{[}$\,$\mbox{]}, int nspecies)
+\item 
+void \hyperlink{structBoundary_226f02b6130f1f539702f6c599c0eb15}{Inject} (int specietype, REAL vavx, REAL \hyperlink{structBoundary_74b059e4119e1739800fa93615f74ac2}{temperature}, \hyperlink{classCollection}{Collection}$<$ \hyperlink{classMolecule}{Molecule} $>$ $\ast$molecules)
+\begin{CompactList}\small\item\em Injecting a specie from accross the boundary with a specified velocity. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Public Attributes}
+\begin{CompactItemize}
+\item 
+int \hyperlink{structBoundary_509bdaf3fb8190c074a4d95ad12584ed}{idir}
+\begin{CompactList}\small\item\em boundary orientation in 3D space: 0,1,2 \item\end{CompactList}\item 
+int \hyperlink{structBoundary_e488ee304ed8d50941a4e8240582d815}{iside}
+\begin{CompactList}\small\item\em side of the boundary: 0,1 \item\end{CompactList}\item 
+REAL $\ast$ \hyperlink{structBoundary_fc9c689d9d8f675992fd68f91a4042a3}{xmin}
+\item 
+REAL $\ast$ \hyperlink{structBoundary_88c943adaa5964eca320bb392f242ee5}{xmax}
+\begin{CompactList}\small\item\em min/max bounds \item\end{CompactList}\item 
+\hyperlink{domain_8h_81abc9b219bae49710486f00fe2456fa}{BoundaryTypes} \hyperlink{structBoundary_5e45eab98ba76e52cf0cdc7518f1d78f}{type}
+\begin{CompactList}\small\item\em defines boundary type \item\end{CompactList}\item 
+bool \hyperlink{structBoundary_3d76841cd43b92d657c58ce7eec21248}{adiabatic}
+\begin{CompactList}\small\item\em flag for adiabatic boundary \item\end{CompactList}\item 
+REAL \hyperlink{structBoundary_2ebca8ebf70ee4a9be4ac3beb32d5be6}{area}
+\begin{CompactList}\small\item\em boundary surface area \item\end{CompactList}\item 
+REAL \hyperlink{structBoundary_74b059e4119e1739800fa93615f74ac2}{temperature}
+\begin{CompactList}\small\item\em boundary temperature \item\end{CompactList}\item 
+\hyperlink{classList}{List}$<$ Gas $>$ \hyperlink{structBoundary_692b67a420d6ddbf657e642f295ae580}{gases}
+\begin{CompactList}\small\item\em list of gases across the boundary \item\end{CompactList}\item 
+Reaction $\ast$ \hyperlink{structBoundary_b681ca73b68c662547f29ab64ee245e3}{reactions}
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classDomain}{Domain} \hyperlink{structBoundary}{Boundary} Definition. 
+
+Definition at line 18 of file domain.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{structBoundary_7c4c8db45b13dab630e4c6ed7a958e71}{
+\index{Boundary@{Boundary}!Boundary@{Boundary}}
+\index{Boundary@{Boundary}!Boundary@{Boundary}}
+\subsubsection[{Boundary}]{\setlength{\rightskip}{0pt plus 5cm}Boundary::Boundary ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{structBoundary_7c4c8db45b13dab630e4c6ed7a958e71}
+
+
+\hyperlink{structBoundary}{Boundary} constructor: sets defaults. 
+
+
+
+Definition at line 30 of file domain.h.
+
+References adiabatic, area, elasticBoundary, idir, iside, reactions, temperature, type, xmax, and xmin.\hypertarget{structBoundary_86eab4f2362618c5b1e3d0df3a5f7f42}{
+\index{Boundary@{Boundary}!$\sim$Boundary@{$\sim$Boundary}}
+\index{$\sim$Boundary@{$\sim$Boundary}!Boundary@{Boundary}}
+\subsubsection[{$\sim$Boundary}]{\setlength{\rightskip}{0pt plus 5cm}Boundary::$\sim$Boundary ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{structBoundary_86eab4f2362618c5b1e3d0df3a5f7f42}
+
+
+\hyperlink{structBoundary}{Boundary} destructor. 
+
+
+
+Definition at line 40 of file domain.h.
+
+\subsection{Member Function Documentation}
+\hypertarget{structBoundary_36aefb40ee2ca353bc730efd0bdf9c63}{
+\index{Boundary@{Boundary}!Area@{Area}}
+\index{Area@{Area}!Boundary@{Boundary}}
+\subsubsection[{Area}]{\setlength{\rightskip}{0pt plus 5cm}void Boundary::Area (REAL {\em a})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{structBoundary_36aefb40ee2ca353bc730efd0bdf9c63}
+
+
+
+
+Definition at line 44 of file domain.h.
+
+References area.\hypertarget{structBoundary_1e938bb18aab00e839c0c6758229a1c3}{
+\index{Boundary@{Boundary}!Area@{Area}}
+\index{Area@{Area}!Boundary@{Boundary}}
+\subsubsection[{Area}]{\setlength{\rightskip}{0pt plus 5cm}REAL Boundary::Area ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{structBoundary_1e938bb18aab00e839c0c6758229a1c3}
+
+
+
+
+Definition at line 43 of file domain.h.
+
+References area.\hypertarget{structBoundary_67865aec3cbeb86d72d70c6ddfefe51d}{
+\index{Boundary@{Boundary}!init@{init}}
+\index{init@{init}!Boundary@{Boundary}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}void Boundary::init (int {\em i}, \/  int {\em j}, \/  REAL {\em ymin}\mbox{[}$\,$\mbox{]}, \/  REAL {\em ymax}\mbox{[}$\,$\mbox{]}, \/  int {\em nspecies})}}
+\label{structBoundary_67865aec3cbeb86d72d70c6ddfefe51d}
+
+
+
+
+Definition at line 27 of file domain.cc.
+
+References idir, iside, reactions, xmax, and xmin.
+
+Referenced by Domain::Domain().\hypertarget{structBoundary_226f02b6130f1f539702f6c599c0eb15}{
+\index{Boundary@{Boundary}!Inject@{Inject}}
+\index{Inject@{Inject}!Boundary@{Boundary}}
+\subsubsection[{Inject}]{\setlength{\rightskip}{0pt plus 5cm}void Boundary::Inject (int {\em specietype}, \/  REAL {\em vavx}, \/  REAL {\em temperature}, \/  {\bf Collection}$<$ {\bf Molecule} $>$ $\ast$ {\em molecules})}}
+\label{structBoundary_226f02b6130f1f539702f6c599c0eb15}
+
+
+Injecting a specie from accross the boundary with a specified velocity. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em specietype}]injected specie type \item[{\em vavx}]average velocity in on direction \item[{\em temperature}]temperature \item[{\em molecules}]collection of molecules \end{description}
+\end{Desc}
+
+
+Definition at line 32 of file domain.cc.
+
+References Collection$<$ Element $>$::append(), Molecule::Coordinate(), DIM, Gui::dx, GAUSS, idir, iside, GridContainer::put(), REAL, RND, Species::Specie::Size(), SMALL, Species::species, Molecule::Temperature(), Run::time, Molecule::Type(), Molecule::Velocity(), xmax, and xmin.
+
+Referenced by Domain::injection().\hypertarget{structBoundary_127d3c02420e5d8ec675e91b4fad9030}{
+\index{Boundary@{Boundary}!Temperature@{Temperature}}
+\index{Temperature@{Temperature}!Boundary@{Boundary}}
+\subsubsection[{Temperature}]{\setlength{\rightskip}{0pt plus 5cm}void Boundary::Temperature (REAL {\em t})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{structBoundary_127d3c02420e5d8ec675e91b4fad9030}
+
+
+
+
+Definition at line 46 of file domain.h.
+
+References temperature.\hypertarget{structBoundary_7b08a692b28e1f4ddb6d503008c92da9}{
+\index{Boundary@{Boundary}!Temperature@{Temperature}}
+\index{Temperature@{Temperature}!Boundary@{Boundary}}
+\subsubsection[{Temperature}]{\setlength{\rightskip}{0pt plus 5cm}REAL Boundary::Temperature ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{structBoundary_7b08a692b28e1f4ddb6d503008c92da9}
+
+
+
+
+Definition at line 45 of file domain.h.
+
+References temperature.
+
+\subsection{Member Data Documentation}
+\hypertarget{structBoundary_3d76841cd43b92d657c58ce7eec21248}{
+\index{Boundary@{Boundary}!adiabatic@{adiabatic}}
+\index{adiabatic@{adiabatic}!Boundary@{Boundary}}
+\subsubsection[{adiabatic}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf Boundary::adiabatic}}}
+\label{structBoundary_3d76841cd43b92d657c58ce7eec21248}
+
+
+flag for adiabatic boundary 
+
+
+
+Definition at line 23 of file domain.h.
+
+Referenced by Boundary(), Domain::boundary(), and Domain::Domain().\hypertarget{structBoundary_2ebca8ebf70ee4a9be4ac3beb32d5be6}{
+\index{Boundary@{Boundary}!area@{area}}
+\index{area@{area}!Boundary@{Boundary}}
+\subsubsection[{area}]{\setlength{\rightskip}{0pt plus 5cm}REAL {\bf Boundary::area}}}
+\label{structBoundary_2ebca8ebf70ee4a9be4ac3beb32d5be6}
+
+
+boundary surface area 
+
+
+
+Definition at line 25 of file domain.h.
+
+Referenced by Area(), Boundary(), Domain::Domain(), and Domain::injection().\hypertarget{structBoundary_692b67a420d6ddbf657e642f295ae580}{
+\index{Boundary@{Boundary}!gases@{gases}}
+\index{gases@{gases}!Boundary@{Boundary}}
+\subsubsection[{gases}]{\setlength{\rightskip}{0pt plus 5cm}{\bf List}$<$Gas$>$ {\bf Boundary::gases}}}
+\label{structBoundary_692b67a420d6ddbf657e642f295ae580}
+
+
+list of gases across the boundary 
+
+
+
+Definition at line 27 of file domain.h.
+
+Referenced by Domain::Domain(), and Domain::injection().\hypertarget{structBoundary_509bdaf3fb8190c074a4d95ad12584ed}{
+\index{Boundary@{Boundary}!idir@{idir}}
+\index{idir@{idir}!Boundary@{Boundary}}
+\subsubsection[{idir}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf Boundary::idir}}}
+\label{structBoundary_509bdaf3fb8190c074a4d95ad12584ed}
+
+
+boundary orientation in 3D space: 0,1,2 
+
+
+
+Definition at line 19 of file domain.h.
+
+Referenced by Boundary(), init(), and Inject().\hypertarget{structBoundary_e488ee304ed8d50941a4e8240582d815}{
+\index{Boundary@{Boundary}!iside@{iside}}
+\index{iside@{iside}!Boundary@{Boundary}}
+\subsubsection[{iside}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf Boundary::iside}}}
+\label{structBoundary_e488ee304ed8d50941a4e8240582d815}
+
+
+side of the boundary: 0,1 
+
+
+
+Definition at line 19 of file domain.h.
+
+Referenced by Boundary(), init(), and Inject().\hypertarget{structBoundary_b681ca73b68c662547f29ab64ee245e3}{
+\index{Boundary@{Boundary}!reactions@{reactions}}
+\index{reactions@{reactions}!Boundary@{Boundary}}
+\subsubsection[{reactions}]{\setlength{\rightskip}{0pt plus 5cm}Reaction$\ast$ {\bf Boundary::reactions}}}
+\label{structBoundary_b681ca73b68c662547f29ab64ee245e3}
+
+
+boundary reactions with all species 
+
+Definition at line 28 of file domain.h.
+
+Referenced by Boundary(), Domain::boundary(), Domain::Domain(), and init().\hypertarget{structBoundary_74b059e4119e1739800fa93615f74ac2}{
+\index{Boundary@{Boundary}!temperature@{temperature}}
+\index{temperature@{temperature}!Boundary@{Boundary}}
+\subsubsection[{temperature}]{\setlength{\rightskip}{0pt plus 5cm}REAL {\bf Boundary::temperature}}}
+\label{structBoundary_74b059e4119e1739800fa93615f74ac2}
+
+
+boundary temperature 
+
+
+
+Definition at line 25 of file domain.h.
+
+Referenced by Boundary(), Domain::boundary(), Domain::Domain(), Domain::injection(), and Temperature().\hypertarget{structBoundary_5e45eab98ba76e52cf0cdc7518f1d78f}{
+\index{Boundary@{Boundary}!type@{type}}
+\index{type@{type}!Boundary@{Boundary}}
+\subsubsection[{type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf BoundaryTypes} {\bf Boundary::type}}}
+\label{structBoundary_5e45eab98ba76e52cf0cdc7518f1d78f}
+
+
+defines boundary type 
+
+
+
+Definition at line 22 of file domain.h.
+
+Referenced by Boundary(), Domain::boundary(), Domain::BoundaryType(), and Domain::Domain().\hypertarget{structBoundary_88c943adaa5964eca320bb392f242ee5}{
+\index{Boundary@{Boundary}!xmax@{xmax}}
+\index{xmax@{xmax}!Boundary@{Boundary}}
+\subsubsection[{xmax}]{\setlength{\rightskip}{0pt plus 5cm}REAL $\ast$ {\bf Boundary::xmax}}}
+\label{structBoundary_88c943adaa5964eca320bb392f242ee5}
+
+
+min/max bounds 
+
+
+
+Definition at line 21 of file domain.h.
+
+Referenced by Boundary(), init(), and Inject().\hypertarget{structBoundary_fc9c689d9d8f675992fd68f91a4042a3}{
+\index{Boundary@{Boundary}!xmin@{xmin}}
+\index{xmin@{xmin}!Boundary@{Boundary}}
+\subsubsection[{xmin}]{\setlength{\rightskip}{0pt plus 5cm}REAL$\ast$ {\bf Boundary::xmin}}}
+\label{structBoundary_fc9c689d9d8f675992fd68f91a4042a3}
+
+
+
+
+Definition at line 21 of file domain.h.
+
+Referenced by Boundary(), init(), and Inject().
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+\hyperlink{domain_8h}{domain.h}\item 
+\hyperlink{domain_8cc}{domain.cc}\end{CompactItemize}

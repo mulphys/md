@@ -1,0 +1,172 @@
+\hypertarget{structPool}{
+\section{Pool$<$ Element $>$ Struct Template Reference}
+\label{structPool}\index{Pool@{Pool}}
+}
+{\tt \#include $<$collection.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{structPool_cb28baa3e52a1256f3832f6888780580}{Pool} (int \hyperlink{structPool_1821fe943de779fbf3b69beae8e7a7b1}{nptrs})
+\item 
+\hyperlink{structPool_1c8a8beac7294a0076e6086c244b2f1c}{$\sim$Pool} ()
+\item 
+int \hyperlink{structPool_35eacf63cd8789880331d6a1e60e40d7}{size} ()
+\item 
+\hyperlink{structPtr}{Ptr}$<$ Element $>$ $\ast$ \hyperlink{structPool_46e44058b21fbfd2c6f613739993439b}{get} ()
+\item 
+bool \hyperlink{structPool_4c8f2bd60ea783e997286b8cc39d3e4f}{put} (\hyperlink{structPtr}{Ptr}$<$ Element $>$ $\ast$ptr)
+\item 
+bool \hyperlink{structPool_377972ba9ffbcf6574d611bc1d9be56b}{check} (char $\ast$msg)
+\end{CompactItemize}
+\subsection*{Public Attributes}
+\begin{CompactItemize}
+\item 
+int \hyperlink{structPool_eaa0d991002928f9bd985fd15c8fb525}{mptrs}
+\item 
+int \hyperlink{structPool_1821fe943de779fbf3b69beae8e7a7b1}{nptrs}
+\item 
+\hyperlink{structPtr}{Ptr}$<$ Element $>$ $\ast$ \hyperlink{structPool_7d28b4715d9de0dbf13f8188e726a49f}{hook}
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class Element$>$ struct Pool$<$ Element $>$}
+
+
+
+Definition at line 414 of file collection.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{structPool_cb28baa3e52a1256f3832f6888780580}{
+\index{Pool@{Pool}!Pool@{Pool}}
+\index{Pool@{Pool}!Pool@{Pool}}
+\subsubsection[{Pool}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element $>$ {\bf Pool}$<$ Element $>$::{\bf Pool} (int {\em nptrs})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{structPool_cb28baa3e52a1256f3832f6888780580}
+
+
+
+
+Definition at line 425 of file collection.h.
+
+References Ptr$<$ Element $>$::element, Pool$<$ Element $>$::hook, Pool$<$ Element $>$::mptrs, Ptr$<$ Element $>$::next, Pool$<$ Element $>$::nptrs, Run::option, and Ptr$<$ Element $>$::prev.\hypertarget{structPool_1c8a8beac7294a0076e6086c244b2f1c}{
+\index{Pool@{Pool}!$\sim$Pool@{$\sim$Pool}}
+\index{$\sim$Pool@{$\sim$Pool}!Pool@{Pool}}
+\subsubsection[{$\sim$Pool}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element $>$ {\bf Pool}$<$ Element $>$::$\sim${\bf Pool} ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{structPool_1c8a8beac7294a0076e6086c244b2f1c}
+
+
+
+
+Definition at line 451 of file collection.h.
+
+References Pool$<$ Element $>$::hook, Pool$<$ Element $>$::mptrs, and Pool$<$ Element $>$::nptrs.
+
+\subsection{Member Function Documentation}
+\hypertarget{structPool_377972ba9ffbcf6574d611bc1d9be56b}{
+\index{Pool@{Pool}!check@{check}}
+\index{check@{check}!Pool@{Pool}}
+\subsubsection[{check}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element $>$ bool {\bf Pool}$<$ Element $>$::check (char $\ast$ {\em msg})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{structPool_377972ba9ffbcf6574d611bc1d9be56b}
+
+
+
+
+DDD
+
+DDD
+
+DDD
+
+DDD
+
+DDD
+
+DDD
+
+DDD
+
+DDD 
+
+Definition at line 495 of file collection.h.
+
+References Pool$<$ Element $>$::hook, Pool$<$ Element $>$::mptrs, Ptr$<$ Element $>$::next, and Pool$<$ Element $>$::nptrs.
+
+Referenced by Container$<$ Element $>$::checkPool().\hypertarget{structPool_46e44058b21fbfd2c6f613739993439b}{
+\index{Pool@{Pool}!get@{get}}
+\index{get@{get}!Pool@{Pool}}
+\subsubsection[{get}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element $>$ {\bf Ptr}$<$ Element $>$ $\ast$ {\bf Pool}$<$ Element $>$::get ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{structPool_46e44058b21fbfd2c6f613739993439b}
+
+
+
+
+DDD: probably not needed, but just to be on the safe side 
+
+Definition at line 457 of file collection.h.
+
+References Pool$<$ Element $>$::hook, Ptr$<$ Element $>$::next, Pool$<$ Element $>$::nptrs, and Ptr$<$ Element $>$::prev.
+
+Referenced by Container$<$ Element $>$::append0(), and Container$<$ Element $>$::insert0().\hypertarget{structPool_4c8f2bd60ea783e997286b8cc39d3e4f}{
+\index{Pool@{Pool}!put@{put}}
+\index{put@{put}!Pool@{Pool}}
+\subsubsection[{put}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ bool {\bf Pool}$<$ Element $>$::put ({\bf Ptr}$<$ Element $>$ $\ast$ {\em ptr})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{structPool_4c8f2bd60ea783e997286b8cc39d3e4f}
+
+
+
+
+Definition at line 471 of file collection.h.
+
+References Pool$<$ Element $>$::hook, Pool$<$ Element $>$::mptrs, Ptr$<$ Element $>$::next, Pool$<$ Element $>$::nptrs, and Ptr$<$ Element $>$::prev.
+
+Referenced by Container$<$ Element $>$::remove0().\hypertarget{structPool_35eacf63cd8789880331d6a1e60e40d7}{
+\index{Pool@{Pool}!size@{size}}
+\index{size@{size}!Pool@{Pool}}
+\subsubsection[{size}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ int {\bf Pool}$<$ Element $>$::size ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{structPool_35eacf63cd8789880331d6a1e60e40d7}
+
+
+
+
+Definition at line 419 of file collection.h.
+
+\subsection{Member Data Documentation}
+\hypertarget{structPool_7d28b4715d9de0dbf13f8188e726a49f}{
+\index{Pool@{Pool}!hook@{hook}}
+\index{hook@{hook}!Pool@{Pool}}
+\subsubsection[{hook}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ {\bf Ptr}$<$Element$>$$\ast$ {\bf Pool}$<$ Element $>$::{\bf hook}}}
+\label{structPool_7d28b4715d9de0dbf13f8188e726a49f}
+
+
+
+
+Definition at line 416 of file collection.h.
+
+Referenced by Pool$<$ Element $>$::check(), Container$<$ Element $>$::checkPool(), Pool$<$ Element $>$::get(), Pool$<$ Element $>$::Pool(), Pool$<$ Element $>$::put(), and Pool$<$ Element $>$::$\sim$Pool().\hypertarget{structPool_eaa0d991002928f9bd985fd15c8fb525}{
+\index{Pool@{Pool}!mptrs@{mptrs}}
+\index{mptrs@{mptrs}!Pool@{Pool}}
+\subsubsection[{mptrs}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ int {\bf Pool}$<$ Element $>$::{\bf mptrs}}}
+\label{structPool_eaa0d991002928f9bd985fd15c8fb525}
+
+
+
+
+Definition at line 415 of file collection.h.
+
+Referenced by Pool$<$ Element $>$::check(), Pool$<$ Element $>$::Pool(), Pool$<$ Element $>$::put(), and Pool$<$ Element $>$::$\sim$Pool().\hypertarget{structPool_1821fe943de779fbf3b69beae8e7a7b1}{
+\index{Pool@{Pool}!nptrs@{nptrs}}
+\index{nptrs@{nptrs}!Pool@{Pool}}
+\subsubsection[{nptrs}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Element$>$ int {\bf Pool}$<$ Element $>$::{\bf nptrs}}}
+\label{structPool_1821fe943de779fbf3b69beae8e7a7b1}
+
+
+
+
+Definition at line 415 of file collection.h.
+
+Referenced by Pool$<$ Element $>$::check(), Pool$<$ Element $>$::get(), Pool$<$ Element $>$::Pool(), Pool$<$ Element $>$::put(), Pool$<$ Molecule $>$::size(), and Pool$<$ Element $>$::$\sim$Pool().
+
+The documentation for this struct was generated from the following file:\begin{CompactItemize}
+\item 
+\hyperlink{collection_8h}{collection.h}\end{CompactItemize}

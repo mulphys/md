@@ -1,0 +1,80 @@
+\hypertarget{run_8cc}{
+\section{run.cc File Reference}
+\label{run_8cc}\index{run.cc@{run.cc}}
+}
+{\tt \#include $<$string.h$>$}\par
+{\tt \#include $<$math.h$>$}\par
+{\tt \#include $<$sys/timeb.h$>$}\par
+{\tt \#include $<$libxml/xmlmemory.h$>$}\par
+{\tt \#include $<$libxml/parser.h$>$}\par
+{\tt \#include $<$iostream$>$}\par
+{\tt \#include \char`\"{}def.h\char`\"{}}\par
+{\tt \#include \char`\"{}run.h\char`\"{}}\par
+{\tt \#include \char`\"{}io.h\char`\"{}}\par
+
+
+Include dependency graph for run.cc:\subsection*{Namespaces}
+\begin{CompactItemize}
+\item 
+namespace \hyperlink{namespaceRun}{Run}
+\begin{CompactList}\small\item\em Processing command-line and execution control parameters. \item\end{CompactList}
+
+\end{CompactItemize}
+\subsection*{Defines}
+\begin{CompactItemize}
+\item 
+\#define \hyperlink{run_8cc_690f251553b39fd4f31894826141b61a}{RAND\_\-MAX}~2147483647
+\end{CompactItemize}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+void \hyperlink{namespaceRun_a186b3a7a41e8fe7a5fa65e70577ebfd}{Run::testrnd} ()
+\begin{CompactList}\small\item\em Test random numer generator. \item\end{CompactList}\item 
+REAL \hyperlink{namespaceRun_61c4192fdab078a931b0b143c2489a66}{Run::rnd} ()
+\begin{CompactList}\small\item\em Seeds random number. \item\end{CompactList}\item 
+REAL \hyperlink{namespaceRun_d4c4416d555619b82bbaad195bbb1dcc}{Run::gauss} ()
+\begin{CompactList}\small\item\em normal random number generator \item\end{CompactList}\item 
+void \hyperlink{namespaceRun_719eff34d155bf728b3c621f7c6b1c92}{Run::init} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\begin{CompactList}\small\item\em Initialize all variables, and execution options. \item\end{CompactList}\item 
+void \hyperlink{namespaceRun_bce2c6229363ea0c1a164b61fcd06f89}{Run::readcmdline} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\begin{CompactList}\small\item\em Parses command-line options. \item\end{CompactList}\item 
+int \hyperlink{namespaceRun_4062bda6143a9042da86a5f48ad6daf5}{Run::elapsed} ()
+\begin{CompactList}\small\item\em time (sec) elapsed since the start of the run \item\end{CompactList}\end{CompactItemize}
+\subsection*{Variables}
+\begin{CompactItemize}
+\item 
+struct \hyperlink{structOption}{Option} \hyperlink{namespaceRun_724100d30eed9a8f5ac9ec41e76e4c40}{Run::option} = \{0,0,0,0\}
+\begin{CompactList}\small\item\em command-line options \item\end{CompactList}\item 
+void($\ast$ \hyperlink{namespaceRun_110719db892c2b065597a3ded0d90c2d}{Run::usage} )()
+\item 
+char \hyperlink{namespaceRun_f2d1163d068ab8ea8c75abd469c4a43f}{Run::programname} \mbox{[}MAXLINLEN\mbox{]}
+\item 
+char \hyperlink{namespaceRun_3a8e039898acf6eb150d36bfc1b799b6}{Run::configfile} \mbox{[}MAXLINLEN\mbox{]}
+\item 
+char \hyperlink{namespaceRun_4f57473c9c02d920b7b738c37597f972}{Run::outputfile} \mbox{[}MAXLINLEN\mbox{]}
+\item 
+char \hyperlink{namespaceRun_70e0ce554030dedb8ebc665cfb95167a}{Run::inputfile} \mbox{[}MAXLINLEN\mbox{]}
+\item 
+char \hyperlink{namespaceRun_764ba544be98b57556f317ca171d7969}{Run::outputname} \mbox{[}MAXLINLEN\mbox{]}
+\item 
+int \hyperlink{namespaceRun_b8a2ab3c70feb348697b53df22451f3c}{Run::nthreads}
+\item 
+struct timeb \hyperlink{namespaceRun_73327ac5b154c258e9b88ea0260d50ad}{Run::worldtime}
+\item 
+struct Time \hyperlink{namespaceRun_0b48df515ddd51b80cedcfd90d8c1dc3}{Run::time}
+\end{CompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{run_8cc_690f251553b39fd4f31894826141b61a}{
+\index{run.cc@{run.cc}!RAND\_\-MAX@{RAND\_\-MAX}}
+\index{RAND\_\-MAX@{RAND\_\-MAX}!run.cc@{run.cc}}
+\subsubsection[{RAND\_\-MAX}]{\setlength{\rightskip}{0pt plus 5cm}\#define RAND\_\-MAX~2147483647}}
+\label{run_8cc_690f251553b39fd4f31894826141b61a}
+
+
+
+
+Definition at line 14 of file run.cc.
+
+Referenced by Run::rnd(), and Run::testrnd().

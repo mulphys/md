@@ -1,0 +1,33 @@
+/*! \page Output Output
+\section SecOutput Output Procedures
+
+There are three data output methods that can be used: 
+
+   - Compressed snapshots of coordinates, velocities, and internal energies stored in
+     gzipped ASCII format files. The files are dumped at time intervals specified in the
+     input XML file under tag: &lt;time&gt;&lt;output&gt;...&lt;/output&gt;&lt;/time&gt; with
+     the file names in format: &lt;task&gt;-&lt;step&gt;.dat.gz, where &lt;task&gt; is the
+     name of the task, which is the same as the name of the executable file (job, view, or any
+     other), and the &lt;step&gt; is the sequence number of the dump, which is automatically
+     incremented for each subsequent dump.
+     The output is performed by <tt>save()</tt> function of Domain class implemented in
+     <tt>domain.cc</tt> file. 
+
+   - Terminal output of time sequence of average quantities, such as the number of
+     molecules (N), average temperature (T), kinetic (K), internal (I), and total energy (E) per molecule and
+     per degree of freedom. In addition to that is also outputs the physical time (Time) in nanoseconds and 
+     memory utilization (Memory). The terminal output can be toggled with
+     &lt;xterm&gt;0,1&lt;/xterm&gt; flag in XML file. The output can be captured into a
+     file using redirect command, like:
+
+     <tt>./job > log.log &</tt>
+
+     and post-processed using the Python <tt>readlog.py</tt> utility (see \ref FAQ).
+     The terminal output is performed inside the <tt>Domain::run()</tt> function at every
+     designated time interval.
+
+   - The last method is to dump the graphics window in X-Window dump format (XWD) and then convert into one 
+     of the common graphics formats, such as png or jpg using standard convert utilities,
+     such as ImageMagic's convert. See also Sec. \ref SecGUI.
+
+*/

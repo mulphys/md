@@ -1,0 +1,153 @@
+\hypertarget{structSpecies_1_1Reaction}{
+\section{Species::Reaction Struct Reference}
+\label{structSpecies_1_1Reaction}\index{Species::Reaction@{Species::Reaction}}
+}
+\hyperlink{structSpecies_1_1Reaction}{Reaction} determines the two products only.  
+
+
+{\tt \#include $<$species.h$>$}
+
+Collaboration diagram for Species::Reaction:\subsection*{Classes}
+\begin{CompactItemize}
+\item 
+struct \hyperlink{structSpecies_1_1Reaction_1_1Outcome}{Outcome}
+\begin{CompactList}\small\item\em Possible outcomes of a reaction. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{structSpecies_1_1Reaction_29289bc048b0654d5c01a804ac3e79f6}{Reaction} ()
+\item 
+\hyperlink{structSpecies_1_1Reaction_4a5235ff4fada5966f38ac8e0ff2b56b}{$\sim$Reaction} ()
+\item 
+void \hyperlink{structSpecies_1_1Reaction_8054a4e4db808d4cfff326f38dec8825}{Erase} (\hyperlink{structSpecies_1_1Reaction_1_1Outcome}{Outcome} $\ast$outcome)
+\item 
+void \hyperlink{structSpecies_1_1Reaction_bf043ef67abfae073216b5aa48163315}{Add} (int ip0, int ip1, REAL a, REAL p, REAL h)
+\item 
+\hyperlink{structSpecies_1_1Reaction_1_1Outcome}{Outcome} $\ast$ \hyperlink{structSpecies_1_1Reaction_5650db946162048690bf038523a7faaa}{First} ()
+\item 
+\hyperlink{structSpecies_1_1Reaction_1_1Outcome}{Outcome} $\ast$ \hyperlink{structSpecies_1_1Reaction_f07ac4b72739ce571d967558d96d0940}{Next} ()
+\end{CompactItemize}
+\subsection*{Public Attributes}
+\begin{CompactItemize}
+\item 
+struct \hyperlink{structSpecies_1_1Reaction_1_1Outcome}{Species::Reaction::Outcome} $\ast$ \hyperlink{structSpecies_1_1Reaction_f7ceec44369f69484487759d39ef9295}{outcomes}
+\begin{CompactList}\small\item\em Possible outcomes of a reaction. \item\end{CompactList}\item 
+struct \hyperlink{structSpecies_1_1Reaction_1_1Outcome}{Species::Reaction::Outcome} $\ast$ \hyperlink{structSpecies_1_1Reaction_55dc123c04036012bffc584ff41bc046}{current}
+\begin{CompactList}\small\item\em all outcomes, and the current outcome \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{structSpecies_1_1Reaction}{Reaction} determines the two products only. 
+
+Definition at line 35 of file species.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{structSpecies_1_1Reaction_29289bc048b0654d5c01a804ac3e79f6}{
+\index{Species::Reaction@{Species::Reaction}!Reaction@{Reaction}}
+\index{Reaction@{Reaction}!Species::Reaction@{Species::Reaction}}
+\subsubsection[{Reaction}]{\setlength{\rightskip}{0pt plus 5cm}Species::Reaction::Reaction ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{structSpecies_1_1Reaction_29289bc048b0654d5c01a804ac3e79f6}
+
+
+
+
+Definition at line 126 of file species.h.
+
+References current, and outcomes.\hypertarget{structSpecies_1_1Reaction_4a5235ff4fada5966f38ac8e0ff2b56b}{
+\index{Species::Reaction@{Species::Reaction}!$\sim$Reaction@{$\sim$Reaction}}
+\index{$\sim$Reaction@{$\sim$Reaction}!Species::Reaction@{Species::Reaction}}
+\subsubsection[{$\sim$Reaction}]{\setlength{\rightskip}{0pt plus 5cm}Species::Reaction::$\sim$Reaction ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{structSpecies_1_1Reaction_4a5235ff4fada5966f38ac8e0ff2b56b}
+
+
+
+
+Definition at line 127 of file species.h.
+
+References Erase(), and outcomes.
+
+\subsection{Member Function Documentation}
+\hypertarget{structSpecies_1_1Reaction_bf043ef67abfae073216b5aa48163315}{
+\index{Species::Reaction@{Species::Reaction}!Add@{Add}}
+\index{Add@{Add}!Species::Reaction@{Species::Reaction}}
+\subsubsection[{Add}]{\setlength{\rightskip}{0pt plus 5cm}void Species::Reaction::Add (int {\em ip0}, \/  int {\em ip1}, \/  REAL {\em a}, \/  REAL {\em p}, \/  REAL {\em h})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{structSpecies_1_1Reaction_bf043ef67abfae073216b5aa48163315}
+
+
+
+
+Add reaction products, probability, and enthalpy: 
+
+Definition at line 135 of file species.h.
+
+References Species::Reaction::Reaction::Outcome::next, and outcomes.
+
+Referenced by Domain::Domain().\hypertarget{structSpecies_1_1Reaction_8054a4e4db808d4cfff326f38dec8825}{
+\index{Species::Reaction@{Species::Reaction}!Erase@{Erase}}
+\index{Erase@{Erase}!Species::Reaction@{Species::Reaction}}
+\subsubsection[{Erase}]{\setlength{\rightskip}{0pt plus 5cm}void Species::Reaction::Erase ({\bf Outcome} $\ast$ {\em outcome})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{structSpecies_1_1Reaction_8054a4e4db808d4cfff326f38dec8825}
+
+
+
+
+Definition at line 131 of file species.h.
+
+References Species::Reaction::Reaction::Outcome::next.
+
+Referenced by $\sim$Reaction().\hypertarget{structSpecies_1_1Reaction_5650db946162048690bf038523a7faaa}{
+\index{Species::Reaction@{Species::Reaction}!First@{First}}
+\index{First@{First}!Species::Reaction@{Species::Reaction}}
+\subsubsection[{First}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Outcome}$\ast$ Species::Reaction::First ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{structSpecies_1_1Reaction_5650db946162048690bf038523a7faaa}
+
+
+
+
+Definition at line 157 of file species.h.
+
+References current, and outcomes.
+
+Referenced by Domain::boundary(), Domain::Domain(), and Domain::interact().\hypertarget{structSpecies_1_1Reaction_f07ac4b72739ce571d967558d96d0940}{
+\index{Species::Reaction@{Species::Reaction}!Next@{Next}}
+\index{Next@{Next}!Species::Reaction@{Species::Reaction}}
+\subsubsection[{Next}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Outcome}$\ast$ Species::Reaction::Next ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{structSpecies_1_1Reaction_f07ac4b72739ce571d967558d96d0940}
+
+
+
+
+Definition at line 158 of file species.h.
+
+References current, Species::Reaction::Reaction::Outcome::next, and outcomes.
+
+Referenced by Domain::boundary(), Domain::Domain(), and Domain::interact().
+
+\subsection{Member Data Documentation}
+\hypertarget{structSpecies_1_1Reaction_55dc123c04036012bffc584ff41bc046}{
+\index{Species::Reaction@{Species::Reaction}!current@{current}}
+\index{current@{current}!Species::Reaction@{Species::Reaction}}
+\subsubsection[{current}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf Species::Reaction::Outcome}$\ast$ {\bf Species::Reaction::current}}}
+\label{structSpecies_1_1Reaction_55dc123c04036012bffc584ff41bc046}
+
+
+all outcomes, and the current outcome 
+
+
+
+Referenced by First(), Next(), and Reaction().\hypertarget{structSpecies_1_1Reaction_f7ceec44369f69484487759d39ef9295}{
+\index{Species::Reaction@{Species::Reaction}!outcomes@{outcomes}}
+\index{outcomes@{outcomes}!Species::Reaction@{Species::Reaction}}
+\subsubsection[{outcomes}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf Species::Reaction::Outcome}	$\ast$ {\bf Species::Reaction::outcomes}}}
+\label{structSpecies_1_1Reaction_f7ceec44369f69484487759d39ef9295}
+
+
+Possible outcomes of a reaction. 
+
+
+
+Referenced by Add(), First(), Next(), Reaction(), and $\sim$Reaction().
+
+The documentation for this struct was generated from the following file:\begin{CompactItemize}
+\item 
+\hyperlink{species_8h}{species.h}\end{CompactItemize}

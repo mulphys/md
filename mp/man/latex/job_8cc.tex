@@ -1,0 +1,106 @@
+\hypertarget{job_8cc}{
+\section{job.cc File Reference}
+\label{job_8cc}\index{job.cc@{job.cc}}
+}
+The ReMoDy backend.  
+
+
+{\tt \#include $<$string.h$>$}\par
+{\tt \#include $<$cstdlib$>$}\par
+{\tt \#include $<$iostream$>$}\par
+{\tt \#include $<$libxml/xmlmemory.h$>$}\par
+{\tt \#include $<$libxml/parser.h$>$}\par
+{\tt \#include $<$math.h$>$}\par
+{\tt \#include \char`\"{}def.h\char`\"{}}\par
+{\tt \#include \char`\"{}io.h\char`\"{}}\par
+{\tt \#include \char`\"{}run.h\char`\"{}}\par
+{\tt \#include \char`\"{}list.h\char`\"{}}\par
+{\tt \#include \char`\"{}collection.h\char`\"{}}\par
+{\tt \#include \char`\"{}model.h\char`\"{}}\par
+{\tt \#include \char`\"{}species.h\char`\"{}}\par
+{\tt \#include \char`\"{}domain.h\char`\"{}}\par
+
+
+Include dependency graph for job.cc:\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+void \hyperlink{job_8cc_2ef30c42cbc289d899a8be5d2d8f77d0}{usage} ()
+\item 
+void \hyperlink{job_8cc_fc14b6317b5568f802ef11ec6b297f36}{parsename} (char $\ast$name, char $\ast$filename)
+\begin{CompactList}\small\item\em Strips the suffix from the filename. \item\end{CompactList}\item 
+int \hyperlink{job_8cc_0ddf1224851353fc92bfbff6f499fa97}{main} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\begin{CompactList}\small\item\em The Main routine for a batch mode. Executes a background job. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+The ReMoDy backend. 
+
+Executes background job. 
+
+Definition in file \hyperlink{job_8cc-source}{job.cc}.
+
+\subsection{Function Documentation}
+\hypertarget{job_8cc_0ddf1224851353fc92bfbff6f499fa97}{
+\index{job.cc@{job.cc}!main@{main}}
+\index{main@{main}!job.cc@{job.cc}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (int {\em argc}, \/  char $\ast$ {\em argv}\mbox{[}$\,$\mbox{]})}}
+\label{job_8cc_0ddf1224851353fc92bfbff6f499fa97}
+
+
+The Main routine for a batch mode. Executes a background job. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em argc,argv,:}]standard command line arguments \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]exit code 0 - success, 1 - failure. \end{Desc}
+
+
+parses command line arguments
+
+creates a domain instance
+
+erases screen
+
+runs the code
+
+retrieves taskname
+
+retrieves taskname
+
+saves data 
+
+Definition at line 41 of file job.cc.
+
+References Run::configfile, Gui::domain, ESC, IO::getIter(), Run::init(), Run::inputfile, Run::option, parsename(), Run::programname, Domain::run(), Domain::save(), and WORDLENGTH.\hypertarget{job_8cc_fc14b6317b5568f802ef11ec6b297f36}{
+\index{job.cc@{job.cc}!parsename@{parsename}}
+\index{parsename@{parsename}!job.cc@{job.cc}}
+\subsubsection[{parsename}]{\setlength{\rightskip}{0pt plus 5cm}void parsename (char $\ast$ {\em name}, \/  char $\ast$ {\em filename})}}
+\label{job_8cc_fc14b6317b5568f802ef11ec6b297f36}
+
+
+Strips the suffix from the filename. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em filename,:}]file name including suffix \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]name: file name with suffix removed \end{Desc}
+
+
+Definition at line 30 of file job.cc.
+
+Referenced by main().\hypertarget{job_8cc_2ef30c42cbc289d899a8be5d2d8f77d0}{
+\index{job.cc@{job.cc}!usage@{usage}}
+\index{usage@{usage}!job.cc@{job.cc}}
+\subsubsection[{usage}]{\setlength{\rightskip}{0pt plus 5cm}void usage ()}}
+\label{job_8cc_2ef30c42cbc289d899a8be5d2d8f77d0}
+
+
+
+
+Definition at line 23 of file job.cc.

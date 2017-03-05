@@ -1,0 +1,143 @@
+\hypertarget{model_8h}{
+\section{model.h File Reference}
+\label{model_8h}\index{model.h@{model.h}}
+}
+
+
+This graph shows which files directly or indirectly include this file:\subsection*{Classes}
+\begin{CompactItemize}
+\item 
+union \hyperlink{unionState}{State}
+\item 
+class \hyperlink{classMolecule}{Molecule}
+\end{CompactItemize}
+\subsection*{Namespaces}
+\begin{CompactItemize}
+\item 
+namespace \hyperlink{namespacePotential}{Potential}
+\begin{CompactList}\small\item\em Interaction-potential functions, such as LJ. \item\end{CompactList}
+
+\item 
+namespace \hyperlink{namespaceGeom}{Geom}
+\begin{CompactList}\small\item\em Provides some trigeometry functions. \item\end{CompactList}
+
+\end{CompactItemize}
+\subsection*{Defines}
+\begin{CompactItemize}
+\item 
+\#define \hyperlink{model_8h_cd774a2f685c6893dcbc9015893f8585}{HARDBALLS}
+\begin{CompactList}\small\item\em hardball collision as opposed to interaction via a potential \item\end{CompactList}\end{CompactItemize}
+\subsection*{Enumerations}
+\begin{CompactItemize}
+\item 
+enum \hyperlink{model_8h_90187db2e362685cff80df2de86a0ba3}{AtomType} \{ \par
+\hyperlink{model_8h_90187db2e362685cff80df2de86a0ba3f35387cab0e820dcf7df1ed4702043e1}{undefined} = 0, 
+\hyperlink{model_8h_90187db2e362685cff80df2de86a0ba360ec43ced5bbdb55ae28686ffb6d77d7}{hydrogen} = 1, 
+\hyperlink{model_8h_90187db2e362685cff80df2de86a0ba3abdf1d307737c3722cbd5f7b4d103672}{helium} = 2, 
+\hyperlink{model_8h_90187db2e362685cff80df2de86a0ba36770cc2d7cb274aa19bb09d9b128c784}{carbon} = 12, 
+\par
+\hyperlink{model_8h_90187db2e362685cff80df2de86a0ba35babf47d8530a99487d8570abd488474}{oxygen} = 16, 
+\hyperlink{model_8h_90187db2e362685cff80df2de86a0ba3fddfc9bb5182c9d464592fbde40e766f}{maxAtomTypes}
+ \}
+\end{CompactItemize}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+void \hyperlink{namespacePotential_40f447bd2b6382c6a6e9170bcba9538a}{Potential::strength} (REAL strength)
+\item 
+REAL \hyperlink{namespacePotential_dddc93ac78511fe0bb740eb7f60c0586}{Potential::strength} ()
+\item 
+void \hyperlink{namespacePotential_cd514cd5456126aec5806df5bf4c606d}{Potential::lengthscale} (REAL lengthscale)
+\item 
+REAL \hyperlink{namespacePotential_97fea8d42e4e224a7f7aba10ef59a9ad}{Potential::lengthscale} ()
+\item 
+void \hyperlink{namespacePotential_623b983939aa06313660e1e37d796ddc}{Potential::Cutoff} (REAL newcutoff)
+\item 
+REAL \hyperlink{namespacePotential_4a1d0ff492f72f8a5962f07f483caa1f}{Potential::Cutoff} ()
+\item 
+REAL \hyperlink{namespacePotential_b53f8127419fc9606a455218ad347074}{Potential::value} (REAL r)
+\item 
+REAL \hyperlink{namespacePotential_3e887e85d927abdab55e33b9a1b5f9a9}{Potential::force} (REAL r)
+\item 
+REAL \hyperlink{namespacePotential_1bbfae0bac5bc358795ba5de0c255cb3}{Potential::derivative} (REAL r)
+\item 
+void \hyperlink{namespaceGeom_6bbaf6733aab04a39e7af8e251cd86e0}{Geom::distvec} (REAL a\mbox{[}$\,$\mbox{]}, REAL b\mbox{[}$\,$\mbox{]}, REAL c\mbox{[}$\,$\mbox{]})
+\item 
+REAL \hyperlink{namespaceGeom_8ffc25d21d218413f26b8633aa5d892c}{Geom::distance} (REAL a\mbox{[}$\,$\mbox{]}, REAL b\mbox{[}$\,$\mbox{]})
+\item 
+REAL \hyperlink{namespaceGeom_1277bdb3dcb8cc8ccd5328d003ee7355}{Geom::distance} (int dim, REAL a\mbox{[}$\,$\mbox{]}, REAL b\mbox{[}$\,$\mbox{]})
+\item 
+REAL \hyperlink{namespaceGeom_cdec0165d0e6b19e6273d02d902589b5}{Geom::sclp} (REAL a\mbox{[}$\,$\mbox{]}, REAL b\mbox{[}$\,$\mbox{]})
+\item 
+REAL \hyperlink{namespaceGeom_418650983a2439f6f782c77539a43fe1}{Geom::length} (REAL a\mbox{[}$\,$\mbox{]})
+\item 
+REAL \hyperlink{namespaceGeom_4a1d7b458468c1e402cfeb3e2314f6a2}{Geom::area} (REAL a\mbox{[}$\,$\mbox{]}, REAL b\mbox{[}$\,$\mbox{]})
+\item 
+REAL \hyperlink{namespaceGeom_ee55a64ec95ad491647143eb3e788da6}{Geom::normalize} (REAL a\mbox{[}$\,$\mbox{]})
+\item 
+int \hyperlink{namespaceGeom_404fb266d9c4a55df9844e29cd64e949}{Geom::hash} (int i, int j, int n)
+\end{CompactItemize}
+\subsection*{Variables}
+\begin{CompactItemize}
+\item 
+const REAL \hyperlink{namespacePotential_556740887ab207a8ffabed2dd038e04e}{Potential::small} = 1.0e-20
+\item 
+const REAL \hyperlink{namespacePotential_dd2f57d7529aa1e7619eb04e15732890}{Potential::large} = 1.0e20
+\end{CompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{model_8h_cd774a2f685c6893dcbc9015893f8585}{
+\index{model.h@{model.h}!HARDBALLS@{HARDBALLS}}
+\index{HARDBALLS@{HARDBALLS}!model.h@{model.h}}
+\subsubsection[{HARDBALLS}]{\setlength{\rightskip}{0pt plus 5cm}\#define HARDBALLS}}
+\label{model_8h_cd774a2f685c6893dcbc9015893f8585}
+
+
+hardball collision as opposed to interaction via a potential 
+
+
+
+Definition at line 2 of file model.h.
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{model_8h_90187db2e362685cff80df2de86a0ba3}{
+\index{model.h@{model.h}!AtomType@{AtomType}}
+\index{AtomType@{AtomType}!model.h@{model.h}}
+\subsubsection[{AtomType}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf AtomType}}}
+\label{model_8h_90187db2e362685cff80df2de86a0ba3}
+
+
+Define the ADSORPTION flag below to enable the time delay for the adsorbed species to be released from the surface \begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{undefined@{undefined}!model.h@{model.h}}\index{model.h@{model.h}!undefined@{undefined}}\item[{\em 
+\hypertarget{model_8h_90187db2e362685cff80df2de86a0ba3f35387cab0e820dcf7df1ed4702043e1}{
+undefined}
+\label{model_8h_90187db2e362685cff80df2de86a0ba3f35387cab0e820dcf7df1ed4702043e1}
+}]\index{hydrogen@{hydrogen}!model.h@{model.h}}\index{model.h@{model.h}!hydrogen@{hydrogen}}\item[{\em 
+\hypertarget{model_8h_90187db2e362685cff80df2de86a0ba360ec43ced5bbdb55ae28686ffb6d77d7}{
+hydrogen}
+\label{model_8h_90187db2e362685cff80df2de86a0ba360ec43ced5bbdb55ae28686ffb6d77d7}
+}]\index{helium@{helium}!model.h@{model.h}}\index{model.h@{model.h}!helium@{helium}}\item[{\em 
+\hypertarget{model_8h_90187db2e362685cff80df2de86a0ba3abdf1d307737c3722cbd5f7b4d103672}{
+helium}
+\label{model_8h_90187db2e362685cff80df2de86a0ba3abdf1d307737c3722cbd5f7b4d103672}
+}]\index{carbon@{carbon}!model.h@{model.h}}\index{model.h@{model.h}!carbon@{carbon}}\item[{\em 
+\hypertarget{model_8h_90187db2e362685cff80df2de86a0ba36770cc2d7cb274aa19bb09d9b128c784}{
+carbon}
+\label{model_8h_90187db2e362685cff80df2de86a0ba36770cc2d7cb274aa19bb09d9b128c784}
+}]\index{oxygen@{oxygen}!model.h@{model.h}}\index{model.h@{model.h}!oxygen@{oxygen}}\item[{\em 
+\hypertarget{model_8h_90187db2e362685cff80df2de86a0ba35babf47d8530a99487d8570abd488474}{
+oxygen}
+\label{model_8h_90187db2e362685cff80df2de86a0ba35babf47d8530a99487d8570abd488474}
+}]\index{maxAtomTypes@{maxAtomTypes}!model.h@{model.h}}\index{model.h@{model.h}!maxAtomTypes@{maxAtomTypes}}\item[{\em 
+\hypertarget{model_8h_90187db2e362685cff80df2de86a0ba3fddfc9bb5182c9d464592fbde40e766f}{
+maxAtomTypes}
+\label{model_8h_90187db2e362685cff80df2de86a0ba3fddfc9bb5182c9d464592fbde40e766f}
+}]\end{description}
+\end{Desc}
+
+
+
+Definition at line 8 of file model.h.
