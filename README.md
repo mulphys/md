@@ -1,29 +1,30 @@
 # ReMoDy: Reactive Molecular Dynamics Solver
-## URL: galacticbubble.com/remody
-# Author: Andrei V Smirnov
-## Email: andrei.v.smirnov@gmail.com
 
-### Molecular dynamics simulation for kinetic reactions and interfacial chemistry
+## Author: [Andrei V Smirnov](andrei.v.smirnov@gmail.com)
 
-## SUB-DIRECTORIES:
+## [URL](http://galacticbubble.com/remody)
+
+## Molecular dynamics simulation for kinetic reactions and interfacial chemistry
+
+### SUB-DIRECTORIES:
 
 mp          - multi-processor version with local time-stepping scheme
 sp          - single processor version with standard time-stepping scheme
 doc         - documents directory
 util        - some utilities for pre- and post-processing
 
-## IMPORTANT FILES:
+### IMPORTANT FILES:
 
 remody.tgz                - TAR-gzipped archive of multi-processor version with local time-stepping scheme
 doc/usersguide.pdf        - User's Guide (PDF)
 doc/programmersguide.pdf  - Programmer's Guide (PDF)
 doc/html/index.html       - Source-code documentaiton (HTML)
 
-## RETRIEVING FROM ARCHIVE:
+### RETRIEVING FROM ARCHIVE:
 
 tar xvzf remody.tbz
 
-## COMPILING:
+### COMPILING:
 
 - Single processor version:
 	cd sp; make
@@ -32,12 +33,12 @@ tar xvzf remody.tbz
 	cd mp; make
 
 
-## CONFIGURING INPUT:
+### CONFIGURING INPUT:
 
 Edit the input XML file (see documentation in /doc).
 
 
-## RUNNING:
+### RUNNING:
 
 cd run
 ./job
@@ -56,12 +57,12 @@ depending on which case to run.
 
 ## DOCUMENTATION:
 
-[HTML](doc/html)
+### [HTML](doc/html)
 
-[PDF](doc)
+### [PDF](doc)
 
-[User Guide](doc/usersguide.pdf)
+### [User Guide](doc/usersguide.pdf)
 
-[Programmer's Guide](doc/programmersguide.pdf)
+### [Programmer's Guide](doc/programmersguide.pdf)
 
 
