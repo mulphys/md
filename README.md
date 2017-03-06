@@ -1,6 +1,6 @@
 # ReMoDy: Reactive Molecular Dynamics Solver
 
-## Author: [Andrei V Smirnov](andrei.v.smirnov@gmail.com)
+## Author: [Andrei V Smirnov](mailto:andrei.v.smirnov@gmail.com)
 
 ## [URL](http://galacticbubble.com/remody)
 
