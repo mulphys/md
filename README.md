@@ -8,17 +8,18 @@
 
 ### SUB-DIRECTORIES:
 
-| [mp](mp/)     | multi-processor version with local time-stepping scheme
-| [sp](sp/)     | single processor version with standard time-stepping scheme
-| [doc](doc/)   | documents directory
-| [util](util/) | some utilities for pre- and post-processing
+|---------------|-------------------------------------------------------------|
+| [mp](mp/)     | multi-processor version with local time-stepping scheme     |
+| [sp](sp/)     | single processor version with standard time-stepping scheme |
+| [doc](doc/)   | documents directory                                         |
+| [util](util/) | some utilities for pre- and post-processing                 |
 
 ### IMPORTANT FILES:
 
-| [remody.tgz](remody.tgz)               | TAR-gzipped archive of multi-processor version with local time-stepping scheme
-| [doc/usersguide.pdf](remody.tgz)       | User's Guide (PDF)
-| [doc/programmersguide.pdf](remody.tgz) | Programmer's Guide (PDF)
-| [doc/html/index.html](remody.tgz)      | Source-code documentaiton (HTML)
+| [remody.tgz](remody.tgz)               | TAR-gzipped archive of multi-processor version with local time-stepping scheme |
+| [doc/usersguide.pdf](remody.tgz)       | User's Guide (PDF)                                                             |
+| [doc/programmersguide.pdf](remody.tgz) | Programmer's Guide (PDF)                                                       |
+| [doc/html/index.html](remody.tgz)      | Source-code documentaiton (HTML)                                               |
 
 ### RETRIEVING FROM ARCHIVE:
 
