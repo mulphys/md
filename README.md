@@ -57,7 +57,7 @@ depending on which case to run.
 
 ## DOCUMENTATION:
 
-### [HTML](http://doc/html/index.html)
+### [HTML](http://galacticbubble.com/remody/doc/html/index.html)
 
 ### [PDF](doc)
 
