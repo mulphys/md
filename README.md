@@ -8,17 +8,17 @@
 
 ### SUB-DIRECTORIES:
 
-mp          - multi-processor version with local time-stepping scheme
-sp          - single processor version with standard time-stepping scheme
-doc         - documents directory
-util        - some utilities for pre- and post-processing
+- mp        multi-processor version with local time-stepping scheme
+- sp          single processor version with standard time-stepping scheme
+- doc         documents directory
+- util        some utilities for pre- and post-processing
 
 ### IMPORTANT FILES:
 
-remody.tgz                - TAR-gzipped archive of multi-processor version with local time-stepping scheme
-doc/usersguide.pdf        - User's Guide (PDF)
-doc/programmersguide.pdf  - Programmer's Guide (PDF)
-doc/html/index.html       - Source-code documentaiton (HTML)
+- remody.tgz                TAR-gzipped archive of multi-processor version with local time-stepping scheme
+- doc/usersguide.pdf        User's Guide (PDF)
+- doc/programmersguide.pdf  Programmer's Guide (PDF)
+- doc/html/index.html       Source-code documentaiton (HTML)
 
 ### RETRIEVING FROM ARCHIVE:
 
@@ -26,11 +26,13 @@ tar xvzf remody.tbz
 
 ### COMPILING:
 
-- Single processor version:
-	cd sp; make
+#### Single processor version:
 
-- Multi processor version:
-	cd mp; make
+cd sp; make
+
+#### Multi processor version:
+
+cd mp; make
 
 
 ### CONFIGURING INPUT:
