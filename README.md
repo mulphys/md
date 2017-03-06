@@ -38,22 +38,16 @@ tar xvzf remody.tbz
 Edit the input XML file (see documentation in /doc).
 
 
-### RUNNING:
+### RUNNING DEMOS:
 
-cd run
-./job
+#### GUI version:
 
-or for GUI version:
+cd run; ./gui -f syngas.xml
 
-cd run
-./gui -f job.xml
 
-or:
+#### Batch job:
 
-./gui -f test.xml
-
-depending on which case to run. 
-
+cd mp/run; ./job
 
 ## DOCUMENTATION:
 
