@@ -57,7 +57,7 @@ depending on which case to run.
 
 ## DOCUMENTATION:
 
-### [HTML](doc/html)
+### [HTML](http://doc/html/index.html)
 
 ### [PDF](doc)
 
