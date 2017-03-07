@@ -1,9 +1,10 @@
 # Reactive Molecular Dynamics Solver 
 
-## -> [Andrei V Smirnov](mailto:andrei.v.smirnov@gmail.com) <-
--> ([URL](http://galacticbubble.com/remody)) <-
+## [Andrei V Smirnov](mailto:andrei.v.smirnov@gmail.com) <-
 
 ## Molecular dynamics simulation for kinetic reactions and interfacial chemistry
+
+<center> *([URL](http://galacticbubble.com/remody))* </center>
 
 ### SUB-DIRECTORIES:
 
