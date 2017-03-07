@@ -4,7 +4,7 @@
 
 ## Molecular dynamics simulation for kinetic reactions and interfacial chemistry
 
-### ([URL](http://galacticbubble.com/remody)) 
+### URL: [ReMoDy](http://galacticbubble.com/remody) 
 
 ### SUB-DIRECTORIES:
 
