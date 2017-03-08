@@ -1,3 +1,4 @@
+![ReMoDy](remody.png)
 # Reactive Molecular Dynamics Solver 
 
 ## [Andrei V Smirnov](mailto:andrei.v.smirnov@gmail.com) 
